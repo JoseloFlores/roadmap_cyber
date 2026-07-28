@@ -75,7 +75,7 @@ Este proyecto es posible gracias al valioso aporte de los siguientes colaborador
 | :--- | :--- | :--- |
 | <img src="https://github.com/identicons/user.png" width="40" height="40" style="border-radius:50%"/> <br> **[Nombre Colaborador 1]** | Liderazgo del Roadmap / Redacción de Apuntes | [@colaborador1](https://github.com/github_username_1) |
 | <img src="https://github.com/identicons/user2.png" width="40" height="40" style="border-radius:50%"/> <br> **[Nombre Colaborador 2]** | Diseño del Repositorio / Laboratorios Prácticos | [@colaborador2](https://github.com/github_username_2) |
-| <img src="<img class="avatar rounded-2 avatar-user" src="https://avatars.githubusercontent.com/u/70613354?s=400&amp;u=bc7bd90fb97874f35882b42203d8f6dc8cad2f79&amp;v=4" width="200" height="200" alt="@JoseloFlores">" width="40" height="40" style="border-radius:50%"/> <br> **[Jo!]** | Documentacion/ Revisión Técnica | [@Jo!](https://github.com/JoseloFlores) |
+| <img src="https://avatars.githubusercontent.com/u/70613354?v=4" width="40" height="40" style="border-radius:50%"/> <br> **[Jo!]** | Documentacion/ Revisión Técnica | [@Jo!](https://github.com/JoseloFlores) |
 
 > 💡 *Si deseas aparecer en esta sección, lee las instrucciones de contribución a continuación.*
 
