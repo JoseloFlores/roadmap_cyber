@@ -1,6 +1,6 @@
 **Módulo de Estudio SOC**
 
-**Módulo 2 - Modelo OSI (Open Systems Interconnection)**
+**Módulo 1 - Modelo OSI (Open Systems Interconnection)**
 
 **Nivel:** Principiante → Analista SOC Nivel 1
 
@@ -126,7 +126,7 @@ Sin carretera, nadie puede viajar.
 
 -   Control de acceso físico.
 
--   CCTV.
+-   CCTV (Circuito Cerrado de Televisión).
 
 -   Armarios de comunicaciones cerrados.
 
@@ -218,15 +218,7 @@ Esta capa decide por dónde viajarán los paquetes entre diferentes redes.
 
 **Ejemplo**
 
-192.168.1.20
-
-↓
-
-Router
-
-↓
-
-8.8.8.8
+192.168.1.20 → Router → 8.8.8.8
 
 **Ataques**
 
@@ -242,9 +234,9 @@ Router
 
 -   Firewalls.
 
--   ACL.
+-   ACL (Lista de Control de Acceso, o Access Control List).
 
--   IDS/IPS.
+-   IDS/IPS (Sistema de Detección de Intrusiones) y un IPS (Sistema de Prevención de Intrusiones).
 
 -   Segmentación.
 
@@ -273,6 +265,8 @@ HTTPS → Puerto 443
 SSH → Puerto 22
 
 DNS → Puerto 53
+
+*(Nota los numeros de puertos para cada protocolo son convenciones)*
 
 **Funciones**
 
