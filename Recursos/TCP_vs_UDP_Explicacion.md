@@ -1,7 +1,5 @@
 # ¿Qué protocolo es mejor? TCP vs. UDP: descubre cuándo usar cada uno
 
-*Por Sergio De Luz*
-
 TCP y UDP son dos protocolos fundamentales para las comunicaciones a través de Internet. Ambos se sitúan en la **capa de transporte** del modelo TCP/IP, siendo la primera capa donde el origen y el destino se comunican directamente (las capas inferiores, red y acceso al medio, no realizan esta función). 
 
 El tráfico de red se compone de un gran número de transferencias de datos entre dispositivos y servidores que utilizan estos dos protocolos para transmitir la información.
