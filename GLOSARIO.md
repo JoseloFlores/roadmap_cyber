@@ -87,7 +87,7 @@ Este glosario contiene los términos, siglas y acrónimos más críticos e impor
 | **root** | *Root / Superusuario* | Usuario administrador con control total del sistema (UID 0). |
 | **sudo** | *Super User DO* | Comando que permite ejecutar acciones con privilegios de administrador de forma temporal y controlada. |
 | **grep** | *Global Regular Expression Print* | Herramienta para buscar patrones de texto dentro de archivos o salidas de otros comandos; esencial para analizar logs. |
-| **pipe** | *Pipe (|)* | Operador que conecta la salida de un comando con la entrada de otro (ej. `cat log \| grep "Failed"`). |
+| **pipe** | *Pipe (\|)* | Operador que conecta la salida de un comando con la entrada de otro (ej. `cat log \| grep "Failed"`). |
 | **PID** | *Process Identifier* | Identificador numérico único de cada proceso en ejecución. |
 | **Daemon** | *Daemon* | Proceso que corre en segundo plano prestando un servicio (ej. `sshd`, `nginx`, `systemd`). |
 | **chmod** | *Change Mode* | Comando para cambiar los permisos (`rwx`) de archivos y directorios. |
