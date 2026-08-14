@@ -71,3 +71,27 @@ Este glosario contiene los términos, siglas y acrónimos más críticos e impor
 | **DoS** | *Denial of Service* | Ataque de denegación de servicio que busca inhabilitar un recurso saturándolo con peticiones. |
 | **DDoS** | *Distributed Denial of Service* | Ataque DoS realizado de manera distribuida desde múltiples fuentes comprometidas (botnets). |
 | **APT** | *Advanced Persistent Threat* | Amenaza Persistente Avanzada; grupo de atacantes altamente capacitado y financiado (generalmente estados-nación). |
+
+---
+
+## 🐧 5. Administración de Linux y Línea de Comandos
+
+| Término | Nombre Completo | Descripción |
+| :--- | :--- | :--- |
+| **CLI** | *Command Line Interface* | Interfaz de línea de comandos; forma de interactuar con el sistema operativo escribiendo comandos en la terminal. |
+| **Shell** | *Shell* | Intérprete de comandos que recibe lo que escribes y lo ejecuta (ej. `bash`, `sh`, `zsh`). |
+| **Bash** | *Bourne Again Shell* | La shell más utilizada en Linux y macOS; es el intérprete por defecto en la mayoría de distribuciones. |
+| **Kernel** | *Kernel* | Núcleo del sistema operativo; gestiona hardware, memoria y procesos. Linux es un kernel. |
+| **Distribución** | *Linux Distribution* | Conjunto de Linux + software empaquetado (Ubuntu, Debian, Kali, CentOS, etc.). El kernel es el motor; la distribución es el auto. |
+| **FHS** | *Filesystem Hierarchy Standard* | Estándar que define la estructura de directorios de Linux (`/etc`, `/home`, `/var/log`, `/tmp`, etc.). |
+| **root** | *Root / Superusuario* | Usuario administrador con control total del sistema (UID 0). |
+| **sudo** | *Super User DO* | Comando que permite ejecutar acciones con privilegios de administrador de forma temporal y controlada. |
+| **grep** | *Global Regular Expression Print* | Herramienta para buscar patrones de texto dentro de archivos o salidas de otros comandos; esencial para analizar logs. |
+| **pipe** | *Pipe (|)* | Operador que conecta la salida de un comando con la entrada de otro (ej. `cat log \| grep "Failed"`). |
+| **PID** | *Process Identifier* | Identificador numérico único de cada proceso en ejecución. |
+| **Daemon** | *Daemon* | Proceso que corre en segundo plano prestando un servicio (ej. `sshd`, `nginx`, `systemd`). |
+| **chmod** | *Change Mode* | Comando para cambiar los permisos (`rwx`) de archivos y directorios. |
+| **chown** | *Change Owner* | Comando para cambiar el propietario (y grupo) de un archivo o directorio. |
+| **setuid** | *Set User ID* | Bit especial de permisos que hace que un ejecutable corra con los privilegios de su propietario (potencial riesgo de escalada). |
+| **umask** | *User file creation mask* | Define los permisos por defecto que reciben los archivos y directorios recién creados. |
+| **Syslog** | *System Logging Protocol* | Protocolo estándar (UDP 514) para enviar y centralizar logs de sistemas y dispositivos; clave para SIEM. |

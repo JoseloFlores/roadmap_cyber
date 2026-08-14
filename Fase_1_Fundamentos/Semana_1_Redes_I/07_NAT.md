@@ -136,15 +136,7 @@ La PC envía el paquete al Gateway.
 
 Recordemos:
 
-PC
-
-↓
-
-Gateway
-
-↓
-
-Internet
+PC → Gateway → Internet
 
 Hasta aquí no hay nada nuevo.
 
@@ -184,27 +176,7 @@ Ahora sí puede viajar por Internet.
 
 PC
 
-192.168.1.25
-
-↓
-
-Gateway
-
-↓
-
-NAT
-
-↓
-
-181.35.220.10
-
-↓
-
-Internet
-
-↓
-
-Google
+192.168.1.25 → Gateway → NAT → 181.35.220.10 → Internet → Google
 
 **4. ¿Cómo vuelve la respuesta?**
 
@@ -224,27 +196,7 @@ Esa conexión en realidad pertenecía a:
 
 Entonces realiza la traducción inversa.
 
-Internet
-
-↓
-
-181.35.220.10
-
-↓
-
-Gateway
-
-↓
-
-NAT
-
-↓
-
-192.168.1.25
-
-↓
-
-Mi PC
+Internet → 181.35.220.10 → Gateway → NAT → 192.168.1.25 → Mi PC
 
 La computadora nunca sabe que su dirección fue modificada.
 
@@ -302,11 +254,7 @@ Una IP privada siempre corresponde a la misma IP pública.
 
 Ejemplo:
 
-192.168.10.10
-
-↓
-
-181.35.220.15
+192.168.10.10 → 181.35.220.15
 
 Siempre.
 
@@ -320,11 +268,7 @@ Cada equipo recibe una disponible.
 
 Ejemplo:
 
-192.168.10.15
-
-↓
-
-181.35.220.20
+192.168.10.15 → 181.35.220.20
 
 Más tarde otro equipo podría utilizar esa misma IP.
 
@@ -348,15 +292,7 @@ Este es el NAT que encontrarás en casi todas las casas y empresas.
 
 En muchas organizaciones:
 
-PC
-
-↓
-
-Firewall
-
-↓
-
-Internet
+PC → Firewall → Internet
 
 El Firewall realiza simultáneamente:
 
@@ -378,19 +314,7 @@ Ejemplo:
 
 IP Interna
 
-192.168.10.25
-
-↓
-
-NAT
-
-↓
-
-181.35.220.10
-
-↓
-
-185.15.20.30
+192.168.10.25 → NAT → 181.35.220.10 → 185.15.20.30
 
 Como analista SOC debes responder:
 
@@ -410,11 +334,7 @@ Alerta SIEM
 
 IP Pública
 
-181.35.220.10
-
-↓
-
-Descarga malware
+181.35.220.10 → Descarga malware
 
 El analista debe investigar:
 
@@ -422,21 +342,7 @@ El analista debe investigar:
 
 Gracias a la tabla NAT podrá descubrir:
 
-181.35.220.10
-
-↓
-
-192.168.10.85
-
-↓
-
-Usuario
-
-Juan Pérez
-
-↓
-
-PC-Ventas-03
+181.35.220.10 → 192.168.10.85 → Usuario Juan Pérez → PC-Ventas-03
 
 Aquí se ve claramente por qué la tabla NAT es una pieza clave durante una investigación.
 
@@ -456,11 +362,7 @@ Por eso el analista debe consultar la tabla NAT.
 
 Si un administrador publica accidentalmente un servidor interno mediante NAT:
 
-Servidor SQL
-
-↓
-
-Internet
+Servidor → SQLInternet
 
 Ese servidor queda expuesto.
 
@@ -470,15 +372,7 @@ Si además tiene una vulnerabilidad, un atacante podría comprometerlo.
 
 Supongamos:
 
-Internet
-
-↓
-
-Puerto 3389
-
-↓
-
-Servidor Windows
+Internet → Puerto 3389 → Servidor Windows
 
 Si el acceso está expuesto sin controles adecuados:
 
@@ -512,25 +406,7 @@ Este escenario ha sido responsable de numerosos incidentes reales.
 
 Firewall
 
-Origen
-
-192.168.20.25
-
-↓
-
-NAT
-
-↓
-
-181.35.220.10
-
-↓
-
-HTTPS
-
-↓
-
-Microsoft
+Origen 192.168.20.25 → NAT → 181.35.220.10 → HTTPS → Microsoft
 
 Interpretación:
 
@@ -542,23 +418,7 @@ Firewall
 
 Origen
 
-192.168.30.45
-
-↓
-
-NAT
-
-↓
-
-181.35.220.10
-
-↓
-
-185.220.xxx.xxx
-
-↓
-
-Puerto 4444
+192.168.30.45 → NAT → 181.35.220.10 → 185.220.xxx.xxx → Puerto 4444
 
 Como analista pensarías:
 
@@ -576,11 +436,7 @@ Como analista pensarías:
 
 Alerta
 
-181.35.220.10
-
-↓
-
-Miles de conexiones por minuto
+181.35.220.10 → Miles de conexiones por minuto
 
 No puedes concluir inmediatamente que toda la empresa está comprometida.
 
