@@ -4,7 +4,7 @@
 
 **Módulo 28: Windows desde la perspectiva del atacante**
 
-**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1\
+**Nivel:** Principiante → Analista SOC Nivel 1\
 **Enfoque:** Mentalidad ofensiva (defensiva) + Detección
 
 Para defender Windows bien, debes pensar como quien quiere vulnerarlo.
@@ -129,7 +129,7 @@ Movimiento lateral
 
 Exfiltración / C2
 
-Cada flecha deja **evidencia** en logs, procesos o red. El <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> las une.
+Cada flecha deja **evidencia** en logs, procesos o red. El SOC las une.
 
 **🧪 Laboratorio recomendado (defensivo)**
 
@@ -214,7 +214,7 @@ El borrado del log de seguridad (1102) suele ser:
 **C)** Actualización\
 **D)** Error de red
 
-**🔹 Pregunta 9 — Caso <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**🔹 Pregunta 9 — Caso SOC**
 
 Varios equipos muestran inicios de sesión tipo 3 (red) desde una misma
 cuenta hacia muchos servidores en minutos. Sugiere:
@@ -258,4 +258,4 @@ Relaciona: 4720 + 4728 + 7045 en poco tiempo apunta a:
 -   ✅ **Módulo 26 — Windows Event Logs**
 -   ✅ **Módulo 27 — Seguridad de Windows**
 -   ✅ **Módulo 28 — Windows desde la perspectiva del atacante**
--   ⚪ Módulo 29 — Investigación <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> en Windows
+-   ⚪ Módulo 29 — Investigación SOC en Windows

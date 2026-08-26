@@ -4,7 +4,7 @@
 
 **Módulo 14 – Introducción a Linux y la Terminal (<a href="../../GLOSARIO.md#cli" target="_blank">CLI</a>)**
 
-**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
+**Nivel:** Principiante → Analista SOC Nivel 1
 
 **Antes de comenzar**
 
@@ -14,13 +14,13 @@ Ya dominas:
 
 - ✅ Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a>
 
-- ✅ Modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>
+- ✅ Modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/IP
 
 - ✅ Máscaras y Subredes
 
 - ✅ <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> y <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>
 
-- ✅ <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> y <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>
+- ✅ TCP y <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>
 
 - ✅ Puertos
 
@@ -34,7 +34,7 @@ Con esto terminamos la etapa de **redes** de tu formación.
 
 Ahora comienza una nueva etapa: la de **administración de sistemas**.
 
-Y para un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>, esa etapa tiene un nombre propio: **Linux**.
+Y para un Analista SOC, esa etapa tiene un nombre propio: **Linux**.
 
 ¿Por qué Linux?
 
@@ -46,7 +46,7 @@ Porque los logs que revisarás en tu trabajo diario se generan, se almacenan y s
 
 El objetivo de esta semana es simple pero fundamental:
 
-**Moverte con soltura en la terminal (<a href="../../GLOSARIO.md#cli" target="_blank">CLI</a>) sin depender de la interfaz gráfica.**
+**Moverte con soltura en la terminal (CLI) sin depender de la interfaz gráfica.**
 
 Bienvenido a la semana que cambiará la forma en que trabajas.
 
@@ -56,9 +56,9 @@ Al finalizar este módulo podrás:
 
 - Comprender qué es Linux y qué es una <a href="../../GLOSARIO.md#distribucion" target="_blank">distribución</a>.
 
-- Explicar por qué un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> trabaja con Linux todos los días.
+- Explicar por qué un Analista SOC trabaja con Linux todos los días.
 
-- Diferenciar entre terminal, <a href="../../GLOSARIO.md#shell" target="_blank">shell</a> y <a href="../../GLOSARIO.md#cli" target="_blank">CLI</a>.
+- Diferenciar entre terminal, <a href="../../GLOSARIO.md#shell" target="_blank">shell</a> y CLI.
 
 - Entender la estructura de un comando de Linux.
 
@@ -82,13 +82,13 @@ Pero no es cualquier sistema operativo.
 
 Linux es, técnicamente, un **<a href="../../GLOSARIO.md#kernel" target="_blank">kernel</a>**.
 
-Un <a href="../../GLOSARIO.md#kernel" target="_blank">kernel</a> es el núcleo del sistema operativo.
+Un kernel es el núcleo del sistema operativo.
 
 Es la parte que conecta el hardware con el software.
 
 Imagina un edificio.
 
-El <a href="../../GLOSARIO.md#kernel" target="_blank">kernel</a> serían los cimientos y la estructura interna.
+El kernel serían los cimientos y la estructura interna.
 
 Sin ellos, el edificio no se sostiene.
 
@@ -98,13 +98,13 @@ Cuando hablamos de "Linux" en la práctica, casi siempre nos referimos a **GNU/L
 
 ¿Por qué?
 
-Porque el <a href="../../GLOSARIO.md#kernel" target="_blank">kernel</a> de Linux se combina con herramientas desarrolladas por el proyecto **GNU**.
+Porque el kernel de Linux se combina con herramientas desarrolladas por el proyecto **GNU**.
 
 Ese conjunto completo es lo que usamos a diario.
 
 Por eso verás escritas ambas cosas:
 
-- Linux (el <a href="../../GLOSARIO.md#kernel" target="_blank">kernel</a>).
+- Linux (el kernel).
 
 - GNU/Linux (el sistema operativo completo).
 
@@ -144,7 +144,7 @@ Algunos ejemplos:
 
 - **Supercomputadoras:** las más potentes del mundo usan Linux.
 
-- **Herramientas de seguridad:** <a href="../../GLOSARIO.md#wireshark" target="_blank">Wireshark</a>, Suricata, Nmap, Metasploit y más.
+- **Herramientas de seguridad:** Wireshark, Suricata, Nmap, Metasploit y más.
 
 **Dato que te servirá como analista**
 
@@ -152,9 +152,9 @@ Si aprendes a manejar Linux, podrás trabajar en cualquier tipo de infraestructu
 
 Porque Linux es el "idioma común" de los servidores modernos.
 
-**2. ¿Por qué un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> necesita Linux?**
+**2. ¿Por qué un Analista SOC necesita Linux?**
 
-Un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1 debe vivir en Linux.
+Un Analista SOC Nivel 1 debe vivir en Linux.
 
 No es un "extra" de la carrera.
 
@@ -178,15 +178,15 @@ Verás archivos en `/var/log/` que puedes abrir y leer con comandos como `cat`, 
 
 **Razón 3 – Las herramientas de seguridad corren sobre Linux**
 
-La mayoría de las herramientas de un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> funcionan mejor en Linux.
+La mayoría de las herramientas de un SOC funcionan mejor en Linux.
 
 Ejemplos:
 
-- **<a href="../../GLOSARIO.md#wireshark" target="_blank">Wireshark</a>:** análisis de tráfico.
+- **Wireshark:** análisis de tráfico.
 
 - **Suricata:** detección de intrusos (<a href="../../GLOSARIO.md#ids" target="_blank">IDS</a>/<a href="../../GLOSARIO.md#ips" target="_blank">IPS</a>).
 
-- **<a href="../../GLOSARIO.md#wazuh" target="_blank">Wazuh</a>:** monitoreo y <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a> open source.
+- **Wazuh:** monitoreo y <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a> open source.
 
 - **Splunk:** la plataforma de análisis de logs más usada en SOCs.
 
@@ -194,13 +194,13 @@ Ejemplos:
 
 **Razón 4 – Kali Linux para el laboratorio**
 
-Kali Linux es una <a href="../../GLOSARIO.md#distribucion" target="_blank">distribución</a> enfocada en seguridad ofensiva.
+Kali Linux es una distribución enfocada en seguridad ofensiva.
 
-Trae instaladas herramientas como Nmap, Metasploit y <a href="../../GLOSARIO.md#wireshark" target="_blank">Wireshark</a>.
+Trae instaladas herramientas como Nmap, Metasploit y Wireshark.
 
 Es ideal para practicar en un laboratorio controlado.
 
-**Razón 5 – La mayoría de los <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a> y <a href="../../GLOSARIO.md#edr" target="_blank">EDR</a> corren sobre Linux**
+**Razón 5 – La mayoría de los SIEM y <a href="../../GLOSARIO.md#edr" target="_blank">EDR</a> corren sobre Linux**
 
 Las plataformas de seguridad que recopilan eventos se despliegan casi siempre en servidores Linux.
 
@@ -218,7 +218,7 @@ Todo eso se hace desde la terminal.
 
 **Analogía rápida**
 
-Linux es como el taller donde se hace la mecánica del <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+Linux es como el taller donde se hace la mecánica del SOC.
 
 La terminal es el banco de trabajo.
 
@@ -236,7 +236,7 @@ Existen muchas versiones llamadas **distribuciones** (o "distros").
 
 Imagina que Linux es el **motor** de un auto.
 
-La <a href="../../GLOSARIO.md#distribucion" target="_blank">distribución</a> es el **auto completo** con sus accesorios.
+La distribución es el **auto completo** con sus accesorios.
 
 Con el mismo motor puedes tener:
 
@@ -248,9 +248,9 @@ Con el mismo motor puedes tener:
 
 Todos usan el mismo motor, pero cada uno está armado para un propósito.
 
-Las principales distribuciones para un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>:
+Las principales distribuciones para un Analista SOC:
 
-| **<a href="../../GLOSARIO.md#distribucion" target="_blank">Distribución</a>**        | **Uso principal**                              | **Por qué importa**                              |
+| **Distribución**        | **Uso principal**                              | **Por qué importa**                              |
 |-------------------------|------------------------------------------------|--------------------------------------------------|
 | Ubuntu                  | Servidores y uso general                        | La más usada; gran comunidad y documentación.    |
 | Debian                  | Servidores estables                            | Base de Ubuntu; muy estable y confiable.         |
@@ -276,7 +276,7 @@ Perfectas para tu laboratorio de práctica.
 
 Son las que encontrarás en el mundo corporativo.
 
-Si trabajas en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> empresarial, es muy probable que veas alguna de estas.
+Si trabajas en un SOC empresarial, es muy probable que veas alguna de estas.
 
 **Alpine**
 
@@ -286,13 +286,13 @@ Se usa casi exclusivamente para contenedores Docker.
 
 **Regla práctica**
 
-Elige una <a href="../../GLOSARIO.md#distribucion" target="_blank">distribución</a> para aprender, por ejemplo Ubuntu.
+Elige una distribución para aprender, por ejemplo Ubuntu.
 
 Los comandos básicos son los mismos en casi todas.
 
 Si sabes navegar en Ubuntu, te adaptarás rápido a las demás.
 
-**4. Terminal, <a href="../../GLOSARIO.md#shell" target="_blank">shell</a> y <a href="../../GLOSARIO.md#cli" target="_blank">CLI</a>**
+**4. Terminal, shell y CLI**
 
 Estos tres términos se usan mucho.
 
@@ -304,27 +304,27 @@ La **terminal** es el programa que te permite interactuar con el sistema escribi
 
 Es como la "ventana" donde escribes.
 
-**La <a href="../../GLOSARIO.md#shell" target="_blank">shell</a>**
+**La shell**
 
-La **<a href="../../GLOSARIO.md#shell" target="_blank">shell</a>** es el intérprete de comandos.
+La **shell** es el intérprete de comandos.
 
 Es el programa que lee lo que escribes y lo ejecuta.
 
-La <a href="../../GLOSARIO.md#shell" target="_blank">shell</a> más común en Linux es **<a href="../../GLOSARIO.md#bash" target="_blank">bash</a>** (Bourne Again <a href="../../GLOSARIO.md#shell" target="_blank">Shell</a>).
+La shell más común en Linux es **<a href="../../GLOSARIO.md#bash" target="_blank">bash</a>** (Bourne Again Shell).
 
-**El <a href="../../GLOSARIO.md#cli" target="_blank">CLI</a>**
+**El CLI**
 
-<a href="../../GLOSARIO.md#cli" target="_blank">CLI</a> significa **Command Line Interface** (Interfaz de Línea de Comandos).
+CLI significa **Command Line Interface** (Interfaz de Línea de Comandos).
 
 Es la forma de trabajar escribiendo comandos, en lugar de hacer clic.
 
-**GUI vs <a href="../../GLOSARIO.md#cli" target="_blank">CLI</a>**
+**GUI vs CLI**
 
 GUI significa **Graphical User Interface** (Interfaz Gráfica).
 
 Son las ventanas, botones y menús que todos conocemos.
 
-| **Característica** | **GUI**                  | **<a href="../../GLOSARIO.md#cli" target="_blank">CLI</a>**                       |
+| **Característica** | **GUI**                  | **CLI**                       |
 |--------------------|--------------------------|-------------------------------|
 | Interacción        | Clics y ventanas         | Escribir comandos             |
 | Velocidad          | Más lenta para tareas    | Más rápida                    |
@@ -333,7 +333,7 @@ Son las ventanas, botones y menús que todos conocemos.
 | Uso en servidores  | Casi nulo                | El estándar                   |
 | Aprendizaje        | Intuitiva                | Requiere práctica             |
 
-**¿Por qué el <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> usa <a href="../../GLOSARIO.md#cli" target="_blank">CLI</a>?**
+**¿Por qué el SOC usa CLI?**
 
 Porque los servidores no tienen pantalla ni mouse.
 
@@ -627,11 +627,11 @@ Piensa en la terminal como un explorador de archivos sin clics.
 | `/home`     | Las carpetas personales de los usuarios.                  |
 | `/etc`      | Los archivos de configuración del sistema.                |
 | `/var`      | Datos variables, incluidos los logs.                      |
-| `/var/log`  | Los logs del sistema (oro para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>).                   |
+| `/var/log`  | Los logs del sistema (oro para un SOC).                   |
 | `/tmp`      | Archivos temporales.                                      |
 | `/bin`      | Comandos esenciales del sistema.                          |
 | `/usr`      | Programas y aplicaciones del usuario.                     |
-| `/root`     | La carpeta personal del usuario <a href="../../GLOSARIO.md#root" target="_blank">root</a>.                     |
+| `/root`     | La carpeta personal del usuario root.                     |
 
 Como analista, vivirás mucho en `/var/log` y `/etc`.
 
@@ -757,7 +757,7 @@ Si la carpeta tiene contenido, fallará.
 
 Ahí es cuando necesitas `rm -r`.
 
-**Regla de seguridad en el <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**Regla de seguridad en el SOC**
 
 Antes de eliminar cualquier archivo:
 
@@ -767,7 +767,7 @@ Antes de eliminar cualquier archivo:
 
 - Confirma que no es evidencia de un incidente.
 
-En un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>, borrar evidencia puede arruinar toda una investigación.
+En un SOC, borrar evidencia puede arruinar toda una investigación.
 
 **9. Ver contenido de archivos**
 
@@ -817,7 +817,7 @@ Ejemplo:
 
 `tail /var/log/syslog`
 
-Es el comando más importante para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+Es el comando más importante para un SOC.
 
 **¿Por qué tail es tan importante?**
 
@@ -917,7 +917,7 @@ Muestra:
 
 - Tus identificadores numéricos.
 
-**<a href="../../GLOSARIO.md#root" target="_blank">root</a>**
+**root**
 
 El usuario `root` es el **administrador del sistema**.
 
@@ -931,7 +931,7 @@ Tiene control total:
 
 - Puede ver todos los logs.
 
-Por eso, el prompt de <a href="../../GLOSARIO.md#root" target="_blank">root</a> termina en `#`.
+Por eso, el prompt de root termina en `#`.
 
 **Usuario normal**
 
@@ -947,7 +947,7 @@ Por seguridad.
 
 Si cometes un error como usuario normal, el daño es limitado.
 
-Si cometes un error como <a href="../../GLOSARIO.md#root" target="_blank">root</a>, puedes romper todo el sistema.
+Si cometes un error como root, puedes romper todo el sistema.
 
 **<a href="../../GLOSARIO.md#sudo" target="_blank">sudo</a>**
 
@@ -959,9 +959,9 @@ Ejemplo:
 
 `sudo apt update`
 
-Ejecuta `apt update` con permisos de <a href="../../GLOSARIO.md#root" target="_blank">root</a>.
+Ejecuta `apt update` con permisos de root.
 
-**Analogía del <a href="../../GLOSARIO.md#sudo" target="_blank">sudo</a>**
+**Analogía del sudo**
 
 `sudo` es como la **tarjeta de administrador** de un edificio.
 
@@ -973,7 +973,7 @@ Y la usa solo cuando es necesario.
 
 No camina con la tarjeta pegada a la frente todo el día.
 
-**Reglas de <a href="../../GLOSARIO.md#sudo" target="_blank">sudo</a>**
+**Reglas de sudo**
 
 - Usa `sudo` solo cuando el comando lo necesite.
 
@@ -981,7 +981,7 @@ No camina con la tarjeta pegada a la frente todo el día.
 
 - Cuando uses `sudo`, verifica bien lo que vas a ejecutar.
 
-**Ejemplos con <a href="../../GLOSARIO.md#sudo" target="_blank">sudo</a>**
+**Ejemplos con sudo**
 
 `sudo systemctl restart ssh`
 
@@ -989,9 +989,9 @@ No camina con la tarjeta pegada a la frente todo el día.
 
 `sudo cat /var/log/auth.log`
 
-**Ojo con <a href="../../GLOSARIO.md#root" target="_blank">root</a>**
+**Ojo con root**
 
-Muchas guías te dicen "trabaja como <a href="../../GLOSARIO.md#root" target="_blank">root</a>".
+Muchas guías te dicen "trabaja como root".
 
 En tu laboratorio de práctica está bien.
 
@@ -1019,7 +1019,7 @@ Muestra:
 
 - El nombre del sistema.
 
-- La versión del <a href="../../GLOSARIO.md#kernel" target="_blank">kernel</a>.
+- La versión del kernel.
 
 - La arquitectura.
 
@@ -1067,7 +1067,7 @@ Ejemplo:
 
 `who`
 
-En un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>, es útil para ver quién tiene sesión activa en el servidor.
+En un SOC, es útil para ver quién tiene sesión activa en el servidor.
 
 **free**
 
@@ -1097,13 +1097,13 @@ Ejemplo:
 
 Verás cada partición y cuánto espacio libre tiene.
 
-**¿Por qué importa esto en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?**
+**¿Por qué importa esto en un SOC?**
 
 Porque los logs se guardan en disco.
 
 Si el disco se llena, el sistema puede dejar de registrar eventos.
 
-Y sin logs, un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> queda "ciego".
+Y sin logs, un SOC queda "ciego".
 
 Por eso:
 
@@ -1133,7 +1133,7 @@ Se convierte en:
 
 `cd /etc`
 
-Si hay varias opciones, presiona `Tab` <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> veces para verlas.
+Si hay varias opciones, presiona `Tab` dos veces para verlas.
 
 **Las flechas del teclado**
 
@@ -1200,7 +1200,7 @@ Borra todo lo que hay escrito en la línea.
 | `Ctrl+W`   | Borrar la palabra anterior.                     |
 | `Ctrl+U`   | Borrar toda la línea.                           |
 
-**El más importante para el <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**El más importante para el SOC**
 
 `Ctrl+C`.
 
@@ -1300,9 +1300,9 @@ Leíste logs.
 
 Y filtramos errores.
 
-Eso es, literalmente, el trabajo básico de un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+Eso es, literalmente, el trabajo básico de un Analista SOC.
 
-**14. Aplicación práctica en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**14. Aplicación práctica en un SOC**
 
 ¿Por qué el analista debe "vivir" en la terminal?
 
@@ -1342,7 +1342,7 @@ Como analista, aprenderás a buscar procesos anómalos.
 
 **Tarea 4 – Responder un incidente rápido**
 
-Imagina una alerta de fuerza bruta <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>.
+Imagina una alerta de fuerza bruta SSH.
 
 El analista:
 
@@ -1350,7 +1350,7 @@ El analista:
 
 2. Filtra los intentos fallidos.
 
-3. Identifica la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> origen.
+3. Identifica la IP origen.
 
 4. Verifica si algún acceso fue exitoso.
 
@@ -1384,23 +1384,23 @@ Un analista que depende de la interfaz gráfica:
 
 - No puede trabajar en servidores sin escritorio.
 
-**La regla del <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**La regla del SOC**
 
-En un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>, el tiempo de respuesta importa.
+En un SOC, el tiempo de respuesta importa.
 
 Y la terminal es la forma más rápida de trabajar.
 
-**15. Lo que esperan de un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1**
+**15. Lo que esperan de un Analista SOC Nivel 1**
 
 Como analista Nivel 1, deberías poder responder estas preguntas:
 
-- ¿Qué es Linux y qué es un <a href="../../GLOSARIO.md#kernel" target="_blank">kernel</a>?
+- ¿Qué es Linux y qué es un kernel?
 
 - ¿Por qué se dice GNU/Linux?
 
-- ¿Qué <a href="../../GLOSARIO.md#distribucion" target="_blank">distribución</a> usarías para un laboratorio de seguridad?
+- ¿Qué distribución usarías para un laboratorio de seguridad?
 
-- ¿Cuál es la diferencia entre <a href="../../GLOSARIO.md#cli" target="_blank">CLI</a> y GUI?
+- ¿Cuál es la diferencia entre CLI y GUI?
 
 - ¿Qué significa el `$` y el `#` en el prompt?
 
@@ -1452,7 +1452,7 @@ Hoy el objetivo es la base.
 
 - Es un sistema operativo.
 
-- Su núcleo se llama **<a href="../../GLOSARIO.md#kernel" target="_blank">kernel</a>**.
+- Su núcleo se llama **kernel**.
 
 - La combinación con las herramientas GNU se llama **GNU/Linux**.
 
@@ -1460,7 +1460,7 @@ Hoy el objetivo es la base.
 
 - Se usa en servidores, IoT, supercomputadoras y Android.
 
-**Por qué es importante para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**Por qué es importante para un SOC**
 
 - Los servidores corporativos corren Linux.
 
@@ -1468,15 +1468,15 @@ Hoy el objetivo es la base.
 
 - Las herramientas de seguridad corren Linux.
 
-- La mayoría de los <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a> y <a href="../../GLOSARIO.md#edr" target="_blank">EDR</a> corren Linux.
+- La mayoría de los SIEM y EDR corren Linux.
 
-**Terminal, <a href="../../GLOSARIO.md#shell" target="_blank">shell</a> y <a href="../../GLOSARIO.md#cli" target="_blank">CLI</a>**
+**Terminal, shell y CLI**
 
 - La terminal es la ventana de texto.
 
-- La <a href="../../GLOSARIO.md#shell" target="_blank">shell</a> interpreta los comandos (la más común es <a href="../../GLOSARIO.md#bash" target="_blank">bash</a>).
+- La shell interpreta los comandos (la más común es bash).
 
-- <a href="../../GLOSARIO.md#cli" target="_blank">CLI</a> es la forma de trabajar con comandos.
+- CLI es la forma de trabajar con comandos.
 
 **Comandos clave**
 
@@ -1511,7 +1511,7 @@ Hoy el objetivo es la base.
 
 - Usuario normal: prompt `$`.
 
-- <a href="../../GLOSARIO.md#root" target="_blank">Root</a>: prompt `#`.
+- Root: prompt `#`.
 
 - `sudo` permite ejecutar comandos como administrador.
 
@@ -1531,22 +1531,22 @@ Hoy el objetivo es la base.
 
 - `/var/log` → los logs del sistema.
 
-- `tail` y `tail -f` → tus mejores amigos en el <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+- `tail` y `tail -f` → tus mejores amigos en el SOC.
 
 **🧠 Conceptos clave para memorizar**
 
 | **Concepto**    | **Debes recordar**                                              |
 |-----------------|-----------------------------------------------------------------|
-| <a href="../../GLOSARIO.md#kernel" target="_blank">Kernel</a>          | El núcleo del sistema operativo; conecta hardware y software.   |
-| <a href="../../GLOSARIO.md#distribucion" target="_blank">Distribución</a>    | Una versión de Linux armada para un propósito (Ubuntu, Kali...).|
-| GNU/Linux       | El <a href="../../GLOSARIO.md#kernel" target="_blank">kernel</a> Linux + las herramientas GNU.                         |
-| <a href="../../GLOSARIO.md#shell" target="_blank">Shell</a>           | El intérprete de comandos.                                      |
-| <a href="../../GLOSARIO.md#bash" target="_blank">bash</a>            | La <a href="../../GLOSARIO.md#shell" target="_blank">shell</a> más común en Linux.                                    |
-| <a href="../../GLOSARIO.md#cli" target="_blank">CLI</a>             | Interfaz de línea de comandos.                                  |
+| Kernel          | El núcleo del sistema operativo; conecta hardware y software.   |
+| Distribución    | Una versión de Linux armada para un propósito (Ubuntu, Kali...).|
+| GNU/Linux       | El kernel Linux + las herramientas GNU.                         |
+| Shell           | El intérprete de comandos.                                      |
+| bash            | La shell más común en Linux.                                    |
+| CLI             | Interfaz de línea de comandos.                                  |
 | GUI             | Interfaz gráfica (ventanas y clics).                            |
 | Prompt `$`      | Indica usuario normal.                                          |
-| Prompt `#`      | Indica usuario <a href="../../GLOSARIO.md#root" target="_blank">root</a>.                                            |
-| <a href="../../GLOSARIO.md#sudo" target="_blank">sudo</a>            | Ejecutar un comando con privilegios de administrador.           |
+| Prompt `#`      | Indica usuario root.                                            |
+| sudo            | Ejecutar un comando con privilegios de administrador.           |
 | man             | Muestra el manual de un comando.                                |
 | pwd             | Muestra el directorio actual ("¿dónde estoy?").                 |
 | ls              | Lista archivos y carpetas.                                      |
@@ -1558,7 +1558,7 @@ Hoy el objetivo es la base.
 | Ctrl+C          | Cancela el comando en ejecución.                                |
 | Tab             | Autocompleta comandos y rutas.                                  |
 
-**🎓 Consejo como tu instructor de <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**🎓 Consejo como tu instructor de SOC**
 
 No memorices los comandos de memoria.
 
@@ -1602,7 +1602,7 @@ No es un capricho de los administradores.
 
 Es la herramienta principal del analista.
 
-Cada día de tu carrera en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> vas a:
+Cada día de tu carrera en un SOC vas a:
 
 - Abrir una terminal.
 
@@ -1618,7 +1618,7 @@ Si no dominas esta base, cada módulo futuro será una batalla.
 
 **Una frase para llevar**
 
-"El Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> no usa Linux porque quiere.
+"El Analista SOC no usa Linux porque quiere.
 
 Lo usa porque es donde ocurre el trabajo real."
 
@@ -1640,15 +1640,15 @@ Bienvenido al mundo de la línea de comandos.
 
 ---
 
-**📘 Carrera de Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**📘 Carrera de Analista SOC**
 
 **Semana 3 – Linux**
 
-**Evaluación – Módulo 14: Introducción a Linux y la Terminal (<a href="../../GLOSARIO.md#cli" target="_blank">CLI</a>)**
+**Evaluación – Módulo 14: Introducción a Linux y la Terminal (CLI)**
 
-**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
+**Nivel:** Principiante → Analista SOC Nivel 1
 
-**Instrucciones:** Responde las siguientes preguntas sin consultar el material de estudio. Este examen está diseñado con el nivel de dificultad de una entrevista técnica para un **Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1**. Encontrarás preguntas teóricas y casos prácticos similares a los que enfrentarás trabajando desde la terminal de un servidor Linux.
+**Instrucciones:** Responde las siguientes preguntas sin consultar el material de estudio. Este examen está diseñado con el nivel de dificultad de una entrevista técnica para un **Analista SOC Nivel 1**. Encontrarás preguntas teóricas y casos prácticos similares a los que enfrentarás trabajando desde la terminal de un servidor Linux.
 
 **Pregunta 1**
 
@@ -1656,7 +1656,7 @@ Bienvenido al mundo de la línea de comandos.
 
 **A)** Un navegador web.
 
-**B)** Un <a href="../../GLOSARIO.md#kernel" target="_blank">kernel</a> (núcleo) de sistema operativo.
+**B)** Un kernel (núcleo) de sistema operativo.
 
 **C)** Una base de datos.
 
@@ -1664,11 +1664,11 @@ Bienvenido al mundo de la línea de comandos.
 
 **Pregunta 2**
 
-¿Cuál es la principal razón por la que un **Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>** necesita Linux?
+¿Cuál es la principal razón por la que un **Analista SOC** necesita Linux?
 
 **A)** Porque las interfaces gráficas son más rápidas.
 
-**B)** Porque los servidores, los logs y las herramientas de seguridad que se analizan en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> corren mayoritariamente sobre Linux.
+**B)** Porque los servidores, los logs y las herramientas de seguridad que se analizan en un SOC corren mayoritariamente sobre Linux.
 
 **C)** Porque Linux es el único sistema que se conecta a Internet.
 
@@ -1676,15 +1676,15 @@ Bienvenido al mundo de la línea de comandos.
 
 **Pregunta 3**
 
-¿Cuál es la diferencia fundamental entre **<a href="../../GLOSARIO.md#cli" target="_blank">CLI</a>** y **GUI**?
+¿Cuál es la diferencia fundamental entre **CLI** y **GUI**?
 
-**A)** <a href="../../GLOSARIO.md#cli" target="_blank">CLI</a> usa el mouse y GUI usa el teclado.
+**A)** CLI usa el mouse y GUI usa el teclado.
 
-**B)** <a href="../../GLOSARIO.md#cli" target="_blank">CLI</a> se controla escribiendo comandos de texto, mientras que GUI se controla con elementos gráficos como ventanas y botones.
+**B)** CLI se controla escribiendo comandos de texto, mientras que GUI se controla con elementos gráficos como ventanas y botones.
 
 **C)** No existe diferencia.
 
-**D)** <a href="../../GLOSARIO.md#cli" target="_blank">CLI</a> solo funciona en Windows.
+**D)** CLI solo funciona en Windows.
 
 **Pregunta 4**
 
@@ -1696,7 +1696,7 @@ Ejecutas el comando `pwd` en la terminal. ¿Qué obtendrás?
 
 **C)** El directorio de trabajo actual (en qué carpeta estás).
 
-**D)** La versión del <a href="../../GLOSARIO.md#kernel" target="_blank">kernel</a>.
+**D)** La versión del kernel.
 
 **Pregunta 5**
 
@@ -1758,11 +1758,11 @@ Quieres ejecutar `apt update`, pero necesitas privilegios de administrador. ¿Qu
 
 **D)** `cat` solo funciona en Windows y `tail` solo en Linux.
 
-**Pregunta 10 (Caso práctico <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>)**
+**Pregunta 10 (Caso práctico SOC)**
 
-Eres el Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> de turno.
+Eres el Analista SOC de turno.
 
-Te piden revisar si un servidor está sufriendo intentos de acceso no autorizados por <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>.
+Te piden revisar si un servidor está sufriendo intentos de acceso no autorizados por SSH.
 
 En el servidor existen los logs del sistema en `/var/log`.
 
@@ -1784,11 +1784,11 @@ En el servidor existen los logs del sistema en `/var/log`.
 
 **Justificación**
 
-Linux es, técnicamente, un **<a href="../../GLOSARIO.md#kernel" target="_blank">kernel</a>**.
+Linux es, técnicamente, un **kernel**.
 
 Es el núcleo del sistema operativo que conecta el hardware con el software.
 
-En la práctica, cuando hablamos de "Linux" nos referimos a **GNU/Linux**, que combina el <a href="../../GLOSARIO.md#kernel" target="_blank">kernel</a> con las herramientas GNU.
+En la práctica, cuando hablamos de "Linux" nos referimos a **GNU/Linux**, que combina el kernel con las herramientas GNU.
 
 **Pregunta 2**
 
@@ -1796,17 +1796,17 @@ En la práctica, cuando hablamos de "Linux" nos referimos a **GNU/Linux**, que c
 
 **Justificación**
 
-Un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> trabaja con Linux porque:
+Un Analista SOC trabaja con Linux porque:
 
 - Los servidores corporativos corren sobre Linux.
 
 - Los logs son archivos de texto plano.
 
-- Herramientas como <a href="../../GLOSARIO.md#wireshark" target="_blank">Wireshark</a>, Suricata, <a href="../../GLOSARIO.md#wazuh" target="_blank">Wazuh</a> y Splunk corren sobre Linux.
+- Herramientas como Wireshark, Suricata, Wazuh y Splunk corren sobre Linux.
 
-- La mayoría de los <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a> y <a href="../../GLOSARIO.md#edr" target="_blank">EDR</a> se despliegan en servidores Linux.
+- La mayoría de los SIEM y EDR se despliegan en servidores Linux.
 
-Es la plataforma donde ocurre el trabajo real del <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+Es la plataforma donde ocurre el trabajo real del SOC.
 
 **Pregunta 3**
 
@@ -1814,11 +1814,11 @@ Es la plataforma donde ocurre el trabajo real del <a href="../../GLOSARIO.md#soc
 
 **Justificación**
 
-- **<a href="../../GLOSARIO.md#cli" target="_blank">CLI</a> (Command Line Interface):** se controla escribiendo comandos de texto.
+- **CLI (Command Line Interface):** se controla escribiendo comandos de texto.
 
 - **GUI (Graphical User Interface):** se controla con elementos gráficos como ventanas, botones y menús.
 
-Los servidores se administran casi siempre por <a href="../../GLOSARIO.md#cli" target="_blank">CLI</a>, porque no tienen escritorio gráfico y porque la <a href="../../GLOSARIO.md#cli" target="_blank">CLI</a> permite automatizar tareas.
+Los servidores se administran casi siempre por CLI, porque no tienen escritorio gráfico y porque la CLI permite automatizar tareas.
 
 **Pregunta 4**
 
@@ -1906,7 +1906,7 @@ Usa `sudo` solo cuando el comando lo necesite, no para todo.
 
 - `tail` muestra solo las **últimas líneas**, que es donde se escriben los eventos más recientes.
 
-Por eso `tail` es tan importante en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>:
+Por eso `tail` es tan importante en un SOC:
 
 los logs nuevos se agregan al final del archivo.
 
@@ -1928,13 +1928,13 @@ La secuencia más razonable es:
 
 `auth.log` es el log donde se registran los accesos y fallos de autenticación.
 
-Es el primer lugar donde se observan intentos de fuerza bruta por <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>.
+Es el primer lugar donde se observan intentos de fuerza bruta por SSH.
 
 Como analista, después deberías:
 
 - Verificar si hubo accesos exitosos.
 
-- Identificar las <a href="../../GLOSARIO.md#ips" target="_blank">IPs</a> origen.
+- Identificar las IPs origen.
 
 - Revisar el patrón de intentos fallidos.
 
@@ -1944,8 +1944,8 @@ La opción **D** es peligrosa: **nunca** borres los logs con `rm`, porque son ev
 
 | **Respuestas Correctas** | **Nivel**                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------|
-| **10/10**                | ⭐ **Excelente.** Ya estás en camino de dominar la terminal de Linux como un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> L1.                    |
+| **10/10**                | ⭐ **Excelente.** Ya estás en camino de dominar la terminal de Linux como un Analista SOC L1.                    |
 | **8–9**                  | 🟢 **Muy buen nivel.** Te manejas bien con los comandos básicos de navegación y archivos.                       |
-| **6–7**                  | 🟡 **Buen progreso.** Repasa los comandos de navegación y la diferencia entre <a href="../../GLOSARIO.md#shell" target="_blank">shell</a> y GUI.                      |
+| **6–7**                  | 🟡 **Buen progreso.** Repasa los comandos de navegación y la diferencia entre shell y GUI.                      |
 | **4–5**                  | 🟠 **Necesitas reforzar algunos conceptos.** Vuelve a practicar `ls`, `cd`, `pwd`, `cat` y `tail` en tu máquina virtual. |
 | **0–3**                  | 🔴 **Es recomendable repasar el módulo completo.** La terminal de Linux será tu herramienta principal durante toda tu carrera como analista. |

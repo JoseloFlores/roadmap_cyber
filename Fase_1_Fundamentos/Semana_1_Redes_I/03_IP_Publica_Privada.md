@@ -2,15 +2,15 @@
 
 **Módulo 1 - Direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Públicas y Privadas**
 
-**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
+**Nivel:** Principiante → Analista SOC Nivel 1
 
 **Objetivos de aprendizaje**
 
 Al finalizar este módulo deberías poder:
 
--   Comprender qué es una dirección <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
+-   Comprender qué es una dirección IP.
 
--   Diferenciar una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública de una privada.
+-   Diferenciar una IP pública de una privada.
 
 -   Entender cuándo se utiliza cada una.
 
@@ -18,15 +18,15 @@ Al finalizar este módulo deberías poder:
 
 -   Aprender las medidas de defensa.
 
--   Relacionar este conocimiento con el trabajo diario de un analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+-   Relacionar este conocimiento con el trabajo diario de un analista SOC.
 
-**1. ¿Qué es una dirección <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>?**
+**1. ¿Qué es una dirección IP?**
 
-Una dirección <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> (Internet Protocol Address) es un identificador único que recibe cada dispositivo conectado a una red.
+Una dirección IP (Internet Protocol Address) es un identificador único que recibe cada dispositivo conectado a una red.
 
 Es equivalente a la dirección de una casa.
 
-Así como el correo necesita una dirección para entregar una carta, Internet necesita una dirección <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> para enviar y recibir información.
+Así como el correo necesita una dirección para entregar una carta, Internet necesita una dirección IP para enviar y recibir información.
 
 Ejemplos:
 
@@ -36,17 +36,17 @@ Ejemplos:
 8.8.8.8
 181.45.221.33
 
-Sin direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>, ningún dispositivo podría comunicarse.
+Sin direcciones IP, ningún dispositivo podría comunicarse.
 
-**2. Dirección <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Pública**
+**2. Dirección IP Pública**
 
 **Definición**
 
-Una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública es la dirección con la que una red aparece en Internet.
+Una IP pública es la dirección con la que una red aparece en Internet.
 
 Es visible para cualquier servidor del mundo.
 
-Cuando ingresas a una página web, esa página puede ver tu <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública.
+Cuando ingresas a una página web, esa página puede ver tu IP pública.
 
 Ejemplo:
 
@@ -76,15 +76,15 @@ Ejemplos:
 
 ✔ Permite la comunicación con Internet.
 
-✔ Puede cambiar (<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> dinámica).
+✔ Puede cambiar (IP dinámica).
 
-✔ Puede ser fija (<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> estática).
+✔ Puede ser fija (IP estática).
 
 **Analogía**
 
 Imagina un edificio.
 
-La <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública sería:
+La IP pública sería:
 
 Av. Corrientes 1234
 
@@ -92,7 +92,7 @@ Todo el mundo conoce esa dirección.
 
 Dentro del edificio hay departamentos.
 
-Esos departamentos serían las <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privadas.
+Esos departamentos serían las IP privadas.
 
 **Ejemplo real**
 
@@ -100,7 +100,7 @@ Casa:
 
 Router
 
-<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Pública
+IP Pública
 
 181.45.25.120
 
@@ -111,7 +111,7 @@ Celular
 Smart TV
 PlayStation
 
-Todos usan la misma <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública para salir a Internet.
+Todos usan la misma IP pública para salir a Internet.
 
 **Ventajas**
 
@@ -131,7 +131,7 @@ Al ser visible también puede ser atacada.
 
 Internet puede ver:
 
-<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Pública
+IP Pública
 
 Puertos abiertos
 
@@ -141,11 +141,11 @@ Ubicación aproximada
 
 Proveedor de Internet
 
-**3. Dirección <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Privada**
+**3. Dirección IP Privada**
 
 **Definición**
 
-Una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privada solo existe dentro de una red local.
+Una IP privada solo existe dentro de una red local.
 
 No puede utilizarse directamente en Internet.
 
@@ -210,9 +210,9 @@ No existe conflicto porque pertenecen a redes distintas.
 
 **Analogía**
 
-Si la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública es la dirección del edificio,
+Si la IP pública es la dirección del edificio,
 
-la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privada sería:
+la IP privada sería:
 
 Departamento 4B
 
@@ -222,7 +222,7 @@ Solo tiene sentido dentro del edificio.
 
 -   Mayor seguridad
 
--   No consumen <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> públicas
+-   No consumen IP públicas
 
 -   Organización interna
 
@@ -232,9 +232,9 @@ Solo tiene sentido dentro del edificio.
 
 Aquí aparece un concepto muy importante.
 
-**<a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> (Network Address Translation)**
+**NAT (Network Address Translation)**
 
-El router traduce todas las <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privadas hacia una única <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública.
+El router traduce todas las IP privadas hacia una única IP pública.
 
 Ejemplo:
 
@@ -254,12 +254,12 @@ Router
 
 Internet
 
-Miles de dispositivos pueden compartir una sola <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública.
+Miles de dispositivos pueden compartir una sola IP pública.
 
 **4. Cuadro comparativo**
 
   ------------------------------------------------------------------------------------------
-  **Característica**                  **<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Pública**   **<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Privada**
+  **Característica**                  **IP Pública**   **IP Privada**
   ----------------------------------- ---------------- -------------------------------------
   Visible desde Internet              Sí               No
 
@@ -277,14 +277,14 @@ Miles de dispositivos pueden compartir una sola <a href="../../GLOSARIO.md#ip" t
 
   Seguridad                           Menor            Mayor
 
-  Necesita <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>                        No               Sí
+  Necesita NAT                        No               Sí
   ------------------------------------------------------------------------------------------
 
 **Similitudes**
 
 Las <a href="../../GLOSARIO.md#dos" target="_blank">dos</a>:
 
--   Son direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
+-   Son direcciones IP.
 
 -   Identifican dispositivos.
 
@@ -292,11 +292,11 @@ Las <a href="../../GLOSARIO.md#dos" target="_blank">dos</a>:
 
 -   Utilizan IPv4 o IPv6.
 
--   Forman parte del protocolo <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
+-   Forman parte del protocolo IP.
 
 **5. ¿Cómo puede aprovecharlas un atacante?**
 
-**Ataques contra <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Pública**
+**Ataques contra IP Pública**
 
 **Escaneo de puertos**
 
@@ -342,7 +342,7 @@ El atacante aprovecha un fallo conocido para obtener acceso.
 
 **Ataques <a href="../../GLOSARIO.md#ddos" target="_blank">DDoS</a>**
 
-Miles de equipos atacan una misma <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública.
+Miles de equipos atacan una misma IP pública.
 
 Resultado:
 
@@ -362,7 +362,7 @@ Obtiene información:
 
 -   Software instalado
 
-**Ataques contra <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Privada**
+**Ataques contra IP Privada**
 
 Generalmente ocurren después de comprometer la red.
 
@@ -396,7 +396,7 @@ Servidores
 
 NAS
 
-Cámaras <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>
+Cámaras IP
 
 Switches
 
@@ -416,7 +416,7 @@ El atacante intercepta el tráfico interno para espiar o modificar comunicacione
 
 **6. ¿Cómo defenderse?**
 
-**Contra ataques a <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Pública**
+**Contra ataques a IP Pública**
 
 -   Firewall bien configurado.
 
@@ -424,7 +424,7 @@ El atacante intercepta el tráfico interno para espiar o modificar comunicacione
 
 -   Actualizar servicios.
 
--   Utilizar <a href="../../GLOSARIO.md#vpn" target="_blank">VPN</a> para accesos remotos.
+-   Utilizar VPN para accesos remotos.
 
 -   <a href="../../GLOSARIO.md#mfa" target="_blank">MFA</a> (autenticación multifactor).
 
@@ -452,9 +452,9 @@ El atacante intercepta el tráfico interno para espiar o modificar comunicacione
 
 -   Inventario actualizado.
 
-**7. Aplicación práctica en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**7. Aplicación práctica en un SOC**
 
-Un analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> trabaja diariamente con direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
+Un analista SOC trabaja diariamente con direcciones IP.
 
 Debe distinguir rápidamente:
 
@@ -476,13 +476,13 @@ Alerta:
 
 181.45.25.120
 
-Intentos <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>
+Intentos SSH
 
 Puerto 22
 
 Interpretación:
 
-La <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública de la empresa está siendo atacada.
+La IP pública de la empresa está siendo atacada.
 
 Acciones:
 
@@ -492,7 +492,7 @@ Acciones:
 
 -   Buscar fuerza bruta.
 
--   Bloquear <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> si corresponde.
+-   Bloquear IP si corresponde.
 
 **Ejemplo 2**
 
@@ -522,7 +522,7 @@ Logs:
 
 Interpretación:
 
-Equipo interno realizando consultas <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> hacia un servidor externo.
+Equipo interno realizando consultas DNS hacia un servidor externo.
 
 Puede ser normal o indicar un comportamiento anómalo, según el contexto.
 
@@ -542,11 +542,11 @@ Interpretación:
 
 Podría indicar comunicación con un servidor de Comando y Control (C2) o un servicio remoto no autorizado. Se debe investigar el proceso que originó la conexión y validar si el destino es legítimo.
 
-**8. Lo que esperan de un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1**
+**8. Lo que esperan de un Analista SOC Nivel 1**
 
 Debes poder responder preguntas como:
 
--   ¿La <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> es pública o privada?
+-   ¿La IP es pública o privada?
 
 -   ¿De qué dispositivo proviene?
 
@@ -566,7 +566,7 @@ Debes poder responder preguntas como:
 
 **Resumen**
 
-**<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Pública**
+**IP Pública**
 
 -   Visible en Internet.
 
@@ -578,30 +578,30 @@ Debes poder responder preguntas como:
 
 -   Requiere protección mediante firewalls, actualizaciones y monitoreo.
 
-**<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Privada**
+**IP Privada**
 
 -   Solo funciona dentro de la red local.
 
 -   No es accesible directamente desde Internet.
 
--   Asignada normalmente por el router mediante <a href="../../GLOSARIO.md#dhcp" target="_blank">DHCP</a>.
+-   Asignada normalmente por el router mediante DHCP.
 
 -   Facilita la organización y seguridad de la red.
 
--   Utiliza <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> para comunicarse con Internet.
+-   Utiliza NAT para comunicarse con Internet.
 
 **Conceptos clave para memorizar**
 
   ------------------------------------------------------------------------
   **Concepto**         **Debes recordar**
   -------------------- ---------------------------------------------------
-  <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Pública           Identifica la red en Internet.
+  IP Pública           Identifica la red en Internet.
 
-  <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Privada           Identifica un dispositivo dentro de la red local.
+  IP Privada           Identifica un dispositivo dentro de la red local.
 
-  <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>                  Traduce <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privadas a una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública.
+  NAT                  Traduce IP privadas a una IP pública.
 
-  <a href="../../GLOSARIO.md#dhcp" target="_blank">DHCP</a>                 Asigna automáticamente <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privadas.
+  DHCP                 Asigna automáticamente IP privadas.
 
   Firewall             Filtra el tráfico de red.
 
@@ -612,9 +612,9 @@ Debes poder responder preguntas como:
   Movimiento lateral   Propagación del atacante entre equipos internos.
   ------------------------------------------------------------------------
 
-**💡 Consejo como si estuviera formando a un futuro analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**💡 Consejo como si estuviera formando a un futuro analista SOC**
 
-No memorices solo las definiciones. Cuando veas una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> en un log, acostúmbrate a preguntarte automáticamente:
+No memorices solo las definiciones. Cuando veas una IP en un log, acostúmbrate a preguntarte automáticamente:
 
 1.  ¿Es pública o privada?
 
@@ -628,17 +628,17 @@ No memorices solo las definiciones. Cuando veas una <a href="../../GLOSARIO.md#i
 
 6.  Si no es normal, ¿qué evidencia necesito para confirmar si es un incidente?
 
-Ese hábito mental es el que diferencia a alguien que conoce teoría de un analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> capaz de investigar y responder incidentes con criterio.
+Ese hábito mental es el que diferencia a alguien que conoce teoría de un analista SOC capaz de investigar y responder incidentes con criterio.
 
-**Evaluación -- Módulo 1: Direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Públicas y Privadas**
+**Evaluación -- Módulo 1: Direcciones IP Públicas y Privadas**
 
-**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
+**Nivel:** Principiante → Analista SOC Nivel 1
 
 **Instrucciones:** Selecciona una única respuesta correcta para cada pregunta. Al finalizar, compara tus respuestas con la sección de soluciones y lee la justificación.
 
 **Pregunta 1**
 
-¿Cuál de las siguientes afirmaciones describe mejor una dirección <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública?
+¿Cuál de las siguientes afirmaciones describe mejor una dirección IP pública?
 
 **A)** Solo puede utilizarse dentro de una red local.
 
@@ -646,11 +646,11 @@ Ese hábito mental es el que diferencia a alguien que conoce teoría de un anali
 
 **C)** Es asignada únicamente por un switch.
 
-**D)** Solo funciona cuando existe un servidor <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>.
+**D)** Solo funciona cuando existe un servidor DNS.
 
 **Pregunta 2**
 
-¿Cuál de las siguientes direcciones pertenece a un rango de <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privadas?
+¿Cuál de las siguientes direcciones pertenece a un rango de IP privadas?
 
 **A)** 8.8.8.8
 
@@ -662,11 +662,11 @@ Ese hábito mental es el que diferencia a alguien que conoce teoría de un anali
 
 **Pregunta 3**
 
-¿Qué dispositivo suele asignar automáticamente las direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privadas dentro de una vivienda?
+¿Qué dispositivo suele asignar automáticamente las direcciones IP privadas dentro de una vivienda?
 
 **A)** Firewall
 
-**B)** Router mediante <a href="../../GLOSARIO.md#dhcp" target="_blank">DHCP</a>
+**B)** Router mediante DHCP
 
 **C)** Servidor Web
 
@@ -674,19 +674,19 @@ Ese hábito mental es el que diferencia a alguien que conoce teoría de un anali
 
 **Pregunta 4**
 
-¿Qué tecnología permite que varios dispositivos con <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privada compartan una única <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública para acceder a Internet?
+¿Qué tecnología permite que varios dispositivos con IP privada compartan una única IP pública para acceder a Internet?
 
-**A)** <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>
+**A)** DNS
 
 **B)** <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>
 
-**C)** <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>
+**C)** NAT
 
-**D)** <a href="../../GLOSARIO.md#ftp" target="_blank">FTP</a>
+**D)** FTP
 
 **Pregunta 5**
 
-Un atacante realiza un escaneo sobre la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública de una empresa. ¿Qué busca principalmente?
+Un atacante realiza un escaneo sobre la IP pública de una empresa. ¿Qué busca principalmente?
 
 **A)** El fondo de pantalla de los usuarios.
 
@@ -698,7 +698,7 @@ Un atacante realiza un escaneo sobre la <a href="../../GLOSARIO.md#ip" target="_
 
 **Pregunta 6**
 
-¿Cuál de las siguientes direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> es pública?
+¿Cuál de las siguientes direcciones IP es pública?
 
 **A)** 10.20.30.40
 
@@ -710,7 +710,7 @@ Un atacante realiza un escaneo sobre la <a href="../../GLOSARIO.md#ip" target="_
 
 **Pregunta 7**
 
-En un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> se observa el siguiente registro:
+En un SOC se observa el siguiente registro:
 
 192.168.1.25
 ↓
@@ -731,7 +731,7 @@ con cientos de conexiones en pocos segundos.
 
 **Pregunta 8**
 
-¿Cuál de las siguientes medidas ayuda a proteger una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública expuesta a Internet?
+¿Cuál de las siguientes medidas ayuda a proteger una IP pública expuesta a Internet?
 
 **A)** Desactivar el firewall.
 
@@ -743,7 +743,7 @@ con cientos de conexiones en pocos segundos.
 
 **Pregunta 9**
 
-¿Cuál de los siguientes rangos corresponde completamente a direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privadas?
+¿Cuál de los siguientes rangos corresponde completamente a direcciones IP privadas?
 
 **A)** 8.0.0.0 -- 8.255.255.255
 
@@ -755,7 +755,7 @@ con cientos de conexiones en pocos segundos.
 
 **Pregunta 10**
 
-Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> recibes una alerta indicando múltiples intentos de conexión <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a> contra la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública de la empresa.
+Como analista SOC recibes una alerta indicando múltiples intentos de conexión SSH contra la IP pública de la empresa.
 
 ¿Cuál sería tu primera acción?
 
@@ -765,7 +765,7 @@ Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> recibes un
 
 **C)** Apagar todos los servidores inmediatamente.
 
-**D)** Cambiar todas las direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> de la empresa.
+**D)** Cambiar todas las direcciones IP de la empresa.
 
 **Respuestas y justificación**
 
@@ -774,7 +774,7 @@ Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> recibes un
 ✅ **Respuesta correcta: B**
 
 **Justificación:**
-Una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública es visible desde Internet y permite que otros equipos se comuniquen con la red o el dispositivo que la posee. Es la \"cara visible\" de una organización o de un hogar en Internet.
+Una IP pública es visible desde Internet y permite que otros equipos se comuniquen con la red o el dispositivo que la posee. Es la \"cara visible\" de una organización o de un hogar en Internet.
 
 **Pregunta 2**
 
@@ -790,14 +790,14 @@ Las demás son direcciones públicas.
 ✅ **Respuesta correcta: B**
 
 **Justificación:**
-En la mayoría de los hogares y pequeñas empresas, el **router** ejecuta un servicio **<a href="../../GLOSARIO.md#dhcp" target="_blank">DHCP</a>**, que asigna automáticamente las <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privadas a los dispositivos conectados.
+En la mayoría de los hogares y pequeñas empresas, el **router** ejecuta un servicio **DHCP**, que asigna automáticamente las IP privadas a los dispositivos conectados.
 
 **Pregunta 4**
 
 ✅ **Respuesta correcta: C**
 
 **Justificación:**
-**<a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> (Network Address Translation)** traduce las direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privadas en una dirección <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública, permitiendo que múltiples dispositivos compartan una única conexión a Internet.
+**NAT (Network Address Translation)** traduce las direcciones IP privadas en una dirección IP pública, permitiendo que múltiples dispositivos compartan una única conexión a Internet.
 
 **Pregunta 5**
 
@@ -847,14 +847,14 @@ El rango **10.0.0.0 -- 10.255.255.255** es uno de los tres bloques reservados pa
 ✅ **Respuesta correcta: B**
 
 **Justificación:**
-Un analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> debe **investigar antes de actuar**. Revisar los registros, confirmar si se trata de un ataque de fuerza bruta y verificar la efectividad de los controles (como el firewall) son pasos iniciales adecuados. Apagar servidores o cambiar <a href="../../GLOSARIO.md#ips" target="_blank">IPs</a> sin evidencia suele generar más problemas que soluciones.
+Un analista SOC debe **investigar antes de actuar**. Revisar los registros, confirmar si se trata de un ataque de fuerza bruta y verificar la efectividad de los controles (como el firewall) son pasos iniciales adecuados. Apagar servidores o cambiar IPs sin evidencia suele generar más problemas que soluciones.
 
 **Autoevaluación**
 
 **9--10 respuestas correctas:** ⭐ Excelente. Tienes una buena comprensión de los conceptos básicos y estás listo para avanzar a temas como puertos, protocolos <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#udp" target="_blank">UDP</a> y análisis de tráfico.
 
-**7--8 respuestas correctas:** 👍 Buen trabajo. Repasa especialmente <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>, los rangos de <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privadas y el rol de las <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> públicas en un entorno <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+**7--8 respuestas correctas:** 👍 Buen trabajo. Repasa especialmente NAT, los rangos de IP privadas y el rol de las IP públicas en un entorno SOC.
 
 **5--6 respuestas correctas:** 📚 Vas por buen camino, pero conviene reforzar los fundamentos antes de continuar con conceptos más avanzados.
 
-**0--4 respuestas correctas:** 🔄 Te recomiendo volver a leer el módulo y repetir el cuestionario. Una base sólida sobre direccionamiento <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> será clave para interpretar logs, alertas y tráfico de red en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+**0--4 respuestas correctas:** 🔄 Te recomiendo volver a leer el módulo y repetir el cuestionario. Una base sólida sobre direccionamiento IP será clave para interpretar logs, alertas y tráfico de red en un SOC.

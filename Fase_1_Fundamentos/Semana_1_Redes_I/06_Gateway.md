@@ -6,29 +6,29 @@
 
 Al finalizar este módulo deberías poder:
 
--   Comprender qué es un <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>.
+-   Comprender qué es un Gateway.
 
 -   Entender por qué existe.
 
 -   Saber cuándo interviene en una comunicación.
 
--   Comprender la relación entre <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>, Máscara y <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>.
+-   Comprender la relación entre <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>, Máscara y Gateway.
 
--   Entender cómo aparece en los logs de un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+-   Entender cómo aparece en los logs de un SOC.
 
--   Identificar ataques relacionados con el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>.
+-   Identificar ataques relacionados con el Gateway.
 
 -   Saber cómo defenderlo.
 
-**1. ¿Qué significa <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>?**
+**1. ¿Qué significa Gateway?**
 
-La palabra **<a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>** significa literalmente:
+La palabra **Gateway** significa literalmente:
 
 **Puerta de Enlace**
 
 Es el dispositivo que permite salir de una red para llegar a otra.
 
-Sin <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>, una computadora solo podría comunicarse con los equipos que pertenecen a su misma subred.
+Sin Gateway, una computadora solo podría comunicarse con los equipos que pertenecen a su misma subred.
 
 **Analogía**
 
@@ -40,7 +40,7 @@ Puedes caminar por las calles de tu barrio sin problema.
 
 Pero si quieres ir a otra ciudad necesitas tomar una autopista.
 
-El acceso a esa autopista sería el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>.
+El acceso a esa autopista sería el Gateway.
 
 Mi Casa
 
@@ -50,7 +50,7 @@ Calles del barrio
 
 ↓
 
-<a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>
+Gateway
 
 ↓
 
@@ -76,7 +76,7 @@ Los <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> pertenecen a la mism
 
 La PC envía la información directamente.
 
-El <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> no participa.
+El Gateway no participa.
 
 Pero ahora quieres acceder a:
 
@@ -92,7 +92,7 @@ Mi PC
 
 ↓
 
-<a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>
+Gateway
 
 ↓
 
@@ -106,9 +106,9 @@ Internet
 
 Google
 
-Sin <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> nunca llegarías a Internet.
+Sin Gateway nunca llegarías a Internet.
 
-**2. ¿Dónde está el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>?**
+**2. ¿Dónde está el Gateway?**
 
 En una casa normalmente es:
 
@@ -120,7 +120,7 @@ Router
 
 192.168.1.1
 
-Todas las computadoras utilizan esa dirección como <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>.
+Todas las computadoras utilizan esa dirección como Gateway.
 
 En una empresa puede ser:
 
@@ -136,7 +136,7 @@ En una empresa puede ser:
 
 Supongamos una PC.
 
-<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>
+IP
 
 192.168.10.25
 
@@ -144,7 +144,7 @@ Máscara
 
 255.255.255.0
 
-<a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>
+Gateway
 
 192.168.10.1
 
@@ -170,7 +170,7 @@ Entonces piensa:
 
 \"Ese equipo no pertenece a mi red.\"
 
-Por lo tanto envía el paquete al <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>.
+Por lo tanto envía el paquete al Gateway.
 
 **¿Cómo decide la PC?**
 
@@ -194,7 +194,7 @@ Si la respuesta es:
 
 ↓
 
-Envía al <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>.
+Envía al Gateway.
 
 Este proceso ocurre millones de veces por segundo en Internet.
 
@@ -204,7 +204,7 @@ Supongamos:
 
 Mi PC
 
-<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>
+IP
 
 192.168.1.25
 
@@ -212,7 +212,7 @@ Máscara
 
 255.255.255.0
 
-<a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>
+Gateway
 
 192.168.1.1
 
@@ -222,13 +222,13 @@ Quiero comunicarme con:
 
 La PC compara.
 
-Los <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> pertenecen a:
+Los dos pertenecen a:
 
 192.168.1
 
 Resultado:
 
-No utiliza el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>.
+No utiliza el Gateway.
 
 Habla directamente.
 
@@ -236,7 +236,7 @@ Ahora quiero acceder a:
 
 172.217.172.46
 
-(Una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública de un servicio de Google).
+(Una IP pública de un servicio de Google).
 
 Mi computadora compara.
 
@@ -254,7 +254,7 @@ Mi PC
 
 ↓
 
-<a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>
+Gateway
 
 ↓
 
@@ -268,9 +268,9 @@ Internet
 
 Google
 
-**5. ¿Qué hace realmente el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>?**
+**5. ¿Qué hace realmente el Gateway?**
 
-El <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> recibe el paquete.
+El Gateway recibe el paquete.
 
 Luego analiza:
 
@@ -292,9 +292,9 @@ Después decide:
 
 -   Registrar el evento en un log.
 
-**6. <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> y Firewall**
+**6. Gateway y Firewall**
 
-En muchas empresas el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> y el Firewall son el mismo equipo.
+En muchas empresas el Gateway y el Firewall son el mismo equipo.
 
 Por ejemplo:
 
@@ -310,7 +310,7 @@ Internet
 
 El Firewall actúa como:
 
--   <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>.
+-   Gateway.
 
 -   Router.
 
@@ -328,9 +328,9 @@ El Firewall verifica:
 
 -   ¿Debe registrarse?
 
-**7. <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> y <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>**
+**7. Gateway y <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>**
 
-Recordemos el <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>.
+Recordemos el NAT.
 
 PC
 
@@ -338,21 +338,21 @@ PC
 
 ↓
 
-<a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>
+Gateway
 
 ↓
 
 181.25.30.40
 
-(<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Pública)
+(IP Pública)
 
 ↓
 
 Internet
 
-El <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> cambia la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privada por la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública mediante <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> para que el tráfico pueda viajar por Internet y regresar correctamente.
+El Gateway cambia la IP privada por la IP pública mediante NAT para que el tráfico pueda viajar por Internet y regresar correctamente.
 
-**8. ¿Cómo aparece en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?**
+**8. ¿Cómo aparece en un SOC?**
 
 En un <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a> es muy común ver registros como:
 
@@ -362,7 +362,7 @@ Origen
 
 ↓
 
-<a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>
+Gateway
 
 192.168.10.1
 
@@ -386,9 +386,9 @@ Como analista debes interpretar:
 
 -   Equipo interno.
 
--   Sale por el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>.
+-   Sale por el Gateway.
 
--   Consulta <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>.
+-   Consulta DNS.
 
 -   Parece tráfico normal.
 
@@ -398,7 +398,7 @@ Otro ejemplo:
 
 ↓
 
-<a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>
+Gateway
 
 ↓
 
@@ -408,35 +408,35 @@ Otro ejemplo:
 
 Puerto 4444
 
-Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> pensarías:
+Como analista SOC pensarías:
 
 -   ¿Qué proceso inició la conexión?
 
--   ¿El usuario debería conectarse a esa <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>?
+-   ¿El usuario debería conectarse a esa IP?
 
 -   ¿El puerto 4444 está autorizado?
 
 -   ¿Podría ser un malware comunicándose con un servidor C2?
 
-**9. ¿Cómo puede atacar un ciberdelincuente el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>?**
+**9. ¿Cómo puede atacar un ciberdelincuente el Gateway?**
 
-**Ataque 1 -- Cambiar el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>**
+**Ataque 1 -- Cambiar el Gateway**
 
 Un malware modifica la configuración de red.
 
 Antes:
 
-<a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>
+Gateway
 
 192.168.1.1
 
 Después:
 
-<a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>
+Gateway
 
 192.168.1.200
 
-El atacante controla esa <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
+El atacante controla esa IP.
 
 Todo el tráfico pasa por él.
 
@@ -444,9 +444,9 @@ Esto facilita un ataque de **Man-in-the-Middle (<a href="../../GLOSARIO.md#mitm"
 
 **Ataque 2 -- <a href="../../GLOSARIO.md#arp" target="_blank">ARP</a> Spoofing**
 
-El atacante envía respuestas <a href="../../GLOSARIO.md#arp" target="_blank">ARP</a> falsas diciendo:
+El atacante envía respuestas ARP falsas diciendo:
 
-\"Yo soy el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>.\"
+\"Yo soy el Gateway.\"
 
 Las víctimas comienzan a enviarle el tráfico.
 
@@ -460,7 +460,7 @@ El atacante puede:
 
 **Ataque 3 -- Comprometer el Router o Firewall**
 
-Si el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> tiene una vulnerabilidad o credenciales débiles, un atacante podría:
+Si el Gateway tiene una vulnerabilidad o credenciales débiles, un atacante podría:
 
 -   Cambiar reglas de firewall.
 
@@ -470,9 +470,9 @@ Si el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> tiene una 
 
 -   Capturar información.
 
-Por eso proteger el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> es crítico.
+Por eso proteger el Gateway es crítico.
 
-**10. ¿Cómo defender el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>?**
+**10. ¿Cómo defender el Gateway?**
 
 -   Cambiar las contraseñas por defecto.
 
@@ -484,13 +484,13 @@ Por eso proteger el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway<
 
 -   Monitorear cambios en la configuración.
 
--   Revisar periódicamente las tablas <a href="../../GLOSARIO.md#arp" target="_blank">ARP</a> y de rutas.
+-   Revisar periódicamente las tablas ARP y de rutas.
 
 -   Utilizar ACL y reglas de firewall con el principio de menor privilegio.
 
--   Registrar eventos y enviarlos al <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>.
+-   Registrar eventos y enviarlos al SIEM.
 
-**11. Aplicación práctica en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**11. Aplicación práctica en un SOC**
 
 **Ejemplo 1**
 
@@ -500,7 +500,7 @@ Equipo
 
 192.168.10.50
 
-<a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>
+Gateway
 
 192.168.10.1
 
@@ -514,13 +514,13 @@ Puerto
 
 **Interpretación:**
 
-Consulta <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> saliendo por el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>. A priori es un comportamiento normal.
+Consulta DNS saliendo por el Gateway. A priori es un comportamiento normal.
 
 **Ejemplo 2**
 
 **Alerta:**
 
-<a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>
+Gateway
 
 192.168.10.1
 
@@ -530,7 +530,7 @@ Miles de intentos <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>
 
 **Interpretación:**
 
-El <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> está siendo atacado.
+El Gateway está siendo atacado.
 
 **Acciones:**
 
@@ -540,7 +540,7 @@ El <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> está siendo 
 
 -   Comprobar si las credenciales administrativas fueron comprometidas.
 
--   Evaluar el bloqueo de las <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> de origen.
+-   Evaluar el bloqueo de las IP de origen.
 
 **Ejemplo 3**
 
@@ -548,11 +548,11 @@ El <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> está siendo 
 
 Varios equipos
 
-<a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> configurado:
+Gateway configurado:
 
 192.168.10.200
 
-El <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> esperado era:
+El Gateway esperado era:
 
 192.168.10.1
 
@@ -562,7 +562,7 @@ Es una alerta crítica. Puede indicar una modificación maliciosa de la configur
 
 **Resumen**
 
-**<a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>**
+**Gateway**
 
 -   Es la puerta de salida hacia otras redes.
 
@@ -572,39 +572,39 @@ Es una alerta crítica. Puede indicar una modificación maliciosa de la configur
 
 -   Es esencial para acceder a Internet.
 
--   Suele realizar <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> y aplicar políticas de seguridad.
+-   Suele realizar NAT y aplicar políticas de seguridad.
 
 **Conceptos clave para memorizar**
 
   -------------------------------------------------------------------------------
   **Concepto**     **Debes recordar**
   ---------------- --------------------------------------------------------------
-  <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>          Puerta de enlace hacia otras redes.
+  Gateway          Puerta de enlace hacia otras redes.
 
-  Mismo segmento   La comunicación suele ser directa, sin pasar por el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>.
+  Mismo segmento   La comunicación suele ser directa, sin pasar por el Gateway.
 
-  Otra subred      El tráfico se envía al <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>.
+  Otra subred      El tráfico se envía al Gateway.
 
-  <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>              El <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> puede traducir <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privadas a públicas.
+  NAT              El Gateway puede traducir IP privadas a públicas.
 
-  Firewall         En muchas empresas también cumple el rol de <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>.
+  Firewall         En muchas empresas también cumple el rol de Gateway.
 
-  <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>              El <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> es una fuente clave de logs y alertas.
+  SOC              El Gateway es una fuente clave de logs y alertas.
   -------------------------------------------------------------------------------
 
-**💡 Consejo como tu entrenador para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**💡 Consejo como tu entrenador para un SOC**
 
 Hay una pregunta que debes hacerte **cada vez que veas un log de red**:
 
-**\"¿Ese paquete necesitó pasar por el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> o no?\"**
+**\"¿Ese paquete necesitó pasar por el Gateway o no?\"**
 
 Si la respuesta es **no**, probablemente la comunicación fue dentro de la misma subred.
 
-Si la respuesta es **sí**, entonces el tráfico cruzó un límite entre redes, y allí es donde suelen actuar el router o el firewall. Eso significa que probablemente existan **logs, reglas de filtrado, traducción <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> o políticas de seguridad** que puedes revisar durante una investigación.
+Si la respuesta es **sí**, entonces el tráfico cruzó un límite entre redes, y allí es donde suelen actuar el router o el firewall. Eso significa que probablemente existan **logs, reglas de filtrado, traducción NAT o políticas de seguridad** que puedes revisar durante una investigación.
 
-Ese hábito mental es muy valioso en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> porque te ayuda a reconstruir el recorrido del tráfico y a entender **dónde buscar evidencias** cuando investigas un incidente.
+Ese hábito mental es muy valioso en un SOC porque te ayuda a reconstruir el recorrido del tráfico y a entender **dónde buscar evidencias** cuando investigas un incidente.
 
-**Evaluación -- Módulo Complementario: <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> (Nivel <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>)**
+**Evaluación -- Módulo Complementario: Gateway (Nivel SOC)**
 
 **10 preguntas Multiple Choice**
 
@@ -612,9 +612,9 @@ Ese hábito mental es muy valioso en un <a href="../../GLOSARIO.md#soc" target="
 
 **Pregunta 1**
 
-¿Qué es un <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>?
+¿Qué es un Gateway?
 
-**A)** Un servidor <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>.
+**A)** Un servidor DNS.
 
 **B)** La puerta de enlace que permite comunicar una red con otras redes.
 
@@ -624,7 +624,7 @@ Ese hábito mental es muy valioso en un <a href="../../GLOSARIO.md#soc" target="
 
 **Pregunta 2**
 
-En una red doméstica, el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> suele ser:
+En una red doméstica, el Gateway suele ser:
 
 **A)** La impresora.
 
@@ -636,7 +636,7 @@ En una red doméstica, el <a href="../../GLOSARIO.md#gateway" target="_blank">Ga
 
 **Pregunta 3**
 
-¿Cuándo utiliza una computadora el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>?
+¿Cuándo utiliza una computadora el Gateway?
 
 **A)** Siempre.
 
@@ -650,7 +650,7 @@ En una red doméstica, el <a href="../../GLOSARIO.md#gateway" target="_blank">Ga
 
 Una PC tiene la siguiente configuración:
 
-<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>
+IP
 
 192.168.1.20
 
@@ -658,7 +658,7 @@ Máscara
 
 255.255.255.0
 
-<a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>
+Gateway
 
 192.168.1.1
 
@@ -668,7 +668,7 @@ Quiere comunicarse con:
 
 ¿Qué ocurre?
 
-**A)** Utiliza el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>.
+**A)** Utiliza el Gateway.
 
 **B)** Se comunica directamente con el destino.
 
@@ -684,19 +684,19 @@ La misma PC ahora quiere acceder a:
 
 ¿Qué hace?
 
-**A)** Envía el tráfico al <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>.
+**A)** Envía el tráfico al Gateway.
 
 **B)** Se comunica directamente.
 
-**C)** Cambia su dirección <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
+**C)** Cambia su dirección IP.
 
 **D)** Utiliza el <a href="../../GLOSARIO.md#broadcast" target="_blank">Broadcast</a>.
 
 **Pregunta 6**
 
-¿Qué función adicional suele realizar un <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> empresarial?
+¿Qué función adicional suele realizar un Gateway empresarial?
 
-**A)** Traducir direcciones mediante <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>.
+**A)** Traducir direcciones mediante NAT.
 
 **B)** Fabricar direcciones <a href="../../GLOSARIO.md#mac" target="_blank">MAC</a>.
 
@@ -706,21 +706,21 @@ La misma PC ahora quiere acceder a:
 
 **Pregunta 7**
 
-¿Qué ataque intenta hacer que los equipos crean que el atacante es el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>?
+¿Qué ataque intenta hacer que los equipos crean que el atacante es el Gateway?
 
 **A)** SQL Injection.
 
 **B)** Phishing.
 
-**C)** <a href="../../GLOSARIO.md#arp" target="_blank">ARP</a> Spoofing.
+**C)** ARP Spoofing.
 
 **D)** XSS.
 
 **Pregunta 8**
 
-Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> observas:
+Como analista SOC observas:
 
-<a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> configurado
+Gateway configurado
 
 192.168.1.200
 
@@ -740,7 +740,7 @@ Valor esperado
 
 **Pregunta 9**
 
-¿Por qué el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> es una fuente importante de información para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?
+¿Por qué el Gateway es una fuente importante de información para un SOC?
 
 **A)** Porque normalmente registra el tráfico que entra y sale de la red.
 
@@ -748,15 +748,15 @@ Valor esperado
 
 **C)** Porque almacena los documentos de la empresa.
 
-**D)** Porque crea direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> públicas.
+**D)** Porque crea direcciones IP públicas.
 
 **Pregunta 10**
 
-¿Cuál sería la primera pregunta que debería hacerse un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> al investigar una comunicación de red?
+¿Cuál sería la primera pregunta que debería hacerse un Analista SOC al investigar una comunicación de red?
 
 **A)** ¿Qué marca tiene la computadora?
 
-**B)** ¿El tráfico necesitó pasar por el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>?
+**B)** ¿El tráfico necesitó pasar por el Gateway?
 
 **C)** ¿Qué color tiene el cable de red?
 
@@ -766,62 +766,62 @@ Valor esperado
 
 **1) ✅ B**
 
-El <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> conecta una red con otras redes y actúa como punto de salida hacia Internet u otras subredes.
+El Gateway conecta una red con otras redes y actúa como punto de salida hacia Internet u otras subredes.
 
 **2) ✅ B**
 
-En la mayoría de los hogares, el router Wi-Fi cumple la función de <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>.
+En la mayoría de los hogares, el router Wi-Fi cumple la función de Gateway.
 
 **3) ✅ B**
 
-El <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> solo interviene cuando el destino está fuera de la subred local.
+El Gateway solo interviene cuando el destino está fuera de la subred local.
 
 **4) ✅ B**
 
-Ambos equipos pertenecen a la red **192.168.1.0/24**, por lo que se comunican directamente sin utilizar el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>.
+Ambos equipos pertenecen a la red **192.168.1.0/24**, por lo que se comunican directamente sin utilizar el Gateway.
 
 **5) ✅ A**
 
-La dirección **8.8.8.8** pertenece a otra red, por lo que la PC envía el tráfico al <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>.
+La dirección **8.8.8.8** pertenece a otra red, por lo que la PC envía el tráfico al Gateway.
 
 **6) ✅ A**
 
-Además de enrutar tráfico, muchos Gateways realizan **<a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>**, permitiendo que varias <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privadas compartan una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública.
+Además de enrutar tráfico, muchos Gateways realizan **NAT**, permitiendo que varias IP privadas compartan una IP pública.
 
 **7) ✅ C**
 
-El **<a href="../../GLOSARIO.md#arp" target="_blank">ARP</a> Spoofing** engaña a los equipos haciéndoles creer que el atacante es el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>, facilitando ataques de tipo **Man-in-the-Middle (<a href="../../GLOSARIO.md#mitm" target="_blank">MitM</a>)**.
+El **ARP Spoofing** engaña a los equipos haciéndoles creer que el atacante es el Gateway, facilitando ataques de tipo **Man-in-the-Middle (MitM)**.
 
 **8) ✅ B**
 
-Un cambio inesperado del <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> puede indicar una configuración maliciosa o un intento de interceptar el tráfico.
+Un cambio inesperado del Gateway puede indicar una configuración maliciosa o un intento de interceptar el tráfico.
 
 **9) ✅ A**
 
-El <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> suele ser un router o firewall que registra conexiones, reglas aplicadas, bloqueos y traducciones <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>, convirtiéndose en una fuente clave de evidencia para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+El Gateway suele ser un router o firewall que registra conexiones, reglas aplicadas, bloqueos y traducciones NAT, convirtiéndose en una fuente clave de evidencia para un SOC.
 
 **10) ✅ B**
 
 La primera pregunta ayuda a orientar la investigación:
 
--   **Si el tráfico no pasó por el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>**, probablemente ocurrió dentro de la misma subred.
+-   **Si el tráfico no pasó por el Gateway**, probablemente ocurrió dentro de la misma subred.
 
--   **Si pasó por el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>**, es posible revisar logs del router o firewall, reglas de seguridad, <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> y eventos registrados.
+-   **Si pasó por el Gateway**, es posible revisar logs del router o firewall, reglas de seguridad, NAT y eventos registrados.
 
-**🎯 Consejo como tu instructor de <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**🎯 Consejo como tu instructor de SOC**
 
-Hasta este punto ya dominas los fundamentos de redes que más se utilizan en un **<a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1**:
+Hasta este punto ya dominas los fundamentos de redes que más se utilizan en un **SOC Nivel 1**:
 
--   ✅ Direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> públicas y privadas.
+-   ✅ Direcciones IP públicas y privadas.
 
 -   ✅ Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a>.
 
--   ✅ Modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
+-   ✅ Modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/IP.
 
 -   ✅ Máscaras de subred.
 
 -   ✅ Subredes.
 
--   ✅ <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>.
+-   ✅ Gateway.
 
-A partir del siguiente módulo, te recomiendo comenzar con **Puertos y Protocolos de Red (<a href="../../GLOSARIO.md#http" target="_blank">HTTP</a>, <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>, <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>, <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>, <a href="../../GLOSARIO.md#ftp" target="_blank">FTP</a>, <a href="../../GLOSARIO.md#smtp" target="_blank">SMTP</a>, RDP, SMB, etc.)**. Es uno de los temas que más aparece en entrevistas técnicas para <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> y en las alertas reales de herramientas como **Splunk**, **Microsoft Sentinel**, **QRadar** o **Elastic <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>**. Ahí empezarás a conectar toda la teoría de redes con incidentes reales.
+A partir del siguiente módulo, te recomiendo comenzar con **Puertos y Protocolos de Red (<a href="../../GLOSARIO.md#http" target="_blank">HTTP</a>, <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>, DNS, SSH, <a href="../../GLOSARIO.md#ftp" target="_blank">FTP</a>, <a href="../../GLOSARIO.md#smtp" target="_blank">SMTP</a>, RDP, SMB, etc.)**. Es uno de los temas que más aparece en entrevistas técnicas para SOC y en las alertas reales de herramientas como **Splunk**, **Microsoft Sentinel**, **QRadar** o **Elastic SIEM**. Ahí empezarás a conectar toda la teoría de redes con incidentes reales.

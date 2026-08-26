@@ -2,7 +2,7 @@
 
 **Módulo 6 - <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> (Network Address Translation)**
 
-**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
+**Nivel:** Principiante → Analista SOC Nivel 1
 
 **Antes de comenzar:** Ya dominas:
 
@@ -10,7 +10,7 @@
 
 -   ✅ Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a>
 
--   ✅ Modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>
+-   ✅ Modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/IP
 
 -   ✅ Máscaras de Subred
 
@@ -18,47 +18,47 @@
 
 -   ✅ <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>
 
-Este módulo conecta todos esos conocimientos. **<a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>** es una tecnología fundamental para entender cómo una red privada puede comunicarse con Internet y cómo un analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> interpreta el tráfico que entra y sale de una organización.
+Este módulo conecta todos esos conocimientos. **NAT** es una tecnología fundamental para entender cómo una red privada puede comunicarse con Internet y cómo un analista SOC interpreta el tráfico que entra y sale de una organización.
 
 **Objetivos de aprendizaje**
 
 Al finalizar este módulo podrás:
 
--   Comprender qué es <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>.
+-   Comprender qué es NAT.
 
 -   Entender por qué fue creado.
 
 -   Saber cómo funciona internamente.
 
--   Diferenciar los tipos de <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>.
+-   Diferenciar los tipos de NAT.
 
--   Comprender su relación con el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>.
+-   Comprender su relación con el Gateway.
 
 -   Saber cómo aparece en un Firewall y en un <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>.
 
 -   Entender cómo puede ser aprovechado por un atacante.
 
--   Aplicarlo durante investigaciones en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+-   Aplicarlo durante investigaciones en un SOC.
 
-**1. ¿Qué es <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>?**
+**1. ¿Qué es NAT?**
 
-**<a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> (Network Address Translation)** significa:
+**NAT (Network Address Translation)** significa:
 
 **Traducción de Direcciones de Red.**
 
-Es una tecnología que permite **cambiar una dirección <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> por otra** mientras un paquete atraviesa un router o un firewall.
+Es una tecnología que permite **cambiar una dirección IP por otra** mientras un paquete atraviesa un router o un firewall.
 
 En la mayoría de los casos:
 
--   Convierte una **<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privada** en una **<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública**.
+-   Convierte una **IP privada** en una **IP pública**.
 
--   O convierte una **<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública** en una **<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privada**.
+-   O convierte una **IP pública** en una **IP privada**.
 
 **Definición sencilla**
 
 Imagina una empresa con 500 computadoras.
 
-Todas tienen <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privadas:
+Todas tienen IP privadas:
 
 192.168.10.15
 
@@ -68,21 +68,21 @@ Todas tienen <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privadas:
 
 192.168.10.100
 
-Pero la empresa solo contrató **una única <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública**:
+Pero la empresa solo contrató **una única IP pública**:
 
 181.35.220.10
 
 La pregunta es:
 
-**¿Cómo hacen 500 computadoras para navegar por Internet usando una sola <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública?**
+**¿Cómo hacen 500 computadoras para navegar por Internet usando una sola IP pública?**
 
 La respuesta es:
 
-**Gracias a <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>.**
+**Gracias a NAT.**
 
-**2. ¿Por qué existe <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>?**
+**2. ¿Por qué existe NAT?**
 
-Recordemos algo que vimos en el módulo de <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> públicas y privadas.
+Recordemos algo que vimos en el módulo de IP públicas y privadas.
 
 Las direcciones IPv4 son limitadas.
 
@@ -92,11 +92,11 @@ Solo existen aproximadamente:
 
 Parece mucho\...
 
-Pero no alcanza para asignar una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública a cada computadora, celular, TV, consola, reloj inteligente, cámara <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>, etc.
+Pero no alcanza para asignar una IP pública a cada computadora, celular, TV, consola, reloj inteligente, cámara IP, etc.
 
-Por eso se crearon las <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privadas y <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>.
+Por eso se crearon las IP privadas y NAT.
 
-**Sin <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>**
+**Sin NAT**
 
 Imaginemos una empresa con:
 
@@ -104,25 +104,25 @@ Imaginemos una empresa con:
 
 Necesitaría:
 
-1000 <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> públicas
+1000 IP públicas
 
 Sería extremadamente costoso y prácticamente inviable.
 
-**Con <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>**
+**Con NAT**
 
 Solo necesita:
 
-1 <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública
+1 IP pública
 
 o unas pocas.
 
-**3. ¿Cómo funciona <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>?**
+**3. ¿Cómo funciona NAT?**
 
 Supongamos:
 
 Mi PC
 
-<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Privada
+IP Privada
 
 192.168.1.25
 
@@ -130,19 +130,19 @@ Quiere acceder a:
 
 www.google.com
 
-(Una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública).
+(Una IP pública).
 
-La PC envía el paquete al <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>.
+La PC envía el paquete al Gateway.
 
 Recordemos:
 
-PC → <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> → Internet
+PC → Gateway → Internet
 
 Hasta aquí no hay nada nuevo.
 
-Ahora aparece <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>.
+Ahora aparece NAT.
 
-El <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> recibe:
+El Gateway recibe:
 
 Origen
 
@@ -152,9 +152,9 @@ Destino
 
 142.250.xxx.xxx
 
-Pero Internet no conoce esa <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privada.
+Pero Internet no conoce esa IP privada.
 
-Entonces el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> hace algo muy importante.
+Entonces el Gateway hace algo muy importante.
 
 La reemplaza.
 
@@ -176,11 +176,11 @@ Ahora sí puede viajar por Internet.
 
 PC
 
-192.168.1.25 → <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> → <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> → 181.35.220.10 → Internet → Google
+192.168.1.25 → Gateway → NAT → 181.35.220.10 → Internet → Google
 
 **4. ¿Cómo vuelve la respuesta?**
 
-Aquí aparece la magia de <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>.
+Aquí aparece la magia de NAT.
 
 Cuando Google responde:
 
@@ -188,7 +188,7 @@ Destino
 
 181.35.220.10
 
-El <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> recuerda:
+El Gateway recuerda:
 
 Esa conexión en realidad pertenecía a:
 
@@ -196,18 +196,18 @@ Esa conexión en realidad pertenecía a:
 
 Entonces realiza la traducción inversa.
 
-Internet → 181.35.220.10 → <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> → <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> → 192.168.1.25 → Mi PC
+Internet → 181.35.220.10 → Gateway → NAT → 192.168.1.25 → Mi PC
 
 La computadora nunca sabe que su dirección fue modificada.
 
-**5. ¿Cómo recuerda el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> quién hizo cada conexión?**
+**5. ¿Cómo recuerda el Gateway quién hizo cada conexión?**
 
-El <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> mantiene una **Tabla <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>**.
+El Gateway mantiene una **Tabla NAT**.
 
 Ejemplo:
 
   -------------------------------------------------------------------------
-  **<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Privada**         **Puerto**   **<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Pública**           **Puerto**
+  **IP Privada**         **Puerto**   **IP Pública**           **Puerto**
   ---------------------- ------------ ------------------------ ------------
   192.168.1.25           50231        181.35.220.10            45001
 
@@ -218,11 +218,11 @@ Ejemplo:
 
 Observa algo importante.
 
-Todos utilizan la misma <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública.
+Todos utilizan la misma IP pública.
 
 Lo que cambia es el puerto.
 
-Gracias a esto el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> sabe exactamente a quién devolver cada respuesta.
+Gracias a esto el Gateway sabe exactamente a quién devolver cada respuesta.
 
 **Analogía**
 
@@ -244,13 +244,13 @@ Cuando llega una carta:
 
 El portero sabe a qué departamento pertenece.
 
-<a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> funciona exactamente igual.
+NAT funciona exactamente igual.
 
-**6. Tipos de <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>**
+**6. Tipos de NAT**
 
-**<a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> Estático**
+**NAT Estático**
 
-Una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privada siempre corresponde a la misma <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública.
+Una IP privada siempre corresponde a la misma IP pública.
 
 Ejemplo:
 
@@ -260,9 +260,9 @@ Siempre.
 
 Muy utilizado para servidores.
 
-**<a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> Dinámico**
+**NAT Dinámico**
 
-Existe un grupo de <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> públicas.
+Existe un grupo de IP públicas.
 
 Cada equipo recibe una disponible.
 
@@ -270,7 +270,7 @@ Ejemplo:
 
 192.168.10.15 → 181.35.220.20
 
-Más tarde otro equipo podría utilizar esa misma <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
+Más tarde otro equipo podría utilizar esa misma IP.
 
 **PAT (Port Address Translation)**
 
@@ -278,17 +278,17 @@ Es el más utilizado.
 
 También llamado:
 
-**<a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> Overload**
+**NAT Overload**
 
 Miles de equipos utilizan:
 
-Una sola <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública.
+Una sola IP pública.
 
 Se diferencian mediante los puertos.
 
-Este es el <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> que encontrarás en casi todas las casas y empresas.
+Este es el NAT que encontrarás en casi todas las casas y empresas.
 
-**7. <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> y el Firewall**
+**7. NAT y el Firewall**
 
 En muchas organizaciones:
 
@@ -296,7 +296,7 @@ PC → Firewall → Internet
 
 El Firewall realiza simultáneamente:
 
--   <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>.
+-   NAT.
 
 -   Filtrado.
 
@@ -306,19 +306,19 @@ El Firewall realiza simultáneamente:
 
 -   <a href="../../GLOSARIO.md#vpn" target="_blank">VPN</a>.
 
-Por eso un Firewall moderno suele ser también el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>.
+Por eso un Firewall moderno suele ser también el Gateway.
 
-**8. ¿Cómo aparece <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?**
+**8. ¿Cómo aparece NAT en un SOC?**
 
 Ejemplo:
 
-<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Interna
+IP Interna
 
-192.168.10.25 → <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> → 181.35.220.10 → 185.15.20.30
+192.168.10.25 → NAT → 181.35.220.10 → 185.15.20.30
 
-Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> debes responder:
+Como analista SOC debes responder:
 
--   ¿Qué usuario utilizaba la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> 192.168.10.25?
+-   ¿Qué usuario utilizaba la IP 192.168.10.25?
 
 -   ¿Qué proceso inició la conexión?
 
@@ -330,9 +330,9 @@ Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> debes resp
 
 **Otro ejemplo**
 
-Alerta <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>
+Alerta SIEM
 
-<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Pública
+IP Pública
 
 181.35.220.10 → Descarga malware
 
@@ -340,13 +340,13 @@ El analista debe investigar:
 
 ¿Quién fue?
 
-Gracias a la tabla <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> podrá descubrir:
+Gracias a la tabla NAT podrá descubrir:
 
 181.35.220.10 → 192.168.10.85 → Usuario Juan Pérez → PC-Ventas-03
 
-Aquí se ve claramente por qué la tabla <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> es una pieza clave durante una investigación.
+Aquí se ve claramente por qué la tabla NAT es una pieza clave durante una investigación.
 
-**9. ¿Cómo puede aprovechar <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> un atacante?**
+**9. ¿Cómo puede aprovechar NAT un atacante?**
 
 **Caso 1 - Ocultar el origen**
 
@@ -356,11 +356,11 @@ Desde Internet solo se observa:
 
 No se sabe inmediatamente cuál equipo interno realizó la conexión.
 
-Por eso el analista debe consultar la tabla <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>.
+Por eso el analista debe consultar la tabla NAT.
 
 **Caso 2 - Configuración incorrecta**
 
-Si un administrador publica accidentalmente un servidor interno mediante <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>:
+Si un administrador publica accidentalmente un servidor interno mediante NAT:
 
 Servidor → SQLInternet
 
@@ -384,29 +384,29 @@ Si el acceso está expuesto sin controles adecuados:
 
 Este escenario ha sido responsable de numerosos incidentes reales.
 
-**10. ¿Cómo defender una infraestructura <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>?**
+**10. ¿Cómo defender una infraestructura NAT?**
 
 -   Publicar solo los servicios necesarios.
 
 -   Evitar exponer RDP directamente a Internet.
 
--   Revisar periódicamente las reglas de <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>.
+-   Revisar periódicamente las reglas de NAT.
 
--   Utilizar <a href="../../GLOSARIO.md#vpn" target="_blank">VPN</a> para el acceso remoto.
+-   Utilizar VPN para el acceso remoto.
 
 -   Aplicar <a href="../../GLOSARIO.md#mfa" target="_blank">MFA</a> para administradores.
 
 -   Monitorear conexiones salientes y entrantes.
 
--   Registrar y conservar las tablas <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> cuando sea posible.
+-   Registrar y conservar las tablas NAT cuando sea posible.
 
-**11. Aplicación práctica en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**11. Aplicación práctica en un SOC**
 
 **Caso 1**
 
 Firewall
 
-Origen 192.168.20.25 → <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> → 181.35.220.10 → <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a> → Microsoft
+Origen 192.168.20.25 → NAT → 181.35.220.10 → <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a> → Microsoft
 
 Interpretación:
 
@@ -418,7 +418,7 @@ Firewall
 
 Origen
 
-192.168.30.45 → <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> → 181.35.220.10 → 185.220.xxx.xxx → Puerto 4444
+192.168.30.45 → NAT → 181.35.220.10 → 185.220.xxx.xxx → Puerto 4444
 
 Como analista pensarías:
 
@@ -426,7 +426,7 @@ Como analista pensarías:
 
 -   ¿El puerto es habitual?
 
--   ¿La <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> tiene mala reputación?
+-   ¿La IP tiene mala reputación?
 
 -   ¿Existe un proceso malicioso?
 
@@ -442,7 +442,7 @@ No puedes concluir inmediatamente que toda la empresa está comprometida.
 
 Primero debes revisar:
 
--   La tabla <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>.
+-   La tabla NAT.
 
 -   Qué equipos generaron las conexiones.
 
@@ -455,20 +455,20 @@ Primero debes revisar:
   -------------------------------------------------------------------------------------------
   **Concepto**   **Función**
   -------------- ----------------------------------------------------------------------------
-  <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Privada     Se utiliza dentro de la red local.
+  IP Privada     Se utiliza dentro de la red local.
 
-  <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Pública     Identifica a la organización en Internet.
+  IP Pública     Identifica a la organización en Internet.
 
-  <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>        Conecta la red local con otras redes.
+  Gateway        Conecta la red local con otras redes.
 
-  <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>            Traduce direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> entre redes.
+  NAT            Traduce direcciones IP entre redes.
 
-  PAT            Permite que muchos equipos compartan una sola <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública mediante puertos.
+  PAT            Permite que muchos equipos compartan una sola IP pública mediante puertos.
 
-  Tabla <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>      Registra la relación entre conexiones internas y externas.
+  Tabla NAT      Registra la relación entre conexiones internas y externas.
   -------------------------------------------------------------------------------------------
 
-**13. Lo que esperan de un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1**
+**13. Lo que esperan de un Analista SOC Nivel 1**
 
 Cuando observes un log como este:
 
@@ -478,7 +478,7 @@ Origen:
 
 ↓
 
-<a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>:
+NAT:
 
 181.35.220.10
 
@@ -496,9 +496,9 @@ Puerto:
 
 Debes ser capaz de responder:
 
--   ¿Cuál es la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privada?
+-   ¿Cuál es la IP privada?
 
--   ¿Cuál es la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública?
+-   ¿Cuál es la IP pública?
 
 -   ¿Quién realizó la conexión?
 
@@ -506,7 +506,7 @@ Debes ser capaz de responder:
 
 -   ¿El tráfico parece normal?
 
--   ¿Qué muestra la tabla <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>?
+-   ¿Qué muestra la tabla NAT?
 
 -   ¿Fue una conexión permitida o bloqueada?
 
@@ -514,31 +514,31 @@ Debes ser capaz de responder:
 
 **Resumen**
 
-**<a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>**
+**NAT**
 
--   Traduce direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
+-   Traduce direcciones IP.
 
--   Permite que <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privadas accedan a Internet.
+-   Permite que IP privadas accedan a Internet.
 
 -   Conserva las direcciones IPv4 públicas.
 
--   Funciona normalmente en el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> o Firewall.
+-   Funciona normalmente en el Gateway o Firewall.
 
 **PAT**
 
--   Es el tipo de <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> más utilizado.
+-   Es el tipo de NAT más utilizado.
 
--   Permite que miles de dispositivos compartan una misma <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública utilizando distintos puertos.
+-   Permite que miles de dispositivos compartan una misma IP pública utilizando distintos puertos.
 
-**Tabla <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>**
+**Tabla NAT**
 
--   Relaciona <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privadas con <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> públicas y puertos.
+-   Relaciona IP privadas con IP públicas y puertos.
 
--   Es fundamental para las investigaciones de un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+-   Es fundamental para las investigaciones de un SOC.
 
-**<a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**NAT en un SOC**
 
-Como analista, nunca debes quedarte solo con la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública. Tu objetivo es reconstruir el camino completo de la comunicación:
+Como analista, nunca debes quedarte solo con la IP pública. Tu objetivo es reconstruir el camino completo de la comunicación:
 
 1.  **¿Qué equipo interno originó el tráfico?**
 
@@ -550,37 +550,37 @@ Como analista, nunca debes quedarte solo con la <a href="../../GLOSARIO.md#ip" t
 
 5.  **¿Fue un comportamiento esperado o anómalo?**
 
-**💡 Consejo como tu entrenador para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**💡 Consejo como tu entrenador para un SOC**
 
-Muchos principiantes creen que **<a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> solo sirve para \"tener Internet\"**, pero en realidad es una de las primeras piezas que un analista utiliza para **atribuir una conexión a un equipo específico**.
+Muchos principiantes creen que **NAT solo sirve para \"tener Internet\"**, pero en realidad es una de las primeras piezas que un analista utiliza para **atribuir una conexión a un equipo específico**.
 
 Imagina que recibes un aviso del proveedor de Internet diciendo:
 
-**\"Su <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública 181.35.220.10 intentó conectarse a un servidor malicioso a las 14:32.\"**
+**\"Su IP pública 181.35.220.10 intentó conectarse a un servidor malicioso a las 14:32.\"**
 
-Eso no identifica al culpable. En una empresa con cientos de equipos, todos comparten esa misma <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública mediante PAT.
+Eso no identifica al culpable. En una empresa con cientos de equipos, todos comparten esa misma IP pública mediante PAT.
 
-Tu trabajo como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> será seguir el rastro:
+Tu trabajo como analista SOC será seguir el rastro:
 
 -   Revisar los **logs del firewall**.
 
--   Consultar la **tabla <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>**.
+-   Consultar la **tabla NAT**.
 
--   Identificar la **<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privada** responsable.
+-   Identificar la **IP privada** responsable.
 
 -   Relacionarla con el **usuario**, el **equipo** y el **proceso** que inició la conexión.
 
-Ese razonamiento es exactamente el que utilizan los analistas durante investigaciones reales y es una habilidad muy valorada en un **<a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1**.
+Ese razonamiento es exactamente el que utilizan los analistas durante investigaciones reales y es una habilidad muy valorada en un **SOC Nivel 1**.
 
-**📚 Evaluación -- Módulo 6: <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> (Network Address Translation)**
+**📚 Evaluación -- Módulo 6: NAT (Network Address Translation)**
 
-**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
+**Nivel:** Principiante → Analista SOC Nivel 1
 
-**Instrucciones:** Responde las siguientes preguntas sin consultar el material de estudio. Al finalizar encontrarás las respuestas con su justificación. Las preguntas están diseñadas con el estilo de una evaluación para un puesto de **Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1**.
+**Instrucciones:** Responde las siguientes preguntas sin consultar el material de estudio. Al finalizar encontrarás las respuestas con su justificación. Las preguntas están diseñadas con el estilo de una evaluación para un puesto de **Analista SOC Nivel 1**.
 
 **Pregunta 1**
 
-¿Qué significa la sigla **<a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>**?
+¿Qué significa la sigla **NAT**?
 
 **A)** Network Access Technology
 
@@ -592,57 +592,57 @@ Ese razonamiento es exactamente el que utilizan los analistas durante investigac
 
 **Pregunta 2**
 
-¿Cuál es el principal objetivo de <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>?
+¿Cuál es el principal objetivo de NAT?
 
 **A)** Encriptar las comunicaciones entre <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> equipos.
 
-**B)** Traducir direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> entre redes.
+**B)** Traducir direcciones IP entre redes.
 
-**C)** Asignar direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> automáticamente.
+**C)** Asignar direcciones IP automáticamente.
 
 **D)** Aumentar la velocidad de Internet.
 
 **Pregunta 3**
 
-¿Por qué fue necesario crear <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>?
+¿Por qué fue necesario crear NAT?
 
 **A)** Porque las direcciones IPv4 públicas son limitadas.
 
 **B)** Porque las direcciones <a href="../../GLOSARIO.md#mac" target="_blank">MAC</a> se agotaron.
 
-**C)** Porque los routers no pueden trabajar con <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> públicas.
+**C)** Porque los routers no pueden trabajar con IP públicas.
 
 **D)** Porque IPv6 dejó de utilizarse.
 
 **Pregunta 4**
 
-¿Qué ocurre cuando una computadora con <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privada quiere acceder a Internet?
+¿Qué ocurre cuando una computadora con IP privada quiere acceder a Internet?
 
-**A)** Cambia automáticamente su dirección <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> por una dirección <a href="../../GLOSARIO.md#mac" target="_blank">MAC</a>.
+**A)** Cambia automáticamente su dirección IP por una dirección MAC.
 
-**B)** El <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> o Firewall traduce la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privada a una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública mediante <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>.
+**B)** El Gateway o Firewall traduce la IP privada a una IP pública mediante NAT.
 
-**C)** El servidor de destino cambia su dirección <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
+**C)** El servidor de destino cambia su dirección IP.
 
-**D)** La computadora recibe una nueva <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública permanente.
+**D)** La computadora recibe una nueva IP pública permanente.
 
 **Pregunta 5**
 
-¿Cuál es el tipo de <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> más utilizado en hogares y empresas?
+¿Cuál es el tipo de NAT más utilizado en hogares y empresas?
 
-**A)** <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> Estático.
+**A)** NAT Estático.
 
-**B)** <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> Dinámico.
+**B)** NAT Dinámico.
 
-**C)** PAT (Port Address Translation o <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> Overload).
+**C)** PAT (Port Address Translation o NAT Overload).
 
-**D)** <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> Inverso.
+**D)** NAT Inverso.
 
 **Pregunta 6**
 
-¿Qué información utiliza principalmente **PAT** para diferenciar múltiples conexiones que comparten una misma <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública?
+¿Qué información utiliza principalmente **PAT** para diferenciar múltiples conexiones que comparten una misma IP pública?
 
-**A)** La dirección <a href="../../GLOSARIO.md#mac" target="_blank">MAC</a>.
+**A)** La dirección MAC.
 
 **B)** El nombre del usuario.
 
@@ -652,9 +652,9 @@ Ese razonamiento es exactamente el que utilizan los analistas durante investigac
 
 **Pregunta 7**
 
-Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> recibes la siguiente alerta:
+Como analista SOC recibes la siguiente alerta:
 
-<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Pública:
+IP Pública:
 
 181.35.220.10
 
@@ -670,23 +670,23 @@ Puerto 4444
 
 **A)** Concluir inmediatamente que toda la empresa está comprometida.
 
-**B)** Buscar en la tabla <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> qué <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privada originó esa conexión.
+**B)** Buscar en la tabla NAT qué IP privada originó esa conexión.
 
 **C)** Reiniciar el firewall.
 
-**D)** Cambiar la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública del proveedor de Internet.
+**D)** Cambiar la IP pública del proveedor de Internet.
 
 **Pregunta 8**
 
-¿Cuál de las siguientes afirmaciones sobre <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> es correcta?
+¿Cuál de las siguientes afirmaciones sobre NAT es correcta?
 
-**A)** <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> reemplaza al firewall.
+**A)** NAT reemplaza al firewall.
 
-**B)** <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> elimina la necesidad de utilizar direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privadas.
+**B)** NAT elimina la necesidad de utilizar direcciones IP privadas.
 
-**C)** <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> permite que varios equipos compartan una misma <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública.
+**C)** NAT permite que varios equipos compartan una misma IP pública.
 
-**D)** <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> bloquea automáticamente todos los ataques.
+**D)** NAT bloquea automáticamente todos los ataques.
 
 **Pregunta 9**
 
@@ -696,15 +696,15 @@ Puerto 4444
 
 **B)** Que un servidor interno quede expuesto directamente a Internet.
 
-**C)** Que la dirección <a href="../../GLOSARIO.md#mac" target="_blank">MAC</a> cambie automáticamente.
+**C)** Que la dirección MAC cambie automáticamente.
 
-**D)** Que el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> deje de realizar <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>.
+**D)** Que el Gateway deje de realizar NAT.
 
-**Pregunta 10 (Caso práctico <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>)**
+**Pregunta 10 (Caso práctico SOC)**
 
-El <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a> genera la siguiente alerta:
+El SIEM genera la siguiente alerta:
 
-<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Pública:
+IP Pública:
 
 181.35.220.10
 
@@ -720,9 +720,9 @@ Hora:
 
 ¿Qué información necesitas para identificar el equipo responsable?
 
-**A)** La dirección <a href="../../GLOSARIO.md#mac" target="_blank">MAC</a> del servidor remoto.
+**A)** La dirección MAC del servidor remoto.
 
-**B)** La tabla <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> del firewall para conocer qué <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privada realizó la conexión.
+**B)** La tabla NAT del firewall para conocer qué IP privada realizó la conexión.
 
 **C)** El modelo del router.
 
@@ -736,7 +736,7 @@ Hora:
 
 **Justificación**
 
-**<a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> (Network Address Translation)** significa **Traducción de Direcciones de Red**. Su función principal es modificar direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> cuando el tráfico pasa por un router o firewall.
+**NAT (Network Address Translation)** significa **Traducción de Direcciones de Red**. Su función principal es modificar direcciones IP cuando el tráfico pasa por un router o firewall.
 
 **Pregunta 2**
 
@@ -744,7 +744,7 @@ Hora:
 
 **Justificación**
 
-<a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> traduce direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> entre diferentes redes, generalmente de una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privada a una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública (y viceversa para las respuestas).
+NAT traduce direcciones IP entre diferentes redes, generalmente de una IP privada a una IP pública (y viceversa para las respuestas).
 
 **Pregunta 3**
 
@@ -752,7 +752,7 @@ Hora:
 
 **Justificación**
 
-Las direcciones **IPv4 públicas son un recurso limitado**. <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> permite que miles de dispositivos compartan una o pocas direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> públicas, reduciendo la necesidad de asignar una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública a cada equipo.
+Las direcciones **IPv4 públicas son un recurso limitado**. NAT permite que miles de dispositivos compartan una o pocas direcciones IP públicas, reduciendo la necesidad de asignar una IP pública a cada equipo.
 
 **Pregunta 4**
 
@@ -760,7 +760,7 @@ Las direcciones **IPv4 públicas son un recurso limitado**. <a href="../../GLOSA
 
 **Justificación**
 
-Cuando un equipo con <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privada accede a Internet, el <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a> o Firewall realiza <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>, sustituyendo la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privada por una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública para que el tráfico pueda ser enrutado en Internet.
+Cuando un equipo con IP privada accede a Internet, el Gateway o Firewall realiza NAT, sustituyendo la IP privada por una IP pública para que el tráfico pueda ser enrutado en Internet.
 
 **Pregunta 5**
 
@@ -768,7 +768,7 @@ Cuando un equipo con <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> priva
 
 **Justificación**
 
-**PAT (Port Address Translation)**, también conocido como **<a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> Overload**, es el tipo de <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> más común. Permite que muchos dispositivos compartan una misma <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública utilizando diferentes números de puerto.
+**PAT (Port Address Translation)**, también conocido como **NAT Overload**, es el tipo de NAT más común. Permite que muchos dispositivos compartan una misma IP pública utilizando diferentes números de puerto.
 
 **Pregunta 6**
 
@@ -776,7 +776,7 @@ Cuando un equipo con <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> priva
 
 **Justificación**
 
-PAT utiliza los **puertos** para distinguir las conexiones de múltiples equipos que comparten una misma dirección <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública.
+PAT utiliza los **puertos** para distinguir las conexiones de múltiples equipos que comparten una misma dirección IP pública.
 
 **Pregunta 7**
 
@@ -784,7 +784,7 @@ PAT utiliza los **puertos** para distinguir las conexiones de múltiples equipos
 
 **Justificación**
 
-Una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública suele representar a toda una organización. Para identificar el equipo responsable es necesario consultar la **tabla <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>** y determinar qué <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privada originó la conexión.
+Una IP pública suele representar a toda una organización. Para identificar el equipo responsable es necesario consultar la **tabla NAT** y determinar qué IP privada originó la conexión.
 
 **Pregunta 8**
 
@@ -792,7 +792,7 @@ Una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública suele represe
 
 **Justificación**
 
-<a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> permite que varios dispositivos utilicen una única <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública para acceder a Internet. Esto no reemplaza al firewall ni bloquea ataques por sí mismo.
+NAT permite que varios dispositivos utilicen una única IP pública para acceder a Internet. Esto no reemplaza al firewall ni bloquea ataques por sí mismo.
 
 **Pregunta 9**
 
@@ -808,20 +808,20 @@ Una regla de **Port Forwarding** puede publicar un servidor interno en Internet.
 
 **Justificación**
 
-La **tabla <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>** relaciona las conexiones entre <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privadas, <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> públicas y puertos. Es una fuente fundamental para identificar el equipo responsable de una actividad detectada desde la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública de la empresa.
+La **tabla NAT** relaciona las conexiones entre IP privadas, IP públicas y puertos. Es una fuente fundamental para identificar el equipo responsable de una actividad detectada desde la IP pública de la empresa.
 
 **🏆 Resultado**
 
   --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   **Respuestas Correctas**   **Nivel**
   -------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **10/10**                  ⭐ **Excelente.** Comprendes <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> no solo desde el punto de vista de redes, sino también desde la perspectiva de un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+  **10/10**                  ⭐ **Excelente.** Comprendes NAT no solo desde el punto de vista de redes, sino también desde la perspectiva de un Analista SOC.
 
-  **8--9**                   🟢 **Muy buen nivel.** Ya puedes interpretar registros de <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> y comprender cómo rastrear conexiones desde una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública hasta un equipo interno.
+  **8--9**                   🟢 **Muy buen nivel.** Ya puedes interpretar registros de NAT y comprender cómo rastrear conexiones desde una IP pública hasta un equipo interno.
 
-  **6--7**                   🟡 **Buen progreso.** Repasa los tipos de <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> (especialmente PAT) y el funcionamiento de la tabla <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>.
+  **6--7**                   🟡 **Buen progreso.** Repasa los tipos de NAT (especialmente PAT) y el funcionamiento de la tabla NAT.
 
-  **4--5**                   🟠 **Necesitas reforzar algunos conceptos.** Vuelve a estudiar el flujo de traducción de direcciones y el papel del <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>/Firewall.
+  **4--5**                   🟠 **Necesitas reforzar algunos conceptos.** Vuelve a estudiar el flujo de traducción de direcciones y el papel del Gateway/Firewall.
 
-  **0--3**                   🔴 **Es recomendable repasar el módulo completo.** <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a> es un concepto esencial para investigar incidentes y atribuir actividad a equipos específicos en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+  **0--3**                   🔴 **Es recomendable repasar el módulo completo.** NAT es un concepto esencial para investigar incidentes y atribuir actividad a equipos específicos en un SOC.
   --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

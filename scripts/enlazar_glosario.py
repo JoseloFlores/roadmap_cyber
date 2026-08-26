@@ -54,6 +54,8 @@ def add_anchors(path):
 
 PLACEHOLDER = "\x00%d\x00"
 
+EXISTING_LINK_RE = re.compile(r'href="[^"]*#([^"]*)"\s+target="_blank"')
+
 
 def protect(text):
     store = []
@@ -77,13 +79,17 @@ def restore(text, store):
     return text
 
 
-def linkify_line(line, terms, rel):
+def linkify_line(line, terms, rel, linked):
     text, store = protect(line)
     for term, slug in sorted(terms, key=lambda t: -len(t[0])):
+        if slug in linked:
+            continue
         href = "%s#%s" % (rel, slug)
         pat = r"(?<![A-Za-z0-9])" + re.escape(term) + r"(?![A-Za-z0-9])"
-        repl = lambda m, h=href: '<a href="%s" target="_blank">%s</a>' % (h, m.group(0))
-        text = re.sub(pat, repl, text, flags=re.IGNORECASE)
+        def repl(m, h=href, s=slug, L=linked):
+            L.add(s)
+            return '<a href="%s" target="_blank">%s</a>' % (h, m.group(0))
+        text = re.sub(pat, repl, text, count=1, flags=re.IGNORECASE)
     return restore(text, store)
 
 
@@ -96,7 +102,9 @@ def process_modules(terms):
             path = os.path.join(dirpath, name)
             rel = os.path.relpath(GLOSSARY, os.path.dirname(path)).replace(os.sep, "/")
             with open(path, encoding="utf-8") as f:
-                lines = f.read().split("\n")
+                txt = f.read()
+            linked = set(EXISTING_LINK_RE.findall(txt))
+            lines = txt.split("\n")
             out = []
             in_fence = False
             modified = False
@@ -108,7 +116,7 @@ def process_modules(terms):
                 if in_fence:
                     out.append(line)
                     continue
-                new = linkify_line(line, terms, rel)
+                new = linkify_line(line, terms, rel, linked)
                 if new != line:
                     modified = True
                 out.append(new)

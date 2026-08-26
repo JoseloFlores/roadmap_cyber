@@ -4,11 +4,11 @@
 
 **Módulo 25: CMD y PowerShell**
 
-**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1\
-**Enfoque:** Línea de comandos + Detección <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>
+**Nivel:** Principiante → Analista SOC Nivel 1\
+**Enfoque:** Línea de comandos + Detección SOC
 
 Esta es **una de las partes más importantes de la semana** para un
-Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>. Tanto el atacante como el defensor usan la línea de
+Analista SOC. Tanto el atacante como el defensor usan la línea de
 comandos: dominarla te permite investigar y entender qué hizo un
 adversario.
 
@@ -73,7 +73,7 @@ Ejemplo sospechoso (no lo ejecutes):
 powershell -enc <cadena_base64>
 ```
 
-`--enc` (`-EncodedCommand`) oculta la intención real. Un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> debe
+`--enc` (`-EncodedCommand`) oculta la intención real. Un SOC debe
 revisar **qué comando decodificado** se ejecutó.
 
 **4. LOLBins**
@@ -97,7 +97,7 @@ Señales en un evento de PowerShell:
 -   Nombres ofuscados o sin espacios (`Inv0ke-WebRequest`).
 -   Ejecución desde `C:\Users\...\AppData` o `%TEMP%`.
 
-**6. Conexión con el <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**6. Conexión con el SOC**
 
 Un evento de PowerShell (Event ID 4104 en el log de PowerShell, cuando
 el logging está habilitado) puede mostrar el script exacto ejecutado.
@@ -106,7 +106,7 @@ Combinado con `netstat` y el proceso padre, reconstruyes la historia.
 **🧪 Laboratorio recomendado**
 
 1.  Abre CMD y ejecuta `ipconfig /all`, `systeminfo`, `whoami`.
-2.  Ejecuta `netstat -ano` y anota una conexión ESTABLISHED con su <a href="../../GLOSARIO.md#pid" target="_blank">PID</a>.
+2.  Ejecuta `netstat -ano` y anota una conexión ESTABLISHED con su PID.
 3.  Abre PowerShell y ejecuta `Get-NetTCPConnection`.
 4.  Ejecuta `Get-Process | Select-Object Name, Id, Path` y observa
     rutas.
@@ -118,7 +118,7 @@ Combinado con `netstat` y el proceso padre, reconstruyes la historia.
 **🔹 Pregunta 1**
 
 ¿Qué combinación de `netstat` muestra conexiones, puertos numéricos y
-<a href="../../GLOSARIO.md#pid" target="_blank">PID</a>?
+PID?
 
 **A)** `netstat -e`\
 **B)** `netstat -ano`\
@@ -166,7 +166,7 @@ El cmdlet para listar eventos del log de Seguridad es:
 
 `whoami` nos indica:
 
-**A)** La <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública.\
+**A)** La IP pública.\
 **B)** El usuario actual y sus privilegios.\
 **C)** El sistema de archivos.\
 **D)** El registro de Windows.
@@ -189,9 +189,9 @@ El cmdlet para listar eventos del log de Seguridad es:
 **C)** Formatear discos.\
 **D)** Editar el registro.
 
-**🔹 Pregunta 9 — Caso <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**🔹 Pregunta 9 — Caso SOC**
 
-Se observa: `cmd.exe` → `powershell.exe -enc <cadena>`. El <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> debe:
+Se observa: `cmd.exe` → `powershell.exe -enc <cadena>`. El SOC debe:
 
 **A)** Ignorarlo, PowerShell es legítimo.\
 **B)** Decodificar el comando y analizarlo junto con red y proceso
@@ -212,7 +212,7 @@ Un LOLBin es:
 
 **✅ RESPUESTAS Y JUSTIFICACIÓN**
 
-1. **B — `netstat -ano`**: all, numérico, <a href="../../GLOSARIO.md#pid" target="_blank">PID</a>.
+1. **B — `netstat -ano`**: all, numérico, PID.
 2. **B**: `CommandLine` revela argumentos.
 3. **B**: `-enc` oculta la intención.
 4. **B**: puede descargar archivos.
@@ -233,4 +233,4 @@ Un LOLBin es:
 -   ⚪ Módulo 26 — Windows Event Logs
 -   ⚪ Módulo 27 — Seguridad de Windows
 -   ⚪ Módulo 28 — Windows desde la perspectiva del atacante
--   ⚪ Módulo 29 — Investigación <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> en Windows
+-   ⚪ Módulo 29 — Investigación SOC en Windows

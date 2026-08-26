@@ -4,12 +4,12 @@
 
 **Módulo 24: Procesos y servicios**
 
-**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1\
-**Enfoque:** Sistemas + Seguridad + Análisis <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>
+**Nivel:** Principiante → Analista SOC Nivel 1\
+**Enfoque:** Sistemas + Seguridad + Análisis SOC
 
 En el módulo 21 definimos qué es un proceso y un servicio. Aquí
 profundizamos en **cómo observarlos** y, sobre todo, en cómo un analista
-<a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> detecta procesos y servicios sospechosos.
+SOC detecta procesos y servicios sospechosos.
 
 **🎯 Objetivos de este módulo**
 
@@ -34,7 +34,7 @@ clave:
 tasklist
 ```
 
-Muestra <a href="../../GLOSARIO.md#pid" target="_blank">PID</a>, nombre de imagen y usuario. Para buscar uno concreto:
+Muestra PID, nombre de imagen y usuario. Para buscar uno concreto:
 
 ```cmd
 tasklist | findstr powershell
@@ -57,7 +57,7 @@ explorer.exe
 notepad.exe
 
 El **proceso padre** es `explorer.exe`; el **hijo** es `notepad.exe`.
-Esto es oro para el <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>: un proceso hijo inesperado es una bandera. Por
+Esto es oro para el SOC: un proceso hijo inesperado es una bandera. Por
 ejemplo:
 
 -   `powershell.exe` lanzado por `winword.exe` (Word) → posible
@@ -112,7 +112,7 @@ Un atacante puede registrar un servicio:
 sc create Actualizador binPath= "C:\ruta\malware.exe"
 ```
 
-Al reiniciar, el malware vuelve a ejecutarse. Por eso el <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> monitoriza
+Al reiniciar, el malware vuelve a ejecutarse. Por eso el SOC monitoriza
 la **creación de servicios** (Event ID 7045).
 
 **🧪 Laboratorio recomendado**
@@ -160,7 +160,7 @@ El proceso que maneja credenciales y es objetivo de dumping es:
 ¿Para qué sirve `taskkill /PID 1234 /F`?
 
 **A)** Listar procesos.\
-**B)** Forzar la terminación del <a href="../../GLOSARIO.md#pid" target="_blank">PID</a> 1234.\
+**B)** Forzar la terminación del PID 1234.\
 **C)** Crear un servicio.\
 **D)** Reiniciar la red.
 
@@ -201,10 +201,10 @@ Para listar servicios por línea de comandos usamos:
 **C)** `netstat -a`\
 **D)** `ping`
 
-**🔹 Pregunta 9 — Caso <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**🔹 Pregunta 9 — Caso SOC**
 
 Se detecta `cmd.exe` hijo de `outlook.exe` que luego ejecuta
-`powershell.exe` con una conexión a una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> externa. Lo más razonable
+`powershell.exe` con una conexión a una IP externa. Lo más razonable
 es:
 
 **A)** Ignorarlo, es correo legítimo.\
@@ -246,4 +246,4 @@ El Event ID que indica instalación de un nuevo servicio es:
 -   ⚪ Módulo 26 — Windows Event Logs
 -   ⚪ Módulo 27 — Seguridad de Windows
 -   ⚪ Módulo 28 — Windows desde la perspectiva del atacante
--   ⚪ Módulo 29 — Investigación <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> en Windows
+-   ⚪ Módulo 29 — Investigación SOC en Windows

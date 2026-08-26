@@ -4,7 +4,7 @@
 
 **Módulo 15 – Estructura del Sistema de Archivos (<a href="../../GLOSARIO.md#fhs" target="_blank">FHS</a>)**
 
-**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
+**Nivel:** Principiante → Analista SOC Nivel 1
 
 **Antes de comenzar**
 
@@ -14,9 +14,9 @@ Ya dominas:
 
 - ✅ Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a>
 
-- ✅ Modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>
+- ✅ Modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/IP
 
-- ✅ <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> y <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>
+- ✅ TCP y <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>
 
 - ✅ Puertos
 
@@ -32,7 +32,7 @@ A diferencia de Windows, no hay unidades como C: o D:.
 
 Todo cuelga de un único punto de partida.
 
-Conocer esa estructura es esencial para un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+Conocer esa estructura es esencial para un Analista SOC.
 
 Los logs de seguridad, las configuraciones y los binarios viven en lugares específicos.
 
@@ -48,7 +48,7 @@ Este módulo te enseña exactamente dónde encontrarla.
 
 Al finalizar este módulo podrás:
 
-- Comprender qué es el estándar <a href="../../GLOSARIO.md#fhs" target="_blank">FHS</a>.
+- Comprender qué es el estándar FHS.
 
 - Explicar por qué todo parte de la raíz `/`.
 
@@ -68,9 +68,9 @@ Al finalizar este módulo podrás:
 
 - Saber qué directorios revisar primero ante un posible incidente.
 
-**1. ¿Qué es <a href="../../GLOSARIO.md#fhs" target="_blank">FHS</a>?**
+**1. ¿Qué es FHS?**
 
-<a href="../../GLOSARIO.md#fhs" target="_blank">FHS</a> significa:
+FHS significa:
 
 **Filesystem Hierarchy Standard**
 
@@ -112,11 +112,11 @@ Cuando necesitas un documento, no lo buscas al azar.
 
 Sabes exactamente a qué piso ir.
 
-El <a href="../../GLOSARIO.md#fhs" target="_blank">FHS</a> es exactamente eso: un edificio organizado por departamentos.
+El FHS es exactamente eso: un edificio organizado por departamentos.
 
 Cada directorio es un departamento con una misión clara.
 
-**¿Por qué le importa a un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?**
+**¿Por qué le importa a un SOC?**
 
 Porque al investigar un incidente necesitas saber dónde buscar:
 
@@ -241,7 +241,7 @@ Si estás en `/etc`, escribir:
 
 Te refiere al mismo archivo.
 
-Para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>, lo habitual es usar rutas absolutas.
+Para un SOC, lo habitual es usar rutas absolutas.
 
 Así no hay lugar a confusiones.
 
@@ -305,7 +305,7 @@ No te preocupes por ese detalle por ahora.
 
 Lo importante es entender la función.
 
-**¿Por qué le importa a un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?**
+**¿Por qué le importa a un SOC?**
 
 Los atacantes a veces reemplazan binarios legítimos.
 
@@ -325,7 +325,7 @@ Ejemplo de comando para ver el hash de un binario:
 
 Si el hash no coincide con el esperado, algo está mal.
 
-Un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> debe saber esto.
+Un Analista SOC debe saber esto.
 
 **¿Cómo explorar estos directorios?**
 
@@ -399,7 +399,7 @@ Ejemplo:
 
 `/opt/google/chrome`
 
-**¿Por qué le importa a un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?**
+**¿Por qué le importa a un SOC?**
 
 Un atacante con privilegios puede instalar backdoors en:
 
@@ -471,7 +471,7 @@ Solo un símbolo `x` en la posición de la contraseña.
 
 Contiene los hashes de las contraseñas.
 
-Solo el <a href="../../GLOSARIO.md#root" target="_blank">root</a> puede leerlo.
+Solo el root puede leerlo.
 
 Es un archivo extremadamente sensible.
 
@@ -479,9 +479,9 @@ Si un atacante lo copia, puede intentar descifrar los hashes offline.
 
 `/etc/hosts`
 
-Permite asociar nombres con direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> localmente.
+Permite asociar nombres con direcciones IP localmente.
 
-Se consulta antes que el <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>.
+Se consulta antes que el DNS.
 
 Ejemplo de contenido:
 
@@ -497,7 +497,7 @@ Define:
 
 - Puerto de escucha.
 
-- Si se permite acceso con <a href="../../GLOSARIO.md#root" target="_blank">root</a>.
+- Si se permite acceso con root.
 
 - Si se permite login por contraseña.
 
@@ -525,7 +525,7 @@ Define el nombre del equipo.
 
 `/etc/resolv.conf`
 
-Define los servidores <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> del sistema.
+Define los servidores DNS del sistema.
 
 **¿Cómo leer estos archivos?**
 
@@ -541,11 +541,11 @@ Para ver las tareas programadas:
 
 `ls /etc/cron.d`
 
-Para ver la configuración de <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>:
+Para ver la configuración de SSH:
 
 `cat /etc/ssh/sshd_config`
 
-**¿Por qué le importa a un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?**
+**¿Por qué le importa a un SOC?**
 
 `/etc` es lectura obligatoria.
 
@@ -605,7 +605,7 @@ Para ir a tu carpeta:
 
 Es la carpeta personal del administrador.
 
-El usuario <a href="../../GLOSARIO.md#root" target="_blank">root</a> es el todopoderoso del sistema.
+El usuario root es el todopoderoso del sistema.
 
 Por eso tiene su propia carpeta fuera de `/home`.
 
@@ -621,7 +621,7 @@ También suele guardar:
 
 - Credenciales y llaves (¡cuidado!).
 
-**¿Por qué le importa a un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?**
+**¿Por qué le importa a un SOC?**
 
 Las carpetas personales pueden contener:
 
@@ -675,7 +675,7 @@ La subcarpeta más importante para ti:
 
 `/var/log`
 
-**La mina de oro del <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.**
+**La mina de oro del SOC.**
 
 Aquí viven los registros de actividad del sistema.
 
@@ -773,7 +773,7 @@ Para ver quién inició sesión recientemente:
 
 `last`
 
-**¿Por qué le importa a un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?**
+**¿Por qué le importa a un SOC?**
 
 Los logs cuentan la historia del incidente.
 
@@ -785,7 +785,7 @@ El analista lee esa historia para entender qué pasó.
 
 ¿Cuándo?
 
-¿Desde qué <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>?
+¿Desde qué IP?
 
 ¿Qué hizo después?
 
@@ -903,7 +903,7 @@ Información de la memoria RAM.
 
 `/proc/version`
 
-Versión del <a href="../../GLOSARIO.md#kernel" target="_blank">kernel</a>.
+Versión del kernel.
 
 `/proc/uptime`
 
@@ -959,7 +959,7 @@ Ese agujero negro que descarta todo.
 
 Generador de números aleatorios.
 
-**¿Por qué le importa a un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?**
+**¿Por qué le importa a un SOC?**
 
 `/proc` revela qué procesos corre el sistema.
 
@@ -1035,7 +1035,7 @@ Para desmontar:
 
 `sudo umount /mnt`
 
-**¿Por qué le importa a un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?**
+**¿Por qué le importa a un SOC?**
 
 Un USB sospechoso puede ser la puerta de entrada de un ataque.
 
@@ -1047,16 +1047,16 @@ Revisar montajes es parte del análisis de un equipo comprometido.
 
 **11. Tabla resumen de directorios**
 
-| **Directorio** | **Contenido**                                   | **Importancia <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**                                    |
+| **Directorio** | **Contenido**                                   | **Importancia SOC**                                    |
 |----------------|-------------------------------------------------|--------------------------------------------------------|
 | `/`            | Raíz del sistema de archivos                    | Todo cuelga de aquí.                                  |
 | `/bin`         | Comandos esenciales (ls, cat, cp)               | Verificar integridad de binarios.                     |
 | `/sbin`        | Comandos de administración (mount, fdisk)       | Herramientas de sistema.                              |
 | `/etc`         | Configuración del sistema                       | Usuarios, servicios, tareas programadas.              |
 | `/home`        | Carpetas personales de usuarios                 | Artefactos y datos de los usuarios.                   |
-| `/root`        | Carpeta del administrador                       | Solo <a href="../../GLOSARIO.md#root" target="_blank">root</a>. Scripts y respaldos.                       |
+| `/root`        | Carpeta del administrador                       | Solo root. Scripts y respaldos.                       |
 | `/var`         | Datos variables                                 | Contiene los logs.                                    |
-| `/var/log`     | Logs del sistema y servicios                    | La mina de oro del <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.                               |
+| `/var/log`     | Logs del sistema y servicios                    | La mina de oro del SOC.                               |
 | `/tmp`         | Archivos temporales                             | Zona favorita para soltar payloads.                   |
 | `/usr`         | Software instalado                              | Binarios y bibliotecas.                               |
 | `/opt`         | Software de terceros                            | Posibles backdoors.                                   |
@@ -1199,7 +1199,7 @@ Toda tarea nueva que no reconoces es sospechosa.
 
 **Permisos restrictivos en `/etc` y `/var/log`**
 
-Solo <a href="../../GLOSARIO.md#root" target="_blank">root</a> y los usuarios autorizados deben leerlos.
+Solo root y los usuarios autorizados deben leerlos.
 
 Los logs no deben ser escribibles por cualquiera.
 
@@ -1233,7 +1233,7 @@ tmpfs /tmp tmpfs defaults,noexec 0 0
 
 Enviar los logs a un servidor central o <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>.
 
-Aunque el atacante borre los logs locales, el <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a> conserva copias.
+Aunque el atacante borre los logs locales, el SIEM conserva copias.
 
 El protocolo es `syslog`.
 
@@ -1241,7 +1241,7 @@ El protocolo es `syslog`.
 
 Cada usuario debe tener solo los permisos que necesita.
 
-Los servicios no deben correr como <a href="../../GLOSARIO.md#root" target="_blank">root</a>.
+Los servicios no deben correr como root.
 
 Así un atacante no escala tan fácil.
 
@@ -1257,7 +1257,7 @@ Así un atacante no escala tan fácil.
 
 - Usar `auditd` para registrar accesos a archivos sensibles.
 
-**14. Aplicación práctica en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**14. Aplicación práctica en un SOC**
 
 **Caso 1 – Sospecha de compromiso**
 
@@ -1275,7 +1275,7 @@ Luego ves si hubo accesos exitosos:
 
 Identificas:
 
-- La <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> del atacante.
+- La IP del atacante.
 
 - El usuario atacado.
 
@@ -1353,7 +1353,7 @@ Orden recomendado:
 
 6. Procesos en `ps aux` → qué corre el sistema.
 
-**15. Lo que esperan de un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1**
+**15. Lo que esperan de un Analista SOC Nivel 1**
 
 En una entrevista o prueba técnica te preguntarán cosas como:
 
@@ -1395,7 +1395,7 @@ Los usuarios del sistema.
 
 Los hashes de las contraseñas.
 
-Solo lo lee <a href="../../GLOSARIO.md#root" target="_blank">root</a>.
+Solo lo lee root.
 
 Debes responder estas preguntas sin dudar.
 
@@ -1403,7 +1403,7 @@ Son la base de todas las investigaciones en Linux.
 
 **16. Resumen**
 
-**<a href="../../GLOSARIO.md#fhs" target="_blank">FHS</a>**
+**FHS**
 
 - Estándar de jerarquía del sistema de archivos.
 
@@ -1437,13 +1437,13 @@ Son la base de todas las investigaciones en Linux.
 
 **Logs**
 
-- `/var/log` → la mina de oro del <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+- `/var/log` → la mina de oro del SOC.
 
 - `/var/log/auth.log` → autenticación.
 
 - `/var/log/syslog` → mensajes del sistema.
 
-- `/var/log/kern.log` → mensajes del <a href="../../GLOSARIO.md#kernel" target="_blank">kernel</a>.
+- `/var/log/kern.log` → mensajes del kernel.
 
 **Temporal y procesos**
 
@@ -1485,14 +1485,14 @@ Son la base de todas las investigaciones en Linux.
 
 | **Concepto** | **Debes recordar**                                       |
 |--------------|----------------------------------------------------------|
-| <a href="../../GLOSARIO.md#fhs" target="_blank">FHS</a>          | Estándar de jerarquía del sistema de archivos.           |
+| FHS          | Estándar de jerarquía del sistema de archivos.           |
 | `/`          | Raíz. Todo cuelga de aquí.                               |
 | `/etc`       | Configuración del sistema. Cerebro de Linux.             |
 | `/etc/passwd`| Usuarios del sistema.                                    |
-| `/etc/shadow`| Hashes de contraseñas. Solo <a href="../../GLOSARIO.md#root" target="_blank">root</a>.                        |
+| `/etc/shadow`| Hashes de contraseñas. Solo root.                        |
 | `/home`      | Carpetas personales de los usuarios.                     |
 | `/root`      | Carpeta personal del administrador.                      |
-| `/var/log`   | Logs del sistema. La mina de oro del <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.                |
+| `/var/log`   | Logs del sistema. La mina de oro del SOC.                |
 | `/var/log/auth.log` | Intentos de login y uso de <a href="../../GLOSARIO.md#sudo" target="_blank">sudo</a>.                  |
 | `/tmp`       | Temporales. Zona favorita de los atacantes.              |
 | `/proc`      | Información de procesos en memoria.                      |
@@ -1501,7 +1501,7 @@ Son la base de todas las investigaciones en Linux.
 | `/opt`       | Software de terceros.                                    |
 | `/dev`       | Dispositivos como archivos.                              |
 
-**🎓 Consejo como tu instructor de <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**🎓 Consejo como tu instructor de SOC**
 
 Memoriza dónde vive la evidencia.
 
@@ -1549,7 +1549,7 @@ Debes pensar:
 
 **`/tmp` → Temporal → Cualquiera puede escribir → Payloads → Archivos sospechosos por investigar.**
 
-Estas asociaciones son el reflejo profesional de un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+Estas asociaciones son el reflejo profesional de un Analista SOC.
 
 La estructura de archivos no es un tema aburrido de administración.
 
@@ -1559,19 +1559,19 @@ Conócelo bien.
 
 ---
 
-**📘 Carrera de Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**📘 Carrera de Analista SOC**
 
 **Semana 3 – Linux**
 
-**Evaluación – Módulo 15: Estructura del Sistema de Archivos (<a href="../../GLOSARIO.md#fhs" target="_blank">FHS</a>)**
+**Evaluación – Módulo 15: Estructura del Sistema de Archivos (FHS)**
 
-**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
+**Nivel:** Principiante → Analista SOC Nivel 1
 
-**Instrucciones:** Responde las siguientes preguntas sin consultar el material de estudio. Este examen está diseñado con el nivel de dificultad de una prueba para un **Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1**. Encontrarás preguntas conceptuales y casos prácticos basados en situaciones reales de investigación en Linux.
+**Instrucciones:** Responde las siguientes preguntas sin consultar el material de estudio. Este examen está diseñado con el nivel de dificultad de una prueba para un **Analista SOC Nivel 1**. Encontrarás preguntas conceptuales y casos prácticos basados en situaciones reales de investigación en Linux.
 
 **Pregunta 1**
 
-¿Qué significa la sigla **<a href="../../GLOSARIO.md#fhs" target="_blank">FHS</a>**?
+¿Qué significa la sigla **FHS**?
 
 **A)** File Hierarchy System
 
@@ -1637,7 +1637,7 @@ Conócelo bien.
 
 **B)** Las contraseñas de los usuarios.
 
-**C)** Los archivos de configuración de <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>.
+**C)** Los archivos de configuración de SSH.
 
 **D)** Los binarios esenciales del sistema.
 
@@ -1649,7 +1649,7 @@ Conócelo bien.
 
 **B)** La raíz del sistema de archivos, de la que cuelgan todos los directorios.
 
-**C)** La carpeta temporal del usuario <a href="../../GLOSARIO.md#root" target="_blank">root</a>.
+**C)** La carpeta temporal del usuario root.
 
 **D)** El directorio de logs del sistema.
 
@@ -1677,7 +1677,7 @@ Conócelo bien.
 
 **D)** `/proc/cpuinfo`
 
-**Pregunta 10 (Caso práctico <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>)**
+**Pregunta 10 (Caso práctico SOC)**
 
 Un analista debe revisar los **intentos de inicio de sesión** en un servidor Linux que se sospecha comprometido.
 
@@ -1699,7 +1699,7 @@ Un analista debe revisar los **intentos de inicio de sesión** en un servidor Li
 
 **Justificación**
 
-<a href="../../GLOSARIO.md#fhs" target="_blank">FHS</a> significa **Filesystem Hierarchy Standard**.
+FHS significa **Filesystem Hierarchy Standard**.
 
 Es el estándar que define la jerarquía de directorios en Linux.
 
@@ -1733,7 +1733,7 @@ Es el "cerebro de configuración" de Linux.
 
 Los logs del sistema se almacenan en **`/var/log`**.
 
-Los más importantes para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> son:
+Los más importantes para un SOC son:
 
 - `/var/log/auth.log`
 
@@ -1741,7 +1741,7 @@ Los más importantes para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC
 
 - `/var/log/kern.log`
 
-Es la mina de oro del Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+Es la mina de oro del Analista SOC.
 
 **Pregunta 4**
 
@@ -1767,7 +1767,7 @@ Cada usuario tiene una carpeta propia, por ejemplo:
 
 `/home/ana`
 
-La carpeta del administrador <a href="../../GLOSARIO.md#root" target="_blank">root</a> vive aparte, en `/root`.
+La carpeta del administrador root vive aparte, en `/root`.
 
 **Pregunta 6**
 
@@ -1785,7 +1785,7 @@ Ejemplos:
 
 - `/proc/meminfo`
 
-Cada proceso tiene su carpeta con su <a href="../../GLOSARIO.md#pid" target="_blank">PID</a>, como `/proc/1234`.
+Cada proceso tiene su carpeta con su PID, como `/proc/1234`.
 
 **Pregunta 7**
 
@@ -1831,7 +1831,7 @@ El archivo **`/etc/passwd`** contiene la lista de **usuarios** del sistema.
 
 Cada línea representa un usuario.
 
-El archivo **`/etc/shadow`**, en cambio, contiene los hashes de las contraseñas y solo es legible por <a href="../../GLOSARIO.md#root" target="_blank">root</a>.
+El archivo **`/etc/shadow`**, en cambio, contiene los hashes de las contraseñas y solo es legible por root.
 
 **Pregunta 10**
 
@@ -1849,7 +1849,7 @@ Y luego los accesos exitosos:
 
 `grep "Accepted password" /var/log/auth.log`
 
-Eso revela la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> del atacante, el usuario comprometido y el momento del acceso.
+Eso revela la IP del atacante, el usuario comprometido y el momento del acceso.
 
 **🏆 Resultado**
 

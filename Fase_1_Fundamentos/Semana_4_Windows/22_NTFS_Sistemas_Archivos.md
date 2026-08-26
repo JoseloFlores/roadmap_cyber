@@ -4,8 +4,8 @@
 
 **Módulo 22: NTFS y Sistema de Archivos de Windows**
 
-**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1\
-**Enfoque:** Sistemas + Seguridad + Análisis <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>
+**Nivel:** Principiante → Analista SOC Nivel 1\
+**Enfoque:** Sistemas + Seguridad + Análisis SOC
 
 Muy bien. Ahora entramos en un tema fundamental porque, cuando un equipo
 Windows es comprometido, **el sistema de archivos suele contener
@@ -35,7 +35,7 @@ Al finalizar este módulo deberías poder:
 
 -   Conocer \$MFT, \$LogFile y otros componentes importantes.
 
--   Identificar ubicaciones interesantes para un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+-   Identificar ubicaciones interesantes para un Analista SOC.
 
 -   Reconocer cómo un atacante puede abusar del sistema de archivos.
 
@@ -103,7 +103,7 @@ C:\\
 
 puede estar utilizando NTFS.
 
-**3. ¿Por qué NTFS es importante para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?**
+**3. ¿Por qué NTFS es importante para un SOC?**
 
 Porque NTFS no solamente almacena:
 
@@ -335,7 +335,7 @@ PowerShell
 
 <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>
 
-Para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>, esto podría ser una cadena de investigación importante.
+Para un SOC, esto podría ser una cadena de investigación importante.
 
 **10. AppData**
 
@@ -353,7 +353,7 @@ LocalLow
 
 Roaming
 
-**11. ¿Por qué AppData interesa a un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?**
+**11. ¿Por qué AppData interesa a un SOC?**
 
 Porque es una ubicación utilizada legítimamente por muchas aplicaciones,
 pero también puede ser utilizada por malware.
@@ -684,7 +684,7 @@ malware.exe
 podría configurarse con atributos que dificulten su visualización
 normal.
 
-Pero un analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> o investigador puede buscar específicamente esos
+Pero un analista SOC o investigador puede buscar específicamente esos
 atributos.
 
 **25. \$MFT**
@@ -798,7 +798,7 @@ se inicia PowerShell
 
 10:05
 
-conexión <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>
+conexión HTTPS
 
 El sistema de archivos podría ayudarnos a investigar:
 
@@ -818,7 +818,7 @@ Y otras fuentes nos permiten complementar:
 
 Event Logs
 
-<a href="../../GLOSARIO.md#edr" target="_blank">EDR</a>
+EDR
 
 Registry
 
@@ -850,7 +850,7 @@ Podrían quedar rastros en:
 
 -   Event Logs.
 
--   <a href="../../GLOSARIO.md#edr" target="_blank">EDR</a>.
+-   EDR.
 
 -   MFT.
 
@@ -862,13 +862,13 @@ Podrían quedar rastros en:
 
 -   Memoria.
 
--   <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>.
+-   DNS.
 
 -   Firewall.
 
 -   Proxy.
 
-Por eso una investigación <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> no debe depender de un único artefacto.
+Por eso una investigación SOC no debe depender de un único artefacto.
 
 **31. Prefetch**
 
@@ -886,7 +886,7 @@ NOTEPAD.EXE-XXXX.pf
 Estos artefactos pueden ayudar en análisis forense a determinar que
 determinadas aplicaciones fueron ejecutadas y obtener contexto temporal.
 
-**32. ¿Cómo piensa un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?**
+**32. ¿Cómo piensa un SOC?**
 
 Supongamos que encontramos:
 
@@ -960,7 +960,7 @@ No Write
 
 Permitir únicamente software autorizado.
 
-**<a href="../../GLOSARIO.md#edr" target="_blank">EDR</a>**
+**EDR**
 
 Detectar comportamientos sospechosos.
 
@@ -1066,9 +1066,9 @@ Por ejemplo:
 Get-Acl C:\\Users
 
 Esto será especialmente importante cuando lleguemos a **PowerShell para
-<a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**.
+SOC**.
 
-**🧩 37. Caso práctico <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**🧩 37. Caso práctico SOC**
 
 Tenemos:
 
@@ -1100,7 +1100,7 @@ winword.exe
 
 Conexión:
 
-<a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a> → dominio desconocido
+HTTPS → dominio desconocido
 
 **¿Qué observamos?**
 
@@ -1118,7 +1118,7 @@ AppData\\Roaming
 
 ↓
 
-<a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>
+HTTPS
 
 No podemos afirmar todavía que sea malware.
 
@@ -1126,7 +1126,7 @@ Pero la combinación merece investigación.
 
 **🔎 38. ¿Qué investigarías?**
 
-Como <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1:
+Como SOC Nivel 1:
 
 **Archivo**
 
@@ -1156,7 +1156,7 @@ Dominio
 
 Puerto
 
-<a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>
+DNS
 
 Reputación
 
@@ -1280,22 +1280,22 @@ Ese razonamiento es muchísimo más importante que memorizar rutas.
 
 -   ⚪ Módulo 28 --- Windows desde la perspectiva del atacante
 
--   ⚪ Módulo 29 --- Investigación <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> en Windows
+-   ⚪ Módulo 29 --- Investigación SOC en Windows
 
 Como venimos haciendo, **el siguiente paso natural es el examen de 10
 preguntas sobre NTFS**, incluyendo algunas situaciones donde tendrás que
-pensar como Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+pensar como Analista SOC.
 
-**🖥️ Carrera de Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**🖥️ Carrera de Analista SOC**
 
 **Semana 4 — Windows**
 
 **📝 Examen --- Módulo 22: NTFS y Sistema de Archivos**
 
-**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
+**Nivel:** Principiante → Analista SOC Nivel 1
 
 Vamos a mantener el mismo formato. Esta evaluación combina **conceptos
-de NTFS + análisis de situaciones reales de <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**.
+de NTFS + análisis de situaciones reales de SOC**.
 
 **Instrucciones:** una sola respuesta correcta por pregunta.\
 Intentá responder las 10 antes de bajar a las soluciones.
@@ -1340,7 +1340,7 @@ perfiles de usuario de Windows?
 
 **🔹 Pregunta 4**
 
-Un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> encuentra el siguiente archivo:
+Un Analista SOC encuentra el siguiente archivo:
 
 C:\\Users\\Empleado\\Downloads\\factura.exe
 
@@ -1366,7 +1366,7 @@ recurso y qué acciones pueden realizar.
 
 **C)** Un tipo de malware.
 
-**D)** Una tabla que almacena direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
+**D)** Una tabla que almacena direcciones IP.
 
 **🔹 Pregunta 6**
 
@@ -1378,7 +1378,7 @@ recurso y qué acciones pueden realizar.
 
 **C)** ACL es un conjunto de entradas ACE.
 
-**D)** ACL pertenece al Registro y ACE pertenece a <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>.
+**D)** ACL pertenece al Registro y ACE pertenece a DNS.
 
 **🔹 Pregunta 7**
 
@@ -1387,7 +1387,7 @@ archivos y directorios del volumen?
 
 **A)** \$MFT
 
-**B)** \$<a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>
+**B)** \$DNS
 
 **C)** \$Registry
 
@@ -1410,9 +1410,9 @@ pero no demuestran por sí solos que sea malware.
 
 **D)** Windows solo permite ejecutar archivos legítimos desde AppData.
 
-**🔹 Pregunta 9 --- Caso <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**🔹 Pregunta 9 --- Caso SOC**
 
-Un <a href="../../GLOSARIO.md#edr" target="_blank">EDR</a> informa:
+Un EDR informa:
 
 Archivo:
 
@@ -1436,7 +1436,7 @@ svchost.exe
 
 ¿Qué técnica podría estar intentando utilizar el atacante?
 
-**A)** <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> Tunneling.
+**A)** DNS Tunneling.
 
 **B)** Masquerading.
 
@@ -1444,7 +1444,7 @@ svchost.exe
 
 **D)** <a href="../../GLOSARIO.md#arp" target="_blank">ARP</a> Poisoning.
 
-**🔹 Pregunta 10 --- Caso <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> ⭐**
+**🔹 Pregunta 10 --- Caso SOC ⭐**
 
 Durante una investigación se descubre:
 
@@ -1458,7 +1458,7 @@ Durante una investigación se descubre:
 
 09:04 → se modifica el Registry
 
-09:05 → comienza conexión <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>
+09:05 → comienza conexión HTTPS
 
 09:10 → factura.exe es eliminado
 
@@ -1569,7 +1569,7 @@ Pictures
 
 AppData
 
-Para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>, estas ubicaciones son importantes porque pueden contener
+Para un SOC, estas ubicaciones son importantes porque pueden contener
 archivos descargados, datos de aplicaciones y posibles artefactos de
 actividad maliciosa.
 
@@ -1605,7 +1605,7 @@ Por eso investigaríamos:
 
 -   Conexiones de red.
 
--   <a href="../../GLOSARIO.md#edr" target="_blank">EDR</a>/antivirus.
+-   EDR/antivirus.
 
 -   Comportamiento.
 
@@ -1673,7 +1673,7 @@ En análisis forense puede ayudar a estudiar:
 
 **✅ C**
 
-Esta es otra pregunta de pensamiento <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+Esta es otra pregunta de pensamiento SOC.
 
 No debemos caer en:
 
@@ -1760,7 +1760,7 @@ sea eliminado, pueden quedar evidencias en:
 
 Event Logs
 
-<a href="../../GLOSARIO.md#edr" target="_blank">EDR</a>
+EDR
 
 MFT
 
@@ -1770,7 +1770,7 @@ Prefetch
 
 Registry
 
-<a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>
+DNS
 
 Firewall
 
@@ -1815,7 +1815,7 @@ El objetivo es reconstruir:
   **Correctas**   **Nivel**
   --------------- -------------------------------------------------------------
   **10/10**       🟢 Excelente --- dominio sólido de NTFS y buen razonamiento
-                  <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+                  SOC.
 
   **8--9/10**     🟢 Muy buen nivel --- podés avanzar.
 
@@ -1826,7 +1826,7 @@ El objetivo es reconstruir:
   **0--3/10**     🔴 Recomiendo volver al módulo antes de avanzar.
   -----------------------------------------------------------------------------
 
-**🧠 DESAFÍO <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> --- Sin opciones**
+**🧠 DESAFÍO SOC --- Sin opciones**
 
 Este ejercicio es diferente. No tiene respuestas A/B/C/D.
 
@@ -1854,13 +1854,13 @@ powershell.exe
 
 Conexión:
 
-<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 443
+TCP 443
 
 Dominio:
 
 update-security\[.\]xyz
 
-Como Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>, quiero que pienses en **qué investigarías primero**.
+Como Analista SOC, quiero que pienses en **qué investigarías primero**.
 
 Tu respuesta podría tener esta estructura:
 
@@ -1913,5 +1913,5 @@ los próximos módulos.
 
   8\. Windows desde la perspectiva del atacante                ⏳
 
-  9\. Investigación <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> en Windows                             ⏳
+  9\. Investigación SOC en Windows                             ⏳
   -------------------------------------------------------------------------

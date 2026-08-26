@@ -4,12 +4,12 @@
 
 **Módulo 23: Usuarios, grupos y autenticación**
 
-**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1\
-**Enfoque:** Administración + Seguridad + Detección <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>
+**Nivel:** Principiante → Analista SOC Nivel 1\
+**Enfoque:** Administración + Seguridad + Detección SOC
 
 En el módulo anterior vimos el sistema de archivos NTFS. Ahora nos
 centramos en **quién** puede acceder a ese sistema: las cuentas, los
-grupos y los mecanismos de autenticación. Para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>, entender la
+grupos y los mecanismos de autenticación. Para un SOC, entender la
 identidad es tan importante como entender la red.
 
 **🎯 Objetivos de este módulo**
@@ -56,7 +56,7 @@ Administrador
 
 Control total sobre el equipo
 
-Un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> debe preguntarse: **¿el proceso sospechoso se ejecutó
+Un Analista SOC debe preguntarse: **¿el proceso sospechoso se ejecutó
 como administrador o como usuario estándar?** Un malware como usuario
 estándar ya es grave, pero como administrador tiene libertad para
 modificar el sistema, desactivar defensas y crear persistencia.
@@ -123,7 +123,7 @@ la cuenta. Windows puede aplicar:
 -   **Política de bloqueo**: tras N intentos fallidos, la cuenta se
     bloquea durante un tiempo.
 
-Para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>, muchos bloqueos seguidos de una misma cuenta pueden indicar
+Para un SOC, muchos bloqueos seguidos de una misma cuenta pueden indicar
 un **ataque de fuerza bruta** o un usuario que simplemente olvidó la
 contraseña.
 
@@ -158,10 +158,10 @@ En AD:
 -   Un usuario puede iniciar sesión en cualquier equipo del dominio.
 -   Existen grupos poderosos como **Domain Admins**.
 
-Para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> esto cambia la escala: un solo evento de un DC puede
+Para un SOC esto cambia la escala: un solo evento de un DC puede
 afectar a toda la organización.
 
-**8. ¿Por qué importa esto al <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?**
+**8. ¿Por qué importa esto al SOC?**
 
 -   **Cuenta nueva creada** → ¿fue legítima? (Event ID 4720).
 -   **Usuario agregado a grupo privilegiado** → ¿aprobado? (Event ID
@@ -235,9 +235,9 @@ Controlador de Dominio?
 **C)** <a href="../../GLOSARIO.md#ftp" target="_blank">FTP</a>\
 **D)** <a href="../../GLOSARIO.md#dhcp" target="_blank">DHCP</a>
 
-**🔹 Pregunta 6 — Caso <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**🔹 Pregunta 6 — Caso SOC**
 
-El <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> observa 50 eventos 4625 en 2 minutos para la cuenta `admin`. Lo
+El SOC observa 50 eventos 4625 en 2 minutos para la cuenta `admin`. Lo
 más probable es:
 
 **A)** Una actualización de Windows.\
@@ -274,7 +274,7 @@ para extraer datos.\
 **C)** Solo sirve para imprimir.\
 **D)** Es igual que el grupo Users.
 
-**🔹 Pregunta 10 — Caso <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> ⭐**
+**🔹 Pregunta 10 — Caso SOC ⭐**
 
 Un analista ve la creación de la cuenta `svc_backup` (Event ID 4720) y
 su posterior agregación al grupo `Administrators` (Event ID 4728) fuera
@@ -312,4 +312,4 @@ privilegios altos.\
 -   ⚪ Módulo 26 — Windows Event Logs
 -   ⚪ Módulo 27 — Seguridad de Windows
 -   ⚪ Módulo 28 — Windows desde la perspectiva del atacante
--   ⚪ Módulo 29 — Investigación <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> en Windows
+-   ⚪ Módulo 29 — Investigación SOC en Windows

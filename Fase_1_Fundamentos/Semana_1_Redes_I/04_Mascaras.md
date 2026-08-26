@@ -2,7 +2,7 @@
 
 **Módulo 4 - Máscaras de Subred (Subnet Mask)**
 
-**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
+**Nivel:** Principiante → Analista SOC Nivel 1
 
 **Objetivos de aprendizaje**
 
@@ -20,7 +20,7 @@ Al finalizar este módulo deberías poder:
 
 -   Identificar cómo un atacante puede aprovechar una mala segmentación.
 
--   Saber cómo un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> utiliza las máscaras de subred en una investigación.
+-   Saber cómo un Analista SOC utiliza las máscaras de subred en una investigación.
 
 **1. ¿Qué es una máscara de subred?**
 
@@ -60,7 +60,7 @@ El HOST
 
 La máscara hace exactamente eso.
 
-Divide una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> en <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> partes:
+Divide una IP en <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> partes:
 
 RED \| HOST
 
@@ -78,7 +78,7 @@ Es una información esencial para que el tráfico llegue al destino correcto.
 
 **2. Estructura de una dirección IPv4**
 
-Recordemos que una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> tiene **32 bits**.
+Recordemos que una IP tiene **32 bits**.
 
 Ejemplo:
 
@@ -94,7 +94,7 @@ No hace falta memorizar el binario, pero es importante saber que la máscara tam
 
 Supongamos:
 
-<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>:
+IP:
 
 192.168.1.35
 
@@ -316,7 +316,7 @@ un atacante que comprometa una PC puede:
 
 -   Buscar impresoras.
 
--   Buscar cámaras <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
+-   Buscar cámaras IP.
 
 -   Buscar controladores de dominio.
 
@@ -346,7 +346,7 @@ Mediante herramientas como:
 
 -   Nmap
 
--   Angry <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Scanner
+-   Angry IP Scanner
 
 -   Masscan
 
@@ -368,7 +368,7 @@ el atacante puede identificar rápidamente los equipos activos de una subred.
 
 -   Monitorear el tráfico entre subredes.
 
-**9. Aplicación práctica en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**9. Aplicación práctica en un SOC**
 
 Las máscaras aparecen constantemente en:
 
@@ -380,11 +380,11 @@ Las máscaras aparecen constantemente en:
 
 -   Logs.
 
--   <a href="../../GLOSARIO.md#vpn" target="_blank">VPN</a>.
+-   VPN.
 
 -   Reglas de acceso.
 
-Un analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> debe interpretarlas rápidamente.
+Un analista SOC debe interpretarlas rápidamente.
 
 **Ejemplo 1**
 
@@ -420,7 +420,7 @@ Interpretación:
 
 El tráfico debe pasar por un router o firewall.
 
-Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> deberías verificar:
+Como analista SOC deberías verificar:
 
 -   ¿Está permitido ese tráfico?
 
@@ -446,7 +446,7 @@ Solo los equipos de la red **192.168.10.0/24** pueden acceder a ese servidor.
 
 **Ejemplo 4**
 
-<a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>
+SIEM
 
 Escaneo detectado
 
@@ -475,7 +475,7 @@ Puede tratarse de un reconocimiento previo a un ataque.
 
   255.255.255.0     /24        254                     Oficinas y <a href="../../GLOSARIO.md#lan" target="_blank">LAN</a>
 
-  255.255.255.128   /25        126                     Dividir una <a href="../../GLOSARIO.md#lan" target="_blank">LAN</a>
+  255.255.255.128   /25        126                     Dividir una LAN
 
   255.255.255.192   /26        62                      Redes pequeñas
 
@@ -492,7 +492,7 @@ Puede tratarse de un reconocimiento previo a un ataque.
 
 **Nota:** Los valores de \"hosts aproximados\" se refieren a IPv4 y consideran las direcciones reservadas de red y <a href="../../GLOSARIO.md#broadcast" target="_blank">broadcast</a> cuando aplican.
 
-**11. Lo que esperan de un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1**
+**11. Lo que esperan de un Analista SOC Nivel 1**
 
 Cuando veas una dirección como:
 
@@ -520,7 +520,7 @@ deberías poder responder rápidamente:
 
 **Máscara de Subred**
 
--   Divide una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> en **Red** y **Host**.
+-   Divide una IP en **Red** y **Host**.
 
 -   Determina quién puede comunicarse directamente.
 
@@ -557,7 +557,7 @@ Permiten:
   -----------------------------------------------------------------------------------------------
   **Concepto**         **Debes recordar**
   -------------------- --------------------------------------------------------------------------
-  Máscara de Subred    Divide una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> en Red y Host.
+  Máscara de Subred    Divide una IP en Red y Host.
 
   CIDR                 Notación abreviada de la máscara (/24, /16, etc.).
 
@@ -565,18 +565,18 @@ Permiten:
 
   Router               Comunica distintas subredes.
 
-  <a href="../../GLOSARIO.md#vlan" target="_blank">VLAN</a>                 Segmenta una red lógica para mejorar seguridad y administración.
+  VLAN                 Segmenta una red lógica para mejorar seguridad y administración.
 
   Movimiento lateral   Un atacante se desplaza entre equipos de una misma o distintas subredes.
   -----------------------------------------------------------------------------------------------
 
-**💡 Consejo como tu entrenador para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**💡 Consejo como tu entrenador para un SOC**
 
-Este tema suele intimidar porque aparecen números como **/24**, **/27** o **255.255.255.192**. Sin embargo, en un **<a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1** no se espera que calcules subredes complejas de memoria.
+Este tema suele intimidar porque aparecen números como **/24**, **/27** o **255.255.255.192**. Sin embargo, en un **SOC Nivel 1** no se espera que calcules subredes complejas de memoria.
 
 Lo que sí se espera es que puedas responder rápidamente preguntas como:
 
--   **¿Estos <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> equipos están en la misma subred?**
+-   **¿Estos dos equipos están en la misma subred?**
 
 -   **¿Ese tráfico debería pasar por un router o firewall?**
 
@@ -584,11 +584,11 @@ Lo que sí se espera es que puedas responder rápidamente preguntas como:
 
 -   **¿Qué segmento de la empresa está siendo afectado?**
 
-Con esa capacidad podrás interpretar mejor los logs, las reglas de firewall y las alertas del <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>. Más adelante aprenderemos a calcular subredes manualmente, pero primero es importante dominar el concepto y saber aplicarlo durante una investigación de seguridad.
+Con esa capacidad podrás interpretar mejor los logs, las reglas de firewall y las alertas del SIEM. Más adelante aprenderemos a calcular subredes manualmente, pero primero es importante dominar el concepto y saber aplicarlo durante una investigación de seguridad.
 
 **Evaluación -- Módulo 4: Máscaras de Subred (Subnet Mask)**
 
-**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
+**Nivel:** Principiante → Analista SOC Nivel 1
 
 **Instrucciones:** Responde las siguientes preguntas sin consultar el material de estudio. Al finalizar, revisa las respuestas y sus justificaciones.
 
@@ -598,11 +598,11 @@ Con esa capacidad podrás interpretar mejor los logs, las reglas de firewall y l
 
 **A)** Aumentar la velocidad de Internet.
 
-**B)** Dividir una dirección <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> en una parte de red y una parte de host.
+**B)** Dividir una dirección IP en una parte de red y una parte de host.
 
-**C)** Encriptar las direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
+**C)** Encriptar las direcciones IP.
 
-**D)** Asignar automáticamente direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
+**D)** Asignar automáticamente direcciones IP.
 
 **Pregunta 2**
 
@@ -626,11 +626,11 @@ Con esa capacidad podrás interpretar mejor los logs, las reglas de firewall y l
 
 **C)** Que la red tiene 16 routers.
 
-**D)** Que solo existen 16 direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> disponibles.
+**D)** Que solo existen 16 direcciones IP disponibles.
 
 **Pregunta 4**
 
-<a href="../../GLOSARIO.md#dos" target="_blank">Dos</a> computadoras tienen las siguientes configuraciones:
+Dos computadoras tienen las siguientes configuraciones:
 
 PC 1
 
@@ -672,7 +672,7 @@ Máscara
 
 **Pregunta 6**
 
-¿Qué dispositivo permite comunicar <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> subredes diferentes?
+¿Qué dispositivo permite comunicar dos subredes diferentes?
 
 **A)** Hub
 
@@ -686,7 +686,7 @@ Máscara
 
 ¿Cuál es una ventaja de dividir una empresa en varias subredes?
 
-**A)** Eliminar la necesidad de usar direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
+**A)** Eliminar la necesidad de usar direcciones IP.
 
 **B)** Mejorar la organización y limitar el movimiento lateral de un atacante.
 
@@ -696,7 +696,7 @@ Máscara
 
 **Pregunta 8**
 
-Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> recibes la siguiente alerta:
+Como analista SOC recibes la siguiente alerta:
 
 Origen:
 
@@ -718,7 +718,7 @@ Máscara:
 
 **C)** El tráfico debe pasar por Internet.
 
-**D)** Es obligatorio utilizar una <a href="../../GLOSARIO.md#vpn" target="_blank">VPN</a>.
+**D)** Es obligatorio utilizar una VPN.
 
 **Pregunta 9**
 
@@ -744,7 +744,7 @@ Destino:
 
 **D)** Un cambio de contraseña.
 
-**Pregunta 10 (Caso práctico <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>)**
+**Pregunta 10 (Caso práctico SOC)**
 
 Un firewall tiene la siguiente regla:
 
@@ -776,7 +776,7 @@ Servidor
 
 **Justificación**
 
-La máscara de subred divide una dirección <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> en <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> partes:
+La máscara de subred divide una dirección IP en dos partes:
 
 -   **Red**
 
@@ -880,9 +880,9 @@ Esto significa que están en la misma subred.
 
 **Justificación**
 
-Cuando un equipo intenta conectarse a una gran cantidad de direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> dentro de la misma subred, es un comportamiento típico de un **escaneo de red** o actividad de reconocimiento.
+Cuando un equipo intenta conectarse a una gran cantidad de direcciones IP dentro de la misma subred, es un comportamiento típico de un **escaneo de red** o actividad de reconocimiento.
 
-Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>, esta alerta merece investigación.
+Como analista SOC, esta alerta merece investigación.
 
 **Pregunta 10**
 
@@ -899,7 +899,7 @@ Este tipo de reglas es habitual para limitar el acceso a recursos críticos.
   -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   **Respuestas Correctas**   **Nivel**
   -------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **10/10**                  ⭐ Excelente. Comprendes el propósito de las máscaras de subred y cómo aplicarlas en investigaciones de un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+  **10/10**                  ⭐ Excelente. Comprendes el propósito de las máscaras de subred y cómo aplicarlas en investigaciones de un SOC.
 
   **8--9**                   🟢 Muy buen nivel. Ya puedes interpretar la mayoría de las reglas de red y de firewall relacionadas con subredes.
 
@@ -907,5 +907,5 @@ Este tipo de reglas es habitual para limitar el acceso a recursos críticos.
 
   **4--5**                   🟠 Necesitas reforzar los conceptos de CIDR y segmentación antes de avanzar a temas más complejos.
 
-  **0--3**                   🔴 Te recomiendo volver a estudiar el módulo. Entender las máscaras de subred es fundamental para analizar tráfico, interpretar reglas de firewall y comprender la segmentación en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+  **0--3**                   🔴 Te recomiendo volver a estudiar el módulo. Entender las máscaras de subred es fundamental para analizar tráfico, interpretar reglas de firewall y comprender la segmentación en un SOC.
   -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

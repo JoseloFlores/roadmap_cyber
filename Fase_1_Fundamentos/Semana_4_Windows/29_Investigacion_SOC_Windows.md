@@ -2,15 +2,15 @@
 
 **Semana 4 — Windows**
 
-**Módulo 29: Investigación <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> en Windows**
+**Módulo 29: Investigación SOC en Windows**
 
-**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1\
+**Nivel:** Principiante → Analista SOC Nivel 1\
 **Enfoque:** Aplicación práctica + Correlación de eventos
 
 Este es el módulo que une todo lo aprendido. Ya no estudiamos una sola
 pieza: aprendemos a **reconstruir la historia de un incidente** uniendo
 identidad, procesos, red y logs. Es exactamente el trabajo diario de un
-Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+Analista SOC.
 
 **🎯 Objetivos de este módulo**
 
@@ -29,7 +29,7 @@ Ante cualquier alerta, un analista responde siempre lo mismo:
 -   **¿Cuándo?** (timestamp).
 -   **¿Desde dónde?** (ruta, equipo, <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>).
 -   **¿Proceso padre?** (quién lo lanzó).
--   **¿Con qué red se comunicó?** (<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>, dominio, puerto).
+-   **¿Con qué red se comunicó?** (IP, dominio, puerto).
 -   **¿Qué ocurrió después?** (persistencia, movimiento lateral).
 
 **2. Construir la línea de tiempo**
@@ -54,7 +54,7 @@ Alerta: 40 eventos 4625 en 1 minuto para `admin`.
 
 Preguntas:
 
--   ¿La <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> de origen es interna o externa?
+-   ¿La IP de origen es interna o externa?
 -   ¿Hubo un 4624 tras los fallos?
 -   ¿El 4624 fue tipo 3 (red) o 10 (RDP)?
 -   ¿Se creó algún proceso después (4688)?
@@ -70,7 +70,7 @@ Alerta: 4688 `powershell.exe` con padre `outlook.exe`, parámetro
 Preguntas:
 
 -   ¿Qué decodifica el `-enc`?
--   ¿A qué dominio/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> se conectó?
+-   ¿A qué dominio/IP se conectó?
 -   ¿Hubo 4625 previos (phishing con credenciales)?
 -   ¿Se creó persistencia (7045 / Registro Run)?
 
@@ -93,22 +93,22 @@ servicio y cuenta, y cazar en otros equipos.
 
 **6. Redactar el veredicto**
 
-Un buen informe <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> incluye:
+Un buen informe SOC incluye:
 
 1.  Resumen (qué pasó).
 2.  Línea de tiempo.
-3.  Evidencia (Event <a href="../../GLOSARIO.md#ids" target="_blank">IDs</a>, <a href="../../GLOSARIO.md#ips" target="_blank">IPs</a>, rutas).
+3.  Evidencia (Event IDs, <a href="../../GLOSARIO.md#ips" target="_blank">IPs</a>, rutas).
 4.  Nivel de confianza.
-5.  Acciones recomendadas (aislar, cazar, bloquear <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>, rotar
+5.  Acciones recomendadas (aislar, cazar, bloquear IP, rotar
     credenciales).
 
-**7. De Windows al <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a> y Sysmon**
+**7. De Windows al SIEM y Sysmon**
 
 Los logs nativos son solo el inicio. En la Fase 2 aprenderás:
 
 -   **Sysmon** (Semana 8): telemetría rica de procesos y red.
 -   **Splunk** (Semanas 6-7): búsqueda centralizada (SPL).
--   **<a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>**: correlación automática de miles de eventos.
+-   **SIEM**: correlación automática de miles de eventos.
 
 Tu trabajo hoy (correlacionar a mano) es la base de lo que luego hará
 la herramienta por ti.
@@ -122,7 +122,7 @@ la herramienta por ti.
 3.  Escribe un veredicto de 3 líneas.
 4.  Indica 3 acciones inmediatas.
 
-**📝 Evaluación — Módulo 29: Investigación <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> en Windows**
+**📝 Evaluación — Módulo 29: Investigación SOC en Windows**
 
 **🔹 Pregunta 1**
 
@@ -156,7 +156,7 @@ Unir 4625 → 4624 → 4688 → conexión es:
 Ante 40 fallos 4625 para `admin` en 1 minuto, lo primero es:
 
 **A)** Reiniciar el router\
-**B)** Verificar si hubo un 4624 exitoso y desde qué <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>\
+**B)** Verificar si hubo un 4624 exitoso y desde qué IP\
 **C)** Apagar la impresora\
 **D)** Borrar logs
 
@@ -180,9 +180,9 @@ Ante 40 fallos 4625 para `admin` en 1 minuto, lo primero es:
 
 **🔹 Pregunta 7**
 
-Un buen informe <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> incluye:
+Un buen informe SOC incluye:
 
-**A)** Solo la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>\
+**A)** Solo la IP\
 **B)** Resumen, línea de tiempo, evidencia y acciones\
 **C)** La contraseña del usuario\
 **D)** Un dibujo
@@ -196,10 +196,10 @@ Sysmon (Semana 8) aporta respecto a los logs nativos:
 **C)** Solo eventos de impresión\
 **D)** Cifrado de discos
 
-**🔹 Pregunta 9 — Caso <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**🔹 Pregunta 9 — Caso SOC**
 
 PC-RRHH-07: 4625 x10 → 4624 → 4688 `powershell.exe` (padre
-`winword.exe`) → conexión a <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> externa. Veredicto razonable:
+`winword.exe`) → conexión a IP externa. Veredicto razonable:
 
 **A)** Mantenimiento normal.\
 **B)** Documento malicioso que ejecutó PowerShell y conectó a C2; aislar
@@ -211,8 +211,8 @@ y decodificar.\
 
 La habilidad de correlacionar eventos a mano sirve para:
 
-**A)** Nada, lo hace el <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a> solo.\
-**B)** Entender la base que luego automatiza el <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>/Sysmon.\
+**A)** Nada, lo hace el SIEM solo.\
+**B)** Entender la base que luego automatiza el SIEM/Sysmon.\
 **C)** Apagar equipos.\
 **D)** Crear virus.
 
@@ -229,13 +229,13 @@ La habilidad de correlacionar eventos a mano sirve para:
 7. **B**: informe completo.
 8. **B**: telemetría rica.
 9. **B**: macro/doc malicioso a C2.
-10. **B**: base del <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>.
+10. **B**: base del SIEM.
 
 **🏆 TABLA DE RESULTADOS — Semana 4**
 
 | Resultado | Evaluación |
 | :--- | :--- |
-| **10/10** | 🟢 Excelente — comprensión y razonamiento <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> muy sólidos. |
+| **10/10** | 🟢 Excelente — comprensión y razonamiento SOC muy sólidos. |
 | **8–9/10** | 🟢 Muy buen nivel — listo para avanzar. |
 | **6–7/10** | 🟡 Buen progreso — reforzar conceptos. |
 | **4–5/10** | 🟠 Repasar fundamentos. |
@@ -251,7 +251,7 @@ La habilidad de correlacionar eventos a mano sirve para:
 -   ✅ **Módulo 26 — Windows Event Logs**
 -   ✅ **Módulo 27 — Seguridad de Windows**
 -   ✅ **Módulo 28 — Windows desde la perspectiva del atacante**
--   ✅ **Módulo 29 — Investigación <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> en Windows**
+-   ✅ **Módulo 29 — Investigación SOC en Windows**
 
 **🎯 Meta de la Semana 4**
 
@@ -266,5 +266,5 @@ Puedas decir:
 sospechosa. Debo investigar el usuario, el proceso padre, el destino de
 la conexión y la actividad posterior."**
 
-Esa es la mentalidad <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>. ¡Siguiente parada: las redes de la Fase 2 y
-los <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>!
+Esa es la mentalidad SOC. ¡Siguiente parada: las redes de la Fase 2 y
+los SIEM!

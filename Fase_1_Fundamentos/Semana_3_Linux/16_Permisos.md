@@ -4,7 +4,7 @@
 
 **Módulo 16 – Permisos de Archivos y Directorios (rwx)**
 
-**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
+**Nivel:** Principiante → Analista SOC Nivel 1
 
 **Antes de comenzar**
 
@@ -12,7 +12,7 @@ Ya dominas:
 
 - ✅ Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a> y <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>
 
-- ✅ <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> y <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>
+- ✅ TCP y <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>
 
 - ✅ Puertos
 
@@ -30,7 +30,7 @@ Y cada archivo tiene un **dueño** y unos **permisos**.
 
 Los permisos `rwx` controlan quién puede **leer**, quién puede **escribir** y quién puede **ejecutar** cada archivo o directorio.
 
-¿Por qué esto es tan importante para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?
+¿Por qué esto es tan importante para un SOC?
 
 Porque una mala configuración de permisos es una de las causas más comunes de compromiso en Linux.
 
@@ -64,7 +64,7 @@ Al finalizar este módulo podrás:
 
 - Identificar ataques que aprovechan permisos mal configurados.
 
-- Aplicar estos conocimientos en auditorías y casos reales de un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+- Aplicar estos conocimientos en auditorías y casos reales de un SOC.
 
 **1. ¿Qué son los permisos?**
 
@@ -133,7 +133,7 @@ Ese comando muestra:
 
 - El nombre del archivo.
 
-Como Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> lo usarás constantemente para auditar el sistema.
+Como Analista SOC lo usarás constantemente para auditar el sistema.
 
 **3. Permisos en archivos**
 
@@ -666,7 +666,7 @@ Solo el dueño tiene acceso.
 
 Ideal para directorios privados.
 
-**Cómo ver tu <a href="../../GLOSARIO.md#umask" target="_blank">umask</a> actual**
+**Cómo ver tu umask actual**
 
 `umask`
 
@@ -682,7 +682,7 @@ Se configura en archivos como:
 
 `~/.bashrc`
 
-**Por qué importa para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**Por qué importa para un SOC**
 
 Un `umask` mal configurado puede dejar archivos legibles o escribibles por todos.
 
@@ -690,9 +690,9 @@ Un `umask` seguro garantiza que los nuevos archivos nazcan protegidos.
 
 Recuerda:
 
-**<a href="../../GLOSARIO.md#umask" target="_blank">umask</a> 022** → archivos `644`, directorios `755`.
+**umask 022** → archivos `644`, directorios `755`.
 
-**<a href="../../GLOSARIO.md#umask" target="_blank">umask</a> 077** → archivos `600`, directorios `700`.
+**umask 077** → archivos `600`, directorios `700`.
 
 **11. Bits especiales**
 
@@ -700,13 +700,13 @@ Además de `rwx`, existen **tres bits especiales**.
 
 | **Bit**   | **Valor octal** | **Símbolo** | **Efecto**                             |
 |-----------|-----------------|-------------|----------------------------------------|
-| <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a>    | 4               | `s` en owner  | Ejecuta con los privilegios del dueño. |
+| setuid    | 4               | `s` en owner  | Ejecuta con los privilegios del dueño. |
 | setgid    | 2               | `s` en group  | Ejecuta con el grupo del archivo.      |
 | sticky    | 1               | `t`          | Solo el dueño puede borrar sus archivos. |
 
-**<a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a> (4)**
+**setuid (4)**
 
-Un ejecutable con <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a> se ejecuta con los privilegios del **propietario** del archivo.
+Un ejecutable con setuid se ejecuta con los privilegios del **propietario** del archivo.
 
 **Ejemplo real**
 
@@ -726,9 +726,9 @@ Y al ejecutarlo, el comando actúa como **<a href="../../GLOSARIO.md#root" targe
 
 ¿Por qué es necesario?
 
-Porque para cambiar la contraseña hay que modificar `/etc/shadow`, que solo <a href="../../GLOSARIO.md#root" target="_blank">root</a> puede tocar.
+Porque para cambiar la contraseña hay que modificar `/etc/shadow`, que solo root puede tocar.
 
-Sin <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a>, los usuarios no podrían cambiar sus contraseñas.
+Sin setuid, los usuarios no podrían cambiar sus contraseñas.
 
 **setgid (2)**
 
@@ -742,7 +742,7 @@ Eso es muy útil en directorios compartidos de equipos.
 
 El sticky bit se aplica a directorios.
 
-Solo el **propietario** del archivo (o <a href="../../GLOSARIO.md#root" target="_blank">root</a>) puede borrarlo.
+Solo el **propietario** del archivo (o root) puede borrarlo.
 
 **Ejemplo real: `/tmp`**
 
@@ -760,7 +760,7 @@ Sin sticky bit, cualquiera podría borrar los archivos temporales de los demás.
 
 | **Bit**   | **Con x** | **Sin x** |
 |-----------|-----------|-----------|
-| <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a>    | `s`       | `S`       |
+| setuid    | `s`       | `S`       |
 | setgid    | `s`       | `S`       |
 | sticky    | `t`       | `T`       |
 
@@ -770,7 +770,7 @@ La letra en mayúscula significa que el bit especial está activo pero no hay `x
 
 `chmod 4755 programa`
 
-Activa <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a>.
+Activa setuid.
 
 `chmod 2755 directorio`
 
@@ -788,17 +788,17 @@ También en notación simbólica:
 
 `chmod +t /tmp`
 
-**Riesgo de seguridad del <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a>**
+**Riesgo de seguridad del setuid**
 
-Un binario <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a> que pertenece a **<a href="../../GLOSARIO.md#root" target="_blank">root</a>** es muy peligroso.
+Un binario setuid que pertenece a **root** es muy peligroso.
 
 Si el binario tiene vulnerabilidades, un atacante puede explotarlo.
 
-Y al explotarlo, obtiene privilegios de **<a href="../../GLOSARIO.md#root" target="_blank">root</a>**.
+Y al explotarlo, obtiene privilegios de **root**.
 
 Esta técnica se llama **escalada de privilegios**.
 
-Un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> debe buscar binarios <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a> sospechosos.
+Un Analista SOC debe buscar binarios setuid sospechosos.
 
 **12. ¿Cómo aprovechan esto los atacantes?**
 
@@ -824,17 +824,17 @@ Cualquier usuario podría copiar los hashes.
 
 Y después intentar crackearlos con herramientas de fuerza bruta.
 
-**Ataque 2 – Binarios con <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a> mal configurados**
+**Ataque 2 – Binarios con setuid mal configurados**
 
-Un binario con <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a> de <a href="../../GLOSARIO.md#root" target="_blank">root</a> es una escalada de privilegios en potencia.
+Un binario con setuid de root es una escalada de privilegios en potencia.
 
-Los atacantes buscan binarios <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a> con vulnerabilidades conocidas.
+Los atacantes buscan binarios setuid con vulnerabilidades conocidas.
 
-O binarios <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a> que cualquiera pueda **modificar**.
+O binarios setuid que cualquiera pueda **modificar**.
 
-Si un binario <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a> es escribible, el atacante puede reemplazarlo.
+Si un binario setuid es escribible, el atacante puede reemplazarlo.
 
-El nuevo binario se ejecutará con privilegios de <a href="../../GLOSARIO.md#root" target="_blank">root</a>.
+El nuevo binario se ejecutará con privilegios de root.
 
 **Ataque 3 – Directorios world-writable como `/tmp`**
 
@@ -885,7 +885,7 @@ Y después de borrar las evidencias, la investigación se complica enormemente.
 | **Ataque**            | **Fallo de permisos**                         | **Consecuencia**                     |
 |------------------------|-----------------------------------------------|--------------------------------------|
 | Ataque 1               | `/etc/shadow` legible                         | Robo de hashes de contraseñas.       |
-| Ataque 2               | Binario <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a> vulnerable                     | Escalada de privilegios a <a href="../../GLOSARIO.md#root" target="_blank">root</a>.      |
+| Ataque 2               | Binario setuid vulnerable                     | Escalada de privilegios a root.      |
 | Ataque 3               | Directorio world-writable                      | Alojamiento de herramientas.         |
 | Ataque 4               | Archivos `777`                                | Modificación de scripts del sistema. |
 | Ataque 5               | Logs escribibles                              | Borrado de evidencias.               |
@@ -910,7 +910,7 @@ Cada usuario y proceso debe tener solo los permisos mínimos para trabajar.
 
 - Directorios privados: `700`.
 
-- Claves privadas <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>: `600` o `400`.
+- Claves privadas SSH: `600` o `400`.
 
 **Proteger `/etc/shadow`**
 
@@ -928,9 +928,9 @@ El grupo `shadow` puede leerlo porque los servicios necesitan verificar contrase
 
 Significa que cualquiera puede leer, modificar y ejecutar.
 
-**Revisar los binarios <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a>**
+**Revisar los binarios setuid**
 
-Buscar periódicamente binarios con <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a>:
+Buscar periódicamente binarios con setuid:
 
 `find / -perm -4000 -type f 2>/dev/null`
 
@@ -940,7 +940,7 @@ Analizar si todos son legítimos.
 
 - Configuraciones: `640` o `644`.
 
-- Logs: `640` y propiedad de <a href="../../GLOSARIO.md#root" target="_blank">root</a>.
+- Logs: `640` y propiedad de root.
 
 - Ningún archivo importante debe ser escribible por others.
 
@@ -952,9 +952,9 @@ Con `umask 077` nacen con `600`.
 
 Elige según el nivel de sensibilidad.
 
-**14. Aplicación práctica en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**14. Aplicación práctica en un SOC**
 
-Como Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> auditarás permisos constantemente.
+Como Analista SOC auditarás permisos constantemente.
 
 Estos son los casos más frecuentes.
 
@@ -990,7 +990,7 @@ Interpretación:
 
 **Alerta de seguridad inmediata.**
 
-**Caso 2 – Buscar binarios <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a>**
+**Caso 2 – Buscar binarios setuid**
 
 Ejecutas:
 
@@ -1006,11 +1006,11 @@ La salida podría mostrar:
 
 Interpretación:
 
-- Estos son binarios <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a> legítimos del sistema.
+- Estos son binarios setuid legítimos del sistema.
 
 - Debes revisar si aparece algo raro o fuera de lo común.
 
-Un binario <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a> sospechoso en `/tmp` o `/home` es motivo de alarma.
+Un binario setuid sospechoso en `/tmp` o `/home` es motivo de alarma.
 
 **Caso 3 – Comprobar los permisos de los logs**
 
@@ -1026,9 +1026,9 @@ Interpretación:
 
 - Permisos `640`.
 
-- Solo <a href="../../GLOSARIO.md#root" target="_blank">root</a> y el grupo `adm` pueden leerlo.
+- Solo root y el grupo `adm` pueden leerlo.
 
-- Nadie puede modificarlo salvo <a href="../../GLOSARIO.md#root" target="_blank">root</a>.
+- Nadie puede modificarlo salvo root.
 
 Protección correcta.
 
@@ -1066,15 +1066,15 @@ La `t` final indica sticky bit.
 
 Sin sticky bit, ese directorio sería un problema grave.
 
-**15. Lo que esperan de un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1**
+**15. Lo que esperan de un Analista SOC Nivel 1**
 
-En una entrevista o en tu primer día en el <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> te harán preguntas como:
+En una entrevista o en tu primer día en el SOC te harán preguntas como:
 
 - ¿Qué significan `rwx`?
 
 - ¿Cuánto vale `chmod 755`?
 
-- ¿Qué es el <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a>?
+- ¿Qué es el setuid?
 
 - ¿Por qué `/tmp` es sospechoso?
 
@@ -1090,7 +1090,7 @@ Cuando revises un servidor, observa:
 
 - ¿Quién puede escribir en los scripts del sistema?
 
-- ¿Existen binarios <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a> inusuales?
+- ¿Existen binarios setuid inusuales?
 
 - ¿Hay directorios world-writable sin sticky bit?
 
@@ -1106,7 +1106,7 @@ Cada respuesta te dice si el servidor está bien configurado o es una víctima e
 
 - Dejar claves privadas con permisos abiertos.
 
-- Olvidar revisar los binarios <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a>.
+- Olvidar revisar los binarios setuid.
 
 **16. Resumen**
 
@@ -1164,7 +1164,7 @@ Cada respuesta te dice si el servidor está bien configurado o es una víctima e
 
 **Bits especiales**
 
-- <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a> = 4.
+- setuid = 4.
 
 - setgid = 2.
 
@@ -1174,7 +1174,7 @@ Cada respuesta te dice si el servidor está bien configurado o es una víctima e
 
 - `/etc/shadow` legible.
 
-- Binarios <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a> mal configurados.
+- Binarios setuid mal configurados.
 
 - Directorios world-writable.
 
@@ -1196,11 +1196,11 @@ Cada respuesta te dice si el servidor está bien configurado o es una víctima e
 | `chmod 777`             | Todos pueden hacer todo. Bandera roja.                            |
 | `chown user:group`      | Cambia propietario y grupo.                                       |
 | `umask 022`             | Archivos 644 y directorios 755.                                   |
-| <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a>                  | Ejecuta con los privilegios del dueño.                            |
+| setuid                  | Ejecuta con los privilegios del dueño.                            |
 | sticky bit              | Solo el dueño borra sus archivos en el directorio.                |
 | `/etc/shadow`           | Hashes de contraseñas. Permisos 640 o 600.                        |
 
-**🎓 Consejo como tu instructor de <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**🎓 Consejo como tu instructor de SOC**
 
 Quiero que memorices una asociación mental:
 
@@ -1228,17 +1228,17 @@ Aprende a leerlo con un solo vistazo.
 
 Con esa habilidad podrás detectar configuraciones inseguras antes de que los atacantes las aprovechen.
 
-Y eso, en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>, marca la diferencia entre prevenir un incidente y responder a uno.
+Y eso, en un SOC, marca la diferencia entre prevenir un incidente y responder a uno.
 
-**📘 Carrera de Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**📘 Carrera de Analista SOC**
 
 **Semana 3 – Linux**
 
 **Evaluación – Módulo 16: Permisos de Archivos y Directorios (rwx)**
 
-**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
+**Nivel:** Principiante → Analista SOC Nivel 1
 
-**Instrucciones:** Responde las siguientes preguntas sin consultar el material de estudio. Este cuestionario está diseñado con un nivel similar al de una entrevista técnica para un **Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1**. Encontrarás preguntas teóricas y casos prácticos basados en auditorías reales de sistemas Linux.
+**Instrucciones:** Responde las siguientes preguntas sin consultar el material de estudio. Este cuestionario está diseñado con un nivel similar al de una entrevista técnica para un **Analista SOC Nivel 1**. Encontrarás preguntas teóricas y casos prácticos basados en auditorías reales de sistemas Linux.
 
 **Pregunta 1**
 
@@ -1302,7 +1302,7 @@ Si ejecutas `chmod 750 archivo.txt`, ¿qué permisos quedan establecidos?
 
 **Pregunta 6**
 
-¿Qué significa que un binario tenga activo el bit **<a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a>**?
+¿Qué significa que un binario tenga activo el bit **setuid**?
 
 **A)** Cualquier usuario puede borrarlo.
 
@@ -1318,7 +1318,7 @@ Si ejecutas `chmod 750 archivo.txt`, ¿qué permisos quedan establecidos?
 
 **A)** Para impedir que se escriba en él.
 
-**B)** Para que solo <a href="../../GLOSARIO.md#root" target="_blank">root</a> pueda entrar.
+**B)** Para que solo root pueda entrar.
 
 **C)** Para que cada usuario solo pueda borrar sus propios archivos.
 
@@ -1352,7 +1352,7 @@ Observas la siguiente salida de `ls -l`:
 
 **D)** Que el archivo tiene permisos de ejecución.
 
-**Pregunta 10 (Caso práctico <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>)**
+**Pregunta 10 (Caso práctico SOC)**
 
 Durante una auditoría encuentras:
 
@@ -1368,9 +1368,9 @@ Resultado:
 
 **B)** Cualquier usuario puede leer los hashes de las contraseñas del sistema.
 
-**C)** Solo <a href="../../GLOSARIO.md#root" target="_blank">root</a> puede acceder al archivo.
+**C)** Solo root puede acceder al archivo.
 
-**D)** El archivo está protegido con <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a>.
+**D)** El archivo está protegido con setuid.
 
 **✅ Respuestas y justificación**
 
@@ -1448,7 +1448,7 @@ Ejemplo:
 
 **Justificación**
 
-El bit **<a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a>** hace que un binario se ejecute con los privilegios del **propietario** del archivo.
+El bit **setuid** hace que un binario se ejecute con los privilegios del **propietario** del archivo.
 
 Ejemplo clásico:
 
@@ -1456,7 +1456,7 @@ Ejemplo clásico:
 
 Pertenece a `root` y cualquiera puede ejecutarlo para cambiar su contraseña.
 
-Por eso un <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a> mal configurado permite escalada de privilegios.
+Por eso un setuid mal configurado permite escalada de privilegios.
 
 **Pregunta 7**
 
@@ -1508,7 +1508,7 @@ Como `/etc/shadow` contiene los **hashes de las contraseñas** del sistema, esta
 
 Los permisos correctos son `640` o `600`, con propietario `root`.
 
-Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> deberías:
+Como analista SOC deberías:
 
 - Reportar la configuración como vulnerabilidad crítica.
 

@@ -4,7 +4,7 @@
 
 **Módulo 27: Seguridad de Windows**
 
-**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1\
+**Nivel:** Principiante → Analista SOC Nivel 1\
 **Enfoque:** Defensas nativas + Evasión del atacante
 
 Windows incluye varias capas de defensa. Entender **qué protege cada
@@ -16,12 +16,12 @@ alarmas son reales y qué controles reforzar.
 -   Conocer Windows Defender, Firewall, UAC, Windows Update.
 -   Entender BitLocker, SmartScreen y Credential Guard.
 -   Relacionar cada defensa con su posible evasión.
--   Ver cómo el <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> detecta intentos de evasión.
+-   Ver cómo el SOC detecta intentos de evasión.
 
 **1. Windows Defender (Antivirus / Antimalware)**
 
 Protección en tiempo real contra malware. Genera eventos cuando detecta
-o **bloquea** una amenaza. Un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> revisa:
+o **bloquea** una amenaza. Un SOC revisa:
 
 -   Detecciones de Defender (log de *Microsoft-Windows-Windows
     Defender/Operational*).
@@ -34,7 +34,7 @@ firmas desconocidas para esquivar el antivirus.
 **2. Firewall de Windows**
 
 Controla qué tráfico entra/sale. Reglas por perfil (Dominio,
-Privado, Público). El <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> investiga conexiones que salen hacia <a href="../../GLOSARIO.md#ips" target="_blank">IPs</a>
+Privado, Público). El SOC investiga conexiones que salen hacia <a href="../../GLOSARIO.md#ips" target="_blank">IPs</a>
 externas sin justificación.
 
 **3. UAC**
@@ -45,7 +45,7 @@ elevarse sin aviso.
 **4. Windows Update**
 
 Parchea vulnerabilidades. Un equipo sin actualizar es presa fácil de
-**exploits conocidos**. El <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> debe identificar equipos desactualizados.
+**exploits conocidos**. El SOC debe identificar equipos desactualizados.
 
 **5. BitLocker**
 
@@ -90,10 +90,10 @@ Credential Guard → técnicas sin volcado de LSASS
 
 SmartScreen → ejecutables firmados o desactivación
 
-**10. El <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> y las capas**
+**10. El SOC y las capas**
 
 Ninguna capa es perfecta. Por eso las organizaciones suman **<a href="../../GLOSARIO.md#edr" target="_blank">EDR</a> +
-Firewall + <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a> + <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**. El analista busca la **falla en la cadena**:
+Firewall + <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a> + SOC**. El analista busca la **falla en la cadena**:
 por ejemplo, Defender bloquea pero el atacante ya había ejecutado
 PowerShell.
 
@@ -180,9 +180,9 @@ AppLocker/WDAC sirven para:
 **C)** Porque crea logs.\
 **D)** Porque cifra la red.
 
-**🔹 Pregunta 9 — Caso <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**🔹 Pregunta 9 — Caso SOC**
 
-Se detecta que un binario se comunicó por <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a> (443) hacia una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>
+Se detecta que un binario se comunicó por HTTPS (443) hacia una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>
 externa y que Defender luego lo bloqueó. Conclusión razonable:
 
 **A)** Es tráfico normal de actualización.\
@@ -196,7 +196,7 @@ investigarse el origen.\
 El concepto de "defensa en profundidad" significa:
 
 **A)** Usar un solo antivirus muy potente.\
-**B)** Sumar varias capas (<a href="../../GLOSARIO.md#edr" target="_blank">EDR</a>, Firewall, <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>, <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>) porque ninguna es
+**B)** Sumar varias capas (EDR, Firewall, SIEM, SOC) porque ninguna es
 perfecta.\
 **C)** Apagar UAC.\
 **D)** Cifrar solo el correo.
@@ -226,4 +226,4 @@ perfecta.\
 -   ✅ **Módulo 26 — Windows Event Logs**
 -   ✅ **Módulo 27 — Seguridad de Windows**
 -   ⚪ Módulo 28 — Windows desde la perspectiva del atacante
--   ⚪ Módulo 29 — Investigación <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> en Windows
+-   ⚪ Módulo 29 — Investigación SOC en Windows

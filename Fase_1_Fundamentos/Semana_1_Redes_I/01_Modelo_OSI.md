@@ -2,13 +2,13 @@
 
 **Módulo 1 - Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a> (Open Systems Interconnection)**
 
-**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
+**Nivel:** Principiante → Analista SOC Nivel 1
 
 **Objetivos de aprendizaje**
 
 Al finalizar este módulo deberías poder:
 
--   Comprender qué es el Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a>.
+-   Comprender qué es el Modelo OSI.
 
 -   Conocer las siete capas y su función.
 
@@ -18,11 +18,11 @@ Al finalizar este módulo deberías poder:
 
 -   Saber cómo defenderlas.
 
--   Aplicar estos conocimientos al trabajo diario de un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
+-   Aplicar estos conocimientos al trabajo diario de un Analista SOC.
 
-**1. ¿Qué es el Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a>?**
+**1. ¿Qué es el Modelo OSI?**
 
-El **Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a> (Open Systems Interconnection)** es un modelo teórico que divide la comunicación entre dispositivos en **7 capas**.
+El **Modelo OSI (Open Systems Interconnection)** es un modelo teórico que divide la comunicación entre dispositivos en **7 capas**.
 
 Cada capa tiene una función específica y se comunica únicamente con la capa inmediatamente superior e inferior.
 
@@ -50,7 +50,7 @@ La comunicación en una red funciona de forma similar: cada \"paso\" tiene una r
 
 **¿Por qué es importante en Ciberseguridad?**
 
-Cuando ocurre un incidente, el analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> debe identificar:
+Cuando ocurre un incidente, el analista SOC debe identificar:
 
 -   ¿En qué capa ocurre el problema?
 
@@ -62,7 +62,7 @@ Cuando ocurre un incidente, el analista <a href="../../GLOSARIO.md#soc" target="
 
 Pensar por capas ayuda a investigar con orden y rapidez.
 
-**Las 7 capas del Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a>**
+**Las 7 capas del Modelo OSI**
 
 7 Aplicación
 6 Presentación
@@ -142,7 +142,7 @@ Permite que <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> dispositivos
 
 Aquí aparecen las **direcciones <a href="../../GLOSARIO.md#mac" target="_blank">MAC</a>**.
 
-**¿Qué es una <a href="../../GLOSARIO.md#mac" target="_blank">MAC</a>?**
+**¿Qué es una MAC?**
 
 Es el identificador físico de una tarjeta de red.
 
@@ -164,7 +164,7 @@ Ejemplo:
 
 **Ataques**
 
-**<a href="../../GLOSARIO.md#arp" target="_blank">ARP</a> Spoofing**
+**ARP Spoofing**
 
 El atacante engaña a otros equipos para hacerse pasar por el router.
 
@@ -172,9 +172,9 @@ Resultado:
 
 Puede interceptar el tráfico (Man-in-the-Middle).
 
-**<a href="../../GLOSARIO.md#mac" target="_blank">MAC</a> Flooding**
+**MAC Flooding**
 
-El atacante llena la tabla <a href="../../GLOSARIO.md#mac" target="_blank">MAC</a> del switch.
+El atacante llena la tabla MAC del switch.
 
 Consecuencia:
 
@@ -184,9 +184,9 @@ El switch comienza a comportarse como un hub y envía tráfico a todos los puert
 
 -   <a href="../../GLOSARIO.md#port-security" target="_blank">Port Security</a>.
 
--   Dynamic <a href="../../GLOSARIO.md#arp" target="_blank">ARP</a> Inspection.
+-   Dynamic ARP Inspection.
 
--   <a href="../../GLOSARIO.md#vlan" target="_blank">VLAN</a>.
+-   VLAN.
 
 -   <a href="../../GLOSARIO.md#802-1x" target="_blank">802.1X</a>.
 
@@ -196,7 +196,7 @@ El switch comienza a comportarse como un hub y envía tráfico a todos los puert
 
 **Función**
 
-Aquí aparecen las **direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>**.
+Aquí aparecen las **direcciones IP**.
 
 Esta capa decide por dónde viajarán los paquetes entre diferentes redes.
 
@@ -224,9 +224,9 @@ Esta capa decide por dónde viajarán los paquetes entre diferentes redes.
 
 -   Escaneo de red.
 
--   <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Spoofing.
+-   IP Spoofing.
 
--   <a href="../../GLOSARIO.md#icmp" target="_blank">ICMP</a> Flood.
+-   ICMP Flood.
 
 -   Reconocimiento.
 
@@ -236,11 +236,11 @@ Esta capa decide por dónde viajarán los paquetes entre diferentes redes.
 
 -   ACL (Lista de Control de Acceso, o Access Control List).
 
--   <a href="../../GLOSARIO.md#ids" target="_blank">IDS</a>/<a href="../../GLOSARIO.md#ips" target="_blank">IPS</a> (Sistema de Detección de Intrusiones) y un <a href="../../GLOSARIO.md#ips" target="_blank">IPS</a> (Sistema de Prevención de Intrusiones).
+-   <a href="../../GLOSARIO.md#ids" target="_blank">IDS</a>/<a href="../../GLOSARIO.md#ips" target="_blank">IPS</a> (Sistema de Detección de Intrusiones) y un IPS (Sistema de Prevención de Intrusiones).
 
 -   Segmentación.
 
--   Filtrado <a href="../../GLOSARIO.md#icmp" target="_blank">ICMP</a> cuando corresponda.
+-   Filtrado ICMP cuando corresponda.
 
 **5. Capa 4 -- Transporte**
 
@@ -272,7 +272,7 @@ Aquí aparecen los **puertos**.
 
 -   Control de errores.
 
--   Confirmación de recepción (<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>).
+-   Confirmación de recepción (TCP).
 
 -   Reenvío de paquetes.
 
@@ -284,7 +284,7 @@ Aquí aparecen los **puertos**.
 
 -   Escaneo de puertos.
 
--   Fuerza bruta sobre <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a> o RDP.
+-   Fuerza bruta sobre SSH o RDP.
 
 **Defensa**
 
@@ -292,7 +292,7 @@ Aquí aparecen los **puertos**.
 
 -   Rate limiting.
 
--   <a href="../../GLOSARIO.md#ids" target="_blank">IDS</a>/<a href="../../GLOSARIO.md#ips" target="_blank">IPS</a>.
+-   IDS/IPS.
 
 -   <a href="../../GLOSARIO.md#mfa" target="_blank">MFA</a>.
 
@@ -302,7 +302,7 @@ Aquí aparecen los **puertos**.
 
 **Función**
 
-Administra el inicio, mantenimiento y cierre de una comunicación entre <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> aplicaciones.
+Administra el inicio, mantenimiento y cierre de una comunicación entre dos aplicaciones.
 
 **Ejemplo**
 
@@ -330,9 +330,9 @@ Todo eso corresponde a esta capa.
 
 -   Cookies seguras.
 
--   <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>.
+-   HTTPS.
 
--   <a href="../../GLOSARIO.md#mfa" target="_blank">MFA</a>.
+-   MFA.
 
 **7. Capa 6 -- Presentación**
 
@@ -370,11 +370,11 @@ Realiza tareas como:
 
 -   Ataques contra cifrados débiles.
 
--   Interceptación si no se usa <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>.
+-   Interceptación si no se usa HTTPS.
 
 **Defensa**
 
--   <a href="../../GLOSARIO.md#tls" target="_blank">TLS</a> actualizado.
+-   TLS actualizado.
 
 -   Certificados válidos.
 
@@ -392,9 +392,9 @@ Aquí funcionan las aplicaciones y servicios.
 
 **Protocolos**
 
--   <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a>
+-   HTTP
 
--   <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>
+-   HTTPS
 
 -   <a href="../../GLOSARIO.md#ftp" target="_blank">FTP</a>
 
@@ -404,7 +404,7 @@ Aquí funcionan las aplicaciones y servicios.
 
 -   IMAP
 
--   <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>
+-   DNS
 
 **Ejemplos**
 
@@ -447,17 +447,17 @@ Aquí funcionan las aplicaciones y servicios.
   ------------------------------------------------------------------------------
   **Capa**         **Función**            **Ejemplo**        **Dispositivo**
   ---------------- ---------------------- ------------------ -------------------
-  7 Aplicación     Servicios al usuario   <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a>, <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>          Navegador
+  7 Aplicación     Servicios al usuario   HTTP, DNS          Navegador
 
-  6 Presentación   Cifrado y formato      <a href="../../GLOSARIO.md#tls" target="_blank">TLS</a>, JPEG          Sistema operativo
+  6 Presentación   Cifrado y formato      TLS, JPEG          Sistema operativo
 
   5 Sesión         Mantiene conexiones    Inicio de sesión   Servidor
 
-  4 Transporte     Puertos y entrega      <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>, <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>           Firewall
+  4 Transporte     Puertos y entrega      TCP, UDP           Firewall
 
-  3 Red            Direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>         IPv4, <a href="../../GLOSARIO.md#icmp" target="_blank">ICMP</a>         Router
+  3 Red            Direcciones IP         IPv4, ICMP         Router
 
-  2 Enlace         Direcciones <a href="../../GLOSARIO.md#mac" target="_blank">MAC</a>        Ethernet, <a href="../../GLOSARIO.md#arp" target="_blank">ARP</a>      Switch
+  2 Enlace         Direcciones MAC        Ethernet, ARP      Switch
 
   1 Física         Transmisión de bits    Cable, fibra       Hub, cableado
   ------------------------------------------------------------------------------
@@ -469,15 +469,15 @@ Aquí funcionan las aplicaciones y servicios.
   ---------- --------------------------------------------------------------
   1          Corte de cables, sabotaje físico
 
-  2          <a href="../../GLOSARIO.md#arp" target="_blank">ARP</a> Spoofing, <a href="../../GLOSARIO.md#mac" target="_blank">MAC</a> Flooding
+  2          ARP Spoofing, MAC Flooding
 
-  3          Escaneo, <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Spoofing, <a href="../../GLOSARIO.md#icmp" target="_blank">ICMP</a> Flood
+  3          Escaneo, IP Spoofing, ICMP Flood
 
   4          SYN Flood, fuerza bruta, escaneo de puertos
 
   5          Session Hijacking
 
-  6          Ataques a <a href="../../GLOSARIO.md#tls" target="_blank">TLS</a>, certificados falsos
+  6          Ataques a TLS, certificados falsos
 
   7          SQL Injection, XSS, Phishing, Malware
   -------------------------------------------------------------------------
@@ -489,22 +489,22 @@ Aquí funcionan las aplicaciones y servicios.
   ---------- -------------------------------------------------------------
   1          Seguridad física y redundancia
 
-  2          <a href="../../GLOSARIO.md#port-security" target="_blank">Port Security</a>, <a href="../../GLOSARIO.md#vlan" target="_blank">VLAN</a>, DAI
+  2          Port Security, VLAN, DAI
 
-  3          Firewall, ACL, <a href="../../GLOSARIO.md#ids" target="_blank">IDS</a>/<a href="../../GLOSARIO.md#ips" target="_blank">IPS</a>
+  3          Firewall, ACL, IDS/IPS
 
-  4          Firewall, <a href="../../GLOSARIO.md#mfa" target="_blank">MFA</a>, Rate Limiting
+  4          Firewall, MFA, Rate Limiting
 
-  5          Expiración de sesiones, <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>
+  5          Expiración de sesiones, HTTPS
 
-  6          <a href="../../GLOSARIO.md#tls" target="_blank">TLS</a> moderno, certificados válidos
+  6          TLS moderno, certificados válidos
 
-  7          <a href="../../GLOSARIO.md#waf" target="_blank">WAF</a>, <a href="../../GLOSARIO.md#edr" target="_blank">EDR</a>, capacitación, actualizaciones
+  7          WAF, EDR, capacitación, actualizaciones
   ------------------------------------------------------------------------
 
-**12. Aplicación práctica en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**12. Aplicación práctica en un SOC**
 
-Un analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> utiliza el Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a> para ubicar rápidamente dónde ocurre un incidente.
+Un analista SOC utiliza el Modelo OSI para ubicar rápidamente dónde ocurre un incidente.
 
 **Ejemplo 1**
 
@@ -516,7 +516,7 @@ Miles de paquetes SYN al puerto 443.
 
 **Posible incidente:** Ataque SYN Flood.
 
-**Acciones del <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>:**
+**Acciones del SOC:**
 
 -   Revisar firewall.
 
@@ -530,17 +530,17 @@ Miles de paquetes SYN al puerto 443.
 
 **Alerta:**
 
-<a href="../../GLOSARIO.md#arp" target="_blank">ARP</a> duplicadas detectadas en la <a href="../../GLOSARIO.md#vlan" target="_blank">VLAN</a> de usuarios.
+ARP duplicadas detectadas en la VLAN de usuarios.
 
 **Capa afectada:** **2 -- Enlace de Datos**
 
-**Posible incidente:** <a href="../../GLOSARIO.md#arp" target="_blank">ARP</a> Spoofing.
+**Posible incidente:** ARP Spoofing.
 
-**Acciones del <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>:**
+**Acciones del SOC:**
 
--   Revisar la tabla <a href="../../GLOSARIO.md#arp" target="_blank">ARP</a>.
+-   Revisar la tabla ARP.
 
--   Identificar la <a href="../../GLOSARIO.md#mac" target="_blank">MAC</a> sospechosa.
+-   Identificar la MAC sospechosa.
 
 -   Aislar el equipo comprometido.
 
@@ -550,17 +550,17 @@ Miles de paquetes SYN al puerto 443.
 
 **Alerta:**
 
-Conexiones desde una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> desconocida a múltiples servidores internos.
+Conexiones desde una IP desconocida a múltiples servidores internos.
 
 **Capa afectada:** **3 -- Red**
 
 **Posible incidente:** Reconocimiento o movimiento lateral.
 
-**Acciones del <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>:**
+**Acciones del SOC:**
 
 -   Revisar logs del firewall.
 
--   Validar si la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pertenece a un activo autorizado.
+-   Validar si la IP pertenece a un activo autorizado.
 
 -   Correlacionar eventos en el <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>.
 
@@ -576,21 +576,21 @@ Intentos repetidos de autenticación fallida en un portal web.
 
 **Posible incidente:** Fuerza bruta o intento de compromiso de cuentas.
 
-**Acciones del <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>:**
+**Acciones del SOC:**
 
 -   Revisar registros de autenticación.
 
--   Bloquear la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> si corresponde.
+-   Bloquear la IP si corresponde.
 
 -   Verificar si hubo accesos exitosos.
 
--   Comprobar si el usuario tiene <a href="../../GLOSARIO.md#mfa" target="_blank">MFA</a> habilitado.
+-   Comprobar si el usuario tiene MFA habilitado.
 
-**13. Lo que esperan de un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1**
+**13. Lo que esperan de un Analista SOC Nivel 1**
 
 Cuando recibas una alerta, deberías preguntarte:
 
--   ¿En qué capa del Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a> ocurre el incidente?
+-   ¿En qué capa del Modelo OSI ocurre el incidente?
 
 -   ¿Qué protocolo está involucrado?
 
@@ -608,11 +608,11 @@ Cuando recibas una alerta, deberías preguntarte:
 
 -   **Capa 1 -- Física:** Transmite bits por el medio físico.
 
--   **Capa 2 -- Enlace:** Utiliza direcciones <a href="../../GLOSARIO.md#mac" target="_blank">MAC</a> para comunicar dispositivos de la misma red.
+-   **Capa 2 -- Enlace:** Utiliza direcciones MAC para comunicar dispositivos de la misma red.
 
--   **Capa 3 -- Red:** Utiliza direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> para enrutar paquetes entre redes.
+-   **Capa 3 -- Red:** Utiliza direcciones IP para enrutar paquetes entre redes.
 
--   **Capa 4 -- Transporte:** Gestiona puertos, <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> y <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>.
+-   **Capa 4 -- Transporte:** Gestiona puertos, TCP y UDP.
 
 -   **Capa 5 -- Sesión:** Administra las sesiones entre aplicaciones.
 
@@ -627,56 +627,56 @@ Cuando recibas una alerta, deberías preguntarte:
   -------------- -----------------------------------------------------------
   Capa 1         Bits y medio físico
 
-  Capa 2         <a href="../../GLOSARIO.md#mac" target="_blank">MAC</a>, Switch, Ethernet, <a href="../../GLOSARIO.md#arp" target="_blank">ARP</a>
+  Capa 2         MAC, Switch, Ethernet, ARP
 
-  Capa 3         <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>, Router, <a href="../../GLOSARIO.md#icmp" target="_blank">ICMP</a>
+  Capa 3         IP, Router, ICMP
 
-  Capa 4         <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>, <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>, Puertos
+  Capa 4         TCP, UDP, Puertos
 
   Capa 5         Sesiones y autenticación
 
-  Capa 6         Cifrado, <a href="../../GLOSARIO.md#tls" target="_blank">TLS</a>, formatos
+  Capa 6         Cifrado, TLS, formatos
 
-  Capa 7         Aplicaciones y protocolos como <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a>, <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a> y <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>
+  Capa 7         Aplicaciones y protocolos como HTTP, HTTPS y DNS
   --------------------------------------------------------------------------
 
-**💡 Consejo como tu entrenador para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
+**💡 Consejo como tu entrenador para un SOC**
 
-No intentes memorizar el Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a> como una lista de siete nombres. **Entiéndelo como una herramienta de investigación.** Cada vez que veas una alerta, pregúntate: *\"¿Qué capa está fallando?\"*.
+No intentes memorizar el Modelo OSI como una lista de siete nombres. **Entiéndelo como una herramienta de investigación.** Cada vez que veas una alerta, pregúntate: *\"¿Qué capa está fallando?\"*.
 
 Por ejemplo:
 
 -   Un puerto 22 atacado → piensa en **Capa 4 (Transporte)**.
 
--   Una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> sospechosa → **Capa 3 (Red)**.
+-   Una IP sospechosa → **Capa 3 (Red)**.
 
 -   Un ataque de phishing → **Capa 7 (Aplicación)**.
 
--   Un <a href="../../GLOSARIO.md#arp" target="_blank">ARP</a> Spoofing → **Capa 2 (Enlace)**.
+-   Un ARP Spoofing → **Capa 2 (Enlace)**.
 
-Los analistas <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> experimentados no recitan las capas de memoria: las usan para acotar rápidamente dónde buscar evidencias, qué logs revisar y qué controles aplicar. Ese enfoque es el que te permitirá investigar incidentes de forma metódica y eficiente.
+Los analistas SOC experimentados no recitan las capas de memoria: las usan para acotar rápidamente dónde buscar evidencias, qué logs revisar y qué controles aplicar. Ese enfoque es el que te permitirá investigar incidentes de forma metódica y eficiente.
 
-**Evaluación -- Módulo 2: Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a>**
+**Evaluación -- Módulo 2: Modelo OSI**
 
-**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
+**Nivel:** Principiante → Analista SOC Nivel 1
 
 **Instrucciones:** Lee cada pregunta cuidadosamente y selecciona **una sola respuesta correcta**. No mires las respuestas hasta terminar el cuestionario.
 
 **Pregunta 1**
 
-¿Cuál es el principal objetivo del Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a>?
+¿Cuál es el principal objetivo del Modelo OSI?
 
 **A)** Aumentar la velocidad de Internet.
 
 **B)** Dividir la comunicación de red en capas con funciones específicas.
 
-**C)** Reemplazar el protocolo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
+**C)** Reemplazar el protocolo TCP/IP.
 
-**D)** Crear direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> públicas.
+**D)** Crear direcciones IP públicas.
 
 **Pregunta 2**
 
-¿En qué capa del Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a> trabajan las direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>?
+¿En qué capa del Modelo OSI trabajan las direcciones IP?
 
 **A)** Capa 2 -- Enlace de Datos
 
@@ -696,40 +696,40 @@ Los analistas <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> experiment
 
 **C)** Switch
 
-**D)** Servidor <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>
+**D)** Servidor DNS
 
 **Pregunta 4**
 
 ¿Qué protocolo pertenece a la **Capa 4 -- Transporte**?
 
-**A)** <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a>
+**A)** HTTP
 
-**B)** <a href="../../GLOSARIO.md#arp" target="_blank">ARP</a>
+**B)** ARP
 
-**C)** <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>
+**C)** TCP
 
-**D)** <a href="../../GLOSARIO.md#icmp" target="_blank">ICMP</a>
+**D)** ICMP
 
 **Pregunta 5**
 
 ¿Qué información utiliza un switch para enviar correctamente una trama dentro de una red local?
 
-**A)** Dirección <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>
+**A)** Dirección IP
 
-**B)** Puerto <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>
+**B)** Puerto TCP
 
-**C)** Dirección <a href="../../GLOSARIO.md#mac" target="_blank">MAC</a>
+**C)** Dirección MAC
 
 **D)** Nombre del equipo
 
 **Pregunta 6**
 
-Recibes la siguiente alerta en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>:
+Recibes la siguiente alerta en un SOC:
 
 Miles de paquetes SYN
 Destino: Puerto 443
 
-¿En qué capa del Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a> ocurre principalmente este ataque?
+¿En qué capa del Modelo OSI ocurre principalmente este ataque?
 
 **A)** Capa 2
 
@@ -747,9 +747,9 @@ Destino: Puerto 443
 
 **B)** Phishing
 
-**C)** <a href="../../GLOSARIO.md#arp" target="_blank">ARP</a> Spoofing
+**C)** ARP Spoofing
 
-**D)** Fuerza Bruta <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>
+**D)** Fuerza Bruta SSH
 
 **Pregunta 8**
 
@@ -757,11 +757,11 @@ Destino: Puerto 443
 
 **A)** Cifrado y formato de datos.
 
-**B)** Direccionamiento <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
+**B)** Direccionamiento IP.
 
 **C)** Cableado de red.
 
-**D)** Puertos <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>.
+**D)** Puertos TCP.
 
 **Pregunta 9**
 
@@ -775,11 +775,11 @@ Destino: Puerto 443
 
 **D)** Aplicación
 
-**Pregunta 10 (Caso práctico <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>)**
+**Pregunta 10 (Caso práctico SOC)**
 
-Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> recibes una alerta indicando que un usuario ingresó a un sitio web falso y entregó sus credenciales.
+Como analista SOC recibes una alerta indicando que un usuario ingresó a un sitio web falso y entregó sus credenciales.
 
-¿En qué capa del Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a> ocurrió principalmente el ataque?
+¿En qué capa del Modelo OSI ocurrió principalmente el ataque?
 
 **A)** Capa 1 -- Física
 
@@ -797,7 +797,7 @@ Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> recibes un
 
 **Justificación**
 
-El Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a> fue creado para **dividir la comunicación de red en siete capas**, facilitando el diseño de redes, la interoperabilidad entre fabricantes y el diagnóstico de problemas.
+El Modelo OSI fue creado para **dividir la comunicación de red en siete capas**, facilitando el diseño de redes, la interoperabilidad entre fabricantes y el diagnóstico de problemas.
 
 **Pregunta 2**
 
@@ -805,11 +805,11 @@ El Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a> fue creado par
 
 **Justificación**
 
-La **Capa 3 (Red)** es responsable del direccionamiento lógico mediante direcciones **<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>** y del enrutamiento de paquetes entre distintas redes.
+La **Capa 3 (Red)** es responsable del direccionamiento lógico mediante direcciones **IP** y del enrutamiento de paquetes entre distintas redes.
 
 **Palabra clave para memorizar:**
 
-**<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> = Capa 3**
+**IP = Capa 3**
 
 **Pregunta 3**
 
@@ -817,13 +817,13 @@ La **Capa 3 (Red)** es responsable del direccionamiento lógico mediante direcci
 
 **Justificación**
 
-El **switch** trabaja principalmente en la **Capa 2**, utilizando direcciones **<a href="../../GLOSARIO.md#mac" target="_blank">MAC</a>** para enviar las tramas únicamente al dispositivo correcto dentro de una red local.
+El **switch** trabaja principalmente en la **Capa 2**, utilizando direcciones **MAC** para enviar las tramas únicamente al dispositivo correcto dentro de una red local.
 
 **Regla rápida:**
 
--   Switch → <a href="../../GLOSARIO.md#mac" target="_blank">MAC</a> → Capa 2
+-   Switch → MAC → Capa 2
 
--   Router → <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> → Capa 3
+-   Router → IP → Capa 3
 
 **Pregunta 4**
 
@@ -831,7 +831,7 @@ El **switch** trabaja principalmente en la **Capa 2**, utilizando direcciones **
 
 **Justificación**
 
-Los protocolos **<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>** y **<a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>** pertenecen a la **Capa 4 (Transporte)** porque gestionan la entrega de datos entre aplicaciones y utilizan **puertos**.
+Los protocolos **TCP** y **UDP** pertenecen a la **Capa 4 (Transporte)** porque gestionan la entrega de datos entre aplicaciones y utilizan **puertos**.
 
 **Pregunta 5**
 
@@ -839,9 +839,9 @@ Los protocolos **<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>** y **<
 
 **Justificación**
 
-Los switches construyen una **tabla <a href="../../GLOSARIO.md#mac" target="_blank">MAC</a>** para saber por qué puerto físico enviar cada trama.
+Los switches construyen una **tabla MAC** para saber por qué puerto físico enviar cada trama.
 
-No utilizan direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> para tomar esa decisión.
+No utilizan direcciones IP para tomar esa decisión.
 
 **Pregunta 6**
 
@@ -849,11 +849,11 @@ No utilizan direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pa
 
 **Justificación**
 
-Un ataque **SYN Flood** explota el funcionamiento del protocolo **<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**, que pertenece a la **Capa 4 (Transporte)**.
+Un ataque **SYN Flood** explota el funcionamiento del protocolo **TCP**, que pertenece a la **Capa 4 (Transporte)**.
 
-Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> deberías pensar inmediatamente:
+Como analista SOC deberías pensar inmediatamente:
 
--   <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>
+-   TCP
 
 -   Puerto
 
@@ -865,7 +865,7 @@ Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> deberías 
 
 **Justificación**
 
-El **<a href="../../GLOSARIO.md#arp" target="_blank">ARP</a> Spoofing** manipula el protocolo <a href="../../GLOSARIO.md#arp" target="_blank">ARP</a> y las direcciones <a href="../../GLOSARIO.md#mac" target="_blank">MAC</a> para interceptar tráfico dentro de la red local.
+El **ARP Spoofing** manipula el protocolo ARP y las direcciones MAC para interceptar tráfico dentro de la red local.
 
 Es un ataque típico de la **Capa 2**.
 
@@ -887,7 +887,7 @@ La **Capa 6 (Presentación)** se encarga de:
 
 Ejemplo:
 
--   <a href="../../GLOSARIO.md#tls" target="_blank">TLS</a>
+-   TLS
 
 -   JPEG
 
@@ -928,7 +928,7 @@ El phishing ocurre principalmente en la **Capa 7 (Aplicación)** porque engaña 
   ------------------------------------------------------------------------------------------------------------------------------------------------------------------
   **Respuestas Correctas**   **Nivel**
   -------------------------- ---------------------------------------------------------------------------------------------------------------------------------------
-  **10/10**                  ⭐ Excelente. Ya piensas como un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Junior. Puedes comenzar a analizar incidentes clasificándolos por capas del Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a>.
+  **10/10**                  ⭐ Excelente. Ya piensas como un Analista SOC Junior. Puedes comenzar a analizar incidentes clasificándolos por capas del Modelo OSI.
 
   **8--9**                   🟢 Muy buen nivel. Solo necesitas reforzar algunos conceptos antes de avanzar.
 
@@ -936,5 +936,5 @@ El phishing ocurre principalmente en la **Capa 7 (Aplicación)** porque engaña 
 
   **4--5**                   🟠 Aún hay conceptos por consolidar. Relee el módulo y vuelve a intentar el cuestionario.
 
-  **0--3**                   🔴 Te recomiendo estudiar nuevamente el Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a> antes de continuar con protocolos como <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>, <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>, <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a> y <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>.
+  **0--3**                   🔴 Te recomiendo estudiar nuevamente el Modelo OSI antes de continuar con protocolos como TCP, UDP, HTTP y DNS.
   ------------------------------------------------------------------------------------------------------------------------------------------------------------------
