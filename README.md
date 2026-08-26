@@ -62,12 +62,12 @@ Los módulos teóricos y prácticos correspondientes a la **Semana 1** se encuen
 
 Los módulos teóricos correspondientes a la **Semana 2** se encuentran organizados y limpios para su fácil lectura:
 
-1. **[Módulo 8. UDP](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_2_Redes_II/9%20_Semana_2_Redes_2_UDP.md)**: El protocolo de transporte rápido, sin conexión y sin garantías.
-2. **[Módulo 9. Puertos](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_2_Redes_II/10%20-%20Semana%202%20Redes%202%20-%20Puertos.%20By%20gpt.md)**: Identificación de servicios y aplicaciones dentro de un dispositivo.
-3. **[Módulo 10. TCP](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_2_Redes_II/11%20-%20Semana%202%20Redes%202%20-%20TCP.%20By%20gpt.md)**: El protocolo confiable y orientado a conexión (Three-Way Handshake).
-4. **[Módulo 11. DHCP](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_2_Redes_II/12%20-%20Semana%202%20Redes%202%20-%20DHCP.%20By%20gpt.md)**: Asignación automática de IP, máscara, gateway y DNS (proceso DORA).
-5. **[Módulo 12. HTTP y HTTPS](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_2_Redes_II/13%20-%20Semana%202%20Redes%202%20-%20HTTP_HTTPS.%20By%20gpt.md)**: Métodos, códigos de estado y la web cifrada.
-6. **[Módulo 13. DNS](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_2_Redes_II/10%20-%20Semana%202%20Redes%202%20-%20DNS.%20By%20gpt.md)**: La agenda telefónica de Internet y sus ataques (DGA, tunneling, spoofing).
+1. **[Módulo 8. UDP](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_2_Redes_II/08_UDP.md)**: El protocolo de transporte rápido, sin conexión y sin garantías.
+2. **[Módulo 9. Puertos](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_2_Redes_II/09_Puertos.md)**: Identificación de servicios y aplicaciones dentro de un dispositivo.
+3. **[Módulo 10. TCP](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_2_Redes_II/10_TCP.md)**: El protocolo confiable y orientado a conexión (Three-Way Handshake).
+4. **[Módulo 11. DHCP](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_2_Redes_II/11_DHCP.md)**: Asignación automática de IP, máscara, gateway y DNS (proceso DORA).
+5. **[Módulo 12. HTTP y HTTPS](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_2_Redes_II/12_HTTP_HTTPS.md)**: Métodos, códigos de estado y la web cifrada.
+6. **[Módulo 13. DNS](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_2_Redes_II/13_DNS.md)**: La agenda telefónica de Internet y sus ataques (DGA, tunneling, spoofing).
 
 ---
 
@@ -75,13 +75,29 @@ Los módulos teóricos correspondientes a la **Semana 2** se encuentran organiza
 
 Los módulos teóricos y el laboratorio correspondientes a la **Semana 3** se encuentran organizados y listos para practicar:
 
-1. **[Módulo 14. Introducción a Linux y la Terminal (CLI)](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_3_Linux/01%20-%20Semana%203%20Linux%20-%20Introduccion%20CLI.%20By%20gpt.md)**: Kernel, distribuciones, shell y primeros comandos (`ls`, `cd`, `pwd`, `cat`, `tail`).
-2. **[Módulo 15. Estructura del Sistema de Archivos (FHS)](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_3_Linux/02%20-%20Semana%203%20Linux%20-%20Estructura%20de%20Archivos%20FHS.%20By%20gpt.md)**: El árbol de directorios y dónde vive la evidencia (`/etc`, `/var/log`, `/tmp`).
-3. **[Módulo 16. Permisos de Archivos (rwx)](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_3_Linux/03%20-%20Semana%203%20Linux%20-%20Permisos.%20By%20gpt.md)**: `chmod`, `chown`, notación octal y bits especiales.
-4. **[Módulo 17. Gestión de Usuarios y Grupos](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_3_Linux/04%20-%20Semana%203%20Linux%20-%20Usuarios%20y%20Grupos.%20By%20gpt.md)**: `/etc/passwd`, `/etc/shadow`, `sudo` y detección de cuentas sospechosas.
-5. **[Módulo 18. Gestión de Procesos](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_3_Linux/05%20-%20Semana%203%20Linux%20-%20Procesos.%20By%20gpt.md)**: `ps`, `top`, `kill`, señales y detección de procesos maliciosos.
-6. **[Módulo 19. grep, Pipes y Análisis de Logs](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_3_Linux/06%20-%20Semana%203%20Linux%20-%20grep%20y%20Analisis%20de%20Logs.%20By%20gpt.md)**: Filtros avanzados y detección de fuerza bruta en `/var/log/auth.log`.
-7. **[Módulo 20. Laboratorio Práctico de Linux](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_3_Linux/07%20-%20Semana%203%20Linux%20-%20Laboratorio%20Practico.%20By%20gpt.md)**: Guía paso a paso: usuarios, permisos restrictivos y monitoreo de logs con `tail -f`.
+1. **[Módulo 14. Introducción a Linux y la Terminal (CLI)](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_3_Linux/14_Introduccion_CLI.md)**: Kernel, distribuciones, shell y primeros comandos (`ls`, `cd`, `pwd`, `cat`, `tail`).
+2. **[Módulo 15. Estructura del Sistema de Archivos (FHS)](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_3_Linux/15_Estructura_Archivos_FHS.md)**: El árbol de directorios y dónde vive la evidencia (`/etc`, `/var/log`, `/tmp`).
+3. **[Módulo 16. Permisos de Archivos (rwx)](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_3_Linux/16_Permisos.md)**: `chmod`, `chown`, notación octal y bits especiales.
+4. **[Módulo 17. Gestión de Usuarios y Grupos](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_3_Linux/17_Usuarios_Grupos.md)**: `/etc/passwd`, `/etc/shadow`, `sudo` y detección de cuentas sospechosas.
+5. **[Módulo 18. Gestión de Procesos](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_3_Linux/18_Procesos.md)**: `ps`, `top`, `kill`, señales y detección de procesos maliciosos.
+6. **[Módulo 19. grep, Pipes y Análisis de Logs](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_3_Linux/19_grep_Analisis_Logs.md)**: Filtros avanzados y detección de fuerza bruta en `/var/log/auth.log`.
+7. **[Módulo 20. Laboratorio Práctico de Linux](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_3_Linux/20_Laboratorio_Practico.md)**: Guía paso a paso: usuarios, permisos restrictivos y monitoreo de logs con `tail -f`.
+
+---
+
+## 🗂️ Contenido de la Semana 4: Windows
+
+Los módulos teóricos y prácticos correspondientes a la **Semana 4** se encuentran organizados y listos para investigar como Analista SOC:
+
+1. **[Módulo 21. Fundamentos de Windows](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_4_Windows/21_Fundamentos_Windows.md)**: Sistema operativo, kernel, User/Kernel Mode, procesos, servicios, usuarios y Registro.
+2. **[Módulo 22. NTFS y Sistema de Archivos](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_4_Windows/22_NTFS_Sistemas_Archivos.md)**: Discos, particiones, permisos, ACL, herencia y archivos ocultos/temporales.
+3. **[Módulo 23. Usuarios, grupos y autenticación](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_4_Windows/23_Usuarios_Grupos_Autenticacion.md)**: Cuentas locales, RID, UAC, NTLM vs Kerberos y Active Directory.
+4. **[Módulo 24. Procesos y servicios](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_4_Windows/24_Procesos_Servicios.md)**: `tasklist`, proceso padre/hijo, `svchost`, `lsass` y persistencia por servicios.
+5. **[Módulo 25. CMD y PowerShell](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_4_Windows/25_CMD_PowerShell.md)**: `ipconfig`, `netstat`, `whoami`, cmdlets y detección de LOLBins/PowerShell malicioso.
+6. **[Módulo 26. Windows Event Logs](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_4_Windows/26_Windows_Event_Logs.md)**: Visor de eventos y Event IDs clave (4624, 4625, 4688, 4720, 7045, 1102).
+7. **[Módulo 27. Seguridad de Windows](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_4_Windows/27_Seguridad_Windows.md)**: Defender, Firewall, BitLocker, Credential Guard, SmartScreen y defensa en profundidad.
+8. **[Módulo 28. Windows desde la perspectiva del atacante](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_4_Windows/28_Windows_Perspectiva_Atacante.md)**: Recon, escalada, persistencia, credential dumping, movimiento lateral y LOLBins.
+9. **[Módulo 29. Investigación SOC en Windows](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_4_Windows/29_Investigacion_SOC_Windows.md)**: Método de investigación, correlación de eventos, línea de tiempo y redacción de veredicto.
 
 ---
 
@@ -100,7 +116,7 @@ Este proyecto es posible gracias al valioso aporte de los siguientes colaborador
 
 | Colaborador | Rol / Contribución | GitHub |
 | :--- | :--- | :--- |
-| <img src="https://github.com/identicons/user.png" width="40" height="40" style="border-radius:50%"/> <br> **[Nombre Colaborador 1]** | Liderazgo del Roadmap / Redacción de Apuntes | [@colaborador1](https://github.com/github_username_1) |
+| <img src="https://avatars.githubusercontent.com/u/185236384?v=4" width="40" height="40" style="border-radius:50%"/> <br> **[Nombre Colaborador 1]** | Liderazgo del Roadmap / Redacción de Apuntes | [Gonzalo](https://github.com/GonzaloAtadia) |
 | <img src="https://github.com/identicons/user2.png" width="40" height="40" style="border-radius:50%"/> <br> **[Nombre Colaborador 2]** | Diseño del Repositorio / Laboratorios Prácticos | [@colaborador2](https://github.com/github_username_2) |
 | <img src="https://avatars.githubusercontent.com/u/70613354?v=4" width="40" height="40" style="border-radius:50%"/> <br> **[Jo!]** | Documentacion/ Revisión Técnica | [@Jo!](https://github.com/JoseloFlores) |
 
