@@ -1,18 +1,18 @@
-**🖥️ Carrera de Analista SOC**
+**🖥️ Carrera de Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 **Semana 4 — Windows**
 
 **Módulo 21: Fundamentos de Windows**
 
-**Nivel:** Principiante → Analista SOC Nivel 1\
-**Enfoque:** Administración + Seguridad + Detección SOC
+**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1\
+**Enfoque:** Administración + Seguridad + Detección <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>
 
 Perfecto. A partir de ahora cerramos formalmente **Redes** y comenzamos
 **Sistemas**, empezando por Windows.
 
 La idea en esta etapa cambia ligeramente: ya no vamos a estudiar
 solamente \"qué hace Windows\", sino **qué ocurre dentro de un equipo
-Windows y cómo puede observarlo un Analista SOC**.
+Windows y cómo puede observarlo un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**.
 
 **🎯 Objetivos de este módulo**
 
@@ -22,9 +22,9 @@ Al terminar esta clase deberías poder explicar:
 
 -   Qué es Windows.
 
--   Qué es el kernel.
+-   Qué es el <a href="../../GLOSARIO.md#kernel" target="_blank">kernel</a>.
 
--   Qué diferencia existe entre **User Mode** y **Kernel Mode**.
+-   Qué diferencia existe entre **User Mode** y **<a href="../../GLOSARIO.md#kernel" target="_blank">Kernel</a> Mode**.
 
 -   Qué son los procesos.
 
@@ -36,7 +36,7 @@ Al terminar esta clase deberías poder explicar:
 
 -   Qué es el Registro de Windows.
 
--   Qué relación tienen todos estos elementos con un SOC.
+-   Qué relación tienen todos estos elementos con un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
 
 **1. ¿Qué es un sistema operativo?**
 
@@ -140,14 +140,14 @@ Windows Server
 
 Utilizado para servidores y servicios empresariales.
 
-En un SOC podemos encontrar ambos.
+En un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> podemos encontrar ambos.
 
-**4. ¿Por qué Windows es importante para un SOC?**
+**4. ¿Por qué Windows es importante para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?**
 
 Porque es uno de los sistemas operativos más utilizados en entornos
 corporativos.
 
-Un SOC puede monitorear:
+Un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> puede monitorear:
 
 PC-VENTAS-01
 
@@ -177,7 +177,7 @@ PowerShell ejecutado
 
 Antivirus detectó malware
 
-El trabajo del SOC consiste, entre otras cosas, en distinguir:
+El trabajo del <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> consiste, entre otras cosas, en distinguir:
 
 ACTIVIDAD NORMAL
 
@@ -196,13 +196,13 @@ Ahora llegamos a uno de los conceptos más importantes.
 Windows separa la ejecución del sistema en diferentes niveles de
 privilegios.
 
-Los dos principales son:
+Los <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> principales son:
 
 USER MODE
 
 ↓
 
-KERNEL MODE
+<a href="../../GLOSARIO.md#kernel" target="_blank">KERNEL</a> MODE
 
 **6. User Mode**
 
@@ -230,14 +230,14 @@ Porque si cualquier programa pudiera modificar directamente la memoria
 del sistema o controlar el hardware, un simple error podría destruir el
 sistema completo.
 
-**7. Kernel Mode**
+**7. <a href="../../GLOSARIO.md#kernel" target="_blank">Kernel</a> Mode**
 
-El **Kernel Mode** tiene privilegios mucho mayores.
+El **<a href="../../GLOSARIO.md#kernel" target="_blank">Kernel</a> Mode** tiene privilegios mucho mayores.
 
 Aquí funciona el núcleo del sistema operativo y componentes que
 necesitan acceso privilegiado.
 
-El kernel administra cosas como:
+El <a href="../../GLOSARIO.md#kernel" target="_blank">kernel</a> administra cosas como:
 
 -   CPU.
 
@@ -273,11 +273,11 @@ API / System Calls
 
 ┌──────────────▼──────────────┐
 
-│ KERNEL MODE │
+│ <a href="../../GLOSARIO.md#kernel" target="_blank">KERNEL</a> MODE │
 
 │ │
 
-│ Kernel │
+│ <a href="../../GLOSARIO.md#kernel" target="_blank">Kernel</a> │
 
 │ Drivers │
 
@@ -295,10 +295,10 @@ API / System Calls
 
 HARDWARE
 
-**8. ¿Por qué esto importa para un SOC?**
+**8. ¿Por qué esto importa para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?**
 
 Porque una aplicación ejecutándose en User Mode normalmente tiene menos
-privilegios que un componente del Kernel.
+privilegios que un componente del <a href="../../GLOSARIO.md#kernel" target="_blank">Kernel</a>.
 
 Un atacante que consigue pasar de:
 
@@ -375,9 +375,9 @@ Ejemplos:
 
 -   Windows Defender.
 
--   DHCP Client.
+-   <a href="../../GLOSARIO.md#dhcp" target="_blank">DHCP</a> Client.
 
--   DNS Client.
+-   <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> Client.
 
 -   Print Spooler.
 
@@ -454,7 +454,7 @@ NT AUTHORITY\\SYSTEM
 La cuenta **SYSTEM** posee privilegios extremadamente elevados dentro
 del sistema Windows.
 
-Para un SOC, esto es muy importante.
+Para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>, esto es muy importante.
 
 Si observamos:
 
@@ -574,7 +574,7 @@ C:\\Program Files\\Google\\
 
 C:\\Program Files\\Microsoft\\
 
-Un analista SOC puede investigar desde qué ubicación se ejecutó un
+Un analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> puede investigar desde qué ubicación se ejecutó un
 programa.
 
 Por ejemplo:
@@ -713,7 +713,7 @@ Windows
 
 ↓
 
-EDR
+<a href="../../GLOSARIO.md#edr" target="_blank">EDR</a>
 
 ↓
 
@@ -721,13 +721,13 @@ Firewall
 
 ↓
 
-SIEM
+<a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>
 
 ↓
 
-SOC
+<a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>
 
-**25. ¿Qué información puede utilizar un SOC?**
+**25. ¿Qué información puede utilizar un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?**
 
 Aquí comienza la conexión con todo lo que estudiamos anteriormente.
 
@@ -735,7 +735,7 @@ Imagina:
 
 PC-FINANZAS-03
 
-El SOC puede recibir:
+El <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> puede recibir:
 
 **Evento de autenticación**
 
@@ -755,7 +755,7 @@ powershell.exe
 
 203.0.113.50:443
 
-**Evento DNS**
+**Evento <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>**
 
 consulta:
 
@@ -771,11 +771,11 @@ POWERSHELL
 
 ↓
 
-DNS
+<a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>
 
 ↓
 
-HTTPS
+<a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>
 
 Esto es **correlación de eventos**.
 
@@ -818,13 +818,13 @@ Podría intentar:
 
 Cada etapa puede dejar evidencia.
 
-**🔍 27. Ejemplo de investigación SOC**
+**🔍 27. Ejemplo de investigación <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 Supongamos que aparece:
 
 factura.exe
 
-El SOC podría preguntar:
+El <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> podría preguntar:
 
 **¿Dónde estaba?**
 
@@ -850,13 +850,13 @@ Comandos sospechosos
 
 update-security.xyz
 
-**¿Qué IP resolvió?**
+**¿Qué <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> resolvió?**
 
 203.0.113.50
 
 **¿Qué protocolo utilizó?**
 
-HTTPS / TCP 443
+<a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a> / <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 443
 
 De esta forma podemos reconstruir una historia.
 
@@ -900,9 +900,9 @@ EVENTOS
 
 ↓
 
-SOC
+<a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>
 
-El SOC observa **qué hacen los usuarios, procesos, servicios y
+El <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> observa **qué hacen los usuarios, procesos, servicios y
 componentes del sistema** para determinar si existe actividad maliciosa.
 
 **🎯 Resumen del Módulo 21**
@@ -929,7 +929,7 @@ Administra:
 
 Es un sistema operativo ampliamente utilizado en organizaciones.
 
-**Kernel**
+**<a href="../../GLOSARIO.md#kernel" target="_blank">Kernel</a>**
 
 Es el núcleo del sistema operativo.
 
@@ -937,7 +937,7 @@ Es el núcleo del sistema operativo.
 
 Ejecutan normalmente las aplicaciones.
 
-**Kernel Mode**
+**<a href="../../GLOSARIO.md#kernel" target="_blank">Kernel</a> Mode**
 
 Tiene acceso privilegiado al sistema y hardware.
 
@@ -973,11 +973,11 @@ Controla determinadas acciones que requieren elevación de privilegios.
   -------------- --------------------------------------------------------
   **OS**         Sistema operativo
 
-  **Kernel**     Núcleo del sistema
+  **<a href="../../GLOSARIO.md#kernel" target="_blank">Kernel</a>**     Núcleo del sistema
 
   **User Mode**  Entorno con privilegios limitados
 
-  **Kernel       Entorno con privilegios elevados
+  **<a href="../../GLOSARIO.md#kernel" target="_blank">Kernel</a>       Entorno con privilegios elevados
   Mode**         
 
   **Proceso**    Programa en ejecución
@@ -996,16 +996,16 @@ Controla determinadas acciones que requieren elevación de privilegios.
 **🛡️ Conexión con tu futura profesión**
 
 Hay una diferencia importante entre aprender Windows como usuario y
-aprenderlo como **Analista SOC**.
+aprenderlo como **Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**.
 
 Un usuario pregunta:
 
 \"¿Cómo hago para abrir el Administrador de tareas?\"
 
-Un Analista SOC pregunta:
+Un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> pregunta:
 
 **\"¿Por qué este proceso apareció, quién lo inició, con qué
-privilegios, desde qué ruta, qué proceso padre lo creó y con qué IP se
+privilegios, desde qué ruta, qué proceso padre lo creó y con qué <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> se
 comunicó después?\"**
 
 Ese cambio de mentalidad es justamente lo que vamos a trabajar durante
@@ -1075,7 +1075,7 @@ nuestro:
 
 **Examen --- 10 preguntas Multiple Choice**
 
-Pero esta vez voy a empezar a introducir **situaciones de SOC**.
+Pero esta vez voy a empezar a introducir **situaciones de <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**.
 
 No solamente:
 
@@ -1083,11 +1083,11 @@ No solamente:
 
 También:
 
-\"El SOC detecta que powershell.exe fue iniciado desde una carpeta de
+\"El <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> detecta que powershell.exe fue iniciado desde una carpeta de
 usuario. ¿Qué información debería investigar el analista?\"
 
 Así empezamos progresivamente a pasar de **memorizar conceptos → razonar
-como Analista SOC**.
+como Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**.
 
 **📍 Progreso**
 
@@ -1109,18 +1109,18 @@ como Analista SOC**.
 
 -   ⚪ Módulo 28: Windows desde la perspectiva del atacante
 
--   ⚪ Módulo 29: Investigación SOC en Windows
+-   ⚪ Módulo 29: Investigación <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> en Windows
 
-**🖥️ Carrera de Analista SOC**
+**🖥️ Carrera de Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 **Semana 4 — Windows**
 
 **📝 Evaluación --- Módulo 21: Fundamentos de Windows**
 
-**Nivel:** Principiante → Analista SOC Nivel 1
+**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
 
 Vamos a mantener el formato que venimos utilizando. Esta vez agrego
-algunas preguntas de **razonamiento SOC**, para empezar a entrenarte
+algunas preguntas de **razonamiento <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**, para empezar a entrenarte
 como analista y no solamente como estudiante.
 
 **Instrucciones:** elegí una sola respuesta por pregunta.\
@@ -1148,7 +1148,7 @@ administra recursos como memoria, procesos y hardware?
 
 **B)** Explorer.exe.
 
-**C)** Kernel.
+**C)** <a href="../../GLOSARIO.md#kernel" target="_blank">Kernel</a>.
 
 **D)** Task Manager.
 
@@ -1193,7 +1193,7 @@ y proporcionar una función al sistema o a otros programas.
 
 **🔹 Pregunta 6**
 
-Un Analista SOC observa:
+Un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> observa:
 
 Proceso:
 
@@ -1222,7 +1222,7 @@ usuario de Windows?
 
 **A)** C:\\Users\\NombreUsuario
 
-**B)** C:\\Kernel\\Users
+**B)** C:\\<a href="../../GLOSARIO.md#kernel" target="_blank">Kernel</a>\\Users
 
 **C)** C:\\System\\Accounts
 
@@ -1232,7 +1232,7 @@ usuario de Windows?
 
 ¿Qué es el **Windows Registry**?
 
-**A)** Un servidor DNS local.
+**A)** Un servidor <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> local.
 
 **B)** Una base de datos jerárquica que almacena configuraciones del
 sistema y aplicaciones.
@@ -1242,9 +1242,9 @@ sistema y aplicaciones.
 **D)** Un sistema de archivos utilizado exclusivamente para discos
 externos.
 
-**🔹 Pregunta 9 --- Caso SOC**
+**🔹 Pregunta 9 --- Caso <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
-El SIEM genera la siguiente alerta:
+El <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a> genera la siguiente alerta:
 
 Equipo: PC-FINANZAS-03
 
@@ -1264,9 +1264,9 @@ factura.exe
 
 Conexión posterior:
 
-TCP 443
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 443
 
-¿Cuál sería la mejor reacción inicial del Analista SOC?
+¿Cuál sería la mejor reacción inicial del Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?
 
 **A)** Ignorar la alerta porque PowerShell es una herramienta legítima
 de Windows.
@@ -1278,7 +1278,7 @@ destino de la conexión y la actividad realizada por PowerShell.
 
 **D)** Concluir inmediatamente que se trata de ransomware.
 
-**🔹 Pregunta 10 --- Caso SOC ⭐**
+**🔹 Pregunta 10 --- Caso <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> ⭐**
 
 Durante una investigación se observa la siguiente secuencia:
 
@@ -1298,16 +1298,16 @@ modificación del Registry
 
 ↓
 
-conexión HTTPS
+conexión <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>
 
 ¿Qué concepto describe mejor lo que está haciendo el analista al
 estudiar esta secuencia completa?
 
-**A)** Resolución DNS.
+**A)** Resolución <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>.
 
 **B)** Correlación y análisis de eventos para reconstruir la actividad.
 
-**C)** Fragmentación IP.
+**C)** Fragmentación <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
 
 **D)** Administración de memoria.
 
@@ -1350,9 +1350,9 @@ forma controlada.
 
 **Pregunta 2**
 
-**✅ Respuesta: C --- Kernel**
+**✅ Respuesta: C --- <a href="../../GLOSARIO.md#kernel" target="_blank">Kernel</a>**
 
-El **kernel** es el núcleo del sistema operativo.
+El **<a href="../../GLOSARIO.md#kernel" target="_blank">kernel</a>** es el núcleo del sistema operativo.
 
 Se encarga de tareas fundamentales como:
 
@@ -1366,7 +1366,7 @@ Se encarga de tareas fundamentales como:
 
 -   Recursos del sistema.
 
-Por eso comprometer componentes con privilegios de kernel puede tener
+Por eso comprometer componentes con privilegios de <a href="../../GLOSARIO.md#kernel" target="_blank">kernel</a> puede tener
 consecuencias extremadamente graves.
 
 **Pregunta 3**
@@ -1438,11 +1438,11 @@ Ejemplos:
 
 -   Windows Defender.
 
--   DHCP Client.
+-   <a href="../../GLOSARIO.md#dhcp" target="_blank">DHCP</a> Client.
 
--   DNS Client.
+-   <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> Client.
 
-Desde un SOC, los servicios son importantes porque un atacante puede
+Desde un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>, los servicios son importantes porque un atacante puede
 intentar **crear o modificar servicios para conseguir persistencia**.
 
 **Pregunta 6**
@@ -1543,7 +1543,7 @@ PowerShell
 
 ↓
 
-HTTPS
+<a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>
 
 Además:
 
@@ -1563,15 +1563,15 @@ El analista debería buscar:
 
 -   Destino de red.
 
--   Consultas DNS relacionadas.
+-   Consultas <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> relacionadas.
 
 -   Eventos de PowerShell.
 
--   Eventos del EDR.
+-   Eventos del <a href="../../GLOSARIO.md#edr" target="_blank">EDR</a>.
 
 -   Actividad posterior.
 
-Esto es pensamiento SOC.
+Esto es pensamiento <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
 
 **Pregunta 10**
 
@@ -1611,7 +1611,7 @@ Esto permite reconstruir potencialmente la cadena de ataque.
   **Resultado**   **Evaluación**
   --------------- --------------------------------------------------------------
   **10/10**       🟢 Excelente --- comprensión muy sólida y buen razonamiento
-                  SOC.
+                  <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
 
   **8--9/10**     🟢 Muy buen nivel --- estás listo para avanzar.
 
@@ -1623,7 +1623,7 @@ Esto permite reconstruir potencialmente la cadena de ataque.
   **0--3/10**     🔴 Conviene volver a estudiar el módulo antes de continuar.
   ------------------------------------------------------------------------------
 
-**🎯 DESAFÍO EXTRA --- NIVEL ENTREVISTA SOC**
+**🎯 DESAFÍO EXTRA --- NIVEL ENTREVISTA <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 Este no cuenta para la nota, pero quiero que empieces a desarrollar el
 razonamiento que vas a necesitar en una entrevista.
@@ -1642,9 +1642,9 @@ Usuario: empleado01
 
 └── powershell.exe
 
-└── conexión TCP 443
+└── conexión <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 443
 
-El EDR además informa:
+El <a href="../../GLOSARIO.md#edr" target="_blank">EDR</a> además informa:
 
 factura.exe
 
@@ -1652,7 +1652,7 @@ ubicación:
 
 C:\\Users\\empleado01\\AppData\\Roaming\\
 
-**Como Analista SOC, ¿qué te llama la atención?**
+**Como Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>, ¿qué te llama la atención?**
 
 Hay **varias cosas**:
 
@@ -1695,15 +1695,15 @@ PowerShell
 
 ↓
 
-TCP 443
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 443
 
 Debemos investigar:
 
-¿A qué IP?
+¿A qué <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>?
 
 ¿A qué dominio?
 
-¿Hubo una consulta DNS?
+¿Hubo una consulta <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>?
 
 ¿Es un dominio conocido?
 
@@ -1735,7 +1735,7 @@ RED
 
 POSIBLE C2
 
-**Eso ya empieza a parecer una investigación SOC real.**
+**Eso ya empieza a parecer una investigación <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> real.**
 
 **📊 Progreso --- Semana 4**
 
@@ -1757,9 +1757,9 @@ POSIBLE C2
 
 -   ⚪ Módulo 8 --- Windows desde la perspectiva del atacante
 
--   ⚪ Módulo 9 --- Investigación SOC en Windows
+-   ⚪ Módulo 9 --- Investigación <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> en Windows
 
 **Siguiente módulo recomendado:** **Sistema de archivos NTFS**, donde
 vamos a profundizar en C:\\Windows, C:\\Users, Program Files, AppData,
 permisos, ACL, archivos ocultos y qué evidencias puede buscar un
-analista SOC en el sistema de archivos.
+analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> en el sistema de archivos.

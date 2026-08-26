@@ -1,10 +1,10 @@
-**🖥️ Carrera de Analista SOC**
+**🖥️ Carrera de Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 **Semana 4 — Windows**
 
 **Módulo 28: Windows desde la perspectiva del atacante**
 
-**Nivel:** Principiante → Analista SOC Nivel 1\
+**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1\
 **Enfoque:** Mentalidad ofensiva (defensiva) + Detección
 
 Para defender Windows bien, debes pensar como quien quiere vulnerarlo.
@@ -19,7 +19,7 @@ correctas.
 -   Conocer técnicas clave: escalada, LOLBins, PowerShell malicioso.
 -   Entender **credential dumping**, **persistencia** y **movimiento
     lateral**.
--   Relacionar cada técnica con los Event IDs que la delatan.
+-   Relacionar cada técnica con los Event <a href="../../GLOSARIO.md#ids" target="_blank">IDs</a> que la delatan.
 
 **1. Reconocimiento y enumeración**
 
@@ -129,7 +129,7 @@ Movimiento lateral
 
 Exfiltración / C2
 
-Cada flecha deja **evidencia** en logs, procesos o red. El SOC las une.
+Cada flecha deja **evidencia** en logs, procesos o red. El <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> las une.
 
 **🧪 Laboratorio recomendado (defensivo)**
 
@@ -214,7 +214,7 @@ El borrado del log de seguridad (1102) suele ser:
 **C)** Actualización\
 **D)** Error de red
 
-**🔹 Pregunta 9 — Caso SOC**
+**🔹 Pregunta 9 — Caso <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 Varios equipos muestran inicios de sesión tipo 3 (red) desde una misma
 cuenta hacia muchos servidores en minutos. Sugiere:
@@ -258,4 +258,4 @@ Relaciona: 4720 + 4728 + 7045 en poco tiempo apunta a:
 -   ✅ **Módulo 26 — Windows Event Logs**
 -   ✅ **Módulo 27 — Seguridad de Windows**
 -   ✅ **Módulo 28 — Windows desde la perspectiva del atacante**
--   ⚪ Módulo 29 — Investigación SOC en Windows
+-   ⚪ Módulo 29 — Investigación <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> en Windows

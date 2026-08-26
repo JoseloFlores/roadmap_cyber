@@ -1,10 +1,10 @@
-**Módulo de Estudio SOC**
+**Módulo de Estudio <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 **Módulo 5 - Subredes (Subnetting)**
 
-**Nivel:** Principiante → Analista SOC Nivel 1
+**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
 
-**Antes de comenzar:** Ya aprendiste sobre **IP públicas y privadas**, **Modelo OSI**, **Modelo TCP/IP** y **Máscaras de Subred**. Este módulo une todos esos conceptos. Comprender las subredes es uno de los conocimientos más importantes para trabajar en redes y en un SOC.
+**Antes de comenzar:** Ya aprendiste sobre **<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> públicas y privadas**, **Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a>**, **Modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>** y **Máscaras de Subred**. Este módulo une todos esos conceptos. Comprender las subredes es uno de los conocimientos más importantes para trabajar en redes y en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
 
 **Objetivos de aprendizaje**
 
@@ -18,13 +18,13 @@ Al finalizar este módulo deberías poder:
 
 -   Interpretar una dirección de red.
 
--   Comprender el concepto de Broadcast.
+-   Comprender el concepto de <a href="../../GLOSARIO.md#broadcast" target="_blank">Broadcast</a>.
 
 -   Identificar el rango de hosts de una subred.
 
 -   Entender cómo un atacante aprovecha una mala segmentación.
 
--   Aplicar estos conocimientos en investigaciones de un SOC.
+-   Aplicar estos conocimientos en investigaciones de un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
 
 **1. ¿Qué es una Subred?**
 
@@ -192,7 +192,7 @@ Ejemplo:
 
 Todos estos pueden asignarse a computadoras, impresoras, servidores, etc.
 
-**Broadcast**
+**<a href="../../GLOSARIO.md#broadcast" target="_blank">Broadcast</a>**
 
 Es la última dirección de la subred.
 
@@ -202,7 +202,7 @@ Sirve para enviar información a todos los dispositivos de esa subred.
 
 No puede asignarse a un equipo.
 
-**Gateway**
+**<a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>**
 
 Generalmente:
 
@@ -226,7 +226,7 @@ Dirección de Red
 
 ↓
 
-Gateway
+<a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>
 
 \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
 
@@ -254,7 +254,7 @@ Host
 
 ↓
 
-Broadcast
+<a href="../../GLOSARIO.md#broadcast" target="_blank">Broadcast</a>
 
 **3. ¿Cuántos hosts puede tener una subred?**
 
@@ -272,7 +272,7 @@ Se restan:
 
 -   Dirección de Red
 
--   Broadcast
+-   <a href="../../GLOSARIO.md#broadcast" target="_blank">Broadcast</a>
 
 Resultado:
 
@@ -490,7 +490,7 @@ Una buena segmentación dificulta ese avance.
 
 -   Crear subredes.
 
--   Utilizar VLAN.
+-   Utilizar <a href="../../GLOSARIO.md#vlan" target="_blank">VLAN</a>.
 
 -   Firewalls internos.
 
@@ -504,9 +504,9 @@ Una buena segmentación dificulta ese avance.
 
 -   Separar la red de invitados de la red corporativa.
 
-**7. Aplicación práctica en un SOC**
+**7. Aplicación práctica en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
-Un Analista SOC observa constantemente direcciones de subred.
+Un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> observa constantemente direcciones de subred.
 
 Debe interpretarlas rápidamente.
 
@@ -528,7 +528,7 @@ Solo la red de Ventas puede acceder a ese servidor.
 
 **Ejemplo 2**
 
-SIEM
+<a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>
 
 Origen
 
@@ -599,9 +599,9 @@ La política de segmentación funcionó correctamente.
 
   Host               Dispositivo dentro de la subred.
 
-  Broadcast          Última dirección de la subred; envía datos a todos los hosts.
+  <a href="../../GLOSARIO.md#broadcast" target="_blank">Broadcast</a>          Última dirección de la subred; envía datos a todos los hosts.
 
-  Gateway            Router o firewall que conecta con otras redes.
+  <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>            Router o firewall que conecta con otras redes.
   ----------------------------------------------------------------------------------
 
 **9. Diferencias entre Red y Subred**
@@ -618,7 +618,7 @@ La política de segmentación funcionó correctamente.
   Mayor superficie de ataque.             Limita el movimiento lateral.
   -------------------------------------------------------------------------
 
-**10. Lo que esperan de un Analista SOC Nivel 1**
+**10. Lo que esperan de un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1**
 
 Cuando veas una dirección como:
 
@@ -628,7 +628,7 @@ deberías responder mentalmente:
 
 -   ¿Cuál es la dirección de red?
 
--   ¿Cuál es el broadcast?
+-   ¿Cuál es el <a href="../../GLOSARIO.md#broadcast" target="_blank">broadcast</a>?
 
 -   ¿Cuál es el rango de hosts?
 
@@ -658,11 +658,11 @@ No se asigna a dispositivos.
 
 Es cualquier dispositivo de la red.
 
-**Broadcast**
+**<a href="../../GLOSARIO.md#broadcast" target="_blank">Broadcast</a>**
 
 Permite enviar un mensaje a todos los dispositivos de la subred.
 
-**Gateway**
+**<a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>**
 
 Conecta una subred con otras redes.
 
@@ -679,9 +679,9 @@ Reduce el riesgo de ataques y facilita la administración.
 
   Dirección de Red     Primera dirección; identifica la subred.
 
-  Broadcast            Última dirección; comunica con todos los hosts.
+  <a href="../../GLOSARIO.md#broadcast" target="_blank">Broadcast</a>            Última dirección; comunica con todos los hosts.
 
-  Gateway              Punto de salida hacia otras redes.
+  <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>              Punto de salida hacia otras redes.
 
   Host                 Equipo dentro de una subred.
 
@@ -690,23 +690,23 @@ Reduce el riesgo de ataques y facilita la administración.
   Movimiento lateral   Más difícil cuando la red está bien segmentada.
   -----------------------------------------------------------------------
 
-**💡 Consejo como tu entrenador para un SOC**
+**💡 Consejo como tu entrenador para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 Este es uno de los temas donde muchos principiantes se confunden porque mezclan **máscara**, **subred**, **CIDR** y **rango de hosts**.
 
 Piensa en este orden:
 
-1.  **La dirección IP** identifica un equipo.
+1.  **La dirección <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>** identifica un equipo.
 
 2.  **La máscara** indica dónde termina la parte de red y dónde empieza la parte de host.
 
 3.  **La subred** es el conjunto de equipos que comparten esa parte de red.
 
-4.  **El gateway** conecta esa subred con otras.
+4.  **El <a href="../../GLOSARIO.md#gateway" target="_blank">gateway</a>** conecta esa subred con otras.
 
 5.  **El firewall** controla qué comunicaciones pueden pasar entre subredes.
 
-Cuando analices un log en un SOC, acostúmbrate a hacer este razonamiento:
+Cuando analices un log en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>, acostúmbrate a hacer este razonamiento:
 
 -   ¿Origen y destino están en la misma subred?
 
@@ -720,15 +720,15 @@ Ese enfoque te permitirá interpretar alertas de red con rapidez y tomar mejores
 
 **📚 Evaluación -- Módulo 5: Subredes (Subnetting)**
 
-**Nivel:** Principiante → Analista SOC Nivel 1
+**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
 
-**Instrucciones:** Responde las siguientes preguntas sin consultar el material de estudio. Imagina que estás realizando un examen para ingresar a un puesto de **Analista SOC Nivel 1**. Al finalizar encontrarás las respuestas con su justificación.
+**Instrucciones:** Responde las siguientes preguntas sin consultar el material de estudio. Imagina que estás realizando un examen para ingresar a un puesto de **Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1**. Al finalizar encontrarás las respuestas con su justificación.
 
 **Pregunta 1**
 
 ¿Qué es una **subred**?
 
-**A)** Una dirección IP pública.
+**A)** Una dirección <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> pública.
 
 **B)** Una división lógica de una red más grande.
 
@@ -746,7 +746,7 @@ Ese enfoque te permitirá interpretar alertas de red con rapidez y tomar mejores
 
 **C)** Eliminar la necesidad de utilizar routers.
 
-**D)** Evitar el uso de direcciones IP.
+**D)** Evitar el uso de direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
 
 **Pregunta 3**
 
@@ -762,7 +762,7 @@ En la subred **192.168.10.0/24**, ¿cuál es la dirección de red?
 
 **Pregunta 4**
 
-En la misma subred **192.168.10.0/24**, ¿cuál es la dirección de broadcast?
+En la misma subred **192.168.10.0/24**, ¿cuál es la dirección de <a href="../../GLOSARIO.md#broadcast" target="_blank">broadcast</a>?
 
 **A)** 192.168.10.0
 
@@ -798,7 +798,7 @@ En la misma subred **192.168.10.0/24**, ¿cuál es la dirección de broadcast?
 
 **Pregunta 7**
 
-¿Qué dispositivo suele utilizarse como **Gateway** dentro de una subred?
+¿Qué dispositivo suele utilizarse como **<a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>** dentro de una subred?
 
 **A)** Una impresora.
 
@@ -816,13 +816,13 @@ En la misma subred **192.168.10.0/24**, ¿cuál es la dirección de broadcast?
 
 **B)** Porque dificulta el movimiento lateral de un atacante entre diferentes áreas de la empresa.
 
-**C)** Porque convierte todas las IP privadas en públicas.
+**C)** Porque convierte todas las <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> privadas en públicas.
 
 **D)** Porque evita la necesidad de utilizar antivirus.
 
 **Pregunta 9**
 
-Como analista SOC recibes la siguiente alerta:
+Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> recibes la siguiente alerta:
 
 Origen:
 
@@ -842,9 +842,9 @@ Destino:
 
 **D)** Se trata obligatoriamente de un ataque.
 
-**Pregunta 10 (Caso práctico SOC)**
+**Pregunta 10 (Caso práctico <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>)**
 
-El SIEM genera la siguiente alerta:
+El <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a> genera la siguiente alerta:
 
 Host origen:
 
@@ -892,7 +892,7 @@ Una **subred** es una división lógica de una red más grande. Permite organiza
 
 Las subredes permiten:
 
--   Reducir el tráfico de broadcast.
+-   Reducir el tráfico de <a href="../../GLOSARIO.md#broadcast" target="_blank">broadcast</a>.
 
 -   Mejorar el rendimiento.
 
@@ -914,7 +914,7 @@ En una red **192.168.10.0/24**, la dirección **192.168.10.0** identifica a toda
 
 **Justificación**
 
-En una red **/24**, la última dirección (**192.168.10.255**) es la dirección de **broadcast**, utilizada para enviar información a todos los equipos de la subred.
+En una red **/24**, la última dirección (**192.168.10.255**) es la dirección de **<a href="../../GLOSARIO.md#broadcast" target="_blank">broadcast</a>**, utilizada para enviar información a todos los equipos de la subred.
 
 **Pregunta 5**
 
@@ -924,7 +924,7 @@ En una red **/24**, la última dirección (**192.168.10.255**) es la dirección 
 
 La dirección **192.168.10.0** es la dirección de red y está reservada. No puede asignarse a un host.
 
-**Nota:** En una /24, la dirección **192.168.10.255** tampoco podría asignarse porque es el broadcast.
+**Nota:** En una /24, la dirección **192.168.10.255** tampoco podría asignarse porque es el <a href="../../GLOSARIO.md#broadcast" target="_blank">broadcast</a>.
 
 **Pregunta 6**
 
@@ -938,7 +938,7 @@ Una subred **/26** dispone de:
 
 -   1 dirección de red.
 
--   1 dirección de broadcast.
+-   1 dirección de <a href="../../GLOSARIO.md#broadcast" target="_blank">broadcast</a>.
 
 Resultado:
 
@@ -950,7 +950,7 @@ Resultado:
 
 **Justificación**
 
-El **Gateway** suele ser un router, un firewall o un switch de capa 3. Es el dispositivo que conecta la subred con otras redes.
+El **<a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>** suele ser un router, un firewall o un switch de capa 3. Es el dispositivo que conecta la subred con otras redes.
 
 **Pregunta 8**
 
@@ -968,7 +968,7 @@ La segmentación limita el alcance de un atacante. Si compromete un equipo de un
 
 Las direcciones **192.168.20.X** y **192.168.30.X** pertenecen a subredes distintas. Para comunicarse, el tráfico normalmente debe pasar por un router o firewall.
 
-Como analista SOC, deberías comprobar si esa comunicación está permitida y si es un comportamiento esperado.
+Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>, deberías comprobar si esa comunicación está permitida y si es un comportamiento esperado.
 
 **Pregunta 10**
 
@@ -978,20 +978,20 @@ Como analista SOC, deberías comprobar si esa comunicación está permitida y si
 
 Un equipo que intenta conectarse rápidamente a todas las direcciones de una misma subred presenta un patrón típico de **reconocimiento (Network Scanning)**.
 
-Herramientas como **Nmap** o **Masscan** pueden generar este tipo de actividad. En un SOC, esta alerta suele investigarse porque puede ser el primer paso antes de un ataque.
+Herramientas como **Nmap** o **Masscan** pueden generar este tipo de actividad. En un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>, esta alerta suele investigarse porque puede ser el primer paso antes de un ataque.
 
 **🏆 Resultado**
 
   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   **Respuestas Correctas**   **Nivel**
   -------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------
-  **10/10**                  ⭐ **Excelente.** Comprendes cómo funcionan las subredes y cómo aplicarlas en investigaciones de un SOC.
+  **10/10**                  ⭐ **Excelente.** Comprendes cómo funcionan las subredes y cómo aplicarlas en investigaciones de un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
 
   **8--9**                   🟢 **Muy buen nivel.** Ya puedes interpretar comunicaciones entre subredes y comprender la segmentación de una red empresarial.
 
-  **6--7**                   🟡 **Buen progreso.** Repasa especialmente los conceptos de dirección de red, broadcast y cantidad de hosts.
+  **6--7**                   🟡 **Buen progreso.** Repasa especialmente los conceptos de dirección de red, <a href="../../GLOSARIO.md#broadcast" target="_blank">broadcast</a> y cantidad de hosts.
 
   **4--5**                   🟠 **Necesitas reforzar algunos conceptos.** Vuelve a estudiar el módulo antes de avanzar.
 
-  **0--3**                   🔴 **Es recomendable repasar el tema completo.** Las subredes son fundamentales para interpretar alertas de firewall, SIEM y análisis de tráfico.
+  **0--3**                   🔴 **Es recomendable repasar el tema completo.** Las subredes son fundamentales para interpretar alertas de firewall, <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a> y análisis de tráfico.
   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

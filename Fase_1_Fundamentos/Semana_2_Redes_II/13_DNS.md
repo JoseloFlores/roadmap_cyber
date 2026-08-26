@@ -1,15 +1,15 @@
-**📘 Carrera de Analista SOC**
+**📘 Carrera de Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 **Semana 2 – Redes II**
 
-**Módulo 13 – DNS (Domain Name System)**
+**Módulo 13 – <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> (Domain Name System)**
 
-**Nivel:** Principiante → Analista SOC Nivel 1
+**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
 
 **Antes de comenzar**
 
 Hasta ahora aprendiste que para comunicarse por Internet las
-computadoras utilizan **direcciones IP**.
+computadoras utilizan **direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>**.
 
 El problema es que las personas no recordamos fácilmente direcciones
 como:
@@ -20,36 +20,36 @@ En cambio, sí recordamos nombres como:
 
 www.google.com
 
-Aquí es donde entra en juego **DNS**, conocido como **"la agenda
+Aquí es donde entra en juego **<a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>**, conocido como **"la agenda
 telefónica de Internet"**.
 
 **🎯 Objetivos de aprendizaje**
 
 Al finalizar este módulo podrás:
 
-- Comprender qué es DNS.
+- Comprender qué es <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>.
 
-- Entender cómo funciona una consulta DNS.
+- Entender cómo funciona una consulta <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>.
 
-- Diferenciar los tipos de servidores DNS.
+- Diferenciar los tipos de servidores <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>.
 
-- Conocer los principales registros DNS.
+- Conocer los principales registros <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>.
 
-- Comprender cuándo DNS usa UDP y cuándo TCP.
+- Comprender cuándo <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> usa <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a> y cuándo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>.
 
-- Entender la caché DNS.
+- Entender la caché <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>.
 
-- Identificar ataques relacionados con DNS.
+- Identificar ataques relacionados con <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>.
 
-- Interpretar eventos DNS en un SOC.
+- Interpretar eventos <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
 
-**1. ¿Qué es DNS?**
+**1. ¿Qué es <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>?**
 
-DNS significa:
+<a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> significa:
 
 **Domain Name System**
 
-Es el sistema encargado de traducir nombres de dominio a direcciones IP.
+Es el sistema encargado de traducir nombres de dominio a direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
 
 Ejemplo:
 
@@ -59,9 +59,9 @@ www.google.com
 
 142.250.184.78
 
-Sin DNS tendríamos que recordar la IP de cada sitio web.
+Sin <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> tendríamos que recordar la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> de cada sitio web.
 
-**2. ¿Por qué existe DNS?**
+**2. ¿Por qué existe <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>?**
 
 Imagina que quieres llamar a un amigo.
 
@@ -69,7 +69,7 @@ No recuerdas su número de teléfono.
 
 Entonces buscas su nombre en la agenda.
 
-DNS hace exactamente lo mismo.
+<a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> hace exactamente lo mismo.
 
 Nombre
 
@@ -79,49 +79,49 @@ www.openai.com
 
 ↓
 
-Consulta DNS
+Consulta <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>
 
 ↓
 
-Dirección IP
+Dirección <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>
 
 ↓
 
 104.xxx.xxx.xxx
 
-**3. ¿Dónde trabaja DNS?**
+**3. ¿Dónde trabaja <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>?**
 
-DNS pertenece a la **Capa de Aplicación**.
+<a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> pertenece a la **Capa de Aplicación**.
 
-**Modelo OSI**
+**Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a>**
 
-7 Aplicación ← DNS
+7 Aplicación ← <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>
 
 6 Presentación
 
 5 Sesión
 
-4 Transporte ← UDP/TCP
+4 Transporte ← <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>
 
-3 Red ← IP
+3 Red ← <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>
 
 2 Enlace
 
 1 Física
 
-**4. ¿Qué puerto utiliza DNS?**
+**4. ¿Qué puerto utiliza <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>?**
 
 Normalmente utiliza:
 
-UDP 53
+<a href="../../GLOSARIO.md#udp" target="_blank">UDP</a> 53
 
 Pero también utiliza:
 
-TCP 53
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 53
 
-**¿Por qué dos protocolos?**
+**¿Por qué <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> protocolos?**
 
-**UDP**
+**<a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>**
 
 Se utiliza para:
 
@@ -141,13 +141,13 @@ Cliente
 
 ↓
 
-Servidor DNS
+Servidor <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>
 
 ↓
 
 142.250.xxx.xxx
 
-**TCP**
+**<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**
 
 Se utiliza cuando:
 
@@ -157,9 +157,9 @@ Se utiliza cuando:
 
 - Algunas respuestas con DNSSEC.
 
-- La consulta UDP supera el tamaño permitido.
+- La consulta <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a> supera el tamaño permitido.
 
-**5. ¿Cómo funciona una consulta DNS?**
+**5. ¿Cómo funciona una consulta <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>?**
 
 Supongamos que escribes:
 
@@ -171,7 +171,7 @@ Lo que realmente ocurre es:
 
 El navegador pregunta:
 
-¿Tengo la IP guardada en caché?
+¿Tengo la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> guardada en caché?
 
 Si la respuesta es sí:
 
@@ -183,11 +183,11 @@ Continúa.
 
 **Paso 2**
 
-El sistema operativo consulta su caché DNS.
+El sistema operativo consulta su caché <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>.
 
 **Paso 3**
 
-Pregunta al servidor DNS configurado (por ejemplo, el del router o el de
+Pregunta al servidor <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> configurado (por ejemplo, el del router o el de
 tu proveedor de Internet).
 
 **Paso 4**
@@ -196,7 +196,7 @@ Si el servidor no conoce la respuesta, inicia una búsqueda recursiva.
 
 **Paso 5**
 
-Obtiene la IP.
+Obtiene la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
 
 **Paso 6**
 
@@ -204,9 +204,9 @@ La devuelve al navegador.
 
 **Paso 7**
 
-El navegador ya puede establecer la conexión HTTP o HTTPS.
+El navegador ya puede establecer la conexión <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a> o <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>.
 
-**6. Tipos de servidores DNS**
+**6. Tipos de servidores <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>**
 
 **Resolver (Recursivo)**
 
@@ -214,19 +214,19 @@ Es el servidor al que consulta tu computadora.
 
 Ejemplos:
 
-- Google Public DNS.
+- Google Public <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>.
 
 - Cloudflare.
 
-- El DNS de tu ISP.
+- El <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> de tu ISP.
 
 Su trabajo consiste en buscar la respuesta por ti.
 
-**Root Server**
+**<a href="../../GLOSARIO.md#root" target="_blank">Root</a> Server**
 
 Es el punto de partida.
 
-No conoce la IP final.
+No conoce la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> final.
 
 Solo indica dónde encontrar el servidor del TLD.
 
@@ -258,19 +258,19 @@ openai.com
 
 ↓
 
-IP oficial
+<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> oficial
 
-**7. Flujo completo de una resolución DNS**
+**7. Flujo completo de una resolución <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>**
 
 Usuario
 
 ↓
 
-Resolver DNS
+Resolver <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>
 
 ↓
 
-Root Server
+<a href="../../GLOSARIO.md#root" target="_blank">Root</a> Server
 
 ↓
 
@@ -282,7 +282,7 @@ Servidor Autoritativo
 
 ↓
 
-Dirección IP
+Dirección <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>
 
 ↓
 
@@ -292,9 +292,9 @@ Resolver
 
 Usuario
 
-**8. Registros DNS**
+**8. Registros <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>**
 
-Los registros DNS son distintos tipos de información almacenada en un
+Los registros <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> son distintos tipos de información almacenada en un
 dominio.
 
 **Registro A**
@@ -331,7 +331,7 @@ Indica qué servidor recibe el correo electrónico del dominio.
 
 **Registro NS**
 
-Indica cuáles son los servidores DNS autoritativos.
+Indica cuáles son los servidores <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> autoritativos.
 
 **Registro TXT**
 
@@ -351,13 +351,13 @@ Hace la resolución inversa.
 
 En lugar de:
 
-Dominio → IP
+Dominio → <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>
 
 Hace:
 
-IP → Dominio
+<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> → Dominio
 
-**9. ¿Qué es la caché DNS?**
+**9. ¿Qué es la caché <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>?**
 
 Para no repetir consultas innecesarias, las respuestas se almacenan
 temporalmente.
@@ -368,7 +368,7 @@ www.google.com
 
 ↓
 
-IP obtenida
+<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> obtenida
 
 ↓
 
@@ -380,7 +380,7 @@ Próxima consulta mucho más rápida
 
 **10. TTL (Time To Live)**
 
-Cada registro DNS posee un tiempo de vida.
+Cada registro <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> posee un tiempo de vida.
 
 Ejemplo:
 
@@ -392,7 +392,7 @@ TTL
 
 Después de ese tiempo, la información debe consultarse nuevamente.
 
-**11. DNS en Wireshark**
+**11. <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> en <a href="../../GLOSARIO.md#wireshark" target="_blank">Wireshark</a>**
 
 Podrías observar:
 
@@ -406,9 +406,9 @@ Standard Query Response
 
 104.xxx.xxx.xxx
 
-Esto indica una resolución DNS exitosa.
+Esto indica una resolución <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> exitosa.
 
-**12. DNS en un Firewall**
+**12. <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> en un Firewall**
 
 Ejemplo:
 
@@ -420,17 +420,17 @@ Origen:
 
 Destino:
 
-Servidor DNS
+Servidor <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>
 
 ↓
 
-UDP 53
+<a href="../../GLOSARIO.md#udp" target="_blank">UDP</a> 53
 
 ↓
 
 Permitido
 
-**13. DNS en un SIEM**
+**13. <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> en un <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>**
 
 Un evento típico podría mostrar:
 
@@ -450,7 +450,7 @@ Resultado:
 
 NXDOMAIN
 
-Como analista SOC deberías preguntarte:
+Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> deberías preguntarte:
 
 - ¿Por qué ese equipo consulta dominios aleatorios?
 
@@ -458,11 +458,11 @@ Como analista SOC deberías preguntarte:
 
 - ¿Ese patrón coincide con un algoritmo de generación de dominios (DGA)?
 
-**14. ¿Cómo utilizan DNS los atacantes?**
+**14. ¿Cómo utilizan <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> los atacantes?**
 
-**Ataque 1 – DNS Spoofing**
+**Ataque 1 – <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> Spoofing**
 
-El atacante responde con una IP falsa antes que el servidor legítimo.
+El atacante responde con una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> falsa antes que el servidor legítimo.
 
 Ejemplo:
 
@@ -470,35 +470,35 @@ www.banco.com
 
 ↓
 
-IP del atacante
+<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> del atacante
 
 El usuario cree estar en el sitio correcto.
 
-**Ataque 2 – DNS Cache Poisoning**
+**Ataque 2 – <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> Cache Poisoning**
 
-El atacante modifica la caché DNS para que las futuras consultas
+El atacante modifica la caché <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> para que las futuras consultas
 devuelvan direcciones falsas.
 
-**Ataque 3 – DNS Amplification**
+**Ataque 3 – <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> Amplification**
 
-Aprovecha servidores DNS abiertos para amplificar un ataque DDoS.
+Aprovecha servidores <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> abiertos para amplificar un ataque <a href="../../GLOSARIO.md#ddos" target="_blank">DDoS</a>.
 
-El atacante envía una consulta pequeña con la IP de la víctima
+El atacante envía una consulta pequeña con la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> de la víctima
 falsificada.
 
 El servidor responde con una respuesta mucho mayor hacia la víctima.
 
-**Ataque 4 – DNS Tunneling**
+**Ataque 4 – <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> Tunneling**
 
-Uno de los ataques más importantes para un SOC.
+Uno de los ataques más importantes para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
 
-El atacante utiliza consultas DNS para transportar información.
+El atacante utiliza consultas <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> para transportar información.
 
 Ejemplo:
 
 usuario123.password.secreto.dominio-malicioso.com
 
-A simple vista parece una consulta DNS.
+A simple vista parece una consulta <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>.
 
 En realidad puede contener datos robados.
 
@@ -522,7 +522,7 @@ Solo uno necesita existir para contactar con el servidor C2.
 
 - Utilizar DNSSEC cuando sea posible.
 
-- Bloquear servidores DNS abiertos.
+- Bloquear servidores <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> abiertos.
 
 - Monitorear consultas inusuales.
 
@@ -532,9 +532,9 @@ Solo uno necesita existir para contactar con el servidor C2.
 
 - Implementar listas de bloqueo (Threat Intelligence).
 
-- Registrar y revisar los logs DNS.
+- Registrar y revisar los logs <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>.
 
-**16. Aplicación práctica en un SOC**
+**16. Aplicación práctica en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 **Caso 1**
 
@@ -584,7 +584,7 @@ login.banco.com.seguridad-maliciosa.xyz
 
 Interpretación:
 
-Posible **DNS Tunneling** o intento de engaño.
+Posible **<a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> Tunneling** o intento de engaño.
 
 **Caso 4**
 
@@ -607,18 +607,18 @@ Interpretación:
 Posible infraestructura de phishing o servidor de Comando y Control
 (C2).
 
-**17. DNS vs HTTP vs HTTPS**
+**17. <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> vs <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a> vs <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>**
 
-| **Característica** | **DNS**               | **HTTP**               | **HTTPS**                              |
+| **Característica** | **<a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>**               | **<a href="../../GLOSARIO.md#http" target="_blank">HTTP</a>**               | **<a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>**                              |
 |--------------------|-----------------------|------------------------|----------------------------------------|
 | Función            | Resolver nombres      | Transferir páginas web | Transferir páginas web de forma segura |
-| Puerto             | UDP/TCP 53            | TCP 80                 | TCP 443                                |
-| Cifrado            | No (tradicionalmente) | No                     | Sí (TLS)                               |
-| Capa OSI           | Aplicación            | Aplicación             | Aplicación                             |
+| Puerto             | <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 53            | <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 80                 | <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 443                                |
+| Cifrado            | No (tradicionalmente) | No                     | Sí (<a href="../../GLOSARIO.md#tls" target="_blank">TLS</a>)                               |
+| Capa <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a>           | Aplicación            | Aplicación             | Aplicación                             |
 
-**18. Lo que esperan de un Analista SOC Nivel 1**
+**18. Lo que esperan de un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1**
 
-Imagina que el SIEM genera esta alerta:
+Imagina que el <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a> genera esta alerta:
 
 Equipo:
 
@@ -626,7 +626,7 @@ PC-RRHH
 
 ↓
 
-4.500 consultas DNS
+4.500 consultas <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>
 
 ↓
 
@@ -650,23 +650,23 @@ Debes formular hipótesis:
 
 - ¿Hay otros equipos con el mismo comportamiento?
 
-- ¿El EDR detectó procesos sospechosos?
+- ¿El <a href="../../GLOSARIO.md#edr" target="_blank">EDR</a> detectó procesos sospechosos?
 
 - ¿Las consultas comenzaron después de ejecutar un archivo?
 
-Ese razonamiento es el que se espera en un SOC.
+Ese razonamiento es el que se espera en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
 
 **19. Resumen**
 
-**DNS**
+**<a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>**
 
-- Traduce nombres de dominio a direcciones IP.
+- Traduce nombres de dominio a direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
 
 - Trabaja en la **Capa de Aplicación**.
 
-- Utiliza **UDP 53** para la mayoría de las consultas.
+- Utiliza **<a href="../../GLOSARIO.md#udp" target="_blank">UDP</a> 53** para la mayoría de las consultas.
 
-- Utiliza **TCP 53** para transferencias de zona y respuestas grandes.
+- Utiliza **<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 53** para transferencias de zona y respuestas grandes.
 
 **Registros más importantes**
 
@@ -686,13 +686,13 @@ Ese razonamiento es el que se espera en un SOC.
 
 **Riesgos**
 
-- DNS Spoofing.
+- <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> Spoofing.
 
-- DNS Cache Poisoning.
+- <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> Cache Poisoning.
 
-- DNS Amplification.
+- <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> Amplification.
 
-- DNS Tunneling.
+- <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> Tunneling.
 
 - DGA.
 
@@ -700,39 +700,39 @@ Ese razonamiento es el que se espera en un SOC.
 
 | **Concepto**      | **Debes recordar**                            |
 |-------------------|-----------------------------------------------|
-| DNS               | Domain Name System.                           |
-| Función           | Traducir nombres de dominio a direcciones IP. |
-| Puerto principal  | UDP 53.                                       |
-| Puerto secundario | TCP 53.                                       |
+| <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>               | Domain Name System.                           |
+| Función           | Traducir nombres de dominio a direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>. |
+| Puerto principal  | <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a> 53.                                       |
+| Puerto secundario | <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 53.                                       |
 | Registro A        | Dominio → IPv4.                               |
 | Registro AAAA     | Dominio → IPv6.                               |
 | Registro MX       | Servidor de correo.                           |
 | Registro NS       | Servidor autoritativo.                        |
 | Registro TXT      | Información de texto (SPF, DKIM, etc.).       |
-| Registro PTR      | Resolución inversa (IP → Dominio).            |
+| Registro PTR      | Resolución inversa (<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> → Dominio).            |
 | TTL               | Tiempo que un registro permanece en caché.    |
 
-**🎓 Consejo como tu instructor de SOC**
+**🎓 Consejo como tu instructor de <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 Si tuviera que elegir **los tres protocolos más importantes para un
-Analista SOC**, serían:
+Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**, serían:
 
-1.  **DNS** → Permite detectar malware, phishing, DGA, DNS Tunneling y
+1.  **<a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>** → Permite detectar malware, phishing, DGA, <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> Tunneling y
     comunicaciones con servidores C2.
 
-2.  **HTTPS/TLS** → Ayuda a analizar conexiones cifradas mediante
+2.  **<a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>/<a href="../../GLOSARIO.md#tls" target="_blank">TLS</a>** → Ayuda a analizar conexiones cifradas mediante
     metadatos y certificados.
 
-3.  **HTTP** → Fundamental para interpretar ataques a aplicaciones web.
+3.  **<a href="../../GLOSARIO.md#http" target="_blank">HTTP</a>** → Fundamental para interpretar ataques a aplicaciones web.
 
 En investigaciones reales, es muy común reconstruir una línea de tiempo
 como esta:
 
-Consulta DNS sospechosa
+Consulta <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> sospechosa
 
 ↓
 
-Conexión HTTPS al dominio resuelto
+Conexión <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a> al dominio resuelto
 
 ↓
 
@@ -746,27 +746,27 @@ Ejecución del malware
 
 Comunicación periódica con un servidor C2
 
-Entender cómo se relacionan **DNS**, **HTTPS** y **HTTP** te permitirá
+Entender cómo se relacionan **<a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>**, **<a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>** y **<a href="../../GLOSARIO.md#http" target="_blank">HTTP</a>** te permitirá
 seguir el recorrido de un incidente desde la primera resolución del
 dominio hasta la actividad maliciosa posterior.
 
-**📘 Carrera de Analista SOC**
+**📘 Carrera de Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 **Semana 2 – Redes II**
 
-**Evaluación – Módulo 13: DNS (Domain Name System)**
+**Evaluación – Módulo 13: <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> (Domain Name System)**
 
-**Nivel:** Principiante → Analista SOC Nivel 1
+**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
 
 **Instrucciones:** Responde las siguientes preguntas sin consultar el
 material de estudio. Este cuestionario está diseñado con un nivel
-similar al de una entrevista técnica para un **Analista SOC Nivel 1**.
+similar al de una entrevista técnica para un **Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1**.
 Encontrarás preguntas teóricas y casos prácticos basados en situaciones
 reales.
 
 **Pregunta 1**
 
-¿Qué significa la sigla **DNS**?
+¿Qué significa la sigla **<a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>**?
 
 **A)** Data Network Service
 
@@ -778,46 +778,46 @@ reales.
 
 **Pregunta 2**
 
-¿Cuál es la función principal de DNS?
+¿Cuál es la función principal de <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>?
 
 **A)** Cifrar las comunicaciones entre cliente y servidor.
 
-**B)** Traducir nombres de dominio en direcciones IP.
+**B)** Traducir nombres de dominio en direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
 
-**C)** Asignar direcciones IP automáticamente.
+**C)** Asignar direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> automáticamente.
 
 **D)** Enviar correos electrónicos.
 
 **Pregunta 3**
 
-¿Cuál es el puerto utilizado normalmente por DNS para realizar
+¿Cuál es el puerto utilizado normalmente por <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> para realizar
 consultas?
 
-**A)** TCP 80
+**A)** <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 80
 
-**B)** TCP 443
+**B)** <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 443
 
-**C)** UDP 53
+**C)** <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a> 53
 
-**D)** TCP 22
+**D)** <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 22
 
 **Pregunta 4**
 
-¿En cuál de los siguientes casos DNS utiliza normalmente **TCP** en
-lugar de UDP?
+¿En cuál de los siguientes casos <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> utiliza normalmente **<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>** en
+lugar de <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>?
 
 **A)** Para enviar un ping.
 
-**B)** Para consultas HTTP.
+**B)** Para consultas <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a>.
 
 **C)** Para transferencias de zona (Zone Transfer) o respuestas
-demasiado grandes para UDP.
+demasiado grandes para <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>.
 
-**D)** Nunca utiliza TCP.
+**D)** Nunca utiliza <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>.
 
 **Pregunta 5**
 
-¿Qué registro DNS relaciona un nombre de dominio con una dirección
+¿Qué registro <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> relaciona un nombre de dominio con una dirección
 **IPv4**?
 
 **A)** MX
@@ -839,24 +839,24 @@ del dominio.
 
 **C)** Almacenar texto para SPF o DKIM.
 
-**D)** Resolver una IP hacia un nombre de dominio.
+**D)** Resolver una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> hacia un nombre de dominio.
 
 **Pregunta 7**
 
-¿Qué representa el valor **TTL (Time To Live)** en un registro DNS?
+¿Qué representa el valor **TTL (Time To Live)** en un registro <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>?
 
 **A)** El tiempo máximo que un paquete puede permanecer en Internet.
 
 **B)** El tiempo que un registro puede permanecer almacenado en caché
 antes de volver a consultarse.
 
-**C)** El tiempo que tarda una consulta DNS en completarse.
+**C)** El tiempo que tarda una consulta <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> en completarse.
 
-**D)** El tiempo que tarda un servidor DNS en iniciar.
+**D)** El tiempo que tarda un servidor <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> en iniciar.
 
 **Pregunta 8**
 
-Como analista SOC observas el siguiente evento:
+Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> observas el siguiente evento:
 
 Equipo:
 
@@ -864,7 +864,7 @@ PC-VENTAS
 
 ↓
 
-5.000 consultas DNS
+5.000 consultas <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>
 
 ↓
 
@@ -885,26 +885,26 @@ Algorithm)**.
 
 **C)** Una actualización de Windows.
 
-**D)** Un problema con el servidor DHCP.
+**D)** Un problema con el servidor <a href="../../GLOSARIO.md#dhcp" target="_blank">DHCP</a>.
 
 **Pregunta 9**
 
-¿Cuál de los siguientes ataques consiste en utilizar consultas DNS para
+¿Cuál de los siguientes ataques consiste en utilizar consultas <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> para
 transportar información robada o establecer comunicaciones ocultas?
 
-**A)** DNS Amplification.
+**A)** <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> Amplification.
 
-**B)** DNS Tunneling.
+**B)** <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> Tunneling.
 
-**C)** ARP Spoofing.
+**C)** <a href="../../GLOSARIO.md#arp" target="_blank">ARP</a> Spoofing.
 
 **D)** SYN Flood.
 
-**Pregunta 10 (Caso práctico SOC)**
+**Pregunta 10 (Caso práctico <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>)**
 
 Durante una investigación observas el siguiente patrón:
 
-Consulta DNS
+Consulta <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>
 
 ↓
 
@@ -912,7 +912,7 @@ Dominio recién registrado
 
 ↓
 
-Conexión HTTPS
+Conexión <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>
 
 ↓
 
@@ -925,9 +925,9 @@ Gran volumen de datos enviados
 **B)** Posible comunicación con un servidor de Comando y Control (C2) o
 exfiltración de datos.
 
-**C)** Un error en el servidor DHCP.
+**C)** Un error en el servidor <a href="../../GLOSARIO.md#dhcp" target="_blank">DHCP</a>.
 
-**D)** Un problema con la resolución ARP.
+**D)** Un problema con la resolución <a href="../../GLOSARIO.md#arp" target="_blank">ARP</a>.
 
 **✅ Respuestas y justificación**
 
@@ -937,8 +937,8 @@ exfiltración de datos.
 
 **Justificación**
 
-DNS significa **Domain Name System**. Es el sistema encargado de
-traducir nombres de dominio, como www.openai.com, en direcciones IP para
+<a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> significa **Domain Name System**. Es el sistema encargado de
+traducir nombres de dominio, como www.openai.com, en direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> para
 que los equipos puedan comunicarse.
 
 **Pregunta 2**
@@ -947,8 +947,8 @@ que los equipos puedan comunicarse.
 
 **Justificación**
 
-La función principal de DNS es convertir nombres fáciles de recordar en
-direcciones IP que entienden las computadoras.
+La función principal de <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> es convertir nombres fáciles de recordar en
+direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> que entienden las computadoras.
 
 Ejemplo:
 
@@ -964,14 +964,14 @@ www.openai.com
 
 **Justificación**
 
-DNS utiliza principalmente el **puerto UDP 53**, ya que las consultas
+<a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> utiliza principalmente el **puerto <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a> 53**, ya que las consultas
 suelen ser pequeñas y requieren rapidez.
 
 **Memoriza:**
 
-- DNS → **UDP 53**
+- <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> → **<a href="../../GLOSARIO.md#udp" target="_blank">UDP</a> 53**
 
-- DNS también puede usar **TCP 53** en casos específicos.
+- <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> también puede usar **<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 53** en casos específicos.
 
 **Pregunta 4**
 
@@ -979,13 +979,13 @@ suelen ser pequeñas y requieren rapidez.
 
 **Justificación**
 
-DNS utiliza **TCP** cuando:
+<a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> utiliza **<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>** cuando:
 
 - Se realiza una **transferencia de zona (Zone Transfer)**.
 
-- La respuesta es demasiado grande para UDP.
+- La respuesta es demasiado grande para <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>.
 
-- Algunas implementaciones con **DNSSEC** requieren TCP.
+- Algunas implementaciones con **DNSSEC** requieren <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>.
 
 **Pregunta 5**
 
@@ -1019,7 +1019,7 @@ electrónico para un dominio determinado.
 
 **Justificación**
 
-El **TTL (Time To Live)** define cuánto tiempo un registro DNS puede
+El **TTL (Time To Live)** define cuánto tiempo un registro <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> puede
 permanecer almacenado en la caché antes de que deba realizarse una nueva
 consulta.
 
@@ -1036,7 +1036,7 @@ Miles de consultas a dominios aleatorios que terminan en **NXDOMAIN**
 utiliza un **DGA (Domain Generation Algorithm)** para intentar localizar
 su servidor de Comando y Control (C2).
 
-Como analista SOC deberías revisar:
+Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> deberías revisar:
 
 - Si otros equipos muestran el mismo patrón.
 
@@ -1050,7 +1050,7 @@ Como analista SOC deberías revisar:
 
 **Justificación**
 
-El **DNS Tunneling** utiliza consultas y respuestas DNS para transportar
+El **<a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> Tunneling** utiliza consultas y respuestas <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> para transportar
 información o mantener comunicaciones ocultas entre un equipo
 comprometido y un servidor remoto.
 
@@ -1070,7 +1070,7 @@ Es una técnica utilizada por algunos malware para:
 
 La secuencia:
 
-Consulta DNS
+Consulta <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>
 
 ↓
 
@@ -1078,7 +1078,7 @@ Dominio recién registrado
 
 ↓
 
-Conexión HTTPS
+Conexión <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>
 
 ↓
 
@@ -1096,7 +1096,7 @@ No confirma por sí solo un incidente, pero podría indicar:
 
 - Infraestructura de phishing.
 
-En un SOC, deberías complementar el análisis con:
+En un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>, deberías complementar el análisis con:
 
 - Reputación del dominio.
 
@@ -1104,7 +1104,7 @@ En un SOC, deberías complementar el análisis con:
 
 - Logs del proxy.
 
-- Eventos del EDR.
+- Eventos del <a href="../../GLOSARIO.md#edr" target="_blank">EDR</a>.
 
 - Historial de conexiones del equipo.
 
@@ -1112,11 +1112,11 @@ En un SOC, deberías complementar el análisis con:
 
 | **Respuestas Correctas** | **Nivel**                                                                                                                                                                |
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **10/10**                | ⭐ **Excelente.** Dominas el funcionamiento de DNS y puedes identificar patrones de ataque relevantes para un SOC.                                                       |
-| **8–9**                  | 🟢 **Muy buen nivel.** Comprendes la resolución DNS y los principales registros y amenazas.                                                                              |
-| **6–7**                  | 🟡 **Buen progreso.** Repasa los tipos de registros, el uso de UDP/TCP y ataques como DGA y DNS Tunneling.                                                               |
-| **4–5**                  | 🟠 **Necesitas reforzar algunos conceptos.** Revisa el flujo de resolución DNS y la función de los registros A, MX, NS, TXT y PTR.                                       |
-| **0–3**                  | 🔴 **Es recomendable repasar el módulo completo.** DNS es uno de los protocolos más importantes para un Analista SOC y aparece constantemente en investigaciones reales. |
+| **10/10**                | ⭐ **Excelente.** Dominas el funcionamiento de <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> y puedes identificar patrones de ataque relevantes para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.                                                       |
+| **8–9**                  | 🟢 **Muy buen nivel.** Comprendes la resolución <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> y los principales registros y amenazas.                                                                              |
+| **6–7**                  | 🟡 **Buen progreso.** Repasa los tipos de registros, el uso de <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> y ataques como DGA y <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> Tunneling.                                                               |
+| **4–5**                  | 🟠 **Necesitas reforzar algunos conceptos.** Revisa el flujo de resolución <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> y la función de los registros A, MX, NS, TXT y PTR.                                       |
+| **0–3**                  | 🔴 **Es recomendable repasar el módulo completo.** <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> es uno de los protocolos más importantes para un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> y aparece constantemente en investigaciones reales. |
 
 **🧠 Preguntas rápidas de memorización**
 
@@ -1124,46 +1124,46 @@ Responde mentalmente en menos de **5 segundos**:
 
 | **Pregunta**                                    | **Respuesta esperada**                        |
 |-------------------------------------------------|-----------------------------------------------|
-| ¿Qué significa DNS?                             | Domain Name System.                           |
-| ¿Cuál es su función?                            | Traducir nombres de dominio a direcciones IP. |
-| ¿Puerto principal de DNS?                       | UDP 53.                                       |
-| ¿Cuándo usa TCP?                                | Transferencias de zona y respuestas grandes.  |
+| ¿Qué significa <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>?                             | Domain Name System.                           |
+| ¿Cuál es su función?                            | Traducir nombres de dominio a direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>. |
+| ¿Puerto principal de <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>?                       | <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a> 53.                                       |
+| ¿Cuándo usa <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>?                                | Transferencias de zona y respuestas grandes.  |
 | ¿Qué hace un registro A?                        | Dominio → IPv4.                               |
 | ¿Qué hace un registro AAAA?                     | Dominio → IPv6.                               |
 | ¿Qué hace un registro MX?                       | Define el servidor de correo.                 |
-| ¿Qué hace un registro PTR?                      | Resolución inversa (IP → dominio).            |
+| ¿Qué hace un registro PTR?                      | Resolución inversa (<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> → dominio).            |
 | ¿Qué significa TTL?                             | Tiempo que un registro permanece en caché.    |
-| ¿Qué ataque utiliza DNS para transportar datos? | DNS Tunneling.                                |
+| ¿Qué ataque utiliza <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> para transportar datos? | <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> Tunneling.                                |
 
 Muchos ataques modernos dejan sus primeras evidencias en los registros
-DNS, incluso antes de que se establezca una conexión HTTP o HTTPS.
+<a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>, incluso antes de que se establezca una conexión <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a> o <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>.
 
 Hasta este punto ya has construido una base sólida en:
 
-- ✅ Direcciones IP públicas y privadas.
+- ✅ Direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> públicas y privadas.
 
-- ✅ Modelo OSI.
+- ✅ Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a>.
 
-- ✅ Modelo TCP/IP.
+- ✅ Modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
 
 - ✅ Máscaras y subredes.
 
-- ✅ Gateway.
+- ✅ <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>.
 
-- ✅ NAT.
+- ✅ <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>.
 
-- ✅ TCP y UDP.
+- ✅ <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> y <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>.
 
 - ✅ Puertos.
 
-- ✅ DHCP.
+- ✅ <a href="../../GLOSARIO.md#dhcp" target="_blank">DHCP</a>.
 
-- ✅ HTTP y HTTPS.
+- ✅ <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a> y <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>.
 
-- ✅ DNS.
+- ✅ <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>.
 
 Esa base será la que utilizarás cuando empieces a analizar tráfico con
-herramientas como **Wireshark**, **Zeek**, **Suricata**, **Splunk** o
+herramientas como **<a href="../../GLOSARIO.md#wireshark" target="_blank">Wireshark</a>**, **Zeek**, **Suricata**, **Splunk** o
 **Microsoft Sentinel**, y cuando pases a la siguiente etapa de tu
 formación centrada en **Linux** y el análisis de incidentes desde la
 línea de comandos.

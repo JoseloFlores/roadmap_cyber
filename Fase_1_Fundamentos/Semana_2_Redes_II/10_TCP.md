@@ -1,124 +1,124 @@
-**📘 Carrera de Analista SOC**
+**📘 Carrera de Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 **Semana 2 – Redes II**
 
-**Módulo 10 – TCP (Transmission Control Protocol)**
+**Módulo 10 – <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> (Transmission Control Protocol)**
 
-**Nivel:** Principiante → Analista SOC Nivel 1
+**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
 
 **Antes de comenzar**
 
 Ya dominas:
 
-- ✅ IP Públicas y Privadas
+- ✅ <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Públicas y Privadas
 
-- ✅ Modelo OSI
+- ✅ Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a>
 
-- ✅ Modelo TCP/IP
+- ✅ Modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>
 
 - ✅ Máscaras
 
 - ✅ Subredes
 
-- ✅ Gateway
+- ✅ <a href="../../GLOSARIO.md#gateway" target="_blank">Gateway</a>
 
-- ✅ NAT
+- ✅ <a href="../../GLOSARIO.md#nat" target="_blank">NAT</a>
 
-- ✅ UDP
+- ✅ <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>
 
 - ✅ Puertos
 
-Ahora estudiaremos al protocolo más importante que verás en un SOC: **TCP**.
+Ahora estudiaremos al protocolo más importante que verás en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>: **<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**.
 
-En el módulo de UDP aprendiste que existe un protocolo rápido pero poco confiable.
+En el módulo de <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a> aprendiste que existe un protocolo rápido pero poco confiable.
 
-TCP es su "hermano", pero con una filosofía totalmente opuesta: es **orientado a conexión** y **confiable**.
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> es su "hermano", pero con una filosofía totalmente opuesta: es **orientado a conexión** y **confiable**.
 
 Es la base de la web, del correo electrónico y de la administración remota.
 
-Prácticamente todos los logs que revisarás en tu trabajo diario contendrán conexiones TCP.
+Prácticamente todos los logs que revisarás en tu trabajo diario contendrán conexiones <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>.
 
-Comprenderlo a fondo es esencial para interpretar capturas, firewall, SIEM y ataques como **SYN Flood** o los **escaneos de puertos**.
+Comprenderlo a fondo es esencial para interpretar capturas, firewall, <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a> y ataques como **SYN Flood** o los **escaneos de puertos**.
 
 **🎯 Objetivos de aprendizaje**
 
 Al finalizar este módulo podrás:
 
-- Comprender qué es TCP y por qué existe.
+- Comprender qué es <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> y por qué existe.
 
-- Explicar el Three-Way Handshake paso a paso.
+- Explicar el <a href="../../GLOSARIO.md#three-way-handshake" target="_blank">Three-Way Handshake</a> paso a paso.
 
-- Diferenciar los flags de TCP (SYN, ACK, FIN, RST, PSH, URG).
+- Diferenciar los flags de <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> (SYN, ACK, FIN, RST, PSH, URG).
 
-- Entender qué garantías ofrece TCP y cuáles no.
+- Entender qué garantías ofrece <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> y cuáles no.
 
-- Conocer los protocolos que utilizan TCP.
+- Conocer los protocolos que utilizan <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>.
 
-- Reconocer TCP en Wireshark, firewall y SIEM.
+- Reconocer <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> en <a href="../../GLOSARIO.md#wireshark" target="_blank">Wireshark</a>, firewall y <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>.
 
-- Identificar ataques contra TCP como SYN Flood y escaneos.
+- Identificar ataques contra <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> como SYN Flood y escaneos.
 
-- Relacionar TCP con el movimiento lateral y la fuerza bruta.
+- Relacionar <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> con el movimiento lateral y la fuerza bruta.
 
-- Aplicar estos conocimientos en investigaciones de un SOC.
+- Aplicar estos conocimientos en investigaciones de un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
 
-- Responder preguntas técnicas de una entrevista para Analista SOC Nivel 1.
+- Responder preguntas técnicas de una entrevista para Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1.
 
-**1. ¿Qué es TCP?**
+**1. ¿Qué es <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>?**
 
-TCP significa **Transmission Control Protocol** (Protocolo de Control de Transmisión).
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> significa **Transmission Control Protocol** (Protocolo de Control de Transmisión).
 
-Es un protocolo de la **Capa 4 (Transporte)** del modelo OSI, igual que UDP.
+Es un protocolo de la **Capa 4 (Transporte)** del modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a>, igual que <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>.
 
-Su filosofía es completamente diferente a la de UDP.
+Su filosofía es completamente diferente a la de <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>.
 
-Mientras UDP dice "voy a enviarlo lo más rápido posible", TCP dice "voy a asegurarme de que todo llegue completo, en orden y sin errores".
+Mientras <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a> dice "voy a enviarlo lo más rápido posible", <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> dice "voy a asegurarme de que todo llegue completo, en orden y sin errores".
 
 **La diferencia en una frase**
 
-**TCP:** La confiabilidad es lo más importante.
+**<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>:** La confiabilidad es lo más importante.
 
-**UDP:** La velocidad es lo más importante.
+**<a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>:** La velocidad es lo más importante.
 
-Para lograr esa confiabilidad, TCP necesita algo que UDP no tiene: una **conexión establecida** entre los dos equipos.
+Para lograr esa confiabilidad, <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> necesita algo que <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a> no tiene: una **conexión establecida** entre los <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> equipos.
 
-Por eso se dice que TCP es un protocolo **orientado a conexión**.
+Por eso se dice que <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> es un protocolo **orientado a conexión**.
 
-**2. ¿Por qué existe TCP?**
+**2. ¿Por qué existe <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>?**
 
 Imagina que estás haciendo una transferencia bancaria, descargando el respaldo de toda una empresa o enviando un correo importante.
 
 ¿Quieres perder parte de esos datos en el camino? Claro que no.
 
-Cuando la información **no puede perderse**, necesitas TCP.
+Cuando la información **no puede perderse**, necesitas <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>.
 
-**Ejemplos de aplicaciones que necesitan TCP**
+**Ejemplos de aplicaciones que necesitan <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**
 
-- Navegación web (HTTP y HTTPS).
+- Navegación web (<a href="../../GLOSARIO.md#http" target="_blank">HTTP</a> y <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>).
 
-- Correo electrónico (SMTP, POP3, IMAP).
+- Correo electrónico (<a href="../../GLOSARIO.md#smtp" target="_blank">SMTP</a>, POP3, IMAP).
 
-- Transferencia de archivos (FTP).
+- Transferencia de archivos (<a href="../../GLOSARIO.md#ftp" target="_blank">FTP</a>).
 
-- Acceso remoto (SSH y RDP).
+- Acceso remoto (<a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a> y RDP).
 
 - Bases de datos (SQL Server, MySQL, PostgreSQL).
 
-Todas estas aplicaciones usan TCP porque no pueden permitirse perder información.
+Todas estas aplicaciones usan <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> porque no pueden permitirse perder información.
 
 **Analogía**
 
-UDP sería una conversación telefónica: si una palabra no se escucha, nadie detiene la conversación.
+<a href="../../GLOSARIO.md#udp" target="_blank">UDP</a> sería una conversación telefónica: si una palabra no se escucha, nadie detiene la conversación.
 
-TCP sería enviar un contrato por **correo certificado**: si falta una hoja la vuelven a enviar, si llega desordenada la reacomodan, y al final el destinatario firma un acuse de recibo.
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> sería enviar un contrato por **correo certificado**: si falta una hoja la vuelven a enviar, si llega desordenada la reacomodan, y al final el destinatario firma un acuse de recibo.
 
-Ese acuse de recibo, en TCP, se llama **ACK**.
+Ese acuse de recibo, en <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>, se llama **ACK**.
 
-**3. El Three-Way Handshake**
+**3. El <a href="../../GLOSARIO.md#three-way-handshake" target="_blank">Three-Way Handshake</a>**
 
-Antes de enviar datos, TCP debe establecer una conexión.
+Antes de enviar datos, <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> debe establecer una conexión.
 
-Ese proceso se llama **Three-Way Handshake** (saludo de tres vías) y tiene tres pasos:
+Ese proceso se llama **<a href="../../GLOSARIO.md#three-way-handshake" target="_blank">Three-Way Handshake</a>** (saludo de tres vías) y tiene tres pasos:
 
 1. Cliente envía **SYN**.
 
@@ -182,17 +182,17 @@ Tú confirmas: "Sí, quiero reservar." (ACK).
 
 A partir de ahí empiezas a pedir la comida (los datos).
 
-**¿Por qué esto importa en un SOC?**
+**¿Por qué esto importa en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?**
 
 Porque verás este saludo en cada captura de red, y porque los atacantes abusan de él.
 
 Si alguien envía miles de **SYN** sin completar el saludo, tienes un posible **SYN Flood**.
 
-**4. ¿Qué NO garantiza TCP?**
+**4. ¿Qué NO garantiza <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>?**
 
-Es importante ser honesto: TCP es muy confiable, pero no es mágico.
+Es importante ser honesto: <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> es muy confiable, pero no es mágico.
 
-**TCP NO:**
+**<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> NO:**
 
 ❌ Cifra la información.
 
@@ -202,15 +202,15 @@ Es importante ser honesto: TCP es muy confiable, pero no es mágico.
 
 ❌ Impide que un atacante intercepte o modifique el tráfico.
 
-TCP garantiza la **entrega correcta**, pero no la **seguridad**.
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> garantiza la **entrega correcta**, pero no la **seguridad**.
 
-Los datos viajan en texto plano por la red; la confidencialidad la aporta otro protocolo: **TLS (Transport Layer Security)**, el cifrado que usa HTTPS.
+Los datos viajan en texto plano por la red; la confidencialidad la aporta otro protocolo: **<a href="../../GLOSARIO.md#tls" target="_blank">TLS</a> (Transport Layer Security)**, el cifrado que usa <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>.
 
-Es como el empleado del banco que revisa que el dinero llegue completo y en orden, pero si nadie sella el sobre, cualquiera en el camino podría abrirlo; ese sello es TLS.
+Es como el empleado del banco que revisa que el dinero llegue completo y en orden, pero si nadie sella el sobre, cualquiera en el camino podría abrirlo; ese sello es <a href="../../GLOSARIO.md#tls" target="_blank">TLS</a>.
 
-Por eso verás siempre: HTTP + TCP → texto plano, y HTTPS + TCP + TLS → cifrado.
+Por eso verás siempre: <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a> + <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> → texto plano, y <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a> + <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> + <a href="../../GLOSARIO.md#tls" target="_blank">TLS</a> → cifrado.
 
-En un SOC, puedes ver los metadatos de la conexión (qué IP, qué puerto, cuándo); para ver el contenido cifrado necesitas otras herramientas o la decodificación del tráfico.
+En un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>, puedes ver los metadatos de la conexión (qué <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>, qué puerto, cuándo); para ver el contenido cifrado necesitas otras herramientas o la decodificación del tráfico.
 
 **5. Cierre de conexión**
 
@@ -236,19 +236,19 @@ Esto se conoce como **Four-Way Handshake**.
 
 Una conexión que nunca se cierra puede significar: un programa colgado, malware manteniendo un canal con su servidor, un equipo apagado de golpe o un corte de red.
 
-En Wireshark observarás los flags FIN, FIN-ACK y ACK.
+En <a href="../../GLOSARIO.md#wireshark" target="_blank">Wireshark</a> observarás los flags FIN, FIN-ACK y ACK.
 
 Si la conexión termina de forma brusca, verás un **RST**.
 
-**RST significa Reset**, es la "interrupción violenta" de una conexión; TCP la usa cuando algo sale mal.
+**RST significa Reset**, es la "interrupción violenta" de una conexión; <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> la usa cuando algo sale mal.
 
-**6. Cabecera TCP y flags**
+**6. Cabecera <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> y flags**
 
-Cada paquete TCP tiene una **cabecera** con información importante.
+Cada paquete <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> tiene una **cabecera** con información importante.
 
 El analista no memoriza todo el campo, pero sí lo esencial.
 
-**Campos más importantes de la cabecera TCP**
+**Campos más importantes de la cabecera <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**
 
 | **Campo**               | **Qué indica**                                                    |
 |-------------------------|-------------------------------------------------------------------|
@@ -291,21 +291,21 @@ Si ves muchas conexiones respondidas con **RST**, el servicio está rechazando c
 
 Puede significar: puerto cerrado, servicio caído, firewall bloqueando o aplicación que rechaza el acceso.
 
-**7. Garantías de TCP**
+**7. Garantías de <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**
 
-TCP ofrece cuatro garantías principales.
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> ofrece cuatro garantías principales.
 
 **Garantía 1 – Retransmisión**
 
-Si un paquete se pierde, TCP lo vuelve a enviar.
+Si un paquete se pierde, <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> lo vuelve a enviar.
 
 **Garantía 2 – Confirmación (ACK)**
 
-Cada grupo de datos recibido se confirma; si no llega confirmación, TCP asume que algo se perdió y reenvía.
+Cada grupo de datos recibido se confirma; si no llega confirmación, <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> asume que algo se perdió y reenvía.
 
 **Garantía 3 – Orden**
 
-Si los paquetes llegan desordenados, TCP los ordena antes de entregarlos a la aplicación.
+Si los paquetes llegan desordenados, <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> los ordena antes de entregarlos a la aplicación.
 
 **Garantía 4 – Control de flujo**
 
@@ -313,60 +313,60 @@ El receptor indica cuántos datos puede recibir a la vez mediante el campo **Win
 
 Es como un semáforo que dice: "manda datos, pero no me satures."
 
-Además, TCP tiene **control de congestión**: cuando la red está saturada, reduce la velocidad de envío.
+Además, <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> tiene **control de congestión**: cuando la red está saturada, reduce la velocidad de envío.
 
-Es como recibir un libro por partes: si una parte se pierde, TCP nota que falta, la vuelve a enviar, ordena las partes y recién entonces entrega el libro completo.
+Es como recibir un libro por partes: si una parte se pierde, <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> nota que falta, la vuelve a enviar, ordena las partes y recién entonces entrega el libro completo.
 
-**¿Cuándo ves esto en un SOC?**
+**¿Cuándo ves esto en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?**
 
 Cuando en una captura ves **Retransmisión**, **Dup ACK** o **Out-of-Order**, la red está perdiendo o retrasando paquetes.
 
 Puede ser por saturación... o un indicio de algo más grave.
 
-**8. Protocolos que utilizan TCP**
+**8. Protocolos que utilizan <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**
 
-La gran mayoría de los servicios importantes utilizan TCP.
+La gran mayoría de los servicios importantes utilizan <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>.
 
-| **Protocolo**  | **Puerto**  | **Utiliza TCP** |
+| **Protocolo**  | **Puerto**  | **Utiliza <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>** |
 |----------------|-------------|-----------------|
-| HTTP           | 80          | ✅              |
-| HTTPS          | 443         | ✅              |
-| SSH            | 22          | ✅              |
-| FTP            | 21          | ✅              |
-| SMTP           | 25          | ✅              |
+| <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a>           | 80          | ✅              |
+| <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>          | 443         | ✅              |
+| <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>            | 22          | ✅              |
+| <a href="../../GLOSARIO.md#ftp" target="_blank">FTP</a>            | 21          | ✅              |
+| <a href="../../GLOSARIO.md#smtp" target="_blank">SMTP</a>           | 25          | ✅              |
 | POP3           | 110         | ✅              |
 | IMAP           | 143         | ✅              |
 | SMB            | 445         | ✅              |
 | RDP            | 3389        | ✅              |
 | SQL Server     | 1433        | ✅              |
 
-**Para un SOC, los más importantes son:**
+**Para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>, los más importantes son:**
 
-- **TCP 443 (HTTPS):** navegación web cifrada; el puerto más común del mundo.
+- **<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 443 (<a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>):** navegación web cifrada; el puerto más común del mundo.
 
-- **TCP 22 (SSH):** administración remota de Linux; muy atacado con fuerza bruta.
+- **<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 22 (<a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>):** administración remota de Linux; muy atacado con fuerza bruta.
 
-- **TCP 445 (SMB):** compartición de archivos en Windows; relacionado con ransomware y movimiento lateral.
+- **<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 445 (SMB):** compartición de archivos en Windows; relacionado con ransomware y movimiento lateral.
 
-- **TCP 3389 (RDP):** escritorio remoto de Windows; uno de los principales blancos de ataque.
+- **<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 3389 (RDP):** escritorio remoto de Windows; uno de los principales blancos de ataque.
 
-- **TCP 1433 (SQL Server):** bases de datos; atractivo para robar información.
+- **<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 1433 (SQL Server):** bases de datos; atractivo para robar información.
 
 **Regla de oro**
 
-Si un servicio necesita que la información llegue completa, casi siempre usará TCP.
+Si un servicio necesita que la información llegue completa, casi siempre usará <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>.
 
-**9. TCP en Wireshark**
+**9. <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> en <a href="../../GLOSARIO.md#wireshark" target="_blank">Wireshark</a>**
 
-Wireshark te mostrará los paquetes del Three-Way Handshake.
+<a href="../../GLOSARIO.md#wireshark" target="_blank">Wireshark</a> te mostrará los paquetes del <a href="../../GLOSARIO.md#three-way-handshake" target="_blank">Three-Way Handshake</a>.
 
-**Captura típica de una conexión HTTPS**
+**Captura típica de una conexión <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>**
 
-Paquete 1: TCP [SYN] — 192.168.1.15:52341 → 142.250.xxx.xxx:443
+Paquete 1: <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> [SYN] — 192.168.1.15:52341 → 142.250.xxx.xxx:443
 
-Paquete 2: TCP [SYN, ACK] — 142.250.xxx.xxx:443 → 192.168.1.15:52341
+Paquete 2: <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> [SYN, ACK] — 142.250.xxx.xxx:443 → 192.168.1.15:52341
 
-Paquete 3: TCP [ACK] — 192.168.1.15:52341 → 142.250.xxx.xxx:443
+Paquete 3: <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> [ACK] — 192.168.1.15:52341 → 142.250.xxx.xxx:443
 
 Después de eso fluyen los datos de la conversación.
 
@@ -374,13 +374,13 @@ Después de eso fluyen los datos de la conversación.
 
 - El puerto origen (52341) es efímero.
 
-- El puerto destino (443) es HTTPS.
+- El puerto destino (443) es <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>.
 
 - La secuencia SYN → SYN-ACK → ACK confirma una conexión exitosa.
 
 **Señales que debes saber reconocer**
 
-| **Evento en Wireshark**   | **Posible significado**                        |
+| **Evento en <a href="../../GLOSARIO.md#wireshark" target="_blank">Wireshark</a>**   | **Posible significado**                        |
 |---------------------------|------------------------------------------------|
 | SYN, SYN-ACK, ACK         | Conexión establecida correctamente.            |
 | SYN sin respuesta         | Servicio caído o puerto filtrado.              |
@@ -390,19 +390,19 @@ Después de eso fluyen los datos de la conversación.
 | Out-of-Order              | Paquetes fuera de secuencia.                   |
 | Muchos SYN sin ACK final  | Posible SYN Flood o escaneo de puertos.        |
 
-**10. TCP en un Firewall**
+**10. <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> en un Firewall**
 
-El firewall decide qué conexiones TCP se permiten.
+El firewall decide qué conexiones <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> se permiten.
 
 **Regla típica de firewall**
 
-Origen 192.168.10.15 → Destino Servidor Web → TCP → Puerto 443 → **Permitido**
+Origen 192.168.10.15 → Destino Servidor Web → <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> → Puerto 443 → **Permitido**
 
 Interpretación: navegación web permitida.
 
 **Otro ejemplo**
 
-Origen 203.0.113.50 → Destino Servidor interno → TCP → Puerto 3389 → **Bloqueado**
+Origen 203.0.113.50 → Destino Servidor interno → <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> → Puerto 3389 → **Bloqueado**
 
 Interpretación: el firewall bloqueó un intento de acceso RDP.
 
@@ -422,7 +422,7 @@ Destino
 
 ↓
 
-TCP
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>
 
 ↓
 
@@ -440,19 +440,19 @@ Como analista:
 
 - Compruebas cuántos intentos similares hubo.
 
-- Investigas si la IP origen es conocida.
+- Investigas si la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> origen es conocida.
 
 **Regla de oro del firewall**
 
 Solo abrir los puertos estrictamente necesarios; todo lo demás se deniega por defecto.
 
-**11. TCP en un SIEM**
+**11. <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> en un <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>**
 
-Un SIEM recopila y correlaciona los eventos de red.
+Un <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a> recopila y correlaciona los eventos de red.
 
 **Alerta típica 1**
 
-30.000 paquetes SYN → TCP → Puerto 443 → en 60 segundos.
+30.000 paquetes SYN → <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> → Puerto 443 → en 60 segundos.
 
 Como analista pensarías:
 
@@ -464,7 +464,7 @@ Como analista pensarías:
 
 **Alerta típica 2**
 
-192.168.10.45 → Conexiones TCP → Puerto 445 → hacia 50 equipos distintos.
+192.168.10.45 → Conexiones <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> → Puerto 445 → hacia 50 equipos distintos.
 
 Como analista pensarías:
 
@@ -476,25 +476,25 @@ Como analista pensarías:
 
 **Alerta típica 3**
 
-203.0.113.10 → TCP → Puerto 22 → 10.000 intentos fallidos.
+203.0.113.10 → <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> → Puerto 22 → 10.000 intentos fallidos.
 
 Como analista pensarías:
 
-- ¿Hay fuerza bruta contra SSH?
+- ¿Hay fuerza bruta contra <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>?
 
 - ¿Alguna conexión fue exitosa?
 
 - ¿Qué usuarios se intentaron usar?
 
-**12. ¿Cómo aprovechan TCP los atacantes?**
+**12. ¿Cómo aprovechan <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> los atacantes?**
 
-TCP es confiable, pero esa misma fiabilidad es usada en su contra.
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> es confiable, pero esa misma fiabilidad es usada en su contra.
 
 **Ataque 1 – SYN Flood**
 
-Es un ataque de denegación de servicio (DoS).
+Es un ataque de denegación de servicio (<a href="../../GLOSARIO.md#dos" target="_blank">DoS</a>).
 
-El atacante envía miles de paquetes **SYN** sin completar el Three-Way Handshake y sin esperar la respuesta.
+El atacante envía miles de paquetes **SYN** sin completar el <a href="../../GLOSARIO.md#three-way-handshake" target="_blank">Three-Way Handshake</a> y sin esperar la respuesta.
 
 El servidor responde con SYN-ACK y espera el ACK final que nunca llega.
 
@@ -512,7 +512,7 @@ Imagina que cientos de personas llaman a tu puerta y nadie se queda: cada vez qu
 
 Los atacantes escanean puertos para descubrir servicios con herramientas como **Nmap**.
 
-Nmap envía paquetes TCP a muchos puertos y analiza las respuestas:
+Nmap envía paquetes <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> a muchos puertos y analiza las respuestas:
 
 - Si recibe SYN-ACK: el puerto está abierto.
 
@@ -528,15 +528,15 @@ Con esa información, el atacante sabe qué atacar.
 
 Un atacante intenta hacerse pasar por un equipo en una conexión activa.
 
-Para eso necesita adivinar los **números de secuencia** de TCP.
+Para eso necesita adivinar los **números de secuencia** de <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>.
 
 Si lo logra, puede inyectar paquetes como si fuera el equipo legítimo.
 
-Es un ataque avanzado, menos común hoy, pero se estudia en un SOC.
+Es un ataque avanzado, menos común hoy, pero se estudia en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
 
-**Ataque 4 – Fuerza bruta sobre SSH y RDP**
+**Ataque 4 – Fuerza bruta sobre <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a> y RDP**
 
-TCP 22 (SSH) y TCP 3389 (RDP) son los favoritos de los atacantes.
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 22 (<a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>) y <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 3389 (RDP) son los favoritos de los atacantes.
 
 Miles de intentos de conexión probando usuarios y contraseñas.
 
@@ -564,15 +564,15 @@ Limitar la cantidad de conexiones por segundo.
 
 Una técnica para resistir SYN Flood: el servidor no guarda la conexión pendiente en memoria, responde con una "cookie" especial y libera recursos.
 
-**Defensa 4 – IDS/IPS**
+**Defensa 4 – <a href="../../GLOSARIO.md#ids" target="_blank">IDS</a>/<a href="../../GLOSARIO.md#ips" target="_blank">IPS</a>**
 
 Detectar patrones anómalos: muchos SYN en poco tiempo, escaneos de puertos y comportamiento inusual.
 
-**Defensa 5 – MFA**
+**Defensa 5 – <a href="../../GLOSARIO.md#mfa" target="_blank">MFA</a>**
 
 Autenticación multifactor: aunque se robe una contraseña, el atacante no puede acceder.
 
-Especialmente importante para SSH y RDP.
+Especialmente importante para <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a> y RDP.
 
 **Defensa 6 – Cerrar puertos innecesarios**
 
@@ -584,15 +584,15 @@ Separar redes críticas de las no críticas; si una parte se compromete, el atac
 
 **Defensa 8 – Monitoreo constante**
 
-Revisar logs de firewall y SIEM para detectar lo anómalo antes de que escale.
+Revisar logs de firewall y <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a> para detectar lo anómalo antes de que escale.
 
-**14. Aplicación práctica en un SOC**
+**14. Aplicación práctica en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 **Caso 1 – SYN Flood al 443**
 
-El SIEM muestra: 200.000 paquetes SYN → TCP → Puerto 443 → 60 segundos → desde muchas IP externas.
+El <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a> muestra: 200.000 paquetes SYN → <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> → Puerto 443 → 60 segundos → desde muchas <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> externas.
 
-Interpretación: posible ataque DDoS o SYN Flood contra el servidor web.
+Interpretación: posible ataque <a href="../../GLOSARIO.md#ddos" target="_blank">DDoS</a> o SYN Flood contra el servidor web.
 
 Investigación:
 
@@ -600,13 +600,13 @@ Investigación:
 
 - Confirmar que no hay usuarios legítimos afectados.
 
-- Analizar si hay más IPs comprometidas.
+- Analizar si hay más <a href="../../GLOSARIO.md#ips" target="_blank">IPs</a> comprometidas.
 
 - Activar mitigación (rate limiting, filtrado).
 
-**Caso 2 – Escaneo masivo desde una IP interna**
+**Caso 2 – Escaneo masivo desde una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> interna**
 
-El firewall muestra: 192.168.10.200 → TCP SYN → 500 puertos distintos → en 10 minutos.
+El firewall muestra: 192.168.10.200 → <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> SYN → 500 puertos distintos → en 10 minutos.
 
 Interpretación: posible escaneo de puertos desde un equipo interno.
 
@@ -622,7 +622,7 @@ Investigación:
 
 **Caso 3 – Retransmisiones excesivas**
 
-Wireshark muestra: 3.000 retransmisiones → 2 minutos → misma conexión.
+<a href="../../GLOSARIO.md#wireshark" target="_blank">Wireshark</a> muestra: 3.000 retransmisiones → 2 minutos → misma conexión.
 
 Interpretación: la red pierde muchos paquetes.
 
@@ -638,9 +638,9 @@ Investigación:
 
 **Caso 4 – Fuerza bruta al 22**
 
-El SIEM muestra: 203.0.113.150 → TCP → Puerto 22 → 50.000 intentos fallidos → 3 horas.
+El <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a> muestra: 203.0.113.150 → <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> → Puerto 22 → 50.000 intentos fallidos → 3 horas.
 
-Interpretación: posible fuerza bruta contra SSH.
+Interpretación: posible fuerza bruta contra <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>.
 
 Investigación:
 
@@ -648,16 +648,16 @@ Investigación:
 
 - ¿Qué usuarios se probaron?
 
-- ¿El firewall debería bloquear esa IP?
+- ¿El firewall debería bloquear esa <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>?
 
-- ¿Se puede añadir la IP a una lista de bloqueo?
+- ¿Se puede añadir la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> a una lista de bloqueo?
 
-**15. TCP vs UDP**
+**15. <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> vs <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>**
 
-| **Característica**    | **TCP**               | **UDP**                      |
+| **Característica**    | **<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**               | **<a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>**                      |
 |-----------------------|-----------------------|------------------------------|
 | Orientado a conexión  | ✅ Sí                 | ❌ No                        |
-| Three-Way Handshake   | ✅ Sí                 | ❌ No                        |
+| <a href="../../GLOSARIO.md#three-way-handshake" target="_blank">Three-Way Handshake</a>   | ✅ Sí                 | ❌ No                        |
 | Garantiza la entrega  | ✅ Sí                 | ❌ No                        |
 | Mantiene el orden     | ✅ Sí                 | ❌ No                        |
 | Reenvía paquetes      | ✅ Sí                 | ❌ No                        |
@@ -666,17 +666,17 @@ Investigación:
 | Control de congestión | ✅ Sí                 | ❌ No                        |
 | Velocidad             | Más lenta             | Más rápida                   |
 | Confiabilidad         | Muy alta              | Baja                         |
-| Uso típico            | Web, SSH, correo, RDP | DNS, VoIP, juegos, streaming |
+| Uso típico            | Web, <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>, correo, RDP | <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>, VoIP, juegos, streaming |
 
 **La diferencia en una frase**
 
-**TCP:** "Necesito asegurarme de que todo llegue."
+**<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>:** "Necesito asegurarme de que todo llegue."
 
-**UDP:** "Necesito que llegue rápido, aunque algo se pierda."
+**<a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>:** "Necesito que llegue rápido, aunque algo se pierda."
 
-**16. Lo que esperan de un Analista SOC Nivel 1**
+**16. Lo que esperan de un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1**
 
-Cuando veas un log TCP como este:
+Cuando veas un log <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> como este:
 
 Origen:
 
@@ -690,7 +690,7 @@ Destino:
 
 ↓
 
-TCP
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>
 
 ↓
 
@@ -732,19 +732,19 @@ Miles de intentos al 22 → posible fuerza bruta.
 
 **17. Resumen**
 
-**TCP**
+**<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**
 
 - Es un protocolo de la **Capa 4 (Transporte)**.
 
 - Es **orientado a conexión**.
 
-- Utiliza el **Three-Way Handshake** para establecer la conexión.
+- Utiliza el **<a href="../../GLOSARIO.md#three-way-handshake" target="_blank">Three-Way Handshake</a>** para establecer la conexión.
 
 - Garantiza la entrega, el orden y la confirmación de los datos.
 
 - No cifra la información.
 
-**El Three-Way Handshake**
+**El <a href="../../GLOSARIO.md#three-way-handshake" target="_blank">Three-Way Handshake</a>**
 
 SYN → SYN-ACK → ACK
 
@@ -782,53 +782,53 @@ SYN → SYN-ACK → ACK
 
 - Session Hijacking.
 
-- Fuerza bruta sobre SSH y RDP.
+- Fuerza bruta sobre <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a> y RDP.
 
 - RST injection.
 
-**¿Cómo se ve en un SOC?**
+**¿Cómo se ve en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?**
 
-- Wireshark: flags, handshake, retransmisiones.
+- <a href="../../GLOSARIO.md#wireshark" target="_blank">Wireshark</a>: flags, handshake, retransmisiones.
 
 - Firewall: reglas allow/deny por puerto.
 
-- SIEM: alertas por volumen, origen y puerto.
+- <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>: alertas por volumen, origen y puerto.
 
 **🧠 Conceptos clave para memorizar**
 
 | **Concepto**          | **Debes recordar**                                           |
 |-----------------------|--------------------------------------------------------------|
-| TCP                   | Transmission Control Protocol.                               |
+| <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>                   | Transmission Control Protocol.                               |
 | Capa                  | Capa 4 (Transporte).                                         |
 | Orientado a conexión  | Establece una sesión antes de enviar datos.                  |
-| Three-Way Handshake   | SYN → SYN-ACK → ACK.                                         |
+| <a href="../../GLOSARIO.md#three-way-handshake" target="_blank">Three-Way Handshake</a>   | SYN → SYN-ACK → ACK.                                         |
 | SYN                   | Solicita iniciar la conexión.                                |
 | ACK                   | Confirma la recepción de datos.                              |
 | FIN                   | Cierra la conexión de forma ordenada.                        |
 | RST                   | Cancela o rechaza la conexión.                               |
-| Retransmisión         | TCP reenvía los paquetes perdidos.                           |
-| 443                   | HTTPS (web cifrada).                                         |
-| 22                    | SSH (administración remota).                                 |
+| Retransmisión         | <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> reenvía los paquetes perdidos.                           |
+| 443                   | <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a> (web cifrada).                                         |
+| 22                    | <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a> (administración remota).                                 |
 | 445                   | SMB (archivos en Windows).                                   |
 | 3389                  | RDP (escritorio remoto).                                     |
 | SYN Flood             | Inundar con SYN para saturar el servidor.                    |
 | Escaneo de puertos    | Enviar SYN a muchos puertos para descubrir servicios.        |
 
-**🎓 Consejo como tu instructor de SOC**
+**🎓 Consejo como tu instructor de <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
-TCP es el protocolo que verás en casi todos los logs.
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> es el protocolo que verás en casi todos los logs.
 
 Por eso, cuando analices una alerta, entrena tu mente para hacer asociaciones rápidas.
 
 **Por ejemplo:**
 
-- Si ves muchos **SYN al puerto 443** desde muchas IPs: posible **SYN Flood** o ataque DDoS.
+- Si ves muchos **SYN al puerto 443** desde muchas <a href="../../GLOSARIO.md#ips" target="_blank">IPs</a>: posible **SYN Flood** o ataque <a href="../../GLOSARIO.md#ddos" target="_blank">DDoS</a>.
 
 - Si ves **puerto 445** con conexiones entre muchas computadoras: posible **movimiento lateral** de un malware.
 
 - Si ves **RST** como respuesta: conexión **rechazada** o puerto cerrado.
 
-- Si ves miles de intentos al **puerto 22**: posible **fuerza bruta** contra SSH.
+- Si ves miles de intentos al **puerto 22**: posible **fuerza bruta** contra <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>.
 
 - Si ves **retransmisiones** constantes: red con pérdida de paquetes o interferencia.
 
@@ -836,25 +836,25 @@ Ese razonamiento basado en **puertos, flags y comportamiento** es el que te dife
 
 No memorices los números sin contexto; asócialos siempre con el servicio y con el riesgo.
 
-Y recuerda la base de todo: **el Three-Way Handshake**.
+Y recuerda la base de todo: **el <a href="../../GLOSARIO.md#three-way-handshake" target="_blank">Three-Way Handshake</a>**.
 
-Si entiendes ese saludo, entenderás los logs de firewall, las capturas de Wireshark y las alertas del SIEM.
+Si entiendes ese saludo, entenderás los logs de firewall, las capturas de <a href="../../GLOSARIO.md#wireshark" target="_blank">Wireshark</a> y las alertas del <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>.
 
 ---
 
-**📘 Carrera de Analista SOC**
+**📘 Carrera de Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 **Semana 2 – Redes II**
 
-**Evaluación – Módulo 10: TCP (Transmission Control Protocol)**
+**Evaluación – Módulo 10: <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> (Transmission Control Protocol)**
 
-**Nivel:** Principiante → Analista SOC Nivel 1
+**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
 
-**Instrucciones:** Responde las siguientes preguntas sin consultar el material de estudio. Piensa como si estuvieras realizando una prueba para ingresar a un **SOC Nivel 1**. Encontrarás preguntas teóricas y casos prácticos. Al finalizar encontrarás las respuestas con su justificación.
+**Instrucciones:** Responde las siguientes preguntas sin consultar el material de estudio. Piensa como si estuvieras realizando una prueba para ingresar a un **<a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1**. Encontrarás preguntas teóricas y casos prácticos. Al finalizar encontrarás las respuestas con su justificación.
 
 **Pregunta 1**
 
-¿Qué significa la sigla **TCP**?
+¿Qué significa la sigla **<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**?
 
 **A)** Transmission Control Protocol
 
@@ -866,7 +866,7 @@ Si entiendes ese saludo, entenderás los logs de firewall, las capturas de Wires
 
 **Pregunta 2**
 
-¿En qué capa del modelo **OSI** trabaja TCP?
+¿En qué capa del modelo **<a href="../../GLOSARIO.md#osi" target="_blank">OSI</a>** trabaja <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>?
 
 **A)** Capa 2 – Enlace de Datos.
 
@@ -878,7 +878,7 @@ Si entiendes ese saludo, entenderás los logs de firewall, las capturas de Wires
 
 **Pregunta 3**
 
-¿Cuál es el orden correcto del **Three-Way Handshake**?
+¿Cuál es el orden correcto del **<a href="../../GLOSARIO.md#three-way-handshake" target="_blank">Three-Way Handshake</a>**?
 
 **A)** ACK → SYN → SYN-ACK
 
@@ -890,7 +890,7 @@ Si entiendes ese saludo, entenderás los logs de firewall, las capturas de Wires
 
 **Pregunta 4**
 
-¿Cuál de las siguientes afirmaciones es **correcta** sobre TCP?
+¿Cuál de las siguientes afirmaciones es **correcta** sobre <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>?
 
 **A)** No garantiza la entrega de los paquetes.
 
@@ -902,7 +902,7 @@ Si entiendes ese saludo, entenderás los logs de firewall, las capturas de Wires
 
 **Pregunta 5**
 
-Un paquete TCP con el flag **RST** indica:
+Un paquete <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> con el flag **RST** indica:
 
 **A)** El inicio de una conexión.
 
@@ -914,19 +914,19 @@ Un paquete TCP con el flag **RST** indica:
 
 **Pregunta 6**
 
-¿Cuál de los siguientes protocolos utiliza normalmente **TCP**?
+¿Cuál de los siguientes protocolos utiliza normalmente **<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**?
 
-**A)** HTTPS.
+**A)** <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>.
 
 **B)** NTP.
 
-**C)** DHCP.
+**C)** <a href="../../GLOSARIO.md#dhcp" target="_blank">DHCP</a>.
 
 **D)** SNMP.
 
-**Pregunta 7 (Caso práctico SOC)**
+**Pregunta 7 (Caso práctico <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>)**
 
-Como analista SOC observas el siguiente registro:
+Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> observas el siguiente registro:
 
 Origen:
 
@@ -934,7 +934,7 @@ Origen:
 
 ↓
 
-TCP
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>
 
 ↓
 
@@ -946,59 +946,59 @@ Miles de intentos
 
 ¿Cuál sería tu primera hipótesis?
 
-**A)** Consultas DNS normales.
+**A)** Consultas <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> normales.
 
-**B)** Un posible ataque de fuerza bruta contra SSH.
+**B)** Un posible ataque de fuerza bruta contra <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>.
 
-**C)** Una transferencia FTP.
+**C)** Una transferencia <a href="../../GLOSARIO.md#ftp" target="_blank">FTP</a>.
 
 **D)** Sincronización horaria mediante NTP.
 
 **Pregunta 8**
 
-En Wireshark observas el siguiente patrón:
+En <a href="../../GLOSARIO.md#wireshark" target="_blank">Wireshark</a> observas el siguiente patrón:
 
-TCP [SYN]
-
-↓
-
-TCP [SYN, ACK]
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> [SYN]
 
 ↓
 
-TCP [ACK]
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> [SYN, ACK]
+
+↓
+
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> [ACK]
 
 ¿Qué indica?
 
-**A)** Una conexión TCP establecida correctamente.
+**A)** Una conexión <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> establecida correctamente.
 
 **B)** Una conexión rechazada por RST.
 
-**C)** Un error de cifrado TLS.
+**C)** Un error de cifrado <a href="../../GLOSARIO.md#tls" target="_blank">TLS</a>.
 
-**D)** Un fallo en la resolución DNS.
+**D)** Un fallo en la resolución <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>.
 
 **Pregunta 9**
 
 ¿Qué es un ataque **SYN Flood**?
 
-**A)** Enviar miles de consultas DNS para saturar un servidor.
+**A)** Enviar miles de consultas <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> para saturar un servidor.
 
 **B)** Enviar miles de paquetes SYN sin completar el handshake para agotar los recursos del servidor.
 
-**C)** Enviar paquetes con credenciales falsas por SSH.
+**C)** Enviar paquetes con credenciales falsas por <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>.
 
-**D)** Interceptar el tráfico cifrado de una conexión HTTPS.
+**D)** Interceptar el tráfico cifrado de una conexión <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>.
 
-**Pregunta 10 (Caso práctico SOC)**
+**Pregunta 10 (Caso práctico <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>)**
 
-El SIEM genera la siguiente alerta:
+El <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a> genera la siguiente alerta:
 
 500.000 paquetes SYN
 
 ↓
 
-TCP
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>
 
 ↓
 
@@ -1006,7 +1006,7 @@ Puerto 443
 
 ↓
 
-Desde 2.000 IP externas
+Desde 2.000 <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> externas
 
 ↓
 
@@ -1016,9 +1016,9 @@ Desde 2.000 IP externas
 
 **A)** Un usuario descargando archivos.
 
-**B)** Un posible SYN Flood o ataque DDoS contra el servidor web.
+**B)** Un posible SYN Flood o ataque <a href="../../GLOSARIO.md#ddos" target="_blank">DDoS</a> contra el servidor web.
 
-**C)** Una consulta DNS de gran tamaño.
+**C)** Una consulta <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> de gran tamaño.
 
 **D)** Una actualización automática de Windows.
 
@@ -1030,7 +1030,7 @@ Desde 2.000 IP externas
 
 **Justificación**
 
-TCP significa **Transmission Control Protocol**.
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> significa **Transmission Control Protocol**.
 
 Es el protocolo de transporte orientado a conexión que garantiza la entrega fiable de los datos.
 
@@ -1040,9 +1040,9 @@ Es el protocolo de transporte orientado a conexión que garantiza la entrega fia
 
 **Justificación**
 
-TCP trabaja en la **Capa 4 (Transporte)** del modelo OSI, al igual que UDP.
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> trabaja en la **Capa 4 (Transporte)** del modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a>, al igual que <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>.
 
-La diferencia es que TCP añade fiabilidad, orden y control de flujo.
+La diferencia es que <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> añade fiabilidad, orden y control de flujo.
 
 **Pregunta 3**
 
@@ -1050,7 +1050,7 @@ La diferencia es que TCP añade fiabilidad, orden y control de flujo.
 
 **Justificación**
 
-El **Three-Way Handshake** sigue este orden:
+El **<a href="../../GLOSARIO.md#three-way-handshake" target="_blank">Three-Way Handshake</a>** sigue este orden:
 
 SYN
 
@@ -1074,7 +1074,7 @@ Finalmente el cliente confirma (ACK).
 
 **Justificación**
 
-TCP es un protocolo **orientado a conexión** que **garantiza la entrega** de los datos mediante confirmaciones y retransmisiones.
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> es un protocolo **orientado a conexión** que **garantiza la entrega** de los datos mediante confirmaciones y retransmisiones.
 
 Sin embargo, **no cifra** la información.
 
@@ -1094,9 +1094,9 @@ Lo verás, por ejemplo, cuando un puerto está cerrado o un servicio no acepta l
 
 **Justificación**
 
-**HTTPS** utiliza **TCP 443**.
+**<a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>** utiliza **<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 443**.
 
-NTP, DHCP y SNMP utilizan UDP, ya que priorizan la velocidad.
+NTP, <a href="../../GLOSARIO.md#dhcp" target="_blank">DHCP</a> y SNMP utilizan <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>, ya que priorizan la velocidad.
 
 **Pregunta 7**
 
@@ -1104,7 +1104,7 @@ NTP, DHCP y SNMP utilizan UDP, ya que priorizan la velocidad.
 
 **Justificación**
 
-Miles de intentos hacia el puerto **TCP 22 (SSH)** son un fuerte indicador de un posible **ataque de fuerza bruta**.
+Miles de intentos hacia el puerto **<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 22 (<a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>)** son un fuerte indicador de un posible **ataque de fuerza bruta**.
 
 Como analista, deberías verificar:
 
@@ -1112,7 +1112,7 @@ Como analista, deberías verificar:
 
 - Qué usuarios se intentaron usar.
 
-- Si la IP origen está en listas de bloqueo.
+- Si la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> origen está en listas de bloqueo.
 
 **Pregunta 8**
 
@@ -1120,9 +1120,9 @@ Como analista, deberías verificar:
 
 **Justificación**
 
-La secuencia SYN → SYN-ACK → ACK es el **Three-Way Handshake**.
+La secuencia SYN → SYN-ACK → ACK es el **<a href="../../GLOSARIO.md#three-way-handshake" target="_blank">Three-Way Handshake</a>**.
 
-Indica que la conexión TCP se estableció correctamente y que los datos pueden fluir.
+Indica que la conexión <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> se estableció correctamente y que los datos pueden fluir.
 
 **Pregunta 9**
 
@@ -1130,7 +1130,7 @@ Indica que la conexión TCP se estableció correctamente y que los datos pueden 
 
 **Justificación**
 
-Un **SYN Flood** consiste en enviar miles de paquetes **SYN** sin completar el Three-Way Handshake.
+Un **SYN Flood** consiste en enviar miles de paquetes **SYN** sin completar el <a href="../../GLOSARIO.md#three-way-handshake" target="_blank">Three-Way Handshake</a>.
 
 El servidor responde con SYN-ACK y queda esperando confirmaciones que nunca llegan.
 
@@ -1140,7 +1140,7 @@ Con suficientes paquetes:
 
 - Los usuarios legítimos quedan sin servicio.
 
-Es un ataque de denegación de servicio (DoS).
+Es un ataque de denegación de servicio (<a href="../../GLOSARIO.md#dos" target="_blank">DoS</a>).
 
 **Pregunta 10**
 
@@ -1148,9 +1148,9 @@ Es un ataque de denegación de servicio (DoS).
 
 **Justificación**
 
-500.000 SYN al puerto 443 desde miles de IP en 60 segundos es un patrón clásico de **SYN Flood** o **ataque DDoS**.
+500.000 SYN al puerto 443 desde miles de <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> en 60 segundos es un patrón clásico de **SYN Flood** o **ataque <a href="../../GLOSARIO.md#ddos" target="_blank">DDoS</a>**.
 
-Como analista SOC deberías:
+Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> deberías:
 
 - Confirmar si el servidor web sigue respondiendo.
 
@@ -1164,8 +1164,8 @@ Como analista SOC deberías:
 
 | **Respuestas Correctas** | **Nivel**                                                                                                        |
 |--------------------------|-----------------------------------------------------------------------------------------------------------------|
-| **10/10**                | ⭐ **Excelente.** Comprendes TCP y puedes identificar ataques asociados como SYN Flood y escaneos de puertos.    |
-| **8–9**                  | 🟢 **Muy buen nivel.** Ya interpretas correctamente los flags y el Three-Way Handshake en capturas y logs.      |
-| **6–7**                  | 🟡 **Buen progreso.** Repasa el Three-Way Handshake y los ataques más comunes contra TCP.                       |
-| **4–5**                  | 🟠 **Necesitas reforzar algunos conceptos.** Vuelve a estudiar las diferencias entre TCP y UDP.                 |
-| **0–3**                  | 🔴 **Es recomendable repasar el módulo completo.** TCP es la base de la mayoría de los logs que verás en un SOC. |
+| **10/10**                | ⭐ **Excelente.** Comprendes <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> y puedes identificar ataques asociados como SYN Flood y escaneos de puertos.    |
+| **8–9**                  | 🟢 **Muy buen nivel.** Ya interpretas correctamente los flags y el <a href="../../GLOSARIO.md#three-way-handshake" target="_blank">Three-Way Handshake</a> en capturas y logs.      |
+| **6–7**                  | 🟡 **Buen progreso.** Repasa el <a href="../../GLOSARIO.md#three-way-handshake" target="_blank">Three-Way Handshake</a> y los ataques más comunes contra <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>.                       |
+| **4–5**                  | 🟠 **Necesitas reforzar algunos conceptos.** Vuelve a estudiar las diferencias entre <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> y <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>.                 |
+| **0–3**                  | 🔴 **Es recomendable repasar el módulo completo.** <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> es la base de la mayoría de los logs que verás en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>. |

@@ -1,26 +1,26 @@
-**📘 Carrera de Analista SOC**
+**📘 Carrera de Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 **Semana 3 – Linux**
 
-**Módulo 19 – grep, Pipes y Análisis de Logs**
+**Módulo 19 – <a href="../../GLOSARIO.md#grep" target="_blank">grep</a>, Pipes y Análisis de Logs**
 
-**Nivel:** Principiante → Analista SOC Nivel 1
+**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
 
 **Antes de comenzar**
 
 Ya dominas:
 
-- ✅ Modelo OSI y TCP/IP
+- ✅ Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a> y <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>
 
-- ✅ TCP y UDP
+- ✅ <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> y <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>
 
 - ✅ Puertos
 
-- ✅ DNS, DHCP, HTTP y HTTPS
+- ✅ <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>, <a href="../../GLOSARIO.md#dhcp" target="_blank">DHCP</a>, <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a> y <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>
 
-- ✅ Introducción a Linux y la Terminal (CLI)
+- ✅ Introducción a Linux y la Terminal (<a href="../../GLOSARIO.md#cli" target="_blank">CLI</a>)
 
-- ✅ Estructura del Sistema de Archivos (FHS)
+- ✅ Estructura del Sistema de Archivos (<a href="../../GLOSARIO.md#fhs" target="_blank">FHS</a>)
 
 - ✅ Permisos de Archivos (rwx)
 
@@ -28,7 +28,7 @@ Ya dominas:
 
 - ✅ Gestión de Procesos
 
-Hoy llegamos a uno de los módulos más importantes de toda tu formación como Analista SOC.
+Hoy llegamos a uno de los módulos más importantes de toda tu formación como Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
 
 Los logs son la materia prima del trabajo en un centro de operaciones de seguridad.
 
@@ -42,13 +42,13 @@ Dominar `grep`, los pipes y `tail -f` te permitirá detectar fuerza bruta, acces
 
 Al finalizar este módulo podrás:
 
-- Comprender qué es `grep` y para qué se usa en un SOC.
+- Comprender qué es `grep` y para qué se usa en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
 
 - Buscar patrones de texto dentro de archivos de log.
 
 - Utilizar las opciones esenciales de `grep`: `-i`, `-v`, `-n`, `-c`, `-r`, `-l` y `-E`.
 
-- Encadenar comandos con el pipe `|`.
+- Encadenar comandos con el <a href="../../GLOSARIO.md#pipe" target="_blank">pipe</a> `|`.
 
 - Redirigir la salida de un comando hacia un archivo con `>` y `>>`.
 
@@ -60,7 +60,7 @@ Al finalizar este módulo podrás:
 
 - Conocer los logs más importantes del sistema Linux.
 
-- Detectar fuerza bruta SSH y accesos sospechosos analizando `auth.log`.
+- Detectar fuerza bruta <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a> y accesos sospechosos analizando `auth.log`.
 
 **1. ¿Qué es `grep`?**
 
@@ -96,7 +96,7 @@ Echas la mezcla, pero el filtro solo deja pasar el líquido que quieres tomar.
 
 `grep` deja pasar únicamente las líneas que contienen lo que buscas.
 
-Para un Analista SOC, `grep` es el filtro universal de los logs.
+Para un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>, `grep` es el filtro universal de los logs.
 
 **2. Uso básico de `grep`**
 
@@ -122,7 +122,7 @@ Verás líneas como:
 
 Esa línea cuenta una historia.
 
-Un intento de conexión SSH falló.
+Un intento de conexión <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a> falló.
 
 **El patrón puede ser una frase**
 
@@ -158,7 +158,7 @@ Eso también es información útil.
 
 `grep` tiene muchas opciones.
 
-Estas son las que usarás todos los días en un SOC.
+Estas son las que usarás todos los días en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
 
 | **Opción** | **Función**                                  | **Ejemplo**                              |
 |------------|----------------------------------------------|------------------------------------------|
@@ -238,13 +238,13 @@ Un solo comando para ver todos los intentos de autenticación.
 
 **4. Pipes `|`: encadenar comandos**
 
-El pipe se representa con el carácter vertical.
+El <a href="../../GLOSARIO.md#pipe" target="_blank">pipe</a> se representa con el carácter vertical.
 
 `|`
 
 Es uno de los caracteres más importantes de la terminal.
 
-**¿Qué hace el pipe?**
+**¿Qué hace el <a href="../../GLOSARIO.md#pipe" target="_blank">pipe</a>?**
 
 Toma la salida de un comando.
 
@@ -260,7 +260,7 @@ El agua sale de un lugar y fluye hacia otro.
 
 Primero `cat` muestra el archivo completo.
 
-El pipe pasa esa salida a `grep`.
+El <a href="../../GLOSARIO.md#pipe" target="_blank">pipe</a> pasa esa salida a `grep`.
 
 `grep` la filtra y solo muestra las líneas que coinciden.
 
@@ -274,9 +274,9 @@ Solo las líneas que te interesan.
 
 `ps aux` lista todos los procesos.
 
-El pipe filtra solo los que contienen "python".
+El <a href="../../GLOSARIO.md#pipe" target="_blank">pipe</a> filtra solo los que contienen "python".
 
-En un SOC lo usarás para verificar si un proceso sospechoso está corriendo.
+En un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> lo usarás para verificar si un proceso sospechoso está corriendo.
 
 **Buscar archivos de configuración**
 
@@ -284,7 +284,7 @@ En un SOC lo usarás para verificar si un proceso sospechoso está corriendo.
 
 Lista el contenido de `/etc`.
 
-El pipe filtra solo los archivos que terminan en `.conf`.
+El <a href="../../GLOSARIO.md#pipe" target="_blank">pipe</a> filtra solo los archivos que terminan en `.conf`.
 
 **`grep` como filtro universal**
 
@@ -298,7 +298,7 @@ Casi cualquier comando puede pasar por un filtro `grep`.
 
 Esta combinación es la base del análisis de logs en la terminal.
 
-**Encadenar más de dos comandos**
+**Encadenar más de <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> comandos**
 
 `cat /var/log/auth.log | grep "Failed" | grep "203.0.113.5"`
 
@@ -306,7 +306,7 @@ Primero muestra el log.
 
 Luego filtra los intentos fallidos.
 
-Finalmente filtra solo los de una IP específica.
+Finalmente filtra solo los de una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> específica.
 
 Tres comandos trabajando juntos en una sola línea.
 
@@ -474,9 +474,9 @@ Muestra solo los últimos 20 resultados.
 
 Presiona `q` para salir.
 
-**Listar las IPs que más atacan**
+**Listar las <a href="../../GLOSARIO.md#ips" target="_blank">IPs</a> que más atacan**
 
-Este es un comando esencial para un SOC:
+Este es un comando esencial para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>:
 
 `grep "Failed password" /var/log/auth.log | awk '{print $(NF-3)}' | sort | uniq -c | sort -nr`
 
@@ -484,9 +484,9 @@ Paso a paso:
 
 - `grep "Failed password"` filtra los intentos fallidos.
 
-- `awk '{print $(NF-3)}'` extrae la IP de cada línea.
+- `awk '{print $(NF-3)}'` extrae la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> de cada línea.
 
-- `sort` ordena las IPs.
+- `sort` ordena las <a href="../../GLOSARIO.md#ips" target="_blank">IPs</a>.
 
 - `uniq -c` las agrupa y cuenta cuántas veces aparece cada una.
 
@@ -494,7 +494,7 @@ Paso a paso:
 
 Resultado:
 
-La IP con más intentos fallidos aparece primero.
+La <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> con más intentos fallidos aparece primero.
 
 Es decir, el atacante más activo.
 
@@ -554,9 +554,9 @@ Busca archivos de configuración en `/home`.
 
 `find / -perm -4000 -type f 2>/dev/null`
 
-Busca archivos con el bit **setuid** activo.
+Busca archivos con el bit **<a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a>** activo.
 
-Los binarios setuid son una forma de escalada de privilegios.
+Los binarios <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a> son una forma de escalada de privilegios.
 
 Este comando aparece en auditorías de seguridad.
 
@@ -568,13 +568,13 @@ Descarta los errores de "Permission denied".
 
 Hace que la salida sea mucho más limpia.
 
-**¿Por qué importa en un SOC?**
+**¿Por qué importa en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?**
 
 Buscar scripts sospechosos.
 
 `find /tmp -name "*.sh" 2>/dev/null`
 
-Buscar binarios setuid.
+Buscar binarios <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a>.
 
 `find / -perm -4000 -type f 2>/dev/null`
 
@@ -592,20 +592,20 @@ Cada log cuenta una parte de la historia del sistema.
 
 | **Log**                  | **Contenido**                                           | **Sistema**                 |
 |--------------------------|---------------------------------------------------------|-----------------------------|
-| `/var/log/auth.log`      | Autenticación: logins, SSH, sudo.                       | Debian / Ubuntu             |
-| `/var/log/secure`        | Autenticación: logins, SSH, sudo.                       | Red Hat / CentOS / Fedora   |
+| `/var/log/auth.log`      | Autenticación: logins, <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>, <a href="../../GLOSARIO.md#sudo" target="_blank">sudo</a>.                       | Debian / Ubuntu             |
+| `/var/log/secure`        | Autenticación: logins, <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>, <a href="../../GLOSARIO.md#sudo" target="_blank">sudo</a>.                       | Red Hat / CentOS / Fedora   |
 | `/var/log/syslog`        | Eventos generales del sistema y servicios.              | Debian / Ubuntu             |
 | `/var/log/messages`      | Eventos generales del sistema y servicios.              | Red Hat / CentOS            |
-| `/var/log/kern.log`      | Mensajes del kernel.                                    | Debian / Ubuntu             |
+| `/var/log/kern.log`      | Mensajes del <a href="../../GLOSARIO.md#kernel" target="_blank">kernel</a>.                                    | Debian / Ubuntu             |
 | `/var/log/dpkg.log`      | Instalación de paquetes con `dpkg`/`apt`.               | Debian / Ubuntu             |
 | `/var/log/apache2/`      | Logs del servidor web Apache.                           | Debian / Ubuntu             |
 | `/var/log/nginx/`        | Logs del servidor web Nginx.                            | Multiplataforma             |
 
-**`/var/log/auth.log` – el favorito del SOC**
+**`/var/log/auth.log` – el favorito del <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 Registra los intentos de autenticación.
 
-Ahí aparecen los intentos de SSH.
+Ahí aparecen los intentos de <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>.
 
 También los eventos de `sudo`.
 
@@ -617,7 +617,7 @@ Cumple la misma función que `auth.log`.
 
 Pero en sistemas Red Hat, CentOS y Fedora.
 
-Recuerda: analista SOC ve ambos mundos.
+Recuerda: analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> ve ambos mundos.
 
 **`/var/log/syslog` – el evento general**
 
@@ -627,11 +627,11 @@ Todos los servicios pueden escribir aquí.
 
 Busca errores generales del sistema.
 
-**`/var/log/kern.log` – el kernel**
+**`/var/log/kern.log` – el <a href="../../GLOSARIO.md#kernel" target="_blank">kernel</a>**
 
 `grep -i "error" /var/log/kern.log`
 
-Revisa problemas del kernel.
+Revisa problemas del <a href="../../GLOSARIO.md#kernel" target="_blank">kernel</a>.
 
 Útil en fallos de hardware o cargas de módulos.
 
@@ -663,9 +663,9 @@ Puede mostrar intentos de encontrar archivos inexistentes.
 
 Un escaneo de vulnerabilidades deja miles de 404.
 
-**10. Análisis real: detectar fuerza bruta SSH**
+**10. Análisis real: detectar fuerza bruta <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>**
 
-La fuerza bruta SSH es uno de los ataques más comunes en Internet.
+La fuerza bruta <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a> es uno de los ataques más comunes en Internet.
 
 El atacante prueba miles de usuarios y contraseñas.
 
@@ -685,7 +685,7 @@ Cada línea incluye:
 
 - Usuario intentado.
 
-- IP de origen.
+- <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> de origen.
 
 - Puerto.
 
@@ -697,13 +697,13 @@ El número resultante te da el volumen total.
 
 Cientos o miles de intentos = posible ataque.
 
-**Paso 3: identificar la IP de origen**
+**Paso 3: identificar la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> de origen**
 
 `grep "Failed password" /var/log/auth.log | awk '{print $(NF-3)}' | sort | uniq -c | sort -nr`
 
-La primera línea del resultado es la IP con más intentos.
+La primera línea del resultado es la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> con más intentos.
 
-Esa es la IP del atacante más activo.
+Esa es la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> del atacante más activo.
 
 **Paso 4: distinguir fallidos de exitosos**
 
@@ -721,23 +721,23 @@ Un log de línea para cada caso:
 
 `grep "Accepted password" /var/log/auth.log | wc -l`
 
-Compara los dos números.
+Compara los <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> números.
 
 **Paso 5: detectar un compromiso probable**
 
-Busca si la IP atacante logró acceder:
+Busca si la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> atacante logró acceder:
 
 `grep "203.0.113.5" /var/log/auth.log | grep "Accepted"`
 
-Si hay líneas de "Accepted password" desde esa IP, algo grave ocurrió.
+Si hay líneas de "Accepted password" desde esa <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>, algo grave ocurrió.
 
 Secuencia típica de un compromiso:
 
-Miles de fallidos desde una IP.
+Miles de fallidos desde una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
 
 ↓
 
-Un acceso exitoso desde esa misma IP.
+Un acceso exitoso desde esa misma <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
 
 = **Compromiso probable.**
 
@@ -815,7 +815,7 @@ Un reinicio inesperado puede ser indicio de manipulación.
 
 `grep -i "error" /var/log/dpkg.log`
 
-**Servicios caídos**
+**Servicios caí<a href="../../GLOSARIO.md#dos" target="_blank">dos</a>**
 
 `grep -i "fail" /var/log/syslog`
 
@@ -823,11 +823,11 @@ Muestra fallos de servicios.
 
 Un servicio crítico caído es una alerta inmediata.
 
-**12. Aplicación práctica en un SOC**
+**12. Aplicación práctica en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 Veamos cómo se aplica todo esto en casos reales.
 
-**Caso 1 – Fuerza bruta SSH desde una IP externa**
+**Caso 1 – Fuerza bruta <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a> desde una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> externa**
 
 El equipo de operaciones reporta lentitud en un servidor.
 
@@ -843,11 +843,11 @@ Cuentas:
 
 Resultado: 12.450 intentos en 24 horas.
 
-Identificas la IP origen:
+Identificas la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> origen:
 
 `grep "Failed password" /var/log/auth.log | awk '{print $(NF-3)}' | sort | uniq -c | sort -nr`
 
-La IP 203.0.113.99 tiene 9.800 intentos.
+La <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> 203.0.113.99 tiene 9.800 intentos.
 
 Verificas si hubo acceso exitoso:
 
@@ -861,7 +861,7 @@ Ataque de fuerza bruta sin éxito.
 
 Acciones:
 
-- Bloquear la IP en el firewall.
+- Bloquear la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> en el firewall.
 
 - Reforzar la política de contraseñas.
 
@@ -903,7 +903,7 @@ Investigas:
 
 - ¿Qué comando exacto se ejecutó?
 
-- ¿Desde qué IP?
+- ¿Desde qué <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>?
 
 - ¿Con qué usuario?
 
@@ -929,13 +929,13 @@ Guardas los accesos exitosos:
 
 `grep "Accepted password" /var/log/auth.log > ~/evidencias_incidente/accesos_exitosos.txt`
 
-Guardas la lista de IPs atacantes:
+Guardas la lista de <a href="../../GLOSARIO.md#ips" target="_blank">IPs</a> atacantes:
 
 `grep "Failed password" /var/log/auth.log | awk '{print $(NF-3)}' | sort | uniq -c | sort -nr > ~/evidencias_incidente/top_ips.txt`
 
 Esas evidencias acompañarán tu reporte de incidente.
 
-**13. Lo que esperan de un Analista SOC Nivel 1**
+**13. Lo que esperan de un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1**
 
 En una entrevista o en tu primer día te harán preguntas como:
 
@@ -943,7 +943,7 @@ En una entrevista o en tu primer día te harán preguntas como:
 
 - ¿Cómo cuento cuántas veces apareció un evento?
 
-- ¿Qué IP está atacando más?
+- ¿Qué <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> está atacando más?
 
 - ¿Hubo acceso exitoso después de los intentos fallidos?
 
@@ -957,7 +957,7 @@ Debes responder con comandos concretos.
 
 `grep -c "Failed password" /var/log/auth.log`
 
-**¿Qué IP ataca más?**
+**¿Qué <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> ataca más?**
 
 `grep "Failed password" /var/log/auth.log | awk '{print $(NF-3)}' | sort | uniq -c | sort -nr`
 
@@ -975,7 +975,7 @@ Debes interpretar el contexto:
 
 - ¿El volumen de intentos es normal?
 
-- ¿La IP de origen es interna o externa?
+- ¿La <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> de origen es interna o externa?
 
 - ¿El horario es habitual?
 
@@ -1015,7 +1015,7 @@ Ese razonamiento es el que distingue a un buen analista.
 
 - `-E`: expresiones regulares extendidas.
 
-**Pipe `|`**
+**<a href="../../GLOSARIO.md#pipe" target="_blank">Pipe</a> `|`**
 
 - Pasa la salida de un comando al siguiente.
 
@@ -1035,13 +1035,13 @@ Ese razonamiento es el que distingue a un buen analista.
 
 - Esencial durante un incidente.
 
-**Fuerza bruta SSH**
+**Fuerza bruta <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>**
 
 - Fallidos: "Failed password".
 
 - Exitosos: "Accepted password".
 
-- Fallidos + exitosos desde la misma IP = compromiso probable.
+- Fallidos + exitosos desde la misma <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> = compromiso probable.
 
 **`find`**
 
@@ -1057,19 +1057,19 @@ Ese razonamiento es el que distingue a un buen analista.
 
 - `/var/log/syslog` → sistema.
 
-- `/var/log/kern.log` → kernel.
+- `/var/log/kern.log` → <a href="../../GLOSARIO.md#kernel" target="_blank">kernel</a>.
 
 **🧠 Conceptos clave para memorizar**
 
 | **Concepto**              | **Debes recordar**                                              |
 |---------------------------|-----------------------------------------------------------------|
-| grep                      | Global Regular Expression Print.                                |
+| <a href="../../GLOSARIO.md#grep" target="_blank">grep</a>                      | Global Regular Expression Print.                                |
 | `grep "patrón" archivo`   | Busca el patrón en el archivo.                                  |
 | `-i`                      | Ignora mayúsculas y minúsculas.                                 |
 | `-v`                      | Muestra todo menos el patrón.                                   |
 | `-c`                      | Cuenta cuántas líneas coinciden.                                |
 | `-r`                      | Busca de forma recursiva en carpetas.                           |
-| Pipe `|`                  | Pasa la salida de un comando como entrada del siguiente.        |
+| <a href="../../GLOSARIO.md#pipe" target="_blank">Pipe</a> `|`                  | Pasa la salida de un comando como entrada del siguiente.        |
 | `>`                       | Crea o sobrescribe un archivo.                                  |
 | `>>`                      | Añade al final del archivo.                                     |
 | `tail -f`                 | Monitorea el log en tiempo real.                                |
@@ -1079,11 +1079,11 @@ Ese razonamiento es el que distingue a un buen analista.
 | "Accepted password"       | Inicio de sesión exitoso.                                       |
 | `find`                    | Busca archivos por nombre, tipo y permisos.                     |
 
-**🎓 Consejo como tu instructor de SOC**
+**🎓 Consejo como tu instructor de <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 `grep` es tu detector de anomalías en los logs.
 
-En el SOC real, cada día revisarás miles de líneas de logs.
+En el <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> real, cada día revisarás miles de líneas de logs.
 
 Sin `grep` sería imposible.
 
@@ -1105,13 +1105,13 @@ Un acceso exitoso es el momento más importante de toda la investigación.
 
 `grep "Failed password" /var/log/auth.log | awk '{print $(NF-3)}' | sort | uniq -c | sort -nr`
 
-Este comando te da al instante las IPs que más atacan.
+Este comando te da al instante las <a href="../../GLOSARIO.md#ips" target="_blank">IPs</a> que más atacan.
 
-Es una de las consultas más usadas en cualquier SOC Linux.
+Es una de las consultas más usadas en cualquier <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Linux.
 
-**El futuro: los SIEM**
+**El futuro: los <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>**
 
-En el SOC real los logs llegarán a un SIEM.
+En el <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> real los logs llegarán a un <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>.
 
 Herramientas como Splunk, Elastic o Sentinel.
 
@@ -1121,27 +1121,27 @@ Pero saber leer los logs en crudo te da la base.
 
 **Comprenderás qué hay detrás de cada alerta.**
 
-Sabrás de dónde salen los datos que ves en el SIEM.
+Sabrás de dónde salen los datos que ves en el <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>.
 
-Y cuando el SIEM falle, podrás ir directo al servidor y analizar con `grep`.
+Y cuando el <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a> falle, podrás ir directo al servidor y analizar con `grep`.
 
 Esa combinación te convierte en un analista completo.
 
 ---
 
-**📘 Carrera de Analista SOC**
+**📘 Carrera de Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 **Semana 3 – Linux**
 
-**Evaluación – Módulo 19: grep, Pipes y Análisis de Logs**
+**Evaluación – Módulo 19: <a href="../../GLOSARIO.md#grep" target="_blank">grep</a>, Pipes y Análisis de Logs**
 
-**Nivel:** Principiante → Analista SOC Nivel 1
+**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
 
-**Instrucciones:** Responde las siguientes preguntas sin consultar el material de estudio. Este cuestionario está diseñado con el nivel de una entrevista técnica para un **Analista SOC Nivel 1**. Encontrarás preguntas teóricas y casos prácticos basados en el análisis real de logs de Linux.
+**Instrucciones:** Responde las siguientes preguntas sin consultar el material de estudio. Este cuestionario está diseñado con el nivel de una entrevista técnica para un **Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1**. Encontrarás preguntas teóricas y casos prácticos basados en el análisis real de logs de Linux.
 
 **Pregunta 1**
 
-¿Qué significa la sigla **grep**?
+¿Qué significa la sigla **<a href="../../GLOSARIO.md#grep" target="_blank">grep</a>**?
 
 **A)** Global Regular Expression Print
 
@@ -1199,11 +1199,11 @@ Quieres ver solo las líneas del archivo `/var/log/auth.log` que contienen la fr
 
 **C)** Copia el resultado a un archivo.
 
-**D)** Compara dos archivos.
+**D)** Compara <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> archivos.
 
 **Pregunta 6**
 
-¿Para qué sirve el pipe **`|`** en Linux?
+¿Para qué sirve el <a href="../../GLOSARIO.md#pipe" target="_blank">pipe</a> **`|`** en Linux?
 
 **A)** Para ejecutar un comando en segundo plano.
 
@@ -1215,7 +1215,7 @@ Quieres ver solo las líneas del archivo `/var/log/auth.log` que contienen la fr
 
 **Pregunta 7**
 
-Estás monitoreando un ataque de fuerza bruta SSH en tiempo real.
+Estás monitoreando un ataque de fuerza bruta <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a> en tiempo real.
 
 ¿Qué comando te muestra las nuevas líneas de `/var/log/auth.log` a medida que aparecen?
 
@@ -1251,9 +1251,9 @@ Estás monitoreando un ataque de fuerza bruta SSH en tiempo real.
 
 **D)** `tail -f *.sh`
 
-**Pregunta 10 (Caso práctico SOC)**
+**Pregunta 10 (Caso práctico <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>)**
 
-El SIEM generó una alerta de posible fuerza bruta SSH.
+El <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a> generó una alerta de posible fuerza bruta <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>.
 
 Necesitas saber cuántos intentos fallidos hubo en el servidor.
 
@@ -1353,7 +1353,7 @@ Devuelve un número como 12.450.
 
 **Justificación**
 
-El pipe **`|`** toma la salida de un comando y la pasa como entrada del siguiente.
+El <a href="../../GLOSARIO.md#pipe" target="_blank">pipe</a> **`|`** toma la salida de un comando y la pasa como entrada del siguiente.
 
 Ejemplo:
 
@@ -1361,7 +1361,7 @@ Ejemplo:
 
 Primero `cat` muestra el log.
 
-El pipe envía esa salida a `grep`.
+El <a href="../../GLOSARIO.md#pipe" target="_blank">pipe</a> envía esa salida a `grep`.
 
 `grep` filtra solo las líneas que contienen "Failed".
 
@@ -1413,7 +1413,7 @@ Añade al final.
 
 `grep` busca dentro del contenido.
 
-`-perm -4000` permite buscar por permisos, como los binarios setuid:
+`-perm -4000` permite buscar por permisos, como los binarios <a href="../../GLOSARIO.md#setuid" target="_blank">setuid</a>:
 
 `find / -perm -4000 -type f 2>/dev/null`
 
@@ -1423,13 +1423,13 @@ Añade al final.
 
 **Justificación**
 
-Para contar los intentos fallidos de SSH:
+Para contar los intentos fallidos de <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>:
 
 `grep -c "Failed password" /var/log/auth.log`
 
 El resultado es el número total de intentos fallidos.
 
-Si quieres ir más allá, puedes identificar la IP más atacante:
+Si quieres ir más allá, puedes identificar la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> más atacante:
 
 `grep "Failed password" /var/log/auth.log | awk '{print $(NF-3)}' | sort | uniq -c | sort -nr`
 
@@ -1437,11 +1437,11 @@ Y verificar si hubo accesos exitosos:
 
 `grep "Accepted password" /var/log/auth.log`
 
-Si una misma IP tuvo muchos fallidos y luego un acceso exitoso:
+Si una misma <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> tuvo muchos fallidos y luego un acceso exitoso:
 
 **Compromiso probable.**
 
-Como analista SOC debes:
+Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> debes:
 
 - Confirmar el acceso exitoso.
 
@@ -1449,7 +1449,7 @@ Como analista SOC debes:
 
 - Verificar qué se hizo con esa cuenta.
 
-- Bloquear la IP en el firewall.
+- Bloquear la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> en el firewall.
 
 - Documentar todo en el reporte de incidente.
 
@@ -1457,8 +1457,8 @@ Como analista SOC debes:
 
 | **Respuestas Correctas** | **Nivel**                                                                                                      |
 |--------------------------|----------------------------------------------------------------------------------------------------------------|
-| **10/10**                | ⭐ **Excelente.** Ya analizas logs en Linux como un Analista SOC: filtras, cuentas y detectas fuerza bruta.     |
-| **8–9**                  | 🟢 **Muy buen nivel.** Dominas grep y los pipes para encontrar información rápidamente.                        |
-| **6–7**                  | 🟡 **Buen progreso.** Repasa las opciones de grep y la diferencia entre `>` y `>>`.                            |
-| **4–5**                  | 🟠 **Necesitas reforzar algunos conceptos.** Practica más con grep y tail -f en tu máquina virtual.            |
-| **0–3**                  | 🔴 **Es recomendable repasar el módulo completo.** grep es una de las herramientas más usadas por los analistas todos los días. |
+| **10/10**                | ⭐ **Excelente.** Ya analizas logs en Linux como un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>: filtras, cuentas y detectas fuerza bruta.     |
+| **8–9**                  | 🟢 **Muy buen nivel.** Dominas <a href="../../GLOSARIO.md#grep" target="_blank">grep</a> y los pipes para encontrar información rápidamente.                        |
+| **6–7**                  | 🟡 **Buen progreso.** Repasa las opciones de <a href="../../GLOSARIO.md#grep" target="_blank">grep</a> y la diferencia entre `>` y `>>`.                            |
+| **4–5**                  | 🟠 **Necesitas reforzar algunos conceptos.** Practica más con <a href="../../GLOSARIO.md#grep" target="_blank">grep</a> y tail -f en tu máquina virtual.            |
+| **0–3**                  | 🔴 **Es recomendable repasar el módulo completo.** <a href="../../GLOSARIO.md#grep" target="_blank">grep</a> es una de las herramientas más usadas por los analistas todos los días. |

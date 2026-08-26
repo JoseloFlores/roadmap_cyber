@@ -1,26 +1,26 @@
-**📘 Carrera de Analista SOC**
+**📘 Carrera de Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 **Semana 3 – Linux**
 
 **Módulo 17 – Gestión de Usuarios y Grupos**
 
-**Nivel:** Principiante → Analista SOC Nivel 1
+**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
 
 **Antes de comenzar**
 
 Ya dominas:
 
-- ✅ Modelo OSI y TCP/IP
+- ✅ Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a> y <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>
 
-- ✅ TCP y UDP
+- ✅ <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> y <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>
 
 - ✅ Puertos
 
-- ✅ DNS, DHCP, HTTP y HTTPS
+- ✅ <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>, <a href="../../GLOSARIO.md#dhcp" target="_blank">DHCP</a>, <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a> y <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>
 
-- ✅ Introducción a Linux y la Terminal (CLI)
+- ✅ Introducción a Linux y la Terminal (<a href="../../GLOSARIO.md#cli" target="_blank">CLI</a>)
 
-- ✅ Estructura del Sistema de Archivos (FHS)
+- ✅ Estructura del Sistema de Archivos (<a href="../../GLOSARIO.md#fhs" target="_blank">FHS</a>)
 
 - ✅ Permisos de Archivos (rwx)
 
@@ -36,7 +36,7 @@ Los **usuarios** determinan quién puede iniciar sesión en Linux.
 
 Los **grupos** determinan qué accesos comparten esos usuarios.
 
-En un SOC vas a auditar cuentas, detectar cuentas nuevas creadas por un
+En un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> vas a auditar cuentas, detectar cuentas nuevas creadas por un
 atacante y revisar intentos de acceso.
 
 Dominar la gestión de usuarios es esencial para detectar escaladas de
@@ -48,7 +48,7 @@ Al finalizar este módulo podrás:
 
 - Comprender qué es un usuario en Linux.
 
-- Diferenciar usuario normal, usuario de sistema y root.
+- Diferenciar usuario normal, usuario de sistema y <a href="../../GLOSARIO.md#root" target="_blank">root</a>.
 
 - Interpretar los archivos `/etc/passwd`, `/etc/shadow` y `/etc/group`.
 
@@ -64,7 +64,7 @@ Al finalizar este módulo podrás:
 
 - Reconocer cómo usan los atacantes la gestión de usuarios.
 
-- Aplicar estos conocimientos en investigaciones de un SOC.
+- Aplicar estos conocimientos en investigaciones de un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
 
 **1. ¿Qué es un usuario en Linux?**
 
@@ -94,7 +94,7 @@ Cada proceso que se ejecuta pertenece a un usuario.
 
 Cada archivo que existe pertenece a un usuario.
 
-Si dos usuarios tienen el mismo UID, el sistema los considera el mismo
+Si <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> usuarios tienen el mismo UID, el sistema los considera el mismo
 usuario.
 
 Esto será muy importante cuando hables de ataques.
@@ -157,7 +157,7 @@ Ejemplos:
 
 - `mysql` → base de datos MySQL.
 
-- `sshd` → servicio SSH.
+- `sshd` → servicio <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>.
 
 Suelen tener UID bajos.
 
@@ -167,9 +167,9 @@ Por ejemplo:
 
 No pueden iniciar sesión normalmente.
 
-Su shell suele ser `/usr/sbin/nologin` o `/bin/false`.
+Su <a href="../../GLOSARIO.md#shell" target="_blank">shell</a> suele ser `/usr/sbin/nologin` o `/bin/false`.
 
-**root (el superusuario)**
+**<a href="../../GLOSARIO.md#root" target="_blank">root</a> (el superusuario)**
 
 `root` es el usuario más poderoso.
 
@@ -201,7 +201,7 @@ Puede entrar a cualquier oficina.
 
 Puede cambiar la cerradura de todo el edificio.
 
-En un SOC, una cuenta con UID 0 despierta siempre sospechas.
+En un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>, una cuenta con UID 0 despierta siempre sospechas.
 
 **3. El archivo `/etc/passwd`**
 
@@ -217,11 +217,11 @@ Solo guarda los datos de identidad.
 
 Cada usuario ocupa una línea.
 
-Cada línea tiene **7 campos** separados por dos puntos.
+Cada línea tiene **7 campos** separados por <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> puntos.
 
 Formato:
 
-usuario:x:UID:GID:comentario:home:shell
+usuario:x:UID:GID:comentario:home:<a href="../../GLOSARIO.md#shell" target="_blank">shell</a>
 
 | **Campo**      | **Significado**                                          | **Ejemplo**                     |
 |----------------|----------------------------------------------------------|---------------------------------|
@@ -231,11 +231,11 @@ usuario:x:UID:GID:comentario:home:shell
 | GID            | Número del grupo principal del usuario.                  | `0`                             |
 | comentario     | Información opcional (nombre real, teléfono, etc.).      | `root`                          |
 | home           | Carpeta personal del usuario.                            | `/root`                         |
-| shell          | Programa que se ejecuta al iniciar sesión.               | `/bin/bash`                     |
+| <a href="../../GLOSARIO.md#shell" target="_blank">shell</a>          | Programa que se ejecuta al iniciar sesión.               | `/bin/bash`                     |
 
 **Ejemplo real**
 
-root:x:0:0:root:/root:/bin/bash
+<a href="../../GLOSARIO.md#root" target="_blank">root</a>:x:0:0:<a href="../../GLOSARIO.md#root" target="_blank">root</a>:/<a href="../../GLOSARIO.md#root" target="_blank">root</a>:/bin/<a href="../../GLOSARIO.md#bash" target="_blank">bash</a>
 
 Interpretación:
 
@@ -247,15 +247,15 @@ Interpretación:
 
 - GID → 0.
 
-- comentario → root.
+- comentario → <a href="../../GLOSARIO.md#root" target="_blank">root</a>.
 
 - home → `/root`.
 
-- shell → `/bin/bash`.
+- <a href="../../GLOSARIO.md#shell" target="_blank">shell</a> → `/bin/bash`.
 
 **Otro ejemplo**
 
-carlos:x:1001:1001:Carlos Perez:/home/carlos:/bin/bash
+carlos:x:1001:1001:Carlos Perez:/home/carlos:/bin/<a href="../../GLOSARIO.md#bash" target="_blank">bash</a>
 
 Interpretación:
 
@@ -265,7 +265,7 @@ Interpretación:
 
 - home → `/home/carlos`.
 
-- shell → `/bin/bash` (usuario normal con login).
+- <a href="../../GLOSARIO.md#shell" target="_blank">shell</a> → `/bin/bash` (usuario normal con login).
 
 **¿Por qué la "x"?**
 
@@ -291,13 +291,13 @@ Para buscar un usuario específico:
 
 `grep carlos /etc/passwd`
 
-Para buscar usuarios con shell de login:
+Para buscar usuarios con <a href="../../GLOSARIO.md#shell" target="_blank">shell</a> de login:
 
 `grep -v nologin /etc/passwd`
 
-**Pista para el SOC**
+**Pista para el <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
-Si aparece un usuario con shell `/bin/bash` que no debería tener login,
+Si aparece un usuario con <a href="../../GLOSARIO.md#shell" target="_blank">shell</a> `/bin/bash` que no debería tener login,
 algo huele mal.
 
 **4. El archivo `/etc/shadow`**
@@ -343,7 +343,7 @@ Si un atacante obtiene el archivo, puede intentar:
 
 **Formato resumido de `/etc/shadow`**
 
-Cada línea tiene 9 campos separados por dos puntos.
+Cada línea tiene 9 campos separados por <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> puntos.
 
 usuario:hash:ultimo_cambio:min:max:aviso:inactiva:expiracion:reservado
 
@@ -395,7 +395,7 @@ Para desbloquear:
 
 `passwd -u carlos`
 
-**Pista para el SOC**
+**Pista para el <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 Un atacante no puede leer `/etc/shadow` sin ser `root`.
 
@@ -422,7 +422,7 @@ grupo:x:GID:miembros
 
 **Ejemplo real**
 
-sudo:x:27:carlos,maria
+<a href="../../GLOSARIO.md#sudo" target="_blank">sudo</a>:x:27:carlos,maria
 
 Interpretación:
 
@@ -481,7 +481,7 @@ Significado:
 
 - `-m` → crea el home `/home/carlos`.
 
-- `-s` → asigna la shell `/bin/bash`.
+- `-s` → asigna la <a href="../../GLOSARIO.md#shell" target="_blank">shell</a> `/bin/bash`.
 
 **Crear un usuario con comentario**
 
@@ -497,7 +497,7 @@ La cuenta se desactiva automáticamente en esa fecha.
 
 `passwd carlos`
 
-El sistema pedirá la nueva contraseña dos veces.
+El sistema pedirá la nueva contraseña <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> veces.
 
 **Eliminar un usuario**
 
@@ -515,7 +515,7 @@ Elimina la cuenta.
 
 También borra su home y su bandeja de correo.
 
-**Pista para el SOC**
+**Pista para el <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 `userdel -r` es peligroso.
 
@@ -545,7 +545,7 @@ Sin la `-a`, `usermod -G` reemplaza todos los grupos.
 
 Ese error puede dejar al usuario sin accesos.
 
-**Cambiar la shell de un usuario**
+**Cambiar la <a href="../../GLOSARIO.md#shell" target="_blank">shell</a> de un usuario**
 
 `usermod -s /usr/sbin/nologin carlos`
 
@@ -644,12 +644,12 @@ El grupo principal es el que aparece en el GID de `/etc/passwd`.
 |-----------|-----------------------------------------------|
 | `root`    | Grupo del superusuario.                       |
 | `sudo`    | Permite ejecutar comandos con privilegios.    |
-| `wheel`   | Alternativa al grupo sudo (en algunos sistemas). |
+| `wheel`   | Alternativa al grupo <a href="../../GLOSARIO.md#sudo" target="_blank">sudo</a> (en algunos sistemas). |
 | `adm`     | Permite leer los logs del sistema.            |
 | `www-data`| Usuario y grupo de los servicios web.         |
 | `shadow`  | Puede leer `/etc/shadow` (usado por servicios).|
 
-**Pista para el SOC**
+**Pista para el <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 Un usuario que no debería estar en `sudo` o en `wheel` es una alerta.
 
@@ -657,7 +657,7 @@ Puede ser el inicio de una escalada de privilegios.
 
 **9. Consultar usuarios e identidad**
 
-En un SOC vas a necesitar saber quién es quién.
+En un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> vas a necesitar saber quién es quién.
 
 **Ver la identidad del usuario actual**
 
@@ -673,7 +673,7 @@ Muestra:
 
 Ejemplo de salida:
 
-uid=1000(carlos) gid=1000(carlos) groups=1000(carlos),27(sudo)
+uid=1000(carlos) gid=1000(carlos) groups=1000(carlos),27(<a href="../../GLOSARIO.md#sudo" target="_blank">sudo</a>)
 
 **Ver quién soy**
 
@@ -729,7 +729,7 @@ Puede incluir LDAP o Active Directory.
 
 `getent passwd carlos`
 
-**Pista para el SOC**
+**Pista para el <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 `who` y `w` te dicen quién está ahora.
 
@@ -739,7 +739,7 @@ Esa línea de tiempo es oro en una investigación.
 
 **10. `sudo` y `su`**
 
-Son dos comandos parecidos.
+Son <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> comandos parecidos.
 
 Pero significan cosas distintas.
 
@@ -791,7 +791,7 @@ Para ver los logs necesitas privilegios:
 
 `sudo tail -f /var/log/auth.log`
 
-Para cambiar a root durante un tiempo:
+Para cambiar a <a href="../../GLOSARIO.md#root" target="_blank">root</a> durante un tiempo:
 
 `sudo -i`
 
@@ -836,7 +836,7 @@ Interpretación de los campos:
 | (ALL:ALL)            | Puede ejecutar como cualquier usuario/grupo.|
 | comando              | Qué comandos puede ejecutar.                |
 
-**Pista para el SOC**
+**Pista para el <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 Revisar `/etc/sudoers` es parte de una auditoría.
 
@@ -894,7 +894,7 @@ Y ya es `root`.
 
 - Buscar cuentas con reglas demasiado amplias.
 
-**Ataque 3 – Fuerza bruta SSH contra usuarios conocidos**
+**Ataque 3 – Fuerza bruta <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a> contra usuarios conocidos**
 
 El atacante prueba contraseñas contra cuentas reales.
 
@@ -932,7 +932,7 @@ Esto se llama **credential stuffing**.
 
 **Cómo detectarlo**
 
-- Intentos de login desde IPs inusuales.
+- Intentos de login desde <a href="../../GLOSARIO.md#ips" target="_blank">IPs</a> inusuales.
 
 - Inicios de sesión en horarios extraños.
 
@@ -964,7 +964,7 @@ El atacante puede:
 
 - Monitorear archivos críticos.
 
-**Pista para el SOC**
+**Pista para el <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 `/etc/passwd` y `/etc/shadow` solo deben modificarlos `root`.
 
@@ -1002,7 +1002,7 @@ Ejemplo:
 
 - El grupo `sudo` tiene pocos miembros.
 
-**Restringir sudo**
+**Restringir <a href="../../GLOSARIO.md#sudo" target="_blank">sudo</a>**
 
 - Limitar comandos permitidos.
 
@@ -1034,9 +1034,9 @@ Ejemplo:
 
 Así las contraseñas viejas pierden validez.
 
-**Restringir SSH**
+**Restringir <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>**
 
-- Deshabilitar el login de `root` por SSH.
+- Deshabilitar el login de `root` por <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>.
 
 - Usar llaves en lugar de contraseñas.
 
@@ -1050,13 +1050,13 @@ Así las contraseñas viejas pierden validez.
 
 - Mantener actualizados los servicios de autenticación.
 
-**Pista para el SOC**
+**Pista para el <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 El menor privilegio es tu mejor amigo.
 
 Cuantas menos cuentas con poder, menor superficie de ataque.
 
-**13. Aplicación práctica en un SOC**
+**13. Aplicación práctica en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 Vamos a resolver casos reales.
 
@@ -1098,7 +1098,7 @@ Comando:
 
 Encuentras:
 
-Failed password for root from 203.0.113.9 port 52340 ssh2
+Failed password for <a href="../../GLOSARIO.md#root" target="_blank">root</a> from 203.0.113.9 port 52340 ssh2
 
 Failed password for admin from 203.0.113.9 port 52341 ssh2
 
@@ -1106,7 +1106,7 @@ Failed password for carlos from 203.0.113.9 port 52342 ssh2
 
 Interpretación:
 
-Múltiples fallos desde la misma IP.
+Múltiples fallos desde la misma <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
 
 Usuarios probados en secuencia.
 
@@ -1114,13 +1114,13 @@ Es un patrón de **fuerza bruta**.
 
 Acciones:
 
-- Identificar la IP origen.
+- Identificar la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> origen.
 
-- Buscar intentos exitosos desde esa IP.
+- Buscar intentos exitosos desde esa <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
 
-- Bloquear la IP en el firewall.
+- Bloquear la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> en el firewall.
 
-**Caso 3 – Auditar miembros del grupo sudo**
+**Caso 3 – Auditar miembros del grupo <a href="../../GLOSARIO.md#sudo" target="_blank">sudo</a>**
 
 Comando:
 
@@ -1128,7 +1128,7 @@ Comando:
 
 Salida:
 
-sudo:x:27:carlos,maria
+<a href="../../GLOSARIO.md#sudo" target="_blank">sudo</a>:x:27:carlos,maria
 
 Compara con la lista oficial de administradores.
 
@@ -1152,13 +1152,13 @@ Acciones:
 
 - Cambiar las contraseñas afectadas.
 
-**Caso 4 – Verificar la shell de las cuentas**
+**Caso 4 – Verificar la <a href="../../GLOSARIO.md#shell" target="_blank">shell</a> de las cuentas**
 
 Comando:
 
 `awk -F: '{print $1, $7}' /etc/passwd`
 
-Cuentas de servicio con shell de login:
+Cuentas de servicio con <a href="../../GLOSARIO.md#shell" target="_blank">shell</a> de login:
 
 `webapp:/bin/bash`
 
@@ -1176,7 +1176,7 @@ Acciones:
 
 `sudo usermod -s /usr/sbin/nologin webapp`
 
-**Pista para el SOC**
+**Pista para el <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 En una investigación, siempre pregunta:
 
@@ -1188,7 +1188,7 @@ En una investigación, siempre pregunta:
 
 - ¿Entró alguien con ella?
 
-**14. Lo que esperan de un Analista SOC Nivel 1**
+**14. Lo que esperan de un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1**
 
 En una entrevista o en el trabajo te harán preguntas como:
 
@@ -1198,7 +1198,7 @@ Debes poder responder mirando `/etc/passwd` y `/etc/group`.
 
 **¿Qué permisos tiene?**
 
-Debes revisar grupos, shell y reglas de `sudo`.
+Debes revisar grupos, <a href="../../GLOSARIO.md#shell" target="_blank">shell</a> y reglas de `sudo`.
 
 **¿Hay cuentas nuevas?**
 
@@ -1220,7 +1220,7 @@ Buscar:
 
 - Muchos `Failed password`.
 
-- Misma IP origen.
+- Misma <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> origen.
 
 - Usuarios probados en secuencia.
 
@@ -1264,7 +1264,7 @@ Buscar:
 
 - No guarda contraseñas.
 
-- Guarda identidad, home y shell.
+- Guarda identidad, home y <a href="../../GLOSARIO.md#shell" target="_blank">shell</a>.
 
 **`/etc/shadow`**
 
@@ -1310,7 +1310,7 @@ Buscar:
 
 - `sudoers` mal configurado.
 
-- Fuerza bruta SSH.
+- Fuerza bruta <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>.
 
 - Contraseñas débiles.
 
@@ -1321,11 +1321,11 @@ Buscar:
 | **Concepto** | **Debes recordar**                                           |
 |--------------|--------------------------------------------------------------|
 | UID          | Número único que identifica a un usuario.                    |
-| root         | Superusuario con UID 0 y poder total.                        |
-| `/etc/passwd`| 7 campos: usuario, x, UID, GID, comentario, home, shell.     |
-| `/etc/shadow`| Almacena los hashes de contraseñas. Solo accesible por root. |
+| <a href="../../GLOSARIO.md#root" target="_blank">root</a>         | Superusuario con UID 0 y poder total.                        |
+| `/etc/passwd`| 7 campos: usuario, x, UID, GID, comentario, home, <a href="../../GLOSARIO.md#shell" target="_blank">shell</a>.     |
+| `/etc/shadow`| Almacena los hashes de contraseñas. Solo accesible por <a href="../../GLOSARIO.md#root" target="_blank">root</a>. |
 | `/etc/group` | Grupos y sus miembros. Formato: grupo:x:GID:miembros.        |
-| `useradd`    | Crea usuarios. `-m` crea home, `-s` define shell.            |
+| `useradd`    | Crea usuarios. `-m` crea home, `-s` define <a href="../../GLOSARIO.md#shell" target="_blank">shell</a>.            |
 | `usermod`    | Modifica usuarios. `-aG` agrega a un grupo sin reemplazar.   |
 | `passwd`     | Cambia contraseñas. `-l` bloquea, `-u` desbloquea.           |
 | `sudo`       | Ejecuta un comando con privilegios de administrador.         |
@@ -1333,7 +1333,7 @@ Buscar:
 | `chage`      | Controla expiración de contraseñas y cuentas.                |
 | `id`         | Muestra UID, GID y grupos del usuario.                       |
 
-**🎓 Consejo como tu instructor de SOC**
+**🎓 Consejo como tu instructor de <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 En un compromiso, los atacantes suelen crear cuentas para persistir.
 
@@ -1371,18 +1371,18 @@ La evidencia vive en el disco.
 
 La cuenta de un atacante puede ser la prueba de un incidente.
 
-**📘 Carrera de Analista SOC**
+**📘 Carrera de Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 **Semana 3 – Linux**
 
 **Evaluación – Módulo 17: Gestión de Usuarios y Grupos**
 
-**Nivel:** Principiante → Analista SOC Nivel 1
+**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
 
 **Instrucciones:** Responde las siguientes preguntas sin consultar el
 material. Este examen está diseñado con el nivel de dificultad de una
-entrevista para un **Analista SOC Nivel 1**. Encontrarás preguntas
-conceptuales y casos prácticos basados en situaciones reales de un SOC.
+entrevista para un **Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1**. Encontrarás preguntas
+conceptuales y casos prácticos basados en situaciones reales de un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
 
 **Pregunta 1**
 
@@ -1451,11 +1451,11 @@ usuarios?
 
 **A)** Elimina al usuario carlos.
 
-**B)** Crea al usuario carlos con home y shell `/bin/bash`.
+**B)** Crea al usuario carlos con home y <a href="../../GLOSARIO.md#shell" target="_blank">shell</a> `/bin/bash`.
 
 **C)** Cambia la contraseña de carlos.
 
-**D)** Agrega a carlos al grupo root.
+**D)** Agrega a carlos al grupo <a href="../../GLOSARIO.md#root" target="_blank">root</a>.
 
 **Pregunta 7**
 
@@ -1484,29 +1484,29 @@ sus grupos actuales?
 
 **Pregunta 9**
 
-Como analista SOC revisas `/var/log/auth.log` y encuentras:
+Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> revisas `/var/log/auth.log` y encuentras:
 
 Failed password for carlos from 203.0.113.9 port 52340 ssh2
 
 Failed password for maria from 203.0.113.9 port 52341 ssh2
 
-Failed password for root from 203.0.113.9 port 52342 ssh2
+Failed password for <a href="../../GLOSARIO.md#root" target="_blank">root</a> from 203.0.113.9 port 52342 ssh2
 
 ¿Cuál es la hipótesis más probable?
 
 **A)** Un usuario olvidó su contraseña.
 
-**B)** Un posible ataque de fuerza bruta contra SSH desde una misma IP.
+**B)** Un posible ataque de fuerza bruta contra <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a> desde una misma <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
 
 **C)** Una actualización automática del sistema.
 
-**D)** Un problema con el servicio DNS.
+**D)** Un problema con el servicio <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>.
 
-**Pregunta 10 (Caso práctico SOC)**
+**Pregunta 10 (Caso práctico <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>)**
 
 Durante una auditoría revisas `/etc/passwd` y encuentras:
 
-sysadmin:x:0:0:Cuenta sistema:/root:/bin/bash
+sysadmin:x:0:0:Cuenta sistema:/<a href="../../GLOSARIO.md#root" target="_blank">root</a>:/bin/<a href="../../GLOSARIO.md#bash" target="_blank">bash</a>
 
 ¿Qué implica esto?
 
@@ -1566,11 +1566,11 @@ Por seguridad, se movieron a un archivo protegido.
 
 Cada línea de `/etc/passwd` tiene **7 campos**:
 
-usuario:x:UID:GID:comentario:home:shell
+usuario:x:UID:GID:comentario:home:<a href="../../GLOSARIO.md#shell" target="_blank">shell</a>
 
 Ejemplo:
 
-root:x:0:0:root:/root:/bin/bash
+<a href="../../GLOSARIO.md#root" target="_blank">root</a>:x:0:0:<a href="../../GLOSARIO.md#root" target="_blank">root</a>:/<a href="../../GLOSARIO.md#root" target="_blank">root</a>:/bin/<a href="../../GLOSARIO.md#bash" target="_blank">bash</a>
 
 **Pregunta 5**
 
@@ -1596,7 +1596,7 @@ Pide la contraseña del usuario actual.
 
 - `-m` crea el home `/home/carlos`.
 
-- `-s` asigna la shell `/bin/bash`.
+- `-s` asigna la <a href="../../GLOSARIO.md#shell" target="_blank">shell</a> `/bin/bash`.
 
 **Pregunta 7**
 
@@ -1632,16 +1632,16 @@ Ejemplo:
 
 **Justificación**
 
-Varios `Failed password` desde **la misma IP** con usuarios probados en
-secuencia indican un posible **ataque de fuerza bruta contra SSH**.
+Varios `Failed password` desde **la misma <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>** con usuarios probados en
+secuencia indican un posible **ataque de fuerza bruta contra <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>**.
 
 Como analista deberías:
 
-- Identificar la IP origen.
+- Identificar la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> origen.
 
 - Buscar intentos exitosos.
 
-- Bloquear la IP si procede.
+- Bloquear la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> si procede.
 
 **Pregunta 10**
 

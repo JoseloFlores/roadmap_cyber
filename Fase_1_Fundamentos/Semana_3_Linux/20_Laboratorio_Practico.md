@@ -1,18 +1,18 @@
-**📘 Carrera de Analista SOC**
+**📘 Carrera de Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 **Semana 3 – Linux**
 
 **Módulo 20 – Laboratorio Práctico de Linux**
 
-**Nivel:** Principiante → Analista SOC Nivel 1
+**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
 
 **Antes de comenzar**
 
 Ya dominas:
 
-- ✅ Introducción a Linux y la Terminal (CLI)
+- ✅ Introducción a Linux y la Terminal (<a href="../../GLOSARIO.md#cli" target="_blank">CLI</a>)
 
-- ✅ Estructura del Sistema de Archivos (FHS)
+- ✅ Estructura del Sistema de Archivos (<a href="../../GLOSARIO.md#fhs" target="_blank">FHS</a>)
 
 - ✅ Permisos de Archivos (rwx)
 
@@ -20,7 +20,7 @@ Ya dominas:
 
 - ✅ Gestión de Procesos
 
-- ✅ grep, Pipes y Análisis de Logs
+- ✅ <a href="../../GLOSARIO.md#grep" target="_blank">grep</a>, Pipes y Análisis de Logs
 
 Hasta ahora has visto la teoría de cada tema por separado.
 
@@ -44,9 +44,9 @@ El objetivo es integrar en un solo escenario práctico:
 
 Vas a simular una pequeña situación de oficina:
 
-una empresa con dos equipos de trabajo (ventas y sistemas), una carpeta compartida con información secreta y un servidor que registra intentos de acceso fallidos.
+una empresa con <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> equipos de trabajo (ventas y sistemas), una carpeta compartida con información secreta y un servidor que registra intentos de acceso fallidos.
 
-Ese escenario te obligará a usar las herramientas de Linux exactamente como las usarás el día de mañana dentro de un SOC.
+Ese escenario te obligará a usar las herramientas de Linux exactamente como las usarás el día de mañana dentro de un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
 
 La meta de esta semana es simple y exigente a la vez:
 
@@ -80,7 +80,7 @@ Al finalizar este laboratorio podrás:
 
 Para realizar este laboratorio necesitas:
 
-- Una máquina virtual con **Ubuntu** o **Debian** (o la distribución que uses).
+- Una máquina virtual con **Ubuntu** o **Debian** (o la <a href="../../GLOSARIO.md#distribucion" target="_blank">distribución</a> que uses).
 
 - Un usuario con permisos de administrador (`sudo`).
 
@@ -186,7 +186,7 @@ Escribe:
 
 `ping -c 4 8.8.8.8`
 
-Esto envía 4 paquetes a la IP 8.8.8.8 (un servidor de Google).
+Esto envía 4 paquetes a la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> 8.8.8.8 (un servidor de Google).
 
 Deberías ver respuestas como:
 
@@ -214,7 +214,7 @@ Todos los comandos que empiezan con `sudo` se ejecutan como **administrador**.
 
 Los comandos que no llevan `sudo` se ejecutan con tus permisos de usuario normal.
 
-Un analista SOC siempre sabe **con qué permisos está ejecutando cada comando**.
+Un analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> siempre sabe **con qué permisos está ejecutando cada comando**.
 
 **2. Laboratorio 1: Crear usuarios y grupos**
 
@@ -222,13 +222,13 @@ En una empresa real, cada empleado tiene su propio usuario.
 
 Y cada usuario pertenece a un grupo según su área.
 
-Nosotros vamos a simular una pequeña oficina con dos departamentos:
+Nosotros vamos a simular una pequeña oficina con <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> departamentos:
 
 - **ventas**
 
 - **sistemas**
 
-Y dos empleados:
+Y <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> empleados:
 
 - **ana**, que trabaja en ventas.
 
@@ -250,7 +250,7 @@ Ahora ejecuta:
 
 Este comando crea el grupo **sistemas**.
 
-Nota: si tu distribución usa los grupos **ventas** y **sistemas** en mayúscula o con otro nombre, no importa. Lo que importa es el procedimiento.
+Nota: si tu <a href="../../GLOSARIO.md#distribucion" target="_blank">distribución</a> usa los grupos **ventas** y **sistemas** en mayúscula o con otro nombre, no importa. Lo que importa es el procedimiento.
 
 **Paso 2: Verificar que los grupos existen**
 
@@ -314,7 +314,7 @@ Ejecuta:
 
 `sudo passwd ana`
 
-El sistema te pedirá que escribas una contraseña dos veces.
+El sistema te pedirá que escribas una contraseña <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> veces.
 
 Esto es lo que vas a ver:
 
@@ -384,7 +384,7 @@ Cada línea se ve similar a:
 
 `ana:x:1001:1001::/home/ana:/bin/sh`
 
-Los campos, separados por dos puntos, son:
+Los campos, separados por <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> puntos, son:
 
 - Nombre de usuario: `ana`.
 
@@ -396,7 +396,7 @@ Los campos, separados por dos puntos, son:
 
 - Directorio personal: `/home/ana`.
 
-- Shell: `/bin/sh`.
+- <a href="../../GLOSARIO.md#shell" target="_blank">Shell</a>: `/bin/sh`.
 
 **Paso 8: Verificar los directorios personales**
 
@@ -408,7 +408,7 @@ Deberías ver los directorios `/home/ana` y `/home/carlos`.
 
 Cada uno pertenece a su usuario.
 
-**🎓 Dato de SOC**
+**🎓 Dato de <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 En una investigación real, los archivos `/etc/passwd` y `/etc/group` te dicen **qué usuarios y grupos existen** en un sistema comprometido.
 
@@ -450,7 +450,7 @@ Interpretación del principio:
 
 - `d` → es un directorio.
 
-- `rwxr-xr-x` → permisos del dueño (root), del grupo (root) y del resto.
+- `rwxr-xr-x` → permisos del dueño (<a href="../../GLOSARIO.md#root" target="_blank">root</a>), del grupo (<a href="../../GLOSARIO.md#root" target="_blank">root</a>) y del resto.
 
 En este momento, el dueño es `root` y el grupo es `root`.
 
@@ -486,7 +486,7 @@ El número `770` es la notación octal de permisos.
 
 Significa:
 
-- **7** para el dueño (root) → lectura, escritura y ejecución.
+- **7** para el dueño (<a href="../../GLOSARIO.md#root" target="_blank">root</a>) → lectura, escritura y ejecución.
 
 - **7** para el grupo (sistemas) → lectura, escritura y ejecución.
 
@@ -514,7 +514,7 @@ Fíjate en el final:
 
 `rwxrwx---`
 
-- El dueño (root): `rwx`.
+- El dueño (<a href="../../GLOSARIO.md#root" target="_blank">root</a>): `rwx`.
 
 - El grupo (sistemas): `rwx`.
 
@@ -548,13 +548,13 @@ Ahora dale permisos muy restrictivos:
 
 El `600` significa:
 
-- **6** para el dueño (root) → lectura y escritura (4 + 2).
+- **6** para el dueño (<a href="../../GLOSARIO.md#root" target="_blank">root</a>) → lectura y escritura (4 + 2).
 
 - **0** para el grupo.
 
 - **0** para el resto.
 
-Nadie más que root puede tocar ese archivo.
+Nadie más que <a href="../../GLOSARIO.md#root" target="_blank">root</a> puede tocar ese archivo.
 
 Verifica:
 
@@ -646,7 +646,7 @@ Carlos **puede entrar a la carpeta**, pero no puede leer el archivo.
 
 Porque el archivo tiene permisos `600`.
 
-Solo el dueño (root) puede leerlo.
+Solo el dueño (<a href="../../GLOSARIO.md#root" target="_blank">root</a>) puede leerlo.
 
 El grupo y el resto tienen `0`.
 
@@ -710,17 +710,17 @@ Ejecuta:
 | `755`       | rwx       | r-x       | `r-x`     | Todo el mundo puede entrar y leer.   |
 | `600`       | rw-       | `---`     | `---`     | Solo el dueño puede leer/escribir.   |
 
-**🎓 Dato de SOC**
+**🎓 Dato de <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 Los permisos `770` y `600` son ejemplos del **principio de menor privilegio**.
 
 Cada usuario tiene acceso únicamente a lo que necesita para trabajar.
 
-En un SOC verás que las malas configuraciones de permisos aparecen en los rankings de vulnerabilidades más explotadas.
+En un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> verás que las malas configuraciones de permisos aparecen en los rankings de vulnerabilidades más explotadas.
 
 Un archivo de configuración con permisos demasiado abiertos puede filtrar contraseñas o claves privadas.
 
-**4. Laboratorio 3: Búsquedas avanzadas de logs con grep**
+**4. Laboratorio 3: Búsquedas avanzadas de logs con <a href="../../GLOSARIO.md#grep" target="_blank">grep</a>**
 
 Ahora vas a ponerte el sombrero de analista.
 
@@ -750,7 +750,7 @@ Si no existe el archivo, es posible que necesites ejecutar:
 
 `sudo grep "Failed password" /var/log/secure`
 
-o revisar dónde está el log de autenticación en tu distribución.
+o revisar dónde está el log de autenticación en tu <a href="../../GLOSARIO.md#distribucion" target="_blank">distribución</a>.
 
 **Paso 2: Leer un fragmento del log**
 
@@ -780,7 +780,7 @@ Ejecuta:
 
 Este comando busca todas las líneas que contienen el texto **"Failed password"**.
 
-Si tu sistema recibió intentos de conexión SSH fallidos, verás líneas como:
+Si tu sistema recibió intentos de conexión <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a> fallidos, verás líneas como:
 
 `Aug 14 10:22:01 ubuntu sshd[...]: Failed password for invalid user admin from 203.0.113.45 port 50000 ssh2`
 
@@ -790,7 +790,7 @@ Interpretación:
 
 - El usuario intentado era `admin`.
 
-- El origen era la IP `203.0.113.45`.
+- El origen era la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> `203.0.113.45`.
 
 Si no ves resultados, no te preocupes.
 
@@ -868,7 +868,7 @@ Muestra **todas las líneas que NO contienen** la palabra `session`.
 
 Ese pipeline muestra los accesos aceptados, pero excluye las líneas que contienen `password`.
 
-**Paso 8: Combinar grep con otros comandos**
+**Paso 8: Combinar <a href="../../GLOSARIO.md#grep" target="_blank">grep</a> con otros comandos**
 
 Ejecuta:
 
@@ -880,7 +880,7 @@ Ejecuta:
 
 `grep "Failed password" /var/log/auth.log | wc -l`
 
-Verás el mismo resultado que con `grep -c`, pero usando un pipe.
+Verás el mismo resultado que con `grep -c`, pero usando un <a href="../../GLOSARIO.md#pipe" target="_blank">pipe</a>.
 
 Ambas formas son válidas.
 
@@ -900,11 +900,11 @@ Si ves líneas como:
 
 Significa que alguien intentó conectarse como ana y falló.
 
-**🎓 Dato de SOC**
+**🎓 Dato de <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 El patrón más clásico de fuerza bruta en Linux se ve así en los logs:
 
-- Muchos `Failed password` desde una misma IP.
+- Muchos `Failed password` desde una misma <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
 
 - Con usuarios variados (`root`, `admin`, `oracle`, `test`).
 
@@ -918,7 +918,7 @@ Esa secuencia es la firma de un ataque automatizado.
 
 Hasta ahora hemos buscado eventos que ya ocurrieron.
 
-Pero un analista SOC también vigila los logs **mientras ocurren los eventos**.
+Pero un analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> también vigila los logs **mientras ocurren los eventos**.
 
 Para eso existe `tail -f`.
 
@@ -1008,7 +1008,7 @@ Ahora en la segunda terminal ejecuta:
 
 `exit`
 
-**Paso 6: Buscar las IPs de origen**
+**Paso 6: Buscar las <a href="../../GLOSARIO.md#ips" target="_blank">IPs</a> de origen**
 
 Si quieres ver de dónde vienen los intentos con más detalle, en la primera terminal (después de `Ctrl + C`) ejecuta:
 
@@ -1018,15 +1018,15 @@ Este pipeline:
 
 - Filtra las líneas fallidas.
 
-- Extrae el campo número 11 (la IP en la línea de sshd).
+- Extrae el campo número 11 (la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> en la línea de sshd).
 
 - Las ordena.
 
-- Cuenta cuántas veces aparece cada IP.
+- Cuenta cuántas veces aparece cada <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
 
-Si tus intentos fueron con `su` y no con SSH, puede que no veas IPs.
+Si tus intentos fueron con `su` y no con <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>, puede que no veas <a href="../../GLOSARIO.md#ips" target="_blank">IPs</a>.
 
-Pero la técnica es oro puro para un SOC:
+Pero la técnica es oro puro para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>:
 
 `grep "Failed password" /var/log/auth.log | awk '{print $11}' | sort | uniq -c`
 
@@ -1048,9 +1048,9 @@ Esto interrumpe el comando `tail -f` y te devuelve el prompt.
 | `tail -f`   | Se queda en vivo mostrando las líneas nuevas.    |
 | `Ctrl + C`  | Detiene el comando que está en primer plano.     |
 
-**🎓 Dato de SOC**
+**🎓 Dato de <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
-En un SOC, `tail -f` (o herramientas equivalentes) se usa para:
+En un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>, `tail -f` (o herramientas equivalentes) se usa para:
 
 - Verificar en vivo si un ataque continúa.
 
@@ -1058,7 +1058,7 @@ En un SOC, `tail -f` (o herramientas equivalentes) se usa para:
 
 - Seguir la actividad de un usuario sospechoso.
 
-- Ver si los intentos de acceso cesan después de bloquear una IP.
+- Ver si los intentos de acceso cesan después de bloquear una <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
 
 **6. Laboratorio 5 (extra): Gestión de procesos**
 
@@ -1094,11 +1094,11 @@ Ejecuta:
 
 `ps aux | grep sshd`
 
-Este pipeline muestra solo los procesos que contienen `sshd` (el servicio de SSH).
+Este pipeline muestra solo los procesos que contienen `sshd` (el servicio de <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>).
 
 `grep` busca dentro de la salida de `ps`.
 
-Deberías ver uno o dos procesos de `sshd` si el servicio está activo.
+Deberías ver uno o <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> procesos de `sshd` si el servicio está activo.
 
 Nota: la propia línea de `grep` aparece en el resultado.
 
@@ -1144,7 +1144,7 @@ Interpretación:
 
 - `[1]` → número de job en tu sesión.
 
-- `12345` → el **PID** del proceso.
+- `12345` → el **<a href="../../GLOSARIO.md#pid" target="_blank">PID</a>** del proceso.
 
 **Paso 5: Encontrar el proceso**
 
@@ -1154,7 +1154,7 @@ Ejecuta:
 
 Deberías ver una línea con tu proceso `sleep 300`.
 
-Fíjate en el número del PID.
+Fíjate en el número del <a href="../../GLOSARIO.md#pid" target="_blank">PID</a>.
 
 **Paso 6: Matar el proceso**
 
@@ -1162,7 +1162,7 @@ Ejecuta:
 
 `kill 12345`
 
-Usa el PID real que apareció en tu sistema.
+Usa el <a href="../../GLOSARIO.md#pid" target="_blank">PID</a> real que apareció en tu sistema.
 
 `kill` envía una señal al proceso para que termine.
 
@@ -1180,7 +1180,7 @@ Ejecuta:
 
 Presiona `q` para salir.
 
-**🎓 Dato de SOC**
+**🎓 Dato de <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 En una investigación, los analistas buscan procesos sospechosos como:
 
@@ -1190,9 +1190,9 @@ En una investigación, los analistas buscan procesos sospechosos como:
 
 - Procesos con nombres genéricos que consumen mucha CPU.
 
-- Procesos con permisos de root pero lanzados desde carpetas temporales.
+- Procesos con permisos de <a href="../../GLOSARIO.md#root" target="_blank">root</a> pero lanzados desde carpetas temporales.
 
-`ps aux` y `top` son las dos primeras herramientas que un analista usa para detectar actividad maliciosa en Linux.
+`ps aux` y `top` son las <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> primeras herramientas que un analista usa para detectar actividad maliciosa en Linux.
 
 **7. Resumen de lo logrado**
 
@@ -1258,7 +1258,7 @@ Te ayudan a consolidar lo que practicaste.
 
 1. ¿Qué permiso le darías a una carpeta para que **solo el grupo sistemas** pueda entrar y trabajar en ella?
 
-2. ¿Cómo sabrías si alguien está intentando forzar el acceso SSH a tu servidor?
+2. ¿Cómo sabrías si alguien está intentando forzar el acceso <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a> a tu servidor?
 
 3. ¿Por qué no se deben usar permisos `777` en archivos de configuración o scripts?
 
@@ -1280,7 +1280,7 @@ Te ayudan a consolidar lo que practicaste.
 
 5. Que el atacante logró entrar después de probar credenciales. Hay que revisar inmediatamente el origen, el usuario comprometido, el horario y cualquier actividad posterior.
 
-6. Porque muchos comandos solo funcionan con privilegios de root, y ejecutar como root algo innecesario aumenta el riesgo de romper el sistema o de dar a un atacante más poder si ejecutas algo malicioso.
+6. Porque muchos comandos solo funcionan con privilegios de <a href="../../GLOSARIO.md#root" target="_blank">root</a>, y ejecutar como <a href="../../GLOSARIO.md#root" target="_blank">root</a> algo innecesario aumenta el riesgo de romper el sistema o de dar a un atacante más poder si ejecutas algo malicioso.
 
 **9. 🎯 Meta de la semana**
 
@@ -1298,13 +1298,13 @@ La forma de lograrlo es la repetición.
 
 Repite los laboratorios **sin mirar las notas**:
 
-1. Crea dos usuarios y dos grupos desde cero.
+1. Crea <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> usuarios y <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> grupos desde cero.
 
 2. Configura una carpeta con acceso solo para un grupo.
 
-3. Crea un archivo que solo root pueda leer.
+3. Crea un archivo que solo <a href="../../GLOSARIO.md#root" target="_blank">root</a> pueda leer.
 
-4. Genera intentos fallidos y encuéntralos con grep.
+4. Genera intentos fallidos y encuéntralos con <a href="../../GLOSARIO.md#grep" target="_blank">grep</a>.
 
 5. Cuenta los intentos fallidos.
 
@@ -1318,9 +1318,9 @@ Si te trabas en algún paso, vuelve a leer el módulo correspondiente y repite.
 
 La práctica es la clave.
 
-**🎓 Consejo como tu instructor de SOC**
+**🎓 Consejo como tu instructor de <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
-Cuando entres a un SOC real, el primer día te van a dar acceso a una terminal.
+Cuando entres a un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> real, el primer día te van a dar acceso a una terminal.
 
 Los equipos Windows se administran con herramientas gráficas.
 
@@ -1344,15 +1344,15 @@ Por eso practicar ahora es tan importante.
 
 ---
 
-**📘 Carrera de Analista SOC**
+**📘 Carrera de Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 **Semana 3 – Linux**
 
 **Evaluación – Módulo 20: Laboratorio Práctico de Linux**
 
-**Nivel:** Principiante → Analista SOC Nivel 1
+**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
 
-**Instrucciones:** Responde las siguientes preguntas sin consultar el material de estudio. Evalúa lo que practicaste en el laboratorio: creación de usuarios y grupos, permisos, análisis de logs con grep y monitoreo con tail -f. Algunas preguntas presentan escenarios similares a los que verás en tu trabajo diario como Analista SOC.
+**Instrucciones:** Responde las siguientes preguntas sin consultar el material de estudio. Evalúa lo que practicaste en el laboratorio: creación de usuarios y grupos, permisos, análisis de logs con <a href="../../GLOSARIO.md#grep" target="_blank">grep</a> y monitoreo con tail -f. Algunas preguntas presentan escenarios similares a los que verás en tu trabajo diario como Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
 
 **Pregunta 1**
 
@@ -1416,7 +1416,7 @@ Ejecutaste `id ana` y el sistema respondió:
 
 **C)** Que ana tiene la contraseña 1001.
 
-**D)** Que ana puede usar el comando sudo.
+**D)** Que ana puede usar el comando <a href="../../GLOSARIO.md#sudo" target="_blank">sudo</a>.
 
 **Pregunta 6**
 
@@ -1438,7 +1438,7 @@ Creaste un archivo con `sudo chmod 600 /opt/proyecto/secretos.txt`. ¿Quién pue
 
 **B)** Todos los miembros del grupo sistemas.
 
-**C)** Solo el usuario root (el dueño del archivo).
+**C)** Solo el usuario <a href="../../GLOSARIO.md#root" target="_blank">root</a> (el dueño del archivo).
 
 **D)** Solo los usuarios que pertenezcan al grupo ventas.
 
@@ -1456,7 +1456,7 @@ Creaste un archivo con `sudo chmod 600 /opt/proyecto/secretos.txt`. ¿Quién pue
 
 **Pregunta 9**
 
-Quieres saber qué procesos relacionados con SSH se están ejecutando. ¿Qué pipeline usarías?
+Quieres saber qué procesos relacionados con <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a> se están ejecutando. ¿Qué pipeline usarías?
 
 **A)** `ps aux | grep sshd`
 
@@ -1466,23 +1466,23 @@ Quieres saber qué procesos relacionados con SSH se están ejecutando. ¿Qué pi
 
 **D)** `kill sshd`
 
-**Pregunta 10 (Caso práctico SOC)**
+**Pregunta 10 (Caso práctico <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>)**
 
-Como analista SOC revisas el log `/var/log/auth.log` y encuentras esta secuencia:
+Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> revisas el log `/var/log/auth.log` y encuentras esta secuencia:
 
 `grep -c "Failed password" /var/log/auth.log` → **1.247**
 
-Todos los intentos vienen de la misma IP `203.0.113.77` en los últimos 15 minutos, probando usuarios como `root`, `admin`, `oracle` y `test`. Al final aparece una línea `Accepted password for root from 203.0.113.77`.
+Todos los intentos vienen de la misma <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> `203.0.113.77` en los últimos 15 minutos, probando usuarios como `root`, `admin`, `oracle` y `test`. Al final aparece una línea `Accepted password for root from 203.0.113.77`.
 
 ¿Cuál sería la interpretación más razonable?
 
 **A)** Tráfico normal de mantenimiento programado.
 
-**B)** Un posible ataque de fuerza bruta contra SSH que terminó en un acceso exitoso.
+**B)** Un posible ataque de fuerza bruta contra <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a> que terminó en un acceso exitoso.
 
 **C)** Un error de sincronización del reloj del servidor.
 
-**D)** El usuario root cambió su contraseña manualmente.
+**D)** El usuario <a href="../../GLOSARIO.md#root" target="_blank">root</a> cambió su contraseña manualmente.
 
 **✅ Respuestas y justificación**
 
@@ -1554,7 +1554,7 @@ El comando `id` muestra identidad y pertenencia a grupos.
 
 **Justificación**
 
-`ps aux` muestra todos los procesos del sistema con su PID, usuario y consumo de recursos.
+`ps aux` muestra todos los procesos del sistema con su <a href="../../GLOSARIO.md#pid" target="_blank">PID</a>, usuario y consumo de recursos.
 
 `ls -l` lista archivos, `grep` busca texto y `pwd` muestra la carpeta actual.
 
@@ -1568,7 +1568,7 @@ El `600` significa lectura y escritura solo para el dueño.
 
 El grupo y el resto tienen `0` (ningún permiso).
 
-Como el archivo fue creado por root, solo root puede leerlo.
+Como el archivo fue creado por <a href="../../GLOSARIO.md#root" target="_blank">root</a>, solo <a href="../../GLOSARIO.md#root" target="_blank">root</a> puede leerlo.
 
 **Pregunta 8**
 
@@ -1598,17 +1598,17 @@ Es la combinación clásica de pipes que usa un analista para buscar procesos.
 
 **Justificación**
 
-1.247 intentos fallidos desde una misma IP en 15 minutos, probando usuarios comunes, es la firma clásica de un **ataque de fuerza bruta** contra SSH.
+1.247 intentos fallidos desde una misma <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> en 15 minutos, probando usuarios comunes, es la firma clásica de un **ataque de fuerza bruta** contra <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>.
 
 Lo más grave es el `Accepted password for root` final:
 
 el atacante logró acceder al sistema.
 
-Como analista SOC deberías:
+Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> deberías:
 
-- Bloquear la IP origen.
+- Bloquear la <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> origen.
 
-- Cambiar la contraseña de root y revocar la sesión activa.
+- Cambiar la contraseña de <a href="../../GLOSARIO.md#root" target="_blank">root</a> y revocar la sesión activa.
 
 - Verificar qué hizo el atacante después del acceso.
 
@@ -1621,7 +1621,7 @@ Como analista SOC deberías:
 | **Respuestas Correctas** | **Nivel**                                                                 |
 |--------------------------|---------------------------------------------------------------------------|
 | **10/10**                | ⭐ **Excelente.** Completaste el laboratorio y ya te mueves en la terminal con confianza. |
-| **8–9**                  | 🟢 **Muy buen nivel.** Solo necesitas practicar un poco más los permisos y grep. |
+| **8–9**                  | 🟢 **Muy buen nivel.** Solo necesitas practicar un poco más los permisos y <a href="../../GLOSARIO.md#grep" target="_blank">grep</a>. |
 | **6–7**                  | 🟡 **Buen progreso.** Repite los laboratorios 2 y 3 hasta dominarlos.      |
 | **4–5**                  | 🟠 **Necesitas reforzar algunos conceptos.** Vuelve a repasar los módulos de usuarios, permisos y logs. |
 | **0–3**                  | 🔴 **Es recomendable repetir el laboratorio completo.** La práctica es la clave para dominar Linux. |

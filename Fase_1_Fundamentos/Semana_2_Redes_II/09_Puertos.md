@@ -1,29 +1,29 @@
-**📘 Carrera de Analista SOC**
+**📘 Carrera de Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 **Semana 2 – Redes II**
 
 **Módulo 9 – Puertos (Ports)**
 
-**Nivel:** Principiante → Analista SOC Nivel 1
+**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
 
 **Bienvenido al módulo más importante de Redes II.**
 
-Si las direcciones IP identifican **qué dispositivo** se comunica, los
+Si las direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> identifican **qué dispositivo** se comunica, los
 **puertos** identifican **qué aplicación o servicio** está utilizando la
 red.
 
-Como Analista SOC, pasarás gran parte de tu tiempo observando logs que
+Como Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>, pasarás gran parte de tu tiempo observando logs que
 contienen información como:
 
-TCP 443
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 443
 
-UDP 53
+<a href="../../GLOSARIO.md#udp" target="_blank">UDP</a> 53
 
-TCP 3389
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 3389
 
-TCP 22
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 22
 
-UDP 123
+<a href="../../GLOSARIO.md#udp" target="_blank">UDP</a> 123
 
 Cuando termines este módulo, deberías reconocer inmediatamente qué
 significa cada uno de esos puertos y si su uso es normal o sospechoso.
@@ -34,15 +34,15 @@ Al finalizar este módulo podrás:
 
 - Comprender qué es un puerto.
 
-- Diferenciar IP y puerto.
+- Diferenciar <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> y puerto.
 
-- Entender cómo trabajan juntos TCP/UDP y los puertos.
+- Entender cómo trabajan juntos <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#udp" target="_blank">UDP</a> y los puertos.
 
 - Conocer la clasificación oficial de puertos.
 
-- Memorizar los puertos más importantes para un SOC.
+- Memorizar los puertos más importantes para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
 
-- Interpretar puertos en Wireshark, Firewalls y SIEM.
+- Interpretar puertos en <a href="../../GLOSARIO.md#wireshark" target="_blank">Wireshark</a>, Firewalls y <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>.
 
 - Comprender cómo utilizan los puertos los atacantes.
 
@@ -55,7 +55,7 @@ servicio dentro de un dispositivo.
 
 Piensa en una computadora como un edificio.
 
-La dirección IP indica **qué edificio es**.
+La dirección <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> indica **qué edificio es**.
 
 El puerto indica **qué oficina** o **qué departamento** dentro de ese
 edificio debe recibir la comunicación.
@@ -66,7 +66,7 @@ Supongamos esta dirección:
 
 Av. Siempre Viva 742
 
-Esa sería la **IP**.
+Esa sería la **<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>**.
 
 Ahora imaginemos que el edificio tiene:
 
@@ -82,7 +82,7 @@ Esas oficinas serían los **puertos**.
 
 El correo debe saber:
 
-- A qué edificio ir (IP).
+- A qué edificio ir (<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>).
 
 - A qué oficina entregar el paquete (Puerto).
 
@@ -109,9 +109,9 @@ paquete?
 
 Gracias a los **puertos**.
 
-**3. IP + Puerto = Destino completo**
+**3. <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> + Puerto = Destino completo**
 
-Una dirección IP sola **no alcanza**.
+Una dirección <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> sola **no alcanza**.
 
 Por ejemplo:
 
@@ -125,13 +125,13 @@ Ahora observa:
 
 192.168.1.10:443
 
-Ya sabemos que el tráfico va dirigido al servicio HTTPS.
+Ya sabemos que el tráfico va dirigido al servicio <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>.
 
 Otro ejemplo:
 
 192.168.1.10:22
 
-Ahora sabemos que se dirige al servicio SSH.
+Ahora sabemos que se dirige al servicio <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>.
 
 **4. ¿Cuántos puertos existen?**
 
@@ -162,15 +162,15 @@ Reservados para los servicios más importantes.
 
 Ejemplos:
 
-- HTTP
+- <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a>
 
-- HTTPS
+- <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>
 
-- SSH
+- <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>
 
-- DNS
+- <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>
 
-- FTP
+- <a href="../../GLOSARIO.md#ftp" target="_blank">FTP</a>
 
 **B. Registered Ports**
 
@@ -199,7 +199,7 @@ conexión.
 
 **6. ¿Qué es un puerto origen y un puerto destino?**
 
-Cada comunicación tiene dos extremos.
+Cada comunicación tiene <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> extremos.
 
 Ejemplo:
 
@@ -245,24 +245,24 @@ Interpretación:
 
 - La PC utiliza un puerto efímero (52120).
 
-- El servidor ofrece el servicio HTTPS en el puerto 443.
+- El servidor ofrece el servicio <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a> en el puerto 443.
 
-**7. Los puertos más importantes para un SOC**
+**7. Los puertos más importantes para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
-**FTP – 20 y 21/TCP**
+**<a href="../../GLOSARIO.md#ftp" target="_blank">FTP</a> – 20 y 21/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**
 
 **Función:** Transferencia de archivos.
 
 **Riesgo:** Si se usa sin cifrado, las credenciales viajan en texto
 plano.
 
-**SSH – 22/TCP**
+**<a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a> – 22/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**
 
 **Función:** Administración remota segura de sistemas Linux.
 
 **Riesgo:** Ataques de fuerza bruta.
 
-**Telnet – 23/TCP**
+**Telnet – 23/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**
 
 **Función:** Administración remota antigua.
 
@@ -270,65 +270,65 @@ plano.
 
 **Recomendación:** Evitar su uso.
 
-**SMTP – 25/TCP**
+**<a href="../../GLOSARIO.md#smtp" target="_blank">SMTP</a> – 25/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**
 
 **Función:** Envío de correo electrónico.
 
 **Riesgo:** Spam, abuso y configuraciones inseguras.
 
-**DNS – 53/UDP (y a veces TCP)**
+**<a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> – 53/<a href="../../GLOSARIO.md#udp" target="_blank">UDP</a> (y a veces <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>)**
 
 **Función:** Resolución de nombres.
 
-**Riesgos:** DNS Tunneling, DNS Amplification.
+**Riesgos:** <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> Tunneling, <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> Amplification.
 
-**DHCP – 67/68 UDP**
+**<a href="../../GLOSARIO.md#dhcp" target="_blank">DHCP</a> – 67/68 <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>**
 
-**Función:** Asignación automática de direcciones IP.
+**Función:** Asignación automática de direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
 
-**Riesgo:** Servidores DHCP no autorizados (Rogue DHCP).
+**Riesgo:** Servidores <a href="../../GLOSARIO.md#dhcp" target="_blank">DHCP</a> no autorizados (<a href="../../GLOSARIO.md#rogue-dhcp" target="_blank">Rogue DHCP</a>).
 
-**HTTP – 80/TCP**
+**<a href="../../GLOSARIO.md#http" target="_blank">HTTP</a> – 80/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**
 
 **Función:** Navegación web sin cifrado.
 
 **Riesgo:** Información visible en texto plano.
 
-**POP3 – 110/TCP**
+**POP3 – 110/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**
 
 **Función:** Recepción de correo.
 
-**NTP – 123/UDP**
+**NTP – 123/<a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>**
 
 **Función:** Sincronización de hora.
 
 **Riesgo:** Ataques de amplificación NTP.
 
-**IMAP – 143/TCP**
+**IMAP – 143/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**
 
 **Función:** Acceso al correo.
 
-**SNMP – 161/UDP**
+**SNMP – 161/<a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>**
 
 **Función:** Administración y monitoreo de dispositivos de red.
 
 **Riesgo:** Configuraciones débiles y abuso para amplificación.
 
-**LDAP – 389/TCP**
+**LDAP – 389/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**
 
 **Función:** Servicios de directorio (como Active Directory).
 
-**HTTPS – 443/TCP**
+**<a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a> – 443/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**
 
 **Función:** Navegación web cifrada.
 
 **Es uno de los puertos más utilizados del mundo.**
 
-**SMB – 445/TCP**
+**SMB – 445/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**
 
 **Función:** Compartición de archivos e impresoras en Windows.
 
-**Muy importante para un SOC.**
+**Muy importante para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.**
 
 **Riesgos:**
 
@@ -340,49 +340,49 @@ plano.
 
 - Robo de archivos.
 
-**Syslog – 514/UDP**
+**<a href="../../GLOSARIO.md#syslog" target="_blank">Syslog</a> – 514/<a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>**
 
 **Función:** Envío de logs.
 
-**LDAPS – 636/TCP**
+**LDAPS – 636/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**
 
 **Función:** LDAP cifrado.
 
-**IMAPS – 993/TCP**
+**IMAPS – 993/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**
 
 **Función:** IMAP cifrado.
 
-**POP3S – 995/TCP**
+**POP3S – 995/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**
 
 **Función:** POP3 cifrado.
 
-**Microsoft SQL Server – 1433/TCP**
+**Microsoft SQL Server – 1433/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**
 
 **Función:** Base de datos.
 
-**Oracle – 1521/TCP**
+**Oracle – 1521/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**
 
 **Función:** Base de datos Oracle.
 
-**MySQL – 3306/TCP**
+**MySQL – 3306/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**
 
 **Función:** Base de datos MySQL.
 
-**PostgreSQL – 5432/TCP**
+**PostgreSQL – 5432/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**
 
 **Función:** Base de datos PostgreSQL.
 
-**RDP – 3389/TCP**
+**RDP – 3389/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**
 
 **Función:** Escritorio Remoto de Windows.
 
 **Uno de los puertos más atacados del mundo.**
 
-**VNC – 5900/TCP**
+**VNC – 5900/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**
 
 **Función:** Acceso remoto gráfico.
 
-**HTTP Alternativo – 8080/TCP**
+**<a href="../../GLOSARIO.md#http" target="_blank">HTTP</a> Alternativo – 8080/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**
 
 Frecuente en:
 
@@ -392,27 +392,27 @@ Frecuente en:
 
 - Aplicaciones empresariales.
 
-**8. Puertos y TCP/UDP**
+**8. Puertos y <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>**
 
-Un mismo número de puerto puede existir para TCP y UDP.
+Un mismo número de puerto puede existir para <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> y <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>.
 
 Ejemplo:
 
-53/TCP
+53/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>
 
-53/UDP
+53/<a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>
 
 No son lo mismo.
 
-- **53/UDP:** consultas DNS normales.
+- **53/<a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>:** consultas <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> normales.
 
-- **53/TCP:** respuestas grandes, transferencias de zona, DNSSEC, etc.
+- **53/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>:** respuestas grandes, transferencias de zona, DNSSEC, etc.
 
-**9. ¿Cómo aparecen los puertos en Wireshark?**
+**9. ¿Cómo aparecen los puertos en <a href="../../GLOSARIO.md#wireshark" target="_blank">Wireshark</a>?**
 
 Ejemplo:
 
-TCP
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>
 
 192.168.1.10:52340
 
@@ -424,7 +424,7 @@ Interpretación:
 
 - Puerto origen: 52340.
 
-- Puerto destino: 443 (HTTPS).
+- Puerto destino: 443 (<a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>).
 
 **10. Puertos en un Firewall**
 
@@ -436,7 +436,7 @@ Origen
 
 ↓
 
-TCP
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>
 
 ↓
 
@@ -450,7 +450,7 @@ Interpretación:
 
 El firewall bloqueó un intento de acceso por RDP.
 
-**11. Puertos en un SIEM**
+**11. Puertos en un <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>**
 
 Alerta:
 
@@ -489,11 +489,11 @@ descubrir:
 
 Los atacantes suelen intentar credenciales sobre:
 
-- 22 (SSH).
+- 22 (<a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>).
 
 - 3389 (RDP).
 
-- 21 (FTP).
+- 21 (<a href="../../GLOSARIO.md#ftp" target="_blank">FTP</a>).
 
 **Ataque 3 – Explotación de vulnerabilidades**
 
@@ -521,7 +521,7 @@ Principio de seguridad:
 
 - Cambiar credenciales por defecto.
 
-- Aplicar MFA en accesos remotos.
+- Aplicar <a href="../../GLOSARIO.md#mfa" target="_blank">MFA</a> en accesos remotos.
 
 - Mantener servicios actualizados.
 
@@ -529,17 +529,17 @@ Principio de seguridad:
 
 - Realizar escaneos internos periódicos para detectar puertos expuestos.
 
-**14. Aplicación práctica en un SOC**
+**14. Aplicación práctica en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 **Caso 1**
 
-TCP
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>
 
 443
 
 ↓
 
-HTTPS
+<a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>
 
 ↓
 
@@ -551,7 +551,7 @@ Navegación web cifrada. En principio, comportamiento esperado.
 
 **Caso 2**
 
-TCP
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>
 
 3389
 
@@ -569,7 +569,7 @@ Posible ataque de fuerza bruta contra RDP.
 
 **Caso 3**
 
-TCP
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>
 
 445
 
@@ -584,7 +584,7 @@ un malware.
 
 **Caso 4**
 
-UDP
+<a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>
 
 53
 
@@ -594,41 +594,41 @@ Miles de consultas por minuto
 
 Interpretación:
 
-Puede ser actividad DNS legítima o un posible túnel DNS. Requiere
+Puede ser actividad <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> legítima o un posible túnel <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>. Requiere
 investigación.
 
 **15. Tabla de puertos esenciales para memorizar**
 
 | **Puerto** | **Protocolo** | **Servicio**     | **Riesgo principal**            |
 |------------|---------------|------------------|---------------------------------|
-| 20/21      | TCP           | FTP              | Credenciales sin cifrar         |
-| 22         | TCP           | SSH              | Fuerza bruta                    |
-| 23         | TCP           | Telnet           | Texto plano                     |
-| 25         | TCP           | SMTP             | Spam                            |
-| 53         | UDP/TCP       | DNS              | Túneles y amplificación         |
-| 67/68      | UDP           | DHCP             | Rogue DHCP                      |
-| 69         | UDP           | TFTP             | Sin autenticación               |
-| 80         | TCP           | HTTP             | Sin cifrado                     |
-| 110        | TCP           | POP3             | Correo sin cifrado              |
-| 123        | UDP           | NTP              | Amplificación                   |
-| 143        | TCP           | IMAP             | Correo                          |
-| 161        | UDP           | SNMP             | Configuraciones débiles         |
-| 389        | TCP           | LDAP             | Active Directory                |
-| 443        | TCP           | HTTPS            | Tráfico web seguro              |
-| 445        | TCP           | SMB              | Ransomware y movimiento lateral |
-| 514        | UDP           | Syslog           | Logs                            |
-| 636        | TCP           | LDAPS            | LDAP cifrado                    |
-| 993        | TCP           | IMAPS            | Correo cifrado                  |
-| 995        | TCP           | POP3S            | Correo cifrado                  |
-| 1433       | TCP           | SQL Server       | Bases de datos                  |
-| 1521       | TCP           | Oracle           | Bases de datos                  |
-| 3306       | TCP           | MySQL            | Bases de datos                  |
-| 3389       | TCP           | RDP              | Acceso remoto, fuerza bruta     |
-| 5432       | TCP           | PostgreSQL       | Bases de datos                  |
-| 5900       | TCP           | VNC              | Acceso remoto                   |
-| 8080       | TCP           | HTTP alternativo | Proxies y aplicaciones          |
+| 20/21      | <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>           | <a href="../../GLOSARIO.md#ftp" target="_blank">FTP</a>              | Credenciales sin cifrar         |
+| 22         | <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>           | <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>              | Fuerza bruta                    |
+| 23         | <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>           | Telnet           | Texto plano                     |
+| 25         | <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>           | <a href="../../GLOSARIO.md#smtp" target="_blank">SMTP</a>             | Spam                            |
+| 53         | <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>       | <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>              | Túneles y amplificación         |
+| 67/68      | <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>           | <a href="../../GLOSARIO.md#dhcp" target="_blank">DHCP</a>             | <a href="../../GLOSARIO.md#rogue-dhcp" target="_blank">Rogue DHCP</a>                      |
+| 69         | <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>           | TFTP             | Sin autenticación               |
+| 80         | <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>           | <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a>             | Sin cifrado                     |
+| 110        | <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>           | POP3             | Correo sin cifrado              |
+| 123        | <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>           | NTP              | Amplificación                   |
+| 143        | <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>           | IMAP             | Correo                          |
+| 161        | <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>           | SNMP             | Configuraciones débiles         |
+| 389        | <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>           | LDAP             | Active Directory                |
+| 443        | <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>           | <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>            | Tráfico web seguro              |
+| 445        | <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>           | SMB              | Ransomware y movimiento lateral |
+| 514        | <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>           | <a href="../../GLOSARIO.md#syslog" target="_blank">Syslog</a>           | Logs                            |
+| 636        | <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>           | LDAPS            | LDAP cifrado                    |
+| 993        | <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>           | IMAPS            | Correo cifrado                  |
+| 995        | <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>           | POP3S            | Correo cifrado                  |
+| 1433       | <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>           | SQL Server       | Bases de datos                  |
+| 1521       | <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>           | Oracle           | Bases de datos                  |
+| 3306       | <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>           | MySQL            | Bases de datos                  |
+| 3389       | <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>           | RDP              | Acceso remoto, fuerza bruta     |
+| 5432       | <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>           | PostgreSQL       | Bases de datos                  |
+| 5900       | <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>           | VNC              | Acceso remoto                   |
+| 8080       | <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>           | <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a> alternativo | Proxies y aplicaciones          |
 
-**16. Lo que esperan de un Analista SOC Nivel 1**
+**16. Lo que esperan de un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1**
 
 Cuando veas un log como este:
 
@@ -644,7 +644,7 @@ Destino:
 
 ↓
 
-TCP
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>
 
 ↓
 
@@ -666,7 +666,7 @@ No debes limitarte a leer los números. Debes interpretar el contexto:
 
 - ¿El destino pertenece a la organización o es externo?
 
-Ese análisis contextual es el trabajo diario de un Analista SOC.
+Ese análisis contextual es el trabajo diario de un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
 
 **17. Resumen**
 
@@ -674,11 +674,11 @@ Ese análisis contextual es el trabajo diario de un Analista SOC.
 
 - Identifica un servicio o aplicación dentro de un dispositivo.
 
-**IP**
+**<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>**
 
 - Identifica el dispositivo.
 
-**IP + Puerto**
+**<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> + Puerto**
 
 - Identifican exactamente a qué servicio debe llegar la comunicación.
 
@@ -690,47 +690,47 @@ Ese análisis contextual es el trabajo diario de un Analista SOC.
 
 - **49152–65535:** Dynamic/Ephemeral Ports.
 
-**Puertos críticos para un SOC**
+**Puertos críticos para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
-- **22 (SSH)**
+- **22 (<a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>)**
 
-- **53 (DNS)**
+- **53 (<a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>)**
 
-- **80 (HTTP)**
+- **80 (<a href="../../GLOSARIO.md#http" target="_blank">HTTP</a>)**
 
 - **123 (NTP)**
 
-- **443 (HTTPS)**
+- **443 (<a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>)**
 
 - **445 (SMB)**
 
 - **3389 (RDP)**
 
-Estos son los que más verás en logs, firewalls, SIEM y EDR.
+Estos son los que más verás en logs, firewalls, <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a> y <a href="../../GLOSARIO.md#edr" target="_blank">EDR</a>.
 
 **🧠 Conceptos clave para memorizar**
 
 | **Concepto**   | **Debes recordar**                                       |
 |----------------|----------------------------------------------------------|
 | Puerto         | Identifica un servicio o aplicación.                     |
-| IP             | Identifica el dispositivo.                               |
+| <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>             | Identifica el dispositivo.                               |
 | Puerto origen  | Generalmente es efímero y lo elige el sistema operativo. |
 | Puerto destino | Corresponde al servicio que se quiere utilizar.          |
-| 443            | HTTPS.                                                   |
-| 53             | DNS.                                                     |
-| 22             | SSH.                                                     |
+| 443            | <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>.                                                   |
+| 53             | <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>.                                                     |
+| 22             | <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>.                                                     |
 | 445            | SMB.                                                     |
 | 3389           | RDP.                                                     |
-| 80             | HTTP.                                                    |
+| 80             | <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a>.                                                    |
 | 123            | NTP.                                                     |
 
-**🎓 Consejo como tu instructor de SOC**
+**🎓 Consejo como tu instructor de <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 Este módulo marca un antes y un después.
 
 A partir de ahora, cuando veas un log como:
 
-TCP 445
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 445
 
 No quiero que pienses: *"es el puerto 445"*.
 
@@ -741,7 +741,7 @@ lateral → Posibles ataques como WannaCry o explotación de SMB.**
 
 Y si ves:
 
-TCP 3389
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 3389
 
 Que pienses inmediatamente:
 
@@ -752,19 +752,19 @@ Ese tipo de asociaciones rápidas es una habilidad que los analistas
 desarrollan con la práctica y que marca una gran diferencia durante una
 investigación.
 
-**📘 Carrera de Analista SOC**
+**📘 Carrera de Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 **Semana 2 – Redes II**
 
 **Evaluación – Módulo 9: Puertos (Ports)**
 
-**Nivel:** Principiante → Analista SOC Nivel 1
+**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
 
 **Instrucciones:** Responde las siguientes preguntas sin consultar el
 material. Este examen está diseñado con el nivel de dificultad de una
-evaluación para un **Analista SOC Nivel 1**. Algunas preguntas son
+evaluación para un **Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1**. Algunas preguntas son
 conceptuales y otras presentan escenarios similares a los que
-encontrarás en un SIEM, un firewall o un EDR.
+encontrarás en un <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>, un firewall o un <a href="../../GLOSARIO.md#edr" target="_blank">EDR</a>.
 
 **Pregunta 1**
 
@@ -780,18 +780,18 @@ encontrarás en un SIEM, un firewall o un EDR.
 
 **Pregunta 2**
 
-¿Cuál es la principal diferencia entre una **dirección IP** y un
+¿Cuál es la principal diferencia entre una **dirección <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>** y un
 **puerto**?
 
-**A)** La IP identifica un dispositivo y el puerto identifica un
+**A)** La <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> identifica un dispositivo y el puerto identifica un
 servicio o aplicación.
 
-**B)** La IP identifica una aplicación y el puerto identifica un
+**B)** La <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> identifica una aplicación y el puerto identifica un
 dispositivo.
 
 **C)** Ambos identifican exactamente lo mismo.
 
-**D)** La IP solo existe en redes privadas.
+**D)** La <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> solo existe en redes privadas.
 
 **Pregunta 3**
 
@@ -807,7 +807,7 @@ dispositivo.
 
 **Pregunta 4**
 
-Cuando tu computadora abre una página web segura (**HTTPS**), ¿qué
+Cuando tu computadora abre una página web segura (**<a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>**), ¿qué
 puerto de destino utiliza normalmente el servidor?
 
 **A)** 22
@@ -820,19 +820,19 @@ puerto de destino utiliza normalmente el servidor?
 
 **Pregunta 5**
 
-¿Qué servicio utiliza normalmente el puerto **22/TCP**?
+¿Qué servicio utiliza normalmente el puerto **22/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**?
 
-**A)** FTP.
+**A)** <a href="../../GLOSARIO.md#ftp" target="_blank">FTP</a>.
 
-**B)** SSH.
+**B)** <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>.
 
-**C)** HTTP.
+**C)** <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a>.
 
-**D)** DNS.
+**D)** <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>.
 
 **Pregunta 6**
 
-Como analista SOC observas el siguiente registro:
+Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> observas el siguiente registro:
 
 Origen:
 
@@ -846,16 +846,16 @@ Destino:
 
 ↓
 
-TCP
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>
 
 ¿Qué representa el puerto **52341**?
 
-**A)** El puerto donde escucha el servidor HTTPS.
+**A)** El puerto donde escucha el servidor <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>.
 
 **B)** Un puerto dinámico (efímero) elegido por el sistema operativo del
 cliente.
 
-**C)** El puerto reservado para DNS.
+**C)** El puerto reservado para <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>.
 
 **D)** El puerto estándar de Windows.
 
@@ -874,13 +874,13 @@ Desktop Protocol)**?
 
 **Pregunta 8**
 
-Como analista SOC recibes una alerta indicando:
+Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> recibes una alerta indicando:
 
 Miles de intentos de conexión
 
 ↓
 
-TCP
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>
 
 ↓
 
@@ -888,30 +888,30 @@ Puerto 22
 
 ¿Cuál sería tu primera hipótesis?
 
-**A)** Consultas DNS normales.
+**A)** Consultas <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> normales.
 
-**B)** Un posible ataque de fuerza bruta contra SSH.
+**B)** Un posible ataque de fuerza bruta contra <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>.
 
 **C)** Una actualización automática del sistema operativo.
 
-**D)** Un problema con el servidor DHCP.
+**D)** Un problema con el servidor <a href="../../GLOSARIO.md#dhcp" target="_blank">DHCP</a>.
 
 **Pregunta 9**
 
 ¿Cuál de los siguientes servicios utiliza normalmente el puerto
-**445/TCP**?
+**445/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**?
 
-**A)** HTTPS.
+**A)** <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>.
 
 **B)** SMB.
 
-**C)** SSH.
+**C)** <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>.
 
 **D)** SNMP.
 
-**Pregunta 10 (Caso práctico SOC)**
+**Pregunta 10 (Caso práctico <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>)**
 
-El SIEM genera la siguiente alerta:
+El <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a> genera la siguiente alerta:
 
 Origen:
 
@@ -925,7 +925,7 @@ Servidor Windows
 
 ↓
 
-TCP
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>
 
 ↓
 
@@ -947,7 +947,7 @@ TCP
 
 **C)** Sincronización horaria mediante NTP.
 
-**D)** Una consulta DNS de gran tamaño.
+**D)** Una consulta <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> de gran tamaño.
 
 **✅ Respuestas y justificación**
 
@@ -958,7 +958,7 @@ TCP
 **Justificación**
 
 Un **puerto** identifica una **aplicación o servicio** que utiliza la
-red. Permite que varias aplicaciones compartan una misma dirección IP
+red. Permite que varias aplicaciones compartan una misma dirección <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>
 sin interferir entre sí.
 
 **Pregunta 2**
@@ -967,7 +967,7 @@ sin interferir entre sí.
 
 **Justificación**
 
-La **IP** identifica el dispositivo dentro de la red, mientras que el
+La **<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>** identifica el dispositivo dentro de la red, mientras que el
 **puerto** identifica el servicio o la aplicación que debe recibir la
 comunicación.
 
@@ -977,7 +977,7 @@ Ejemplo:
 
 - **192.168.1.10** → Dispositivo.
 
-- **443** → Servicio HTTPS.
+- **443** → Servicio <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>.
 
 **Pregunta 3**
 
@@ -986,7 +986,7 @@ Ejemplo:
 **Justificación**
 
 Los **Well-Known Ports** abarcan desde el **0 hasta el 1023** y están
-reservados para los servicios más conocidos como HTTP, HTTPS, SSH y DNS.
+reservados para los servicios más conocidos como <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a>, <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>, <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a> y <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>.
 
 **Pregunta 4**
 
@@ -994,8 +994,8 @@ reservados para los servicios más conocidos como HTTP, HTTPS, SSH y DNS.
 
 **Justificación**
 
-El protocolo **HTTPS** utiliza por defecto el **puerto 443/TCP**,
-permitiendo la comunicación cifrada mediante TLS.
+El protocolo **<a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>** utiliza por defecto el **puerto 443/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**,
+permitiendo la comunicación cifrada mediante <a href="../../GLOSARIO.md#tls" target="_blank">TLS</a>.
 
 **Pregunta 5**
 
@@ -1003,7 +1003,7 @@ permitiendo la comunicación cifrada mediante TLS.
 
 **Justificación**
 
-El puerto **22/TCP** corresponde al servicio **SSH (Secure Shell)**,
+El puerto **22/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>** corresponde al servicio **<a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a> (Secure <a href="../../GLOSARIO.md#shell" target="_blank">Shell</a>)**,
 utilizado para la administración remota segura de sistemas.
 
 **Pregunta 6**
@@ -1022,7 +1022,7 @@ con el servidor.
 
 **Justificación**
 
-El puerto **3389/TCP** corresponde a **RDP (Remote Desktop Protocol)**,
+El puerto **3389/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>** corresponde a **RDP (Remote Desktop Protocol)**,
 utilizado para acceder remotamente a equipos Windows.
 
 **Pregunta 8**
@@ -1031,9 +1031,9 @@ utilizado para acceder remotamente a equipos Windows.
 
 **Justificación**
 
-Una gran cantidad de intentos hacia el puerto **22/TCP** suele indicar
+Una gran cantidad de intentos hacia el puerto **22/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>** suele indicar
 un posible **ataque de fuerza bruta** intentando obtener acceso mediante
-credenciales SSH.
+credenciales <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>.
 
 **Pregunta 9**
 
@@ -1041,11 +1041,11 @@ credenciales SSH.
 
 **Justificación**
 
-El puerto **445/TCP** corresponde al protocolo **SMB (Server Message
+El puerto **445/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>** corresponde al protocolo **SMB (Server Message
 Block)**, utilizado para compartir archivos e impresoras en entornos
 Windows.
 
-Es uno de los puertos más vigilados en un SOC por su relación con
+Es uno de los puertos más vigilados en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> por su relación con
 ransomware y movimiento lateral.
 
 **Pregunta 10**
@@ -1054,12 +1054,12 @@ ransomware y movimiento lateral.
 
 **Justificación**
 
-Miles de intentos sobre el puerto **3389/TCP** son un fuerte indicador
+Miles de intentos sobre el puerto **3389/<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>** son un fuerte indicador
 de un posible **ataque de fuerza bruta contra RDP**.
 
-Como analista SOC, deberías revisar:
+Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>, deberías revisar:
 
-- La IP de origen.
+- La <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> de origen.
 
 - El número de intentos fallidos.
 
@@ -1073,8 +1073,8 @@ Como analista SOC, deberías revisar:
 
 | **Respuestas Correctas** | **Nivel**                                                                                                                                           |
 |--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| **10/10**                | ⭐ **Excelente.** Reconoces rápidamente los puertos más importantes y puedes interpretar alertas típicas de un SOC.                                 |
+| **10/10**                | ⭐ **Excelente.** Reconoces rápidamente los puertos más importantes y puedes interpretar alertas típicas de un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.                                 |
 | **8–9**                  | 🟢 **Muy buen nivel.** Ya relacionas puertos con servicios y riesgos comunes.                                                                       |
 | **6–7**                  | 🟡 **Buen progreso.** Repasa especialmente los puertos más utilizados (22, 53, 80, 123, 443, 445 y 3389).                                           |
 | **4–5**                  | 🟠 **Necesitas reforzar algunos conceptos.** Memoriza la clasificación de puertos y los servicios asociados.                                        |
-| **0–3**                  | 🔴 **Es recomendable repasar el módulo completo.** Los puertos son una de las herramientas fundamentales para interpretar eventos de red en un SOC. |
+| **0–3**                  | 🔴 **Es recomendable repasar el módulo completo.** Los puertos son una de las herramientas fundamentales para interpretar eventos de red en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>. |

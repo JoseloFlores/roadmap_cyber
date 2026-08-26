@@ -1,21 +1,21 @@
-**🖥️ Carrera de Analista SOC**
+**🖥️ Carrera de Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 **Semana 4 — Windows**
 
 **Módulo 26: Windows Event Logs**
 
-**Nivel:** Principiante → Analista SOC Nivel 1\
+**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1\
 **Enfoque:** Detección + Análisis de eventos de seguridad
 
 Este es **uno de los módulos más importantes de toda la semana**. Los
-logs son la materia prima del SOC. Aquí aprendes a leer lo que Windows
+logs son la materia prima del <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>. Aquí aprendes a leer lo que Windows
 ya registra por defecto y a reconocer los eventos clave de seguridad.
 
 **🎯 Objetivos de este módulo**
 
 -   Abrir el **Visor de eventos** (`eventvwr.msc`).
 -   Conocer los logs **Security, System, Application, PowerShell**.
--   Memorizar los **Event IDs** más relevantes para SOC.
+-   Memorizar los **Event <a href="../../GLOSARIO.md#ids" target="_blank">IDs</a>** más relevantes para <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
 -   Entender la diferencia entre inicio exitoso y fallido.
 -   Saber correlacionar eventos para reconstruir incidentes.
 
@@ -33,9 +33,9 @@ Rutas principales:
 -   **Registros de aplicaciones y servicios → Microsoft → Windows →
     PowerShell**: scripts ejecutados (si el logging está activado).
 
-**2. Event IDs imprescindibles**
+**2. Event <a href="../../GLOSARIO.md#ids" target="_blank">IDs</a> imprescindibles**
 
-| Event ID | Significado | Por qué importa al SOC |
+| Event ID | Significado | Por qué importa al <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> |
 | :--- | :--- | :--- |
 | **4624** | Inicio de sesión exitoso | ¿De dónde? ¿A qué hora? |
 | **4625** | Inicio de sesión fallido | Fuerza bruta, usuario erróneo |
@@ -54,7 +54,7 @@ Rutas principales:
 -   **4625** repetido de una cuenta = posible **fuerza bruta**.
 -   **4624** tras muchos 4625 = acceso exitoso tras ataque.
 -   El campo **Logon Type** ayuda: `2` (interactivo), `3` (red),
-    `10` (RDP/RemoteInteractive). Muchos 4624 tipo `3` desde IP
+    `10` (RDP/RemoteInteractive). Muchos 4624 tipo `3` desde <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>
     externa pueden ser escaneo.
 
 **4. 4688 (creación de proceso)**
@@ -74,7 +74,7 @@ evidencia**. El propio borrado es, por sí mismo, una alerta grave.
 
 **6. Correlación básica**
 
-Un incidente real se reconstruye uniendo IDs:
+Un incidente real se reconstruye uniendo <a href="../../GLOSARIO.md#ids" target="_blank">IDs</a>:
 
 4625 (varios)
 
@@ -94,13 +94,13 @@ Conexión externa (netstat / Sysmon)
 
 Posible compromiso
 
-Esto es **correlación de eventos**, el corazón del trabajo SOC.
+Esto es **correlación de eventos**, el corazón del trabajo <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
 
 **7. Limitaciones**
 
 Los logs nativos no siempre traen la línea de comandos ni la conexión
 de red. Por eso en fases posteriores usaremos **Sysmon** (Semana 8) y
-un **SIEM** (Semana 6) para enriquecerlos.
+un **<a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>** (Semana 6) para enriquecerlos.
 
 **🧪 Laboratorio recomendado**
 
@@ -174,8 +174,8 @@ RDP?
 
 **A)** Logon Type\
 **B)** RID\
-**C)** PID\
-**D)** MAC
+**C)** <a href="../../GLOSARIO.md#pid" target="_blank">PID</a>\
+**D)** <a href="../../GLOSARIO.md#mac" target="_blank">MAC</a>
 
 **🔹 Pregunta 8**
 
@@ -186,7 +186,7 @@ El Event ID 4720 indica:
 **C)** Descarga de archivo\
 **D)** Reinicio
 
-**🔹 Pregunta 9 — Caso SOC**
+**🔹 Pregunta 9 — Caso <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 Secuencia: 20 eventos 4625 (cuenta `admin`) → 1 evento 4624 → 4688
 (`powershell.exe`). Conclusión más razonable:
@@ -198,7 +198,7 @@ Secuencia: 20 eventos 4625 (cuenta `admin`) → 1 evento 4624 → 4688
 
 **🔹 Pregunta 10**
 
-¿Por qué el SOC valora el Event ID 1102 aunque sea "solo un borrado"?
+¿Por qué el <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> valora el Event ID 1102 aunque sea "solo un borrado"?
 
 **A)** Porque mejora el rendimiento.\
 **B)** Porque suele ser un intento de encubrir evidencias.\
@@ -230,4 +230,4 @@ Secuencia: 20 eventos 4625 (cuenta `admin`) → 1 evento 4624 → 4688
 -   ✅ **Módulo 26 — Windows Event Logs**
 -   ⚪ Módulo 27 — Seguridad de Windows
 -   ⚪ Módulo 28 — Windows desde la perspectiva del atacante
--   ⚪ Módulo 29 — Investigación SOC en Windows
+-   ⚪ Módulo 29 — Investigación <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> en Windows

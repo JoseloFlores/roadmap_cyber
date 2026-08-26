@@ -1,18 +1,18 @@
-**Módulo de Estudio SOC**
+**Módulo de Estudio <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
-**Módulo 3 - Modelo TCP/IP**
+**Módulo 3 - Modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>**
 
-**Nivel:** Principiante → Analista SOC Nivel 1
+**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
 
 **Objetivos de aprendizaje**
 
 Al finalizar este módulo deberías poder:
 
--   Comprender qué es el Modelo TCP/IP.
+-   Comprender qué es el Modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
 
 -   Conocer sus cuatro capas y su función.
 
--   Entender la diferencia entre TCP/IP y el Modelo OSI.
+-   Entender la diferencia entre <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> y el Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a>.
 
 -   Identificar los protocolos más importantes de cada capa.
 
@@ -20,13 +20,13 @@ Al finalizar este módulo deberías poder:
 
 -   Saber cómo defenderlas.
 
--   Aplicar este conocimiento en el trabajo diario de un Analista SOC.
+-   Aplicar este conocimiento en el trabajo diario de un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
 
-**1. ¿Qué es el Modelo TCP/IP?**
+**1. ¿Qué es el Modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>?**
 
-El **Modelo TCP/IP (Transmission Control Protocol / Internet Protocol)** es el conjunto de protocolos que permite que Internet funcione.
+El **Modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> (Transmission Control Protocol / Internet Protocol)** es el conjunto de protocolos que permite que Internet funcione.
 
-A diferencia del Modelo OSI, que es un modelo teórico para comprender cómo viajan los datos, **TCP/IP es el modelo que realmente utilizan las redes modernas**, incluida Internet.
+A diferencia del Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a>, que es un modelo teórico para comprender cómo viajan los datos, **<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> es el modelo que realmente utilizan las redes modernas**, incluida Internet.
 
 Cada vez que:
 
@@ -40,29 +40,29 @@ Cada vez que:
 
 -   Descargas un archivo.
 
-Estás utilizando el modelo TCP/IP.
+Estás utilizando el modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
 
-**¿Por qué es importante para un SOC?**
+**¿Por qué es importante para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>?**
 
-La mayoría de los logs, alertas y herramientas de seguridad están basados en protocolos TCP/IP.
+La mayoría de los logs, alertas y herramientas de seguridad están basados en protocolos <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
 
 Cuando un analista revisa:
 
--   Wireshark
+-   <a href="../../GLOSARIO.md#wireshark" target="_blank">Wireshark</a>
 
 -   Firewall
 
--   IDS/IPS
+-   <a href="../../GLOSARIO.md#ids" target="_blank">IDS</a>/<a href="../../GLOSARIO.md#ips" target="_blank">IPS</a>
 
--   EDR
+-   <a href="../../GLOSARIO.md#edr" target="_blank">EDR</a>
 
--   SIEM
+-   <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>
 
-está analizando tráfico TCP/IP.
+está analizando tráfico <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
 
 Por eso, dominar este modelo es fundamental.
 
-**Las 4 capas del Modelo TCP/IP**
+**Las 4 capas del Modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>**
 
 4 Aplicación
 3 Transporte
@@ -73,16 +73,16 @@ Una forma sencilla de recordarlas es:
 
 **Acceso → Internet → Transporte → Aplicación**
 
-**Diferencia con el Modelo OSI**
+**Diferencia con el Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a>**
 
-OSI tiene **7 capas**.
+<a href="../../GLOSARIO.md#osi" target="_blank">OSI</a> tiene **7 capas**.
 
-TCP/IP tiene **4 capas**.
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> tiene **4 capas**.
 
-TCP/IP agrupa varias capas del OSI.
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> agrupa varias capas del <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a>.
 
   -----------------------------------------------------------------------
-  **Modelo TCP/IP**                   **Equivale en OSI**
+  **Modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>**                   **Equivale en <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a>**
   ----------------------------------- -----------------------------------
   Aplicación                          7 + 6 + 5
 
@@ -103,7 +103,7 @@ Aquí viajan las tramas.
 
 Se utilizan:
 
--   Direcciones MAC
+-   Direcciones <a href="../../GLOSARIO.md#mac" target="_blank">MAC</a>
 
 -   Ethernet
 
@@ -127,7 +127,7 @@ Se utilizan:
 
 -   Wi-Fi (802.11)
 
--   ARP
+-   <a href="../../GLOSARIO.md#arp" target="_blank">ARP</a>
 
 **Analogía**
 
@@ -137,7 +137,7 @@ Los vecinos pueden comunicarse entre ellos.
 
 **Ataques**
 
-**ARP Spoofing**
+**<a href="../../GLOSARIO.md#arp" target="_blank">ARP</a> Spoofing**
 
 El atacante se hace pasar por el router.
 
@@ -145,9 +145,9 @@ Consecuencia:
 
 Intercepción del tráfico.
 
-**MAC Flooding**
+**<a href="../../GLOSARIO.md#mac" target="_blank">MAC</a> Flooding**
 
-Satura la tabla MAC del switch.
+Satura la tabla <a href="../../GLOSARIO.md#mac" target="_blank">MAC</a> del switch.
 
 **Rogue Access Point**
 
@@ -155,13 +155,13 @@ El atacante instala un punto de acceso Wi-Fi falso para engañar a los usuarios.
 
 **Defensa**
 
--   VLAN
+-   <a href="../../GLOSARIO.md#vlan" target="_blank">VLAN</a>
 
--   Port Security
+-   <a href="../../GLOSARIO.md#port-security" target="_blank">Port Security</a>
 
--   Dynamic ARP Inspection
+-   Dynamic <a href="../../GLOSARIO.md#arp" target="_blank">ARP</a> Inspection
 
--   802.1X
+-   <a href="../../GLOSARIO.md#802-1x" target="_blank">802.1X</a>
 
 -   Redes Wi-Fi seguras (WPA2/WPA3)
 
@@ -171,7 +171,7 @@ El atacante instala un punto de acceso Wi-Fi falso para engañar a los usuarios.
 
 Es responsable del direccionamiento y del enrutamiento entre redes.
 
-Aquí aparecen las direcciones IP.
+Aquí aparecen las direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
 
 **Protocolos**
 
@@ -179,7 +179,7 @@ Aquí aparecen las direcciones IP.
 
 -   IPv6
 
--   ICMP
+-   <a href="../../GLOSARIO.md#icmp" target="_blank">ICMP</a>
 
 -   IPSec
 
@@ -211,13 +211,13 @@ Es como el sistema de rutas que utiliza un servicio de mensajería para llevar u
 
 Busca equipos activos.
 
-**IP Spoofing**
+**<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Spoofing**
 
-El atacante falsifica una dirección IP.
+El atacante falsifica una dirección <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
 
-**ICMP Flood**
+**<a href="../../GLOSARIO.md#icmp" target="_blank">ICMP</a> Flood**
 
-Envía enormes cantidades de paquetes ICMP para afectar la disponibilidad de un servicio.
+Envía enormes cantidades de paquetes <a href="../../GLOSARIO.md#icmp" target="_blank">ICMP</a> para afectar la disponibilidad de un servicio.
 
 **Defensa**
 
@@ -225,7 +225,7 @@ Envía enormes cantidades de paquetes ICMP para afectar la disponibilidad de un 
 
 -   ACL
 
--   IDS/IPS
+-   <a href="../../GLOSARIO.md#ids" target="_blank">IDS</a>/<a href="../../GLOSARIO.md#ips" target="_blank">IPS</a>
 
 -   Segmentación de red
 
@@ -235,17 +235,17 @@ Envía enormes cantidades de paquetes ICMP para afectar la disponibilidad de un 
 
 **Función**
 
-Controla cómo se envían los datos entre dos aplicaciones.
+Controla cómo se envían los datos entre <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> aplicaciones.
 
 Aquí aparecen los puertos.
 
 **Protocolos**
 
--   TCP
+-   <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>
 
--   UDP
+-   <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>
 
-**TCP**
+**<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>**
 
 Características:
 
@@ -259,15 +259,15 @@ Características:
 
 Ejemplos:
 
--   HTTPS
+-   <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>
 
--   SSH
+-   <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>
 
--   FTP
+-   <a href="../../GLOSARIO.md#ftp" target="_blank">FTP</a>
 
--   SMTP
+-   <a href="../../GLOSARIO.md#smtp" target="_blank">SMTP</a>
 
-**UDP**
+**<a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>**
 
 Características:
 
@@ -287,7 +287,7 @@ Ejemplos:
 
 -   Juegos online
 
--   DNS (consultas)
+-   <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> (consultas)
 
 **Ataques**
 
@@ -297,17 +297,17 @@ Ejemplos:
 
 -   Fuerza bruta
 
--   UDP Flood
+-   <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a> Flood
 
 **Defensa**
 
 -   Firewall
 
--   IDS/IPS
+-   <a href="../../GLOSARIO.md#ids" target="_blank">IDS</a>/<a href="../../GLOSARIO.md#ips" target="_blank">IPS</a>
 
 -   Rate Limiting
 
--   MFA
+-   <a href="../../GLOSARIO.md#mfa" target="_blank">MFA</a>
 
 -   Cierre de puertos innecesarios
 
@@ -321,23 +321,23 @@ Aquí aparecen la mayoría de los protocolos conocidos.
 
 **Protocolos**
 
--   HTTP
+-   <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a>
 
--   HTTPS
+-   <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>
 
--   DNS
+-   <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>
 
--   FTP
+-   <a href="../../GLOSARIO.md#ftp" target="_blank">FTP</a>
 
--   SSH
+-   <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>
 
--   SMTP
+-   <a href="../../GLOSARIO.md#smtp" target="_blank">SMTP</a>
 
 -   POP3
 
 -   IMAP
 
--   DHCP
+-   <a href="../../GLOSARIO.md#dhcp" target="_blank">DHCP</a>
 
 -   NTP
 
@@ -353,7 +353,7 @@ Aquí aparecen la mayoría de los protocolos conocidos.
 
 -   Navegadores
 
--   Clientes FTP
+-   Clientes <a href="../../GLOSARIO.md#ftp" target="_blank">FTP</a>
 
 **Analogía**
 
@@ -383,11 +383,11 @@ Secuestro de información.
 
 **Defensa**
 
--   WAF
+-   <a href="../../GLOSARIO.md#waf" target="_blank">WAF</a>
 
 -   Antivirus
 
--   EDR
+-   <a href="../../GLOSARIO.md#edr" target="_blank">EDR</a>
 
 -   Capacitación
 
@@ -398,21 +398,21 @@ Secuestro de información.
 **6. Cuadro comparativo de las capas**
 
   --------------------------------------------------------------------------------------------------------------------
-  **Capa TCP/IP**   **Función**                       **Protocolos**                     **Dispositivos**
+  **Capa <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>**   **Función**                       **Protocolos**                     **Dispositivos**
   ----------------- --------------------------------- ---------------------------------- -----------------------------
-  Aplicación        Servicios al usuario              HTTP, HTTPS, DNS, SMTP, FTP, SSH   Navegador, servidor web
+  Aplicación        Servicios al usuario              <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a>, <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>, <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>, <a href="../../GLOSARIO.md#smtp" target="_blank">SMTP</a>, <a href="../../GLOSARIO.md#ftp" target="_blank">FTP</a>, <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>   Navegador, servidor web
 
-  Transporte        Comunicación extremo a extremo    TCP, UDP                           Firewall, sistema operativo
+  Transporte        Comunicación extremo a extremo    <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>, <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>                           Firewall, sistema operativo
 
-  Internet          Direccionamiento y enrutamiento   IPv4, IPv6, ICMP                   Router
+  Internet          Direccionamiento y enrutamiento   IPv4, IPv6, <a href="../../GLOSARIO.md#icmp" target="_blank">ICMP</a>                   Router
 
-  Acceso a la Red   Comunicación física y local       Ethernet, Wi-Fi, ARP               Switch, NIC
+  Acceso a la Red   Comunicación física y local       Ethernet, Wi-Fi, <a href="../../GLOSARIO.md#arp" target="_blank">ARP</a>               Switch, NIC
   --------------------------------------------------------------------------------------------------------------------
 
-**7. Comparación entre TCP/IP y OSI**
+**7. Comparación entre <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> y <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a>**
 
   -----------------------------------------------------------------------
-  **Modelo OSI**                        **Modelo TCP/IP**
+  **Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a>**                        **Modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>**
   ------------------------------------- ---------------------------------
   7 capas                               4 capas
 
@@ -432,11 +432,11 @@ Secuestro de información.
   -------------------- --------------------------------------------------
   Aplicación           Phishing, SQL Injection, XSS, Malware
 
-  Transporte           SYN Flood, Fuerza Bruta, UDP Flood
+  Transporte           SYN Flood, Fuerza Bruta, <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a> Flood
 
-  Internet             Escaneo, IP Spoofing, ICMP Flood
+  Internet             Escaneo, <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Spoofing, <a href="../../GLOSARIO.md#icmp" target="_blank">ICMP</a> Flood
 
-  Acceso a la Red      ARP Spoofing, MAC Flooding, Rogue AP
+  Acceso a la Red      <a href="../../GLOSARIO.md#arp" target="_blank">ARP</a> Spoofing, <a href="../../GLOSARIO.md#mac" target="_blank">MAC</a> Flooding, Rogue AP
   -----------------------------------------------------------------------
 
 **9. ¿Cómo defender cada capa?**
@@ -444,16 +444,16 @@ Secuestro de información.
   -----------------------------------------------------------------------
   **Capa**                **Defensa**
   ----------------------- -----------------------------------------------
-  Aplicación              WAF, EDR, Actualizaciones, MFA
+  Aplicación              <a href="../../GLOSARIO.md#waf" target="_blank">WAF</a>, <a href="../../GLOSARIO.md#edr" target="_blank">EDR</a>, Actualizaciones, <a href="../../GLOSARIO.md#mfa" target="_blank">MFA</a>
 
-  Transporte              Firewall, IDS/IPS, Rate Limiting
+  Transporte              Firewall, <a href="../../GLOSARIO.md#ids" target="_blank">IDS</a>/<a href="../../GLOSARIO.md#ips" target="_blank">IPS</a>, Rate Limiting
 
   Internet                ACL, Firewalls, Segmentación
 
-  Acceso a la Red         VLAN, Port Security, WPA3
+  Acceso a la Red         <a href="../../GLOSARIO.md#vlan" target="_blank">VLAN</a>, <a href="../../GLOSARIO.md#port-security" target="_blank">Port Security</a>, WPA3
   -----------------------------------------------------------------------
 
-**10. Aplicación práctica en un SOC**
+**10. Aplicación práctica en un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 **Ejemplo 1**
 
@@ -461,7 +461,7 @@ Secuestro de información.
 
 Puerto 22
 
-2000 intentos SSH
+2000 intentos <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>
 
 **Capa afectada**
 
@@ -471,13 +471,13 @@ Transporte
 
 Fuerza Bruta
 
-**Acciones SOC**
+**Acciones <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
 -   Revisar logs.
 
 -   Verificar origen.
 
--   Bloquear IP si corresponde.
+-   Bloquear <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> si corresponde.
 
 -   Confirmar si hubo autenticaciones exitosas.
 
@@ -491,7 +491,7 @@ Fuerza Bruta
 
 8.8.8.8
 
-Miles de consultas ICMP.
+Miles de consultas <a href="../../GLOSARIO.md#icmp" target="_blank">ICMP</a>.
 
 **Capa**
 
@@ -499,13 +499,13 @@ Internet
 
 **Posible incidente**
 
-ICMP Flood o reconocimiento.
+<a href="../../GLOSARIO.md#icmp" target="_blank">ICMP</a> Flood o reconocimiento.
 
 **Ejemplo 3**
 
 **Alerta**
 
-ARP duplicadas
+<a href="../../GLOSARIO.md#arp" target="_blank">ARP</a> duplicadas
 
 **Capa**
 
@@ -513,7 +513,7 @@ Acceso a la Red
 
 **Posible incidente**
 
-ARP Spoofing.
+<a href="../../GLOSARIO.md#arp" target="_blank">ARP</a> Spoofing.
 
 **Ejemplo 4**
 
@@ -529,13 +529,13 @@ Aplicación
 
 Malware.
 
-**11. Lo que esperan de un Analista SOC Nivel 1**
+**11. Lo que esperan de un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1**
 
 Cuando revises una alerta debes preguntarte:
 
 -   ¿Qué protocolo está involucrado?
 
--   ¿En qué capa TCP/IP ocurre el problema?
+-   ¿En qué capa <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> ocurre el problema?
 
 -   ¿Qué dispositivo participa?
 
@@ -559,13 +559,13 @@ Cuando revises una alerta debes preguntarte:
 
 -   Wi-Fi.
 
--   MAC.
+-   <a href="../../GLOSARIO.md#mac" target="_blank">MAC</a>.
 
--   ARP.
+-   <a href="../../GLOSARIO.md#arp" target="_blank">ARP</a>.
 
 **Internet**
 
--   Direcciones IP.
+-   Direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
 
 -   Enrutamiento.
 
@@ -573,13 +573,13 @@ Cuando revises una alerta debes preguntarte:
 
 -   IPv6.
 
--   ICMP.
+-   <a href="../../GLOSARIO.md#icmp" target="_blank">ICMP</a>.
 
 **Transporte**
 
--   TCP.
+-   <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>.
 
--   UDP.
+-   <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>.
 
 -   Puertos.
 
@@ -587,17 +587,17 @@ Cuando revises una alerta debes preguntarte:
 
 **Aplicación**
 
--   HTTP.
+-   <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a>.
 
--   HTTPS.
+-   <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>.
 
--   DNS.
+-   <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>.
 
--   FTP.
+-   <a href="../../GLOSARIO.md#ftp" target="_blank">FTP</a>.
 
--   SSH.
+-   <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>.
 
--   SMTP.
+-   <a href="../../GLOSARIO.md#smtp" target="_blank">SMTP</a>.
 
 -   Servicios utilizados por el usuario.
 
@@ -606,84 +606,84 @@ Cuando revises una alerta debes preguntarte:
   -----------------------------------------------------------------------
   **Concepto**              **Debes recordar**
   ------------------------- ---------------------------------------------
-  Acceso a la Red           MAC, Ethernet, Wi-Fi, ARP
+  Acceso a la Red           <a href="../../GLOSARIO.md#mac" target="_blank">MAC</a>, Ethernet, Wi-Fi, <a href="../../GLOSARIO.md#arp" target="_blank">ARP</a>
 
-  Internet                  IP, Router, ICMP
+  Internet                  <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>, Router, <a href="../../GLOSARIO.md#icmp" target="_blank">ICMP</a>
 
-  Transporte                TCP, UDP, Puertos
+  Transporte                <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>, <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>, Puertos
 
-  Aplicación                HTTP, HTTPS, DNS, SSH, FTP
+  Aplicación                <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a>, <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>, <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>, <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>, <a href="../../GLOSARIO.md#ftp" target="_blank">FTP</a>
   -----------------------------------------------------------------------
 
-**🎯 Relación entre IP Pública, OSI y TCP/IP**
+**🎯 Relación entre <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Pública, <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a> y <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>**
 
 Hasta ahora ya conoces tres conceptos fundamentales. Es importante que los conectes mentalmente:
 
 Internet
 │
-IP Pública (Capa Internet / Capa 3 OSI)
+<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> Pública (Capa Internet / Capa 3 <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a>)
 │
 ┌───────────┐
 │ Router │
 └───────────┘
 │
 ─────────────────────────
-Red Local (LAN)
+Red Local (<a href="../../GLOSARIO.md#lan" target="_blank">LAN</a>)
 ─────────────────────────
 │ │ │
 PC 1 PC 2 Servidor
 192.168.1.10 192.168.1.20 192.168.1.30
-(MAC) (MAC) (MAC)
+(<a href="../../GLOSARIO.md#mac" target="_blank">MAC</a>) (<a href="../../GLOSARIO.md#mac" target="_blank">MAC</a>) (<a href="../../GLOSARIO.md#mac" target="_blank">MAC</a>)
 
 Cuando un usuario abre [**https://www.google.com**](https://www.google.com) ocurre, de forma simplificada, lo siguiente:
 
-1.  **Aplicación:** el navegador genera una solicitud HTTPS.
+1.  **Aplicación:** el navegador genera una solicitud <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>.
 
-2.  **Transporte:** TCP establece una conexión usando el puerto 443.
+2.  **Transporte:** <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> establece una conexión usando el puerto 443.
 
-3.  **Internet:** el paquete recibe una dirección IP de origen y una de destino para poder ser enrutado.
+3.  **Internet:** el paquete recibe una dirección <a href="../../GLOSARIO.md#ip" target="_blank">IP</a> de origen y una de destino para poder ser enrutado.
 
 4.  **Acceso a la Red:** el paquete se convierte en una trama Ethernet o Wi-Fi y viaja por la red local hasta el router.
 
 Este proceso ocurre en milisegundos y se repite miles de veces por segundo.
 
-**💡 Consejo como tu entrenador para un SOC**
+**💡 Consejo como tu entrenador para un <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>**
 
-No estudies el Modelo TCP/IP de memoria. **Aprende a relacionarlo con los logs que verás todos los días.**
+No estudies el Modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> de memoria. **Aprende a relacionarlo con los logs que verás todos los días.**
 
-Cuando abras un registro en un SIEM o en Wireshark, intenta identificar inmediatamente:
+Cuando abras un registro en un <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a> o en <a href="../../GLOSARIO.md#wireshark" target="_blank">Wireshark</a>, intenta identificar inmediatamente:
 
--   **¿Hay una dirección MAC?** → Piensa en **Acceso a la Red**.
+-   **¿Hay una dirección <a href="../../GLOSARIO.md#mac" target="_blank">MAC</a>?** → Piensa en **Acceso a la Red**.
 
--   **¿Hay direcciones IP?** → Piensa en **Internet**.
+-   **¿Hay direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>?** → Piensa en **Internet**.
 
--   **¿Hay puertos TCP o UDP?** → Piensa en **Transporte**.
+-   **¿Hay puertos <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> o <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>?** → Piensa en **Transporte**.
 
--   **¿Aparecen HTTP, HTTPS, DNS o SSH?** → Piensa en **Aplicación**.
+-   **¿Aparecen <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a>, <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>, <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a> o <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>?** → Piensa en **Aplicación**.
 
-Ese ejercicio mental hará que, con el tiempo, puedas interpretar una alerta en segundos y decidir qué evidencias revisar primero, una habilidad esencial para un Analista SOC.
+Ese ejercicio mental hará que, con el tiempo, puedas interpretar una alerta en segundos y decidir qué evidencias revisar primero, una habilidad esencial para un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>.
 
-**Evaluación -- Módulo 3: Modelo TCP/IP**
+**Evaluación -- Módulo 3: Modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>**
 
-**Nivel:** Principiante → Analista SOC Nivel 1
+**Nivel:** Principiante → Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Nivel 1
 
 **Instrucciones:** Responde las siguientes preguntas sin consultar el material de estudio. Al finalizar, revisa las respuestas y sus justificaciones.
 
 **Pregunta 1**
 
-¿Cuál es la principal diferencia entre el Modelo TCP/IP y el Modelo OSI?
+¿Cuál es la principal diferencia entre el Modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> y el Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a>?
 
-**A)** TCP/IP tiene 7 capas y OSI tiene 4.
+**A)** <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> tiene 7 capas y <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a> tiene 4.
 
-**B)** OSI es un modelo teórico y TCP/IP es el modelo utilizado en Internet.
+**B)** <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a> es un modelo teórico y <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> es el modelo utilizado en Internet.
 
-**C)** TCP/IP solo funciona en redes privadas.
+**C)** <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> solo funciona en redes privadas.
 
-**D)** OSI reemplazó completamente a TCP/IP.
+**D)** <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a> reemplazó completamente a <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
 
 **Pregunta 2**
 
-¿Cuántas capas tiene el Modelo TCP/IP?
+¿Cuántas capas tiene el Modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>?
 
 **A)** 3
 
@@ -695,7 +695,7 @@ Ese ejercicio mental hará que, con el tiempo, puedas interpretar una alerta en 
 
 **Pregunta 3**
 
-¿En qué capa del Modelo TCP/IP trabajan las direcciones IP?
+¿En qué capa del Modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> trabajan las direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>?
 
 **A)** Acceso a la Red
 
@@ -709,45 +709,45 @@ Ese ejercicio mental hará que, con el tiempo, puedas interpretar una alerta en 
 
 ¿Cuál de los siguientes protocolos pertenece a la capa **Transporte**?
 
-**A)** HTTP
+**A)** <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a>
 
-**B)** TCP
+**B)** <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>
 
-**C)** ICMP
+**C)** <a href="../../GLOSARIO.md#icmp" target="_blank">ICMP</a>
 
-**D)** ARP
+**D)** <a href="../../GLOSARIO.md#arp" target="_blank">ARP</a>
 
 **Pregunta 5**
 
 ¿Qué protocolo pertenece a la capa **Aplicación**?
 
-**A)** UDP
+**A)** <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>
 
 **B)** Ethernet
 
-**C)** HTTP
+**C)** <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a>
 
 **D)** IPv4
 
 **Pregunta 6**
 
-¿Cuál es la principal diferencia entre **TCP** y **UDP**?
+¿Cuál es la principal diferencia entre **<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>** y **<a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>**?
 
-**A)** TCP utiliza direcciones MAC y UDP utiliza direcciones IP.
+**A)** <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> utiliza direcciones <a href="../../GLOSARIO.md#mac" target="_blank">MAC</a> y <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a> utiliza direcciones <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
 
-**B)** TCP es orientado a conexión y confirma la recepción de los datos; UDP prioriza la velocidad y no confirma la entrega.
+**B)** <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> es orientado a conexión y confirma la recepción de los datos; <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a> prioriza la velocidad y no confirma la entrega.
 
-**C)** UDP solo funciona en Internet y TCP solo en redes locales.
+**C)** <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a> solo funciona en Internet y <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> solo en redes locales.
 
 **D)** No existe ninguna diferencia importante.
 
 **Pregunta 7**
 
-Como analista SOC recibes la siguiente alerta:
+Como analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> recibes la siguiente alerta:
 
-Se detectaron miles de paquetes ICMP provenientes de una misma dirección IP.
+Se detectaron miles de paquetes <a href="../../GLOSARIO.md#icmp" target="_blank">ICMP</a> provenientes de una misma dirección <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>.
 
-¿En qué capa del Modelo TCP/IP ocurre principalmente este incidente?
+¿En qué capa del Modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> ocurre principalmente este incidente?
 
 **A)** Aplicación
 
@@ -765,27 +765,27 @@ Se detectaron miles de paquetes ICMP provenientes de una misma dirección IP.
 
 **B)** Phishing
 
-**C)** ARP Spoofing
+**C)** <a href="../../GLOSARIO.md#arp" target="_blank">ARP</a> Spoofing
 
-**D)** Fuerza Bruta SSH
+**D)** Fuerza Bruta <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>
 
 **Pregunta 9**
 
 ¿Qué protocolo se utiliza normalmente para navegar de forma segura por Internet?
 
-**A)** FTP
+**A)** <a href="../../GLOSARIO.md#ftp" target="_blank">FTP</a>
 
-**B)** HTTP
+**B)** <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a>
 
-**C)** HTTPS
+**C)** <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>
 
-**D)** SMTP
+**D)** <a href="../../GLOSARIO.md#smtp" target="_blank">SMTP</a>
 
-**Pregunta 10 (Caso práctico SOC)**
+**Pregunta 10 (Caso práctico <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a>)**
 
 Un usuario recibe un correo electrónico falso, hace clic en un enlace e ingresa sus credenciales en una página idéntica a la del banco.
 
-¿En qué capa del Modelo TCP/IP ocurre principalmente el ataque?
+¿En qué capa del Modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> ocurre principalmente el ataque?
 
 **A)** Acceso a la Red
 
@@ -803,9 +803,9 @@ Un usuario recibe un correo electrónico falso, hace clic en un enlace e ingresa
 
 **Justificación**
 
-El **Modelo OSI** fue creado como un modelo de referencia para comprender cómo se comunican las redes.
+El **Modelo <a href="../../GLOSARIO.md#osi" target="_blank">OSI</a>** fue creado como un modelo de referencia para comprender cómo se comunican las redes.
 
-El **Modelo TCP/IP** es el que realmente utilizan Internet y la mayoría de las redes actuales.
+El **Modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a>** es el que realmente utilizan Internet y la mayoría de las redes actuales.
 
 **Pregunta 2**
 
@@ -813,7 +813,7 @@ El **Modelo TCP/IP** es el que realmente utilizan Internet y la mayoría de las 
 
 **Justificación**
 
-El Modelo TCP/IP tiene **4 capas**:
+El Modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> tiene **4 capas**:
 
 1.  Acceso a la Red
 
@@ -825,9 +825,9 @@ El Modelo TCP/IP tiene **4 capas**:
 
 **Consejo para el examen:**
 
-OSI = **7 capas**
+<a href="../../GLOSARIO.md#osi" target="_blank">OSI</a> = **7 capas**
 
-TCP/IP = **4 capas**
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> = **4 capas**
 
 **Pregunta 3**
 
@@ -839,7 +839,7 @@ La capa **Internet** se encarga del direccionamiento mediante **IPv4** e **IPv6*
 
 **Palabra clave:**
 
-**IP = Capa Internet**
+**<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> = Capa Internet**
 
 **Pregunta 4**
 
@@ -849,9 +849,9 @@ La capa **Internet** se encarga del direccionamiento mediante **IPv4** e **IPv6*
 
 Los protocolos principales de la capa **Transporte** son:
 
--   TCP
+-   <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>
 
--   UDP
+-   <a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>
 
 Son responsables de la comunicación entre aplicaciones y utilizan **puertos**.
 
@@ -861,19 +861,19 @@ Son responsables de la comunicación entre aplicaciones y utilizan **puertos**.
 
 **Justificación**
 
-HTTP pertenece a la capa **Aplicación**.
+<a href="../../GLOSARIO.md#http" target="_blank">HTTP</a> pertenece a la capa **Aplicación**.
 
 También pertenecen:
 
--   HTTPS
+-   <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>
 
--   DNS
+-   <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>
 
--   FTP
+-   <a href="../../GLOSARIO.md#ftp" target="_blank">FTP</a>
 
--   SSH
+-   <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>
 
--   SMTP
+-   <a href="../../GLOSARIO.md#smtp" target="_blank">SMTP</a>
 
 -   IMAP
 
@@ -885,7 +885,7 @@ También pertenecen:
 
 **Justificación**
 
-TCP:
+<a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>:
 
 -   Establece una conexión.
 
@@ -895,7 +895,7 @@ TCP:
 
 -   Es más confiable.
 
-UDP:
+<a href="../../GLOSARIO.md#udp" target="_blank">UDP</a>:
 
 -   No establece conexión.
 
@@ -911,9 +911,9 @@ UDP:
 
 **Justificación**
 
-El protocolo **ICMP** pertenece a la capa **Internet**.
+El protocolo **<a href="../../GLOSARIO.md#icmp" target="_blank">ICMP</a>** pertenece a la capa **Internet**.
 
-Un gran volumen de paquetes ICMP puede indicar un ataque como un **ICMP Flood** o una actividad de reconocimiento.
+Un gran volumen de paquetes <a href="../../GLOSARIO.md#icmp" target="_blank">ICMP</a> puede indicar un ataque como un **<a href="../../GLOSARIO.md#icmp" target="_blank">ICMP</a> Flood** o una actividad de reconocimiento.
 
 **Pregunta 8**
 
@@ -921,7 +921,7 @@ Un gran volumen de paquetes ICMP puede indicar un ataque como un **ICMP Flood** 
 
 **Justificación**
 
-El **ARP Spoofing** manipula las direcciones MAC y el protocolo ARP para interceptar el tráfico en una red local.
+El **<a href="../../GLOSARIO.md#arp" target="_blank">ARP</a> Spoofing** manipula las direcciones <a href="../../GLOSARIO.md#mac" target="_blank">MAC</a> y el protocolo <a href="../../GLOSARIO.md#arp" target="_blank">ARP</a> para interceptar el tráfico en una red local.
 
 Por eso corresponde a la capa **Acceso a la Red**.
 
@@ -931,7 +931,7 @@ Por eso corresponde a la capa **Acceso a la Red**.
 
 **Justificación**
 
-**HTTPS** utiliza cifrado (TLS) para proteger la comunicación entre el navegador y el servidor.
+**<a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>** utiliza cifrado (<a href="../../GLOSARIO.md#tls" target="_blank">TLS</a>) para proteger la comunicación entre el navegador y el servidor.
 
 Esto garantiza:
 
@@ -964,7 +964,7 @@ Por eso se clasifica principalmente dentro de la capa **Aplicación**.
   ---------------------------------------------------------------------------------------------------------------------------------------------
   **Respuestas Correctas**   **Nivel**
   -------------------------- ------------------------------------------------------------------------------------------------------------------
-  **10/10**                  ⭐ Excelente. Ya comienzas a relacionar protocolos, capas y tipos de ataque como lo hace un Analista SOC Junior.
+  **10/10**                  ⭐ Excelente. Ya comienzas a relacionar protocolos, capas y tipos de ataque como lo hace un Analista <a href="../../GLOSARIO.md#soc" target="_blank">SOC</a> Junior.
 
   **8--9**                   🟢 Muy buen nivel. Solo necesitas afianzar algunos conceptos antes de pasar al siguiente tema.
 
@@ -972,5 +972,5 @@ Por eso se clasifica principalmente dentro de la capa **Aplicación**.
 
   **4--5**                   🟠 Aún hay conceptos por reforzar. Relee el módulo y vuelve a realizar el cuestionario.
 
-  **0--3**                   🔴 Es recomendable repasar el Modelo TCP/IP antes de avanzar a protocolos específicos como DNS, HTTP o SSH.
+  **0--3**                   🔴 Es recomendable repasar el Modelo <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a>/<a href="../../GLOSARIO.md#ip" target="_blank">IP</a> antes de avanzar a protocolos específicos como <a href="../../GLOSARIO.md#dns" target="_blank">DNS</a>, <a href="../../GLOSARIO.md#http" target="_blank">HTTP</a> o <a href="../../GLOSARIO.md#ssh" target="_blank">SSH</a>.
   ---------------------------------------------------------------------------------------------------------------------------------------------
