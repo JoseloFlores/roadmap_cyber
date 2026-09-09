@@ -655,7 +655,7 @@ se ejecute automáticamente cuando un usuario inicia sesión.
 Esto convierte al Registro en una fuente importante de evidencia durante
 una investigación.
 
-**23. ¿Qué es el UAC?**
+**23. ¿Qué es el <a href="../../GLOSARIO.md#uac" target="_blank">UAC</a>?**
 
 UAC significa:
 

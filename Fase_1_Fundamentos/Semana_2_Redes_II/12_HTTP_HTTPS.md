@@ -320,7 +320,7 @@ Muchos ataques envían cientos o miles de POST a la misma ruta.
 
 - Fuerza bruta contra un portal.
 
-- Relleno de credenciales (credential stuffing).
+- Relleno de credenciales (<a href="../../GLOSARIO.md#credential-stuffing" target="_blank">credential stuffing</a>).
 
 - Intentos de acceso de cuentas robadas.
 

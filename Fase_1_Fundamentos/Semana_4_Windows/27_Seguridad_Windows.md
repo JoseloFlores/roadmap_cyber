@@ -13,7 +13,7 @@ alarmas son reales y qué controles reforzar.
 
 **🎯 Objetivos de este módulo**
 
--   Conocer Windows Defender, Firewall, UAC, Windows Update.
+-   Conocer Windows Defender, Firewall, <a href="../../GLOSARIO.md#uac" target="_blank">UAC</a>, Windows Update.
 -   Entender BitLocker, SmartScreen y Credential Guard.
 -   Relacionar cada defensa con su posible evasión.
 -   Ver cómo el SOC detecta intentos de evasión.
@@ -55,7 +55,7 @@ forense desde fuera.
 
 **6. Credential Guard**
 
-Aísla secretos (como los hashes de LSASS) en una zona protegida por
+Aísla secretos (como los hashes de <a href="../../GLOSARIO.md#lsass" target="_blank">LSASS</a>) en una zona protegida por
 virtualización (VBS). Dificulta el **LSASS dumping**. Si está
 desactivado, el riesgo aumenta.
 

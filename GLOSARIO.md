@@ -121,3 +121,46 @@ Este glosario contiene los términos, siglas y acrónimos más críticos e impor
 | <a id="port-security"></a>**Port Security** | *Seguridad de Puertos* | Función del switch que limita las direcciones MAC por puerto para frenar ataques. |
 | <a id="lease"></a>**lease** | *Concesión* | Tiempo durante el cual una IP asignada por DHCP puede ser usada antes de renovarse. |
 | <a id="scope"></a>**scope** | *Ámbito* | Rango de direcciones IP que un servidor DHCP reparte a los clientes. |
+
+---
+
+## 🪟 7. Windows, Usuarios y Autenticación
+
+| Sigla | Nombre Completo | Descripción |
+| :--- | :--- | :--- |
+| <a id="sam"></a>**SAM** | *Security Account Manager* | Base de datos local de Windows que almacena la información de las cuentas locales y representaciones criptográficas de sus contraseñas; objetivo frecuente de *credential dumping*. |
+| <a id="sid"></a>**SID** | *Security Identifier* | Identificador de seguridad único con el que Windows identifica cuentas y otras entidades de seguridad (usuario, grupo, equipo). |
+| <a id="rid"></a>**RID** | *Relative Identifier* | Última parte del SID que distingue una cuenta dentro de un equipo o dominio (ej. la cuenta Administrador integrada termina en `-500`). |
+| <a id="uac"></a>**UAC** | *User Account Control* | Control de cuentas de usuario; solicita confirmación antes de ejecutar acciones con privilegios elevados para frenar elevaciones silenciosas. |
+| <a id="ntlm"></a>**NTLM** | *NT LAN Manager* | Mecanismo/protocolo de autenticación histórico de Microsoft basado en desafío-respuesta (challenge-response); todavía presente en escenarios específicos. |
+| <a id="kerberos"></a>**Kerberos** | *Kerberos* | Protocolo de autenticación basado en tickets, principal en dominios modernos de Active Directory (KDC → TGT → service tickets). |
+| <a id="active-directory"></a>**Active Directory** | *Active Directory (AD)* | Servicio de directorio de Microsoft que administra de forma centralizada identidades, equipos, grupos, políticas y recursos de un dominio. |
+| <a id="dc"></a>**DC** | *Domain Controller* | Servidor que proporciona las funciones centrales del dominio de Active Directory, incluida la autenticación; activo crítico. |
+| <a id="kdc"></a>**KDC** | *Key Distribution Center* | Componente central de Kerberos encargado de emitir y gestionar tickets (contiene los servicios AS y TGS). |
+| <a id="as"></a>**AS** | *Authentication Service* | Servicio del KDC que participa en la autenticación inicial y entrega el TGT. |
+| <a id="tgt"></a>**TGT** | *Ticket Granting Ticket* | Ticket inicial de Kerberos que permite al usuario solicitar posteriormente tickets para servicios concretos. |
+| <a id="tgs"></a>**TGS** | *Ticket Granting Service* | Servicio del KDC que, a partir del TGT, emite los tickets de servicio (service tickets). |
+| <a id="service-ticket"></a>**Service Ticket** | *Ticket de Servicio* | Ticket de Kerberos que permite al usuario acceder a un servicio específico (ej. FILESERVER). |
+| <a id="spn"></a>**SPN** | *Service Principal Name* | Identificador de una instancia de servicio dentro de Kerberos; las cuentas con SPN son objetivo de Kerberoasting. |
+| <a id="ou"></a>**OU** | *Organizational Unit* | Unidad organizativa; contenedor de Active Directory que agrupa objetos (usuarios, equipos) para administrarlos mediante políticas. |
+| <a id="gpo"></a>**GPO** | *Group Policy Object* | Objeto de directiva de grupo; aplica configuraciones y políticas (contraseñas, firewall, restricciones) a usuarios y equipos del dominio. |
+| <a id="krbtgt"></a>**KRBTGT** | *KRBTGT Account* | Cuenta especial de Active Directory cuyo secreto criptográfico es clave en la emisión/validación de tickets Kerberos; su compromiso habilita un Golden Ticket. |
+| <a id="logon-type"></a>**Logon Type** | *Tipo de inicio de sesión* | Clasificación que registra cómo ocurrió un logon: 2 (interactivo), 3 (red), 4 (batch), 5 (servicio), 10 (RDP). |
+| <a id="lsass"></a>**LSASS** | *Local Security Authority Subsystem Service* | Proceso de Windows (`lsass.exe`) que gestiona seguridad y autenticación; objetivo de volcado de credenciales (LSASS dumping). |
+| <a id="minimo-privilegio"></a>**Mínimo Privilegio** | *Principle of Least Privilege* | Regla de seguridad: cada usuario, grupo o proceso debe tener únicamente los permisos necesarios para realizar su función. |
+
+---
+
+## ⚔️ 8. Ataques a Credenciales y Técnicas de Evasión
+
+| Sigla | Nombre Completo | Descripción |
+| :--- | :--- | :--- |
+| <a id="password-spraying"></a>**Password Spraying** | *Rociado de contraseñas* | Ataque que prueba una o pocas contraseñas comunes contra muchas cuentas para evadir los bloqueos por intentos fallidos. |
+| <a id="credential-stuffing"></a>**Credential Stuffing** | *Relleno de credenciales* | Ataque que reutiliza credenciales robadas de otros servicios para intentar acceder a una organización. |
+| <a id="pass-the-hash"></a>**Pass-the-Hash** | *Pass-the-Hash* | Técnica que usa el hash de una credencial obtenido de un sistema para autenticarse sin conocer la contraseña original. |
+| <a id="pass-the-ticket"></a>**Pass-the-Ticket** | *Pass-the-Ticket* | Técnica que reutiliza un ticket Kerberos válido para autenticarse ante servicios sin conocer la contraseña. |
+| <a id="kerberoasting"></a>**Kerberoasting** | *Kerberoasting* | Ataque que solicita tickets de servicio de cuentas con SPN para atacar sus contraseñas de forma offline. |
+| <a id="golden-ticket"></a>**Golden Ticket** | *Golden Ticket* | Falsificación de TGTs de Kerberos tras comprometer el secreto KRBTGT, otorgando acceso amplio y persistente al dominio. |
+| <a id="masquerading"></a>**Masquerading** | *Suplantación de nombre* | Técnica de evasión donde el atacante nombra o ubica un archivo para que parezca legítimo (ej. `svch0st.exe`). |
+| <a id="living-off-the-land"></a>**Living off the Land** | *Living off the Land (LotL)* | Abuso de herramientas legítimas ya presentes en el sistema (PowerShell, WMI, `rundll32`) para realizar acciones maliciosas. |
+| <a id="process-injection"></a>**Process Injection** | *Inyección de procesos* | Familia de técnicas donde código malicioso intenta ejecutarse dentro del contexto de otro proceso legítimo. |

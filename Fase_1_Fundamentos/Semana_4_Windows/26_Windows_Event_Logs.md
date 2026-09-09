@@ -53,7 +53,7 @@ Rutas principales:
 
 -   **4625** repetido de una cuenta = posible **fuerza bruta**.
 -   **4624** tras muchos 4625 = acceso exitoso tras ataque.
--   El campo **Logon Type** ayuda: `2` (interactivo), `3` (red),
+-   El campo **<a href="../../GLOSARIO.md#logon-type" target="_blank">Logon Type</a>** ayuda: `2` (interactivo), `3` (red),
     `10` (RDP/RemoteInteractive). Muchos 4624 tipo `3` desde <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>
     externa pueden ser escaneo.
 
@@ -173,7 +173,7 @@ El Event ID 1102 indica:
 RDP?
 
 **A)** Logon Type\
-**B)** RID\
+**B)** <a href="../../GLOSARIO.md#rid" target="_blank">RID</a>\
 **C)** <a href="../../GLOSARIO.md#pid" target="_blank">PID</a>\
 **D)** <a href="../../GLOSARIO.md#mac" target="_blank">MAC</a>
 

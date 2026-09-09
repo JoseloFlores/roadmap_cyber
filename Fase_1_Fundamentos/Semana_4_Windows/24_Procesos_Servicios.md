@@ -94,7 +94,7 @@ No todo lo raro es malware, pero conviene conocer la línea base:
 -   `explorer.exe` (interfaz de usuario).
 
 `lsass.exe` es especialmente sensible: un atacante puede volcarlo
-(**LSASS dumping**) para robar hashes/NTLM.
+(**<a href="../../GLOSARIO.md#lsass" target="_blank">LSASS</a> dumping**) para robar hashes/<a href="../../GLOSARIO.md#ntlm" target="_blank">NTLM</a>.
 
 **6. Indicadores de proceso sospechoso**
 

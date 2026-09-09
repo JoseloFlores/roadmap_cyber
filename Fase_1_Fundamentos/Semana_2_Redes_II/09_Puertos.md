@@ -316,7 +316,7 @@ plano.
 
 **LDAP – 389/TCP**
 
-**Función:** Servicios de directorio (como Active Directory).
+**Función:** Servicios de directorio (como <a href="../../GLOSARIO.md#active-directory" target="_blank">Active Directory</a>).
 
 **HTTPS – 443/TCP**
 

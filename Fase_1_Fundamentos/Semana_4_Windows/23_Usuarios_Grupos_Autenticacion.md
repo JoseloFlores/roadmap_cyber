@@ -19,17 +19,17 @@ Al terminar deberías poder explicar:
 -   Qué es una cuenta de usuario local.
 -   Diferencia entre usuario estándar y administrador.
 -   Qué son los grupos y por qué se usan.
--   Qué es el UAC y cómo protege el sistema.
+-   Qué es el <a href="../../GLOSARIO.md#uac" target="_blank">UAC</a> y cómo protege el sistema.
 -   Qué es una contraseña, el bloqueo de cuenta y la política de bloqueo.
--   Diferencia entre los protocolos de autenticación **NTLM** y
-    **Kerberos**.
--   Qué es **Active Directory** y por qué cambia la escala del análisis.
+-   Diferencia entre los protocolos de autenticación **<a href="../../GLOSARIO.md#ntlm" target="_blank">NTLM</a>** y
+    **<a href="../../GLOSARIO.md#kerberos" target="_blank">Kerberos</a>**.
+-   Qué es **<a href="../../GLOSARIO.md#active-directory" target="_blank">Active Directory</a>** y por qué cambia la escala del análisis.
 
 **1. Cuentas de usuario locales**
 
 Windows identifica a cada persona o servicio mediante una **cuenta**. En
 un equipo aislado existen las **cuentas locales**, almacenadas en la
-base de datos **SAM** (`%SystemRoot%\System32\config\SAM`).
+base de datos **<a href="../../GLOSARIO.md#sam" target="_blank">SAM</a>** (`%SystemRoot%\System32\config\SAM`).
 
 Ejemplos típicos:
 
@@ -37,7 +37,7 @@ Ejemplos típicos:
 -   `Invitado` (cuenta limitada, normalmente deshabilitada).
 -   Cuentas de personas: `juan`, `Gonzalo`, `empleado01`.
 
-Cada cuenta tiene un **RID** (Relative Identifier). Por ejemplo, el
+Cada cuenta tiene un **<a href="../../GLOSARIO.md#rid" target="_blank">RID</a>** (Relative Identifier). Por ejemplo, el
 administrador local siempre termina en `-500`. Esto es útil en
 investigaciones: ver un RID `-500` significa que se usó la cuenta
 administrador integrada.
@@ -135,16 +135,16 @@ NTLM (más antiguo):
 
 -   Basado en un **desafío-respuesta** (challenge-response).
 -   No requiere un servidor de autoridad central.
--   Más vulnerable a ataques como **Pass-the-Hash** y **brujula de
+-   Más vulnerable a ataques como **<a href="../../GLOSARIO.md#pass-the-hash" target="_blank">Pass-the-Hash</a>** y **brujula de
     fuerza bruta**.
 
 Kerberos (dominio/Active Directory):
 
--   Basado en vales (**tickets**) emitidos por el **DC** (Domain
+-   Basado en vales (**tickets**) emitidos por el **<a href="../../GLOSARIO.md#dc" target="_blank">DC</a>** (Domain
     Controller).
--   Usa un **TGT** (Ticket Granting Ticket) y luego **service tickets**.
+-   Usa un **<a href="../../GLOSARIO.md#tgt" target="_blank">TGT</a>** (Ticket Granting Ticket) y luego **service tickets**.
 -   Más seguro, pero introduce objetivos como el **DC** y ataques como
-    **Kerberoasting** o **Golden Ticket**.
+    **<a href="../../GLOSARIO.md#kerberoasting" target="_blank">Kerberoasting</a>** o **<a href="../../GLOSARIO.md#golden-ticket" target="_blank">Golden Ticket</a>**.
 
 **7. Active Directory (introducción)**
 

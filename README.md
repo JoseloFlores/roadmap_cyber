@@ -98,6 +98,9 @@ Los módulos teóricos y prácticos correspondientes a la **Semana 4** se encuen
 7. **[Módulo 27. Seguridad de Windows](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_4_Windows/27_Seguridad_Windows.md)**: Defender, Firewall, BitLocker, Credential Guard, SmartScreen y defensa en profundidad.
 8. **[Módulo 28. Windows desde la perspectiva del atacante](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_4_Windows/28_Windows_Perspectiva_Atacante.md)**: Recon, escalada, persistencia, credential dumping, movimiento lateral y LOLBins.
 9. **[Módulo 29. Investigación SOC en Windows](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_4_Windows/29_Investigacion_SOC_Windows.md)**: Método de investigación, correlación de eventos, línea de tiempo y redacción de veredicto.
+10. **[Módulo 23b. Sistemas: Usuarios, grupos y autenticación (ampliado)](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_4_Windows/23b_Sistemas_Usuarios_Grupos_Autenticacion.md)**: Profundización sobre cuentas, grupos, SID, SAM, UAC, NTLM vs Kerberos, Active Directory y ataques a identidades, con examen de 10 preguntas.
+11. **[Módulo 23c. Kerberos + Active Directory (complementario)](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_4_Windows/23c_Sistemas_Kerberos_Active_Directory.md)**: AD, Domain Controller, OU, GPO y flujo completo de Kerberos (KDC, TGT, TGS, SPN) con ataques (Kerberoasting, Pass-the-Ticket, Golden Ticket), con examen.
+12. **[Módulo 24b. Sistemas: Procesos y servicios (ampliado)](file:///home/jo/Documentos/road_map_cyber/Fase_1_Fundamentos/Semana_4_Windows/24b_Sistemas_Procesos_Servicios.md)**: Profundización sobre procesos, PID, árbol de procesos, servicios, `svchost`, LSASS, persistencia y Living off the Land, con examen de 10 preguntas.
 
 ---
 

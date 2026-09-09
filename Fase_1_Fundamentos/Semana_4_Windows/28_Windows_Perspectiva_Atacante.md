@@ -37,7 +37,7 @@ horario o desde cuentas no administrativas.
 
 Busca pasar de usuario estándar a SYSTEM/Administrador. Técnicas:
 
--   Bypass UAC.
+-   Bypass <a href="../../GLOSARIO.md#uac" target="_blank">UAC</a>.
 -   Explotar servicio mal configurado.
 -   Abusar de tareas programadas.
 
@@ -59,8 +59,8 @@ Detección: revisar 7045, 4720, 4728 y claves de autoarranque.
 
 Roba credenciales en memoria:
 
--   Volcado de **LSASS** para obtener hashes/NTLM.
--   **Kerberoasting**: pide service tickets para crackearlos.
+-   Volcado de **<a href="../../GLOSARIO.md#lsass" target="_blank">LSASS</a>** para obtener hashes/<a href="../../GLOSARIO.md#ntlm" target="_blank">NTLM</a>.
+-   **<a href="../../GLOSARIO.md#kerberoasting" target="_blank">Kerberoasting</a>**: pide service tickets para crackearlos.
 
 Detección: herramientas como `mimikatz`, accesos anómalos a LSASS,
 muchas solicitudes de service tickets.
@@ -71,7 +71,7 @@ Una vez dentro de un equipo, salta a otros:
 
 -   **PsExec**: ejecución remota vía SMB.
 -   **WMI** / **WinRM**.
--   Uso de credenciales robadas (Pass-the-Hash).
+-   Uso de credenciales robadas (<a href="../../GLOSARIO.md#pass-the-hash" target="_blank">Pass-the-Hash</a>).
 
 Detección: inicios de sesión tipo 3 (red) hacia múltiples equipos,
 creación de procesos remotamente.
@@ -174,7 +174,7 @@ Volcar LSASS para robar hashes es:
 Kerberoasting ataca:
 
 **A)** El firewall\
-**B)** Service tickets de Active Directory\
+**B)** Service tickets de <a href="../../GLOSARIO.md#active-directory" target="_blank">Active Directory</a>\
 **C)** El registro\
 **D)** BitLocker
 

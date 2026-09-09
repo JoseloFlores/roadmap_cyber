@@ -723,7 +723,7 @@ Muestra los 10 últimos inicios de sesión.
 
 Lee las fuentes de cuentas configuradas.
 
-Puede incluir LDAP o Active Directory.
+Puede incluir LDAP o <a href="../../GLOSARIO.md#active-directory" target="_blank">Active Directory</a>.
 
 **Buscar un usuario específico**
 
@@ -928,7 +928,7 @@ Un atacante roba credenciales de otro sitio.
 
 Y las prueba en el sistema Linux.
 
-Esto se llama **credential stuffing**.
+Esto se llama **<a href="../../GLOSARIO.md#credential-stuffing" target="_blank">credential stuffing</a>**.
 
 **Cómo detectarlo**
 

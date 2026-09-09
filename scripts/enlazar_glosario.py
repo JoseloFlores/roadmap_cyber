@@ -85,7 +85,7 @@ def linkify_line(line, terms, rel, linked):
         if slug in linked:
             continue
         href = "%s#%s" % (rel, slug)
-        pat = r"(?<![A-Za-z0-9])" + re.escape(term) + r"(?![A-Za-z0-9])"
+        pat = r"(?<!\w)" + re.escape(term) + r"(?!\w)"
         def repl(m, h=href, s=slug, L=linked):
             L.add(s)
             return '<a href="%s" target="_blank">%s</a>' % (h, m.group(0))

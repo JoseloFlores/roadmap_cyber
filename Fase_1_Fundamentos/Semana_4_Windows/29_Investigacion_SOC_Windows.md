@@ -24,7 +24,7 @@ Analista SOC.
 
 Ante cualquier alerta, un analista responde siempre lo mismo:
 
--   **¿Quién?** (usuario, cuenta, RID).
+-   **¿Quién?** (usuario, cuenta, <a href="../../GLOSARIO.md#rid" target="_blank">RID</a>).
 -   **¿Qué?** (proceso, servicio, archivo).
 -   **¿Cuándo?** (timestamp).
 -   **¿Desde dónde?** (ruta, equipo, <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>).

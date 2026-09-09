@@ -940,7 +940,7 @@ Eso es **investigación basada en evidencia**.
 
 ¿Cómo podemos defender un sistema Windows?
 
-**Principio de mínimo privilegio**
+**Principio de <a href="../../GLOSARIO.md#minimo-privilegio" target="_blank">mínimo privilegio</a>**
 
 Los usuarios deben tener solamente los permisos necesarios.
 
@@ -1000,7 +1000,7 @@ svch0st.exe
 
 La segunda utiliza 0 en lugar de o.
 
-Esto puede ser un intento de **masquerading**.
+Esto puede ser un intento de **<a href="../../GLOSARIO.md#masquerading" target="_blank">masquerading</a>**.
 
 **🧠 35. Concepto clave: Masquerading**
 
