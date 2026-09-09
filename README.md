@@ -119,9 +119,8 @@ Este proyecto es posible gracias al valioso aporte de los siguientes colaborador
 
 | Colaborador | Rol / Contribución | GitHub |
 | :--- | :--- | :--- |
-| <img src="https://avatars.githubusercontent.com/u/185236384?v=4" width="40" height="40" style="border-radius:50%"/> <br> **[Nombre Colaborador 1]** | Liderazgo del Roadmap / Redacción de Apuntes | [Gonzalo](https://github.com/GonzaloAtadia) |
-| <img src="https://github.com/identicons/user2.png" width="40" height="40" style="border-radius:50%"/> <br> **[Nombre Colaborador 2]** | Diseño del Repositorio / Laboratorios Prácticos | [@colaborador2](https://github.com/github_username_2) |
-| <img src="https://avatars.githubusercontent.com/u/70613354?v=4" width="40" height="40" style="border-radius:50%"/> <br> **[Jo!]** | Documentacion/ Revisión Técnica | [@Jo!](https://github.com/JoseloFlores) |
+| <img src="https://avatars.githubusercontent.com/u/185236384?v=4" width="40" height="40" style="border-radius:50%"/> <br> **Gonzalo** | Liderazgo del Roadmap / Redacción de Apuntes | [Gonzalo](https://github.com/GonzaloAtadia) |
+| <img src="https://avatars.githubusercontent.com/u/70613354?v=4" width="40" height="40" style="border-radius:50%"/> <br> **Jo]** | Documentacion/ Revisión Técnica | [Jo!](https://github.com/JoseloFlores) |
 
 > 💡 *Si deseas aparecer en esta sección, lee las instrucciones de contribución a continuación.*
 
