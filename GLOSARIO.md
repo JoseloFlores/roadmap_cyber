@@ -164,3 +164,30 @@ Este glosario contiene los términos, siglas y acrónimos más críticos e impor
 | <a id="masquerading"></a>**Masquerading** | *Suplantación de nombre* | Técnica de evasión donde el atacante nombra o ubica un archivo para que parezca legítimo (ej. `svch0st.exe`). |
 | <a id="living-off-the-land"></a>**Living off the Land** | *Living off the Land (LotL)* | Abuso de herramientas legítimas ya presentes en el sistema (PowerShell, WMI, `rundll32`) para realizar acciones maliciosas. |
 | <a id="process-injection"></a>**Process Injection** | *Inyección de procesos* | Familia de técnicas donde código malicioso intenta ejecutarse dentro del contexto de otro proceso legítimo. |
+| <a id="lolbin"></a>**LOLBin** | *Living Off The Land Binary* | Binario legítimo de Windows que puede ser abusado con fines maliciosos (ej. `certutil` para descargar, `bitsadmin`, `wmic`). |
+| <a id="baseline"></a>**Baseline** | *Línea base* | Estado normal de referencia de un sistema o red; permite detectar anomalías por comparación. |
+
+---
+
+## 🖥️ 9. CLI, Logs y Defensas de Windows
+
+| Sigla | Nombre Completo | Descripción |
+| :--- | :--- | :--- |
+| <a id="cmd"></a>**CMD** | *Command Prompt (`cmd.exe`)* | Consola clásica de Windows; permite ejecutar comandos de reconocimiento y administración (`whoami`, `ipconfig`, `netstat`, `tasklist`). Abusada para descubrimiento y ejecución. |
+| <a id="powershell"></a>**PowerShell** | *PowerShell (`powershell.exe`)* | Shell potente de Windows con acceso a .NET/WMI; usa cmdlets (`Get-Process`, `Get-Service`). Su parámetro `-EncodedCommand` y `IEX` son indicadores SOC clave. |
+| <a id="command-line"></a>**Command Line** | *Línea de comandos* | Argumentos completos con los que se lanzó un proceso; revela descargas, ofuscación y ejecución (clave en Event ID 4688). |
+| <a id="event-viewer"></a>**Event Viewer** | *Visor de eventos (`eventvwr.msc`)* | Herramienta gráfica de Windows para consultar los registros Security, System, Application y PowerShell. |
+| <a id="event-id"></a>**Event ID** | *ID de evento* | Número que identifica el tipo de evento Windows (ej. 4624 logon exitoso, 4625 fallido, 4688 creación de proceso). |
+| <a id="4624"></a>**4624** | *Successful Logon* | Inicio de sesión exitoso; se analiza con usuario, IP/origen, Logon Type y actividad posterior. |
+| <a id="4625"></a>**4625** | *Failed Logon* | Inicio de sesión fallido; múltiples 4625 sugieren fuerza bruta o password spraying. |
+| <a id="4688"></a>**4688** | *Process Creation* | Creación de proceso (requiere Audit Process Creation); muestra nombre, PID, PPID y línea de comandos. |
+| <a id="7045"></a>**7045** | *Service Installation* | Instalación de un servicio en el log System; técnica común de persistencia. |
+| <a id="1102"></a>**1102** | *Audit Log Cleared* | Borrado del log de seguridad; suele indicar intento de encubrimiento y es alerta grave. |
+| <a id="source-network-address"></a>**Source Network Address** | *Dirección IP de origen* | Campo del evento 4624/4625 que indica desde qué IP se originó el logon; clave para distinguir acceso local vs remoto. |
+| <a id="windows-defender"></a>**Windows Defender** | *Microsoft Defender* | Conjunto de capacidades de seguridad de Microsoft (antivirus/antimalware, firewall, protección de apps y cuentas); detecta por firmas y comportamiento. |
+| <a id="firewall-windows"></a><a id="firewall-de-windows"></a>**Firewall de Windows** | *Windows Defender Firewall* | Controla tráfico entrante/saliente por perfiles (Dominio, Privado, Público); el SOC investiga conexiones salientes injustificadas. |
+| <a id="bitlocker"></a>**BitLocker** | *BitLocker* | Cifrado de disco de Windows que protege datos en reposo; no detiene a un atacante con sesión iniciada. |
+| <a id="credential-guard"></a>**Credential Guard** | *Credential Guard* | Aísla secretos (hashes de LSASS) con virtualización (VBS); dificulta el LSASS dumping. |
+| <a id="smartscreen"></a>**SmartScreen** | *SmartScreen* | Filtro de descargas y ejecutables de internet; el atacante intenta evadirlo o desactivarlo. |
+| <a id="applocker"></a>**AppLocker** | *AppLocker / WDAC* | Control de aplicaciones por política (permite/bloquea ejecución); el atacante busca LOLBins ya permitidos. |
+| <a id="script-block-logging"></a>**Script Block Logging** | *Registro de bloques de script* | Logging de PowerShell (Event ID 4104) que registra el script ejecutado; vital para analizar comandos ofuscados. |

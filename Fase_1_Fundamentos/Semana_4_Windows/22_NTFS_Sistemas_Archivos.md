@@ -238,9 +238,9 @@ componentes de 64 bits del sistema.
 
 Aquí podemos encontrar ejecutables legítimos como:
 
-cmd.exe
+<a href="../../GLOSARIO.md#cmd" target="_blank">cmd.exe</a>
 
-powershell.exe
+<a href="../../GLOSARIO.md#powershell" target="_blank">powershell</a>.exe
 
 taskmgr.exe
 

@@ -608,7 +608,7 @@ Los atacantes instalan persistencia como servicios.
 Un servicio nuevo y desconocido es un gran indicador de compromiso.
 
 Si `systemctl status mysteryservice` muestra algo que no está en tu
-baseline, investiga.
+<a href="../../GLOSARIO.md#baseline" target="_blank">baseline</a>, investiga.
 
 **11. ¿Cómo aprovechan esto los atacantes?**
 

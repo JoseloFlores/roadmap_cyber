@@ -173,7 +173,7 @@ Servicio iniciado
 
 Conexión de red
 
-PowerShell ejecutado
+<a href="../../GLOSARIO.md#powershell" target="_blank">PowerShell</a> ejecutado
 
 Antivirus detectó malware
 
@@ -329,7 +329,7 @@ explorer.exe
 
 powershell.exe
 
-cmd.exe
+<a href="../../GLOSARIO.md#cmd" target="_blank">cmd.exe</a>
 
 svchost.exe
 
@@ -373,7 +373,7 @@ Ejemplos:
 
 -   Windows Update.
 
--   Windows Defender.
+-   <a href="../../GLOSARIO.md#windows-defender" target="_blank">Windows Defender</a>.
 
 -   <a href="../../GLOSARIO.md#dhcp" target="_blank">DHCP</a> Client.
 

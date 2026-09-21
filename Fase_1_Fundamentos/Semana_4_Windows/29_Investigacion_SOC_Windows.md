@@ -15,7 +15,7 @@ Analista SOC.
 **🎯 Objetivos de este módulo**
 
 -   Aplicar el método de investigación basado en preguntas.
--   Correlacionar Event <a href="../../GLOSARIO.md#ids" target="_blank">IDs</a> (4625 → 4624 → 4688 → red).
+-   Correlacionar Event <a href="../../GLOSARIO.md#event-id" target="_blank">IDs</a> (<a href="../../GLOSARIO.md#4625" target="_blank">4625</a> → <a href="../../GLOSARIO.md#4624" target="_blank">4624</a> → <a href="../../GLOSARIO.md#4688" target="_blank">4688</a> → red).
 -   Usar una línea de tiempo para ordenar los hechos.
 -   Redactar un veredicto y las siguientes acciones.
 -   Conectar lo aprendido con las próximas fases (Sysmon, <a href="../../GLOSARIO.md#siem" target="_blank">SIEM</a>).
@@ -44,7 +44,7 @@ Ordena los eventos por hora. Ejemplo:
 
 10:34 — conexión <a href="../../GLOSARIO.md#tcp" target="_blank">TCP</a> 443 a 203.0.113.50
 
-10:35 — 7045 (servicio `ActualizadorX`)
+10:35 — <a href="../../GLOSARIO.md#7045" target="_blank">7045</a> (servicio `ActualizadorX`)
 
 La secuencia revela un ataque, no eventos aislados.
 
@@ -62,7 +62,7 @@ Preguntas:
 Veredicto probable: ataque de fuerza bruta; investigar si hubo acceso
 exitoso.
 
-**4. Caso práctico B: PowerShell sospechoso**
+**4. Caso práctico B: <a href="../../GLOSARIO.md#powershell" target="_blank">PowerShell</a> sospechoso**
 
 Alerta: 4688 `powershell.exe` con padre `outlook.exe`, parámetro
 `-enc`.
@@ -247,7 +247,7 @@ La habilidad de correlacionar eventos a mano sirve para:
 -   ✅ **Módulo 22 — NTFS y sistema de archivos**
 -   ✅ **Módulo 23 — Usuarios, grupos y autenticación**
 -   ✅ **Módulo 24 — Procesos y servicios**
--   ✅ **Módulo 25 — CMD y PowerShell**
+-   ✅ **Módulo 25 — <a href="../../GLOSARIO.md#cmd" target="_blank">CMD</a> y PowerShell**
 -   ✅ **Módulo 26 — Windows Event Logs**
 -   ✅ **Módulo 27 — Seguridad de Windows**
 -   ✅ **Módulo 28 — Windows desde la perspectiva del atacante**
