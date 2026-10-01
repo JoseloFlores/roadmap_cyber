@@ -538,7 +538,7 @@ Solo uno necesita existir para contactar con el servidor C2.
 
 **Caso 1**
 
-Log:
+<a href="../../GLOSARIO.md#log" target="_blank">Log</a>:
 
 Consulta:
 

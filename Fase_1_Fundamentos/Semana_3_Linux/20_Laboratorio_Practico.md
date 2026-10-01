@@ -74,7 +74,7 @@ Al finalizar este laboratorio podrás:
 
 - Gestionar procesos con `ps`, `top` y `kill`.
 
-- Detectar patrones de fuerza bruta en los logs.
+- Detectar patrones de <a href="../../GLOSARIO.md#fuerza-bruta" target="_blank">fuerza bruta</a> en los logs.
 
 **Requisitos**
 
@@ -736,7 +736,7 @@ En distribuciones basadas en Red Hat (como CentOS, Fedora o Rocky), el archivo e
 
 Para este laboratorio asumimos que usas Ubuntu o Debian.
 
-**Paso 1: Verificar que el log existe**
+**Paso 1: Verificar que el <a href="../../GLOSARIO.md#log" target="_blank">log</a> existe**
 
 Ejecuta:
 

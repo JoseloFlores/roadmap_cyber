@@ -822,7 +822,7 @@ Si `/etc/shadow` fuera legible por todos:
 
 Cualquier usuario podría copiar los hashes.
 
-Y después intentar crackearlos con herramientas de fuerza bruta.
+Y después intentar crackearlos con herramientas de <a href="../../GLOSARIO.md#fuerza-bruta" target="_blank">fuerza bruta</a>.
 
 **Ataque 2 – Binarios con setuid mal configurados**
 
@@ -924,7 +924,7 @@ El grupo `shadow` puede leerlo porque los servicios necesitan verificar contrase
 
 **No usar `777` nunca**
 
-`chmod 777` es una bandera roja en cualquier auditoría.
+`chmod 777` es una bandera roja en cualquier <a href="../../GLOSARIO.md#auditoria" target="_blank">auditoría</a>.
 
 Significa que cualquiera puede leer, modificar y ejecutar.
 
@@ -1032,7 +1032,7 @@ Interpretación:
 
 Protección correcta.
 
-Si un log fuera escribible por others, el atacante podría borrar sus huellas.
+Si un <a href="../../GLOSARIO.md#log" target="_blank">log</a> fuera escribible por others, el atacante podría borrar sus huellas.
 
 **Caso 4 – Revisar directorios world-writable**
 

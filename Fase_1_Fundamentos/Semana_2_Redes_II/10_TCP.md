@@ -58,7 +58,7 @@ Al finalizar este módulo podrás:
 
 - Identificar ataques contra TCP como SYN Flood y escaneos.
 
-- Relacionar TCP con el movimiento lateral y la fuerza bruta.
+- Relacionar TCP con el movimiento lateral y la <a href="../../GLOSARIO.md#fuerza-bruta" target="_blank">fuerza bruta</a>.
 
 - Aplicar estos conocimientos en investigaciones de un SOC.
 
@@ -406,7 +406,7 @@ Origen 203.0.113.50 → Destino Servidor interno → TCP → Puerto 3389 → **B
 
 Interpretación: el firewall bloqueó un intento de acceso RDP.
 
-**Log de un firewall**
+**<a href="../../GLOSARIO.md#log" target="_blank">Log</a> de un firewall**
 
 Registro típico:
 

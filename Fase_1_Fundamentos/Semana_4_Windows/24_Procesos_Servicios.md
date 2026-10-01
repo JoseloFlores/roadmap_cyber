@@ -2160,7 +2160,7 @@ Contexto
 
 ↓
 
-Correlación
+<a href="../../GLOSARIO.md#correlacion" target="_blank">Correlación</a>
 
 ↓
 

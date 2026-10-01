@@ -84,7 +84,7 @@ Grupos importantes en Windows:
     Remoto.
 -   **Backup Operators**: pueden leer cualquier archivo (incluso los
     protegidos) para respaldos.
--   **Event Log Readers**: pueden leer logs (a veces abusado por
+-   **Event <a href="../../GLOSARIO.md#log" target="_blank">Log</a> Readers**: pueden leer logs (a veces abusado por
     atacantes para leer credenciales en logs).
 
 **4. UAC (User Account Control)**
@@ -117,12 +117,12 @@ la cuenta. Windows puede aplicar:
     bloquea durante un tiempo.
 
 Para un SOC, muchos bloqueos seguidos de una misma cuenta pueden indicar
-un **ataque de fuerza bruta** o un usuario que simplemente olvidó la
+un **ataque de <a href="../../GLOSARIO.md#fuerza-bruta" target="_blank">fuerza bruta</a>** o un usuario que simplemente olvidó la
 contraseña.
 
 **6. NTLM vs Kerberos**
 
-Son los dos protocolos de autenticación principales de Windows.
+Son los <a href="../../GLOSARIO.md#dos" target="_blank">dos</a> protocolos de autenticación principales de Windows.
 
 NTLM (más antiguo):
 
@@ -1884,7 +1884,7 @@ Esto facilita:
 
 -   Administración.
 
--   Auditoría.
+-   <a href="../../GLOSARIO.md#auditoria" target="_blank">Auditoría</a>.
 
 -   Cambios de personal.
 

@@ -318,7 +318,7 @@ Porque indica un intento de autenticación.
 
 Muchos ataques envían cientos o miles de POST a la misma ruta.
 
-- Fuerza bruta contra un portal.
+- <a href="../../GLOSARIO.md#fuerza-bruta" target="_blank">Fuerza bruta</a> contra un portal.
 
 - Relleno de credenciales (<a href="../../GLOSARIO.md#credential-stuffing" target="_blank">credential stuffing</a>).
 
@@ -442,7 +442,7 @@ curl/7.68.0
 
 python-requests/2.25.1
 
-Cuando un log muestra **curl** o **python-requests**, no es un navegador.
+Cuando un <a href="../../GLOSARIO.md#log" target="_blank">log</a> muestra **curl** o **python-requests**, no es un navegador.
 
 Es una herramienta.
 

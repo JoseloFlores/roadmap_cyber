@@ -206,7 +206,7 @@ PsExec suele asociarse a:
 
 **🔹 Pregunta 8**
 
-El borrado del log de seguridad (1102) suele ser:
+El borrado del <a href="../../GLOSARIO.md#log" target="_blank">log</a> de seguridad (1102) suele ser:
 
 **A)** Mantenimiento\
 **B)** Intento de encubrir evidencias\
@@ -227,7 +227,7 @@ cuenta hacia muchos servidores en minutos. Sugiere:
 
 Relaciona: 4720 + 4728 + 7045 en poco tiempo apunta a:
 
-**A)** Fuerza bruta\
+**A)** <a href="../../GLOSARIO.md#fuerza-bruta" target="_blank">Fuerza bruta</a>\
 **B)** Persistencia con cuenta y servicio privilegiados\
 **C)** Phishing de correo\
 **D)** Spam
@@ -865,7 +865,7 @@ Después de esta introducción a la perspectiva atacante, la progresión que te 
 
 - indicadores
 
-- correlación SIEM
+- <a href="../../GLOSARIO.md#correlacion" target="_blank">correlación</a> SIEM
 
 **8. Caso práctico SOC**
 

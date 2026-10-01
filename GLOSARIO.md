@@ -191,3 +191,25 @@ Este glosario contiene los términos, siglas y acrónimos más críticos e impor
 | <a id="smartscreen"></a>**SmartScreen** | *SmartScreen* | Filtro de descargas y ejecutables de internet; el atacante intenta evadirlo o desactivarlo. |
 | <a id="applocker"></a>**AppLocker** | *AppLocker / WDAC* | Control de aplicaciones por política (permite/bloquea ejecución); el atacante busca LOLBins ya permitidos. |
 | <a id="script-block-logging"></a>**Script Block Logging** | *Registro de bloques de script* | Logging de PowerShell (Event ID 4104) que registra el script ejecutado; vital para analizar comandos ofuscados. |
+
+---
+
+## 📝 10. Gestión de Logs y Análisis SOC
+
+| Sigla | Nombre Completo | Descripción |
+| :--- | :--- | :--- |
+| <a id="log"></a>**Log** | *Log / Registro* | Registro de acontecimientos que ocurrieron en un sistema; materia prima del SOC para detectar e investigar. |
+| <a id="raw-log"></a>**Raw Log** | *Log en crudo* | Log nativo en formato original (texto plano, XML, syslog) leído sin ayuda del SIEM; base de la Semana 5. |
+| <a id="timestamp"></a>**Timestamp** | *Marca de tiempo* | Fecha y hora de un evento; columna vertebral de la línea de tiempo y la correlación. Requiere NTP confiable. |
+| <a id="facility"></a>**Facility** | *Facility (Syslog)* | Campo Syslog que indica quién genera el mensaje (auth, kern, cron, daemon, mail). |
+| <a id="severity"></a>**Severity** | *Severity (Syslog)* | Gravedad Syslog de 0 (emerg) a 7 (debug); permite priorizar qué mirar primero. |
+| <a id="rsyslog"></a>**Rsyslog** | *Rsyslog* | Servicio Linux que escribe, rota y reenvía Syslog local o al SIEM (clásico UDP/TCP 514). |
+| <a id="journalctl"></a>**Journalctl** | *Journalctl* | Visor de `systemd-journald`; filtra por servicio (`-u`), severidad (`-p`) y tiempo (`--since`). |
+| <a id="log-rotation"></a>**Log Rotation** | *Rotación de logs* | Mecanismo que rota, comprime (`auth.log.1`, `.gz`) y purga logs viejos; define la ventana investigable. |
+| <a id="retencion"></a>**Retención** | *Retención de logs* | Tiempo que se conservan los logs (local vs SIEM); si expira, solo queda la copia centralizada. |
+| <a id="normalizacion"></a>**Normalización** | *Normalización* | Conversión de formatos distintos (Syslog, XML) a campos comunes (`_time`, `src_ip`, `user`) para correlacionar en el SIEM. |
+| <a id="correlacion"></a>**Correlación** | *Correlación de eventos* | Unión de eventos aislados (4625→4624→4688→red) para reconstruir un comportamiento o incidente. |
+| <a id="auditoria"></a>**Auditoría** | *Auditoría* | Propiedad de que el log sea completo, con timestamp confiable y difícil de borrar; permite probar lo ocurrido. |
+| <a id="fuerza-bruta"></a>**Fuerza Bruta** | *Brute Force* | Ataque que prueba muchas contraseñas contra una cuenta; deja muchos fallos (4625 / `Failed password`) y a veces un éxito. |
+| <a id="falso-positivo"></a>**Falso Positivo** | *False Positive* | Alerta sobre actividad legítima (usuario que olvidó password); el analista debe descartarla con baseline. |
+| <a id="falso-negativo"></a>**Falso Negativo** | *False Negative* | Ataque real que no generó alerta; el riesgo mayor, se caza con baseline y hunting. |

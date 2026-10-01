@@ -777,7 +777,7 @@ DNS
 
 <a href="../../GLOSARIO.md#https" target="_blank">HTTPS</a>
 
-Esto es **correlación de eventos**.
+Esto es **<a href="../../GLOSARIO.md#correlacion" target="_blank">correlación</a> de eventos**.
 
 Y es precisamente una de las habilidades que vamos a desarrollar durante
 esta etapa.

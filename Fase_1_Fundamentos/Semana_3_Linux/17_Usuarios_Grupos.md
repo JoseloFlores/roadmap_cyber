@@ -337,7 +337,7 @@ Si un atacante obtiene el archivo, puede intentar:
 
 - Romper los hashes con diccionarios.
 
-- Romper los hashes con fuerza bruta.
+- Romper los hashes con <a href="../../GLOSARIO.md#fuerza-bruta" target="_blank">fuerza bruta</a>.
 
 - Reutilizar hashes en otras máquinas.
 
@@ -399,7 +399,7 @@ Para desbloquear:
 
 Un atacante no puede leer `/etc/shadow` sin ser `root`.
 
-Si el archivo aparece en un log de exfiltración, es una emergencia.
+Si el archivo aparece en un <a href="../../GLOSARIO.md#log" target="_blank">log</a> de exfiltración, es una emergencia.
 
 **5. El archivo `/etc/group`**
 
@@ -838,7 +838,7 @@ Interpretación de los campos:
 
 **Pista para el SOC**
 
-Revisar `/etc/sudoers` es parte de una auditoría.
+Revisar `/etc/sudoers` es parte de una <a href="../../GLOSARIO.md#auditoria" target="_blank">auditoría</a>.
 
 Un usuario con permiso a `ALL` en un comando peligroso puede escalar.
 

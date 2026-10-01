@@ -706,7 +706,7 @@ Piensa en este orden:
 
 5.  **El firewall** controla qué comunicaciones pueden pasar entre subredes.
 
-Cuando analices un log en un SOC, acostúmbrate a hacer este razonamiento:
+Cuando analices un <a href="../../GLOSARIO.md#log" target="_blank">log</a> en un SOC, acostúmbrate a hacer este razonamiento:
 
 -   ¿Origen y destino están en la misma subred?
 

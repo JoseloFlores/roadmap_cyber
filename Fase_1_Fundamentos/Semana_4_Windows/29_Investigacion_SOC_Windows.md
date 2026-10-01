@@ -5,7 +5,7 @@
 **Módulo 29: Investigación SOC en Windows**
 
 **Nivel:** Principiante → Analista SOC Nivel 1\
-**Enfoque:** Aplicación práctica + Correlación de eventos
+**Enfoque:** Aplicación práctica + <a href="../../GLOSARIO.md#correlacion" target="_blank">Correlación</a> de eventos
 
 Este es el módulo que une todo lo aprendido. Ya no estudiamos una sola
 pieza: aprendemos a **reconstruir la historia de un incidente** uniendo
@@ -26,7 +26,7 @@ Ante cualquier alerta, un analista responde siempre lo mismo:
 
 -   **¿Quién?** (usuario, cuenta, <a href="../../GLOSARIO.md#rid" target="_blank">RID</a>).
 -   **¿Qué?** (proceso, servicio, archivo).
--   **¿Cuándo?** (timestamp).
+-   **¿Cuándo?** (<a href="../../GLOSARIO.md#timestamp" target="_blank">timestamp</a>).
 -   **¿Desde dónde?** (ruta, equipo, <a href="../../GLOSARIO.md#ip" target="_blank">IP</a>).
 -   **¿Proceso padre?** (quién lo lanzó).
 -   **¿Con qué red se comunicó?** (IP, dominio, puerto).
@@ -48,7 +48,7 @@ Ordena los eventos por hora. Ejemplo:
 
 La secuencia revela un ataque, no eventos aislados.
 
-**3. Caso práctico A: Fuerza bruta**
+**3. Caso práctico A: <a href="../../GLOSARIO.md#fuerza-bruta" target="_blank">Fuerza bruta</a>**
 
 Alerta: 40 eventos 4625 en 1 minuto para `admin`.
 
@@ -97,7 +97,7 @@ Un buen informe SOC incluye:
 
 1.  Resumen (qué pasó).
 2.  Línea de tiempo.
-3.  Evidencia (Event IDs, <a href="../../GLOSARIO.md#ips" target="_blank">IPs</a>, rutas).
+3.  Evidencia (Event <a href="../../GLOSARIO.md#ids" target="_blank">IDs</a>, <a href="../../GLOSARIO.md#ips" target="_blank">IPs</a>, rutas).
 4.  Nivel de confianza.
 5.  Acciones recomendadas (aislar, cazar, bloquear IP, rotar
     credenciales).

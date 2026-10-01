@@ -284,7 +284,7 @@ Aquí aparecen los **puertos**.
 
 -   Escaneo de puertos.
 
--   Fuerza bruta sobre SSH o RDP.
+-   <a href="../../GLOSARIO.md#fuerza-bruta" target="_blank">Fuerza bruta</a> sobre SSH o RDP.
 
 **Defensa**
 

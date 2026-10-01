@@ -376,7 +376,7 @@ Internet → Puerto 3389 → Servidor Windows
 
 Si el acceso está expuesto sin controles adecuados:
 
--   Ataques de fuerza bruta.
+-   Ataques de <a href="../../GLOSARIO.md#fuerza-bruta" target="_blank">fuerza bruta</a>.
 
 -   Robo de credenciales.
 
@@ -470,7 +470,7 @@ Primero debes revisar:
 
 **13. Lo que esperan de un Analista SOC Nivel 1**
 
-Cuando observes un log como este:
+Cuando observes un <a href="../../GLOSARIO.md#log" target="_blank">log</a> como este:
 
 Origen:
 

@@ -318,7 +318,7 @@ Herramientas comunes:
 
 -   RustScan
 
-**Fuerza bruta**
+**<a href="../../GLOSARIO.md#fuerza-bruta" target="_blank">Fuerza bruta</a>**
 
 Si encuentra abiertos:
 
@@ -614,7 +614,7 @@ Debes poder responder preguntas como:
 
 **💡 Consejo como si estuviera formando a un futuro analista SOC**
 
-No memorices solo las definiciones. Cuando veas una IP en un log, acostúmbrate a preguntarte automáticamente:
+No memorices solo las definiciones. Cuando veas una IP en un <a href="../../GLOSARIO.md#log" target="_blank">log</a>, acostúmbrate a preguntarte automáticamente:
 
 1.  ¿Es pública o privada?
 

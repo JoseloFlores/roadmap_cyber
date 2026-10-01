@@ -26,7 +26,7 @@ Este módulo unifica la referencia de defensas (Defender, Firewall, <a href="../
 Protección en tiempo real contra malware. Genera eventos cuando detecta
 o **bloquea** una amenaza. Un SOC revisa:
 
--   Detecciones de Defender (log de *Microsoft-Windows-Windows
+-   Detecciones de Defender (<a href="../../GLOSARIO.md#log" target="_blank">log</a> de *Microsoft-Windows-Windows
     Defender/Operational*).
 -   Intentos de **desactivar** Defender (cambios en registro o
     política).
@@ -145,7 +145,7 @@ Un equipo sin Windows Update es vulnerable a:
 **A)** Phishing de correo\
 **B)** Exploits conocidos ya parcheados\
 **C)** Borrado de logs\
-**D)** Fuerza bruta de red
+**D)** <a href="../../GLOSARIO.md#fuerza-bruta" target="_blank">Fuerza bruta</a> de red
 
 **🔹 Pregunta 5**
 
@@ -377,7 +377,7 @@ Red
 
 Usuario
 
-Y volvemos a la correlación.
+Y volvemos a la <a href="../../GLOSARIO.md#correlacion" target="_blank">correlación</a>.
 
 **5. Defender no es lo mismo que un SIEM**
 

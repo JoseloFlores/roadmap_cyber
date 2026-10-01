@@ -314,7 +314,7 @@ La shell más común en Linux es **<a href="../../GLOSARIO.md#bash" target="_bla
 
 **El CLI**
 
-CLI significa **Command Line Interface** (Interfaz de Línea de Comandos).
+CLI significa **<a href="../../GLOSARIO.md#command-line" target="_blank">Command Line</a> Interface** (Interfaz de Línea de Comandos).
 
 Es la forma de trabajar escribiendo comandos, en lugar de hacer clic.
 
@@ -763,7 +763,7 @@ Antes de eliminar cualquier archivo:
 
 - Verifica que es el correcto.
 
-- Asegúrate de que no es un log que necesites para una investigación.
+- Asegúrate de que no es un <a href="../../GLOSARIO.md#log" target="_blank">log</a> que necesites para una investigación.
 
 - Confirma que no es evidencia de un incidente.
 
@@ -1342,7 +1342,7 @@ Como analista, aprenderás a buscar procesos anómalos.
 
 **Tarea 4 – Responder un incidente rápido**
 
-Imagina una alerta de fuerza bruta SSH.
+Imagina una alerta de <a href="../../GLOSARIO.md#fuerza-bruta" target="_blank">fuerza bruta</a> SSH.
 
 El analista:
 

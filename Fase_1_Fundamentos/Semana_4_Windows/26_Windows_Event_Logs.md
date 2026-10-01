@@ -7,12 +7,12 @@
 **Nivel:** Principiante → Analista SOC Nivel 1\
 **Enfoque:** Detección + Análisis de eventos de seguridad
 
-Este módulo unifica la referencia de Event <a href="../../GLOSARIO.md#event-id" target="_blank">IDs</a> (<a href="../../GLOSARIO.md#4624" target="_blank">4624</a>/<a href="../../GLOSARIO.md#4625" target="_blank">4625</a>/4672/<a href="../../GLOSARIO.md#4688" target="_blank">4688</a>/4720/<a href="../../GLOSARIO.md#7045" target="_blank">7045</a>/<a href="../../GLOSARIO.md#1102" target="_blank">1102</a>, Logon Type) con la guía larga (<a href="../../GLOSARIO.md#event-viewer" target="_blank">Event Viewer</a>, Security/System/Application, correlación, <a href="../../GLOSARIO.md#powershell" target="_blank">PowerShell</a> logging, SIEM) y la profundización 4624/4625/4688 (Logon Type, <a href="../../GLOSARIO.md#source-network-address" target="_blank">Source Network Address</a>, brute force vs <a href="../../GLOSARIO.md#password-spraying" target="_blank">password spraying</a>).
+Este módulo unifica la referencia de Event <a href="../../GLOSARIO.md#event-id" target="_blank">IDs</a> (<a href="../../GLOSARIO.md#4624" target="_blank">4624</a>/<a href="../../GLOSARIO.md#4625" target="_blank">4625</a>/4672/<a href="../../GLOSARIO.md#4688" target="_blank">4688</a>/4720/<a href="../../GLOSARIO.md#7045" target="_blank">7045</a>/<a href="../../GLOSARIO.md#1102" target="_blank">1102</a>, Logon Type) con la guía larga (<a href="../../GLOSARIO.md#event-viewer" target="_blank">Event Viewer</a>, Security/System/Application, <a href="../../GLOSARIO.md#correlacion" target="_blank">correlación</a>, <a href="../../GLOSARIO.md#powershell" target="_blank">PowerShell</a> logging, SIEM) y la profundización 4624/4625/4688 (Logon Type, <a href="../../GLOSARIO.md#source-network-address" target="_blank">Source Network Address</a>, brute force vs <a href="../../GLOSARIO.md#password-spraying" target="_blank">password spraying</a>).
 
 **🎯 Objetivos del módulo**
 
 -   Abrir el **Visor de eventos** (`eventvwr.msc`) y distinguir Security/System/Application/PowerShell.
--   Memorizar los **Event IDs** clave y su significado SOC.
+-   Memorizar los **Event <a href="../../GLOSARIO.md#ids" target="_blank">IDs</a>** clave y su significado SOC.
 -   Diferenciar 4624 vs 4625 y usar Logon Type (2 interactivo, 3 red, 10 RDP).
 -   Correlacionar 4625→4624→4688→red para reconstruir incidentes.
 
@@ -27,7 +27,7 @@ Este módulo unifica la referencia de Event <a href="../../GLOSARIO.md#event-id"
 
 Rutas principales:
 
--   **Registros de Windows → Seguridad**: auditoría de inicios,
+-   **Registros de Windows → Seguridad**: <a href="../../GLOSARIO.md#auditoria" target="_blank">auditoría</a> de inicios,
     privilegios, cuenta.
 -   **Registros de Windows → Sistema**: arranque, controladores,
     errores.
@@ -40,7 +40,7 @@ Rutas principales:
 | <a href="../../GLOSARIO.md#event-id" target="_blank">Event ID</a> | Significado | Por qué importa al SOC |
 | :--- | :--- | :--- |
 | **4624** | Inicio de sesión exitoso | ¿De dónde? ¿A qué hora? |
-| **4625** | Inicio de sesión fallido | Fuerza bruta, usuario erróneo |
+| **4625** | Inicio de sesión fallido | <a href="../../GLOSARIO.md#fuerza-bruta" target="_blank">Fuerza bruta</a>, usuario erróneo |
 | **4672** | Privilegios especiales asignados | Posible elevación |
 | **4688** | Creación de proceso | ¿Qué se ejecutó y con qué padre? |
 | **4689** | Fin de proceso | Cierre de la ejecución |
@@ -49,7 +49,7 @@ Rutas principales:
 | **4728** | Miembro agregado a grupo (global) | Escalada de privilegios |
 | **4732** | Miembro agregado a grupo (local) | Escalada local |
 | **7045** | Instalación de servicio | Persistencia vía servicio |
-| **1102** | Borrado de log de seguridad | Intento de encubrimiento |
+| **1102** | Borrado de <a href="../../GLOSARIO.md#log" target="_blank">log</a> de seguridad | Intento de encubrimiento |
 
 **3. 4624 vs 4625**
 

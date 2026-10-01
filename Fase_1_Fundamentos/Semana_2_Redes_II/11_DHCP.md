@@ -520,7 +520,7 @@ Alertar ante configuraciones inusuales.
 
 **Caso 1**
 
-Log del SIEM:
+<a href="../../GLOSARIO.md#log" target="_blank">Log</a> del SIEM:
 
 Equipo:
 

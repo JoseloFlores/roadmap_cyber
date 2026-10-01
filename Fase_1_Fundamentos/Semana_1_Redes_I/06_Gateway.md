@@ -290,7 +290,7 @@ Después decide:
 
 -   Reenviar.
 
--   Registrar el evento en un log.
+-   Registrar el evento en un <a href="../../GLOSARIO.md#log" target="_blank">log</a>.
 
 **6. Gateway y Firewall**
 

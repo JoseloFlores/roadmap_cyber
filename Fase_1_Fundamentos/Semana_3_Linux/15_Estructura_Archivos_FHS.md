@@ -1139,7 +1139,7 @@ También modifica las fechas de sus acciones.
 
 ¿Cómo lo detectas?
 
-Un log vacío o con huecos es una señal de alerta.
+Un <a href="../../GLOSARIO.md#log" target="_blank">log</a> vacío o con huecos es una señal de alerta.
 
 También revisando si existen herramientas como:
 

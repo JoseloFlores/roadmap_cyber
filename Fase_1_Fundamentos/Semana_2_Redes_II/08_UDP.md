@@ -565,7 +565,7 @@ Ejemplos:
 
 **17. Lo que esperan de un Analista SOC Nivel 1**
 
-Cuando veas un log como:
+Cuando veas un <a href="../../GLOSARIO.md#log" target="_blank">log</a> como:
 
 Origen:
 

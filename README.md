@@ -101,6 +101,20 @@ Los módulos teóricos y prácticos correspondientes a la **Semana 4** se encuen
 
 ---
 
+## 🗂️ Contenido de la Semana 5: Gestión de Logs
+
+Los módulos teóricos y prácticos correspondientes a la **Semana 5 (Fase 2)** se encuentran en `Fase_2_Analista_SOC/Semana_5_Gestion_Logs/` y cubren lectura manual en raw sin SIEM:
+
+1. **[Módulo 30. ¿Qué es un log?](file:///home/jo/Documentos/road_map_cyber/Fase_2_Analista_SOC/Semana_5_Gestion_Logs/30_Que_Es_Un_Log.md)**: Evento vs registro vs alerta, ciclo evento→log→colector→SIEM→analista y centralización.
+2. **[Módulo 31. Tipos de logs](file:///home/jo/Documentos/road_map_cyber/Fase_2_Analista_SOC/Semana_5_Gestion_Logs/31_Tipos_De_Logs.md)**: Seguridad, Sistema, Aplicación y Auditoría en Windows (`eventvwr.msc`) y Linux (`auth.log`/`secure`, `syslog`, `access.log`).
+3. **[Módulo 32. Event Log de Windows (vista SOC)](file:///home/jo/Documentos/road_map_cyber/Fase_2_Analista_SOC/Semana_5_Gestion_Logs/32_Event_Log_Windows_SOC.md)**: Filtro manual por ID, lectura XML (usuario, IP, Logon Type), 4624/4625/4688/4720/7045/1102 y evidencia `.evtx`.
+4. **[Módulo 33. Syslog en Linux](file:///home/jo/Documentos/road_map_cyber/Fase_2_Analista_SOC/Semana_5_Gestion_Logs/33_Syslog_Linux.md)**: Facility/severity, `rsyslog` (UDP/TCP 514), `journalctl`, `logger` y laboratorio en VM Ubuntu.
+5. **[Módulo 34. Anatomía de un log raw](file:///home/jo/Documentos/road_map_cyber/Fase_2_Analista_SOC/Semana_5_Gestion_Logs/34_Anatomia_Log_Raw.md)**: Timestamp, hostname, proceso/PID, normalización manual, retención y `log rotation` (`zgrep`).
+6. **[Módulo 35. Fuerza bruta y logins inusuales](file:///home/jo/Documentos/road_map_cyber/Fase_2_Analista_SOC/Semana_5_Gestion_Logs/35_Deteccion_Fuerza_Bruta_Logins.md)**: `grep -c`, top IPs con `awk | sort | uniq -c`, `Failed` vs `Accepted`, hora/IP/cuenta anómala y falsos positivos.
+7. **[Módulo 36. Usuarios admin, persistencia e investigación](file:///home/jo/Documentos/road_map_cyber/Fase_2_Analista_SOC/Semana_5_Gestion_Logs/36_Usuarios_Admin_Persistencia_Investigacion.md)**: 4720/4728 + `useradd`, 7045/cron, línea de tiempo mixta, veredicto y tabla final Semana 5.
+
+---
+
 ## 📚 Recursos PDF Incluidos
 
 En la carpeta **[Recursos/](file:///home/jo/Documentos/road_map_cyber/Recursos/)** encontrarás documentación complementaria en formato PDF:

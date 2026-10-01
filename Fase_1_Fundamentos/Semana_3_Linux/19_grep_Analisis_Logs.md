@@ -32,11 +32,11 @@ Hoy llegamos a uno de los módulos más importantes de toda tu formación como A
 
 Los logs son la materia prima del trabajo en un centro de operaciones de seguridad.
 
-Todo lo que ocurre en un sistema queda registrado en algún archivo de log.
+Todo lo que ocurre en un sistema queda registrado en algún archivo de <a href="../../GLOSARIO.md#log" target="_blank">log</a>.
 
 Y en Linux, `grep` es la herramienta más poderosa para buscar y filtrar dentro de esos archivos.
 
-Dominar `grep`, los pipes y `tail -f` te permitirá detectar fuerza bruta, accesos sospechosos y actividad anómala directamente en los logs.
+Dominar `grep`, los pipes y `tail -f` te permitirá detectar <a href="../../GLOSARIO.md#fuerza-bruta" target="_blank">fuerza bruta</a>, accesos sospechosos y actividad anómala directamente en los logs.
 
 **🎯 Objetivos de aprendizaje**
 

@@ -159,7 +159,7 @@ Ningún malware puede ejecutarse sin crear un proceso.
 
 Por eso los analistas SOC revisan procesos constantemente.
 
-**Correlación con el <a href="../../GLOSARIO.md#edr" target="_blank">EDR</a>**
+**<a href="../../GLOSARIO.md#correlacion" target="_blank">Correlación</a> con el <a href="../../GLOSARIO.md#edr" target="_blank">EDR</a>**
 
 Un **EDR (Endpoint Detection and Response)** recopila datos de los
 procesos de cada equipo: nombre, PID y PPID, usuario, ruta del
@@ -204,7 +204,7 @@ Ejemplo:
 
 Salida típica:
 
-UID PID PPID C STIME TTY TIME CMD
+UID PID PPID C STIME TTY TIME <a href="../../GLOSARIO.md#cmd" target="_blank">CMD</a>
 
 root 1 0 0 09:15 ? 00:00:01 /sbin/init
 

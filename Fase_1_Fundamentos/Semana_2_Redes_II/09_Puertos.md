@@ -260,7 +260,7 @@ plano.
 
 **Función:** Administración remota segura de sistemas Linux.
 
-**Riesgo:** Ataques de fuerza bruta.
+**Riesgo:** Ataques de <a href="../../GLOSARIO.md#fuerza-bruta" target="_blank">fuerza bruta</a>.
 
 **Telnet – 23/TCP**
 
@@ -630,7 +630,7 @@ investigación.
 
 **16. Lo que esperan de un Analista SOC Nivel 1**
 
-Cuando veas un log como este:
+Cuando veas un <a href="../../GLOSARIO.md#log" target="_blank">log</a> como este:
 
 Origen:
 

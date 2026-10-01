@@ -12,7 +12,10 @@ import unicodedata
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GLOSSARY = os.path.join(ROOT, "GLOSARIO.md")
-MODULES_DIR = os.path.join(ROOT, "Fase_1_Fundamentos")
+MODULES_DIRS = [
+    os.path.join(ROOT, "Fase_1_Fundamentos"),
+    os.path.join(ROOT, "Fase_2_Analista_SOC"),
+]
 
 
 def slugify(term):
@@ -95,35 +98,38 @@ def linkify_line(line, terms, rel, linked):
 
 def process_modules(terms):
     count = 0
-    for dirpath, _, files in os.walk(MODULES_DIR):
-        for name in sorted(files):
-            if not name.endswith(".md"):
-                continue
-            path = os.path.join(dirpath, name)
-            rel = os.path.relpath(GLOSSARY, os.path.dirname(path)).replace(os.sep, "/")
-            with open(path, encoding="utf-8") as f:
-                txt = f.read()
-            linked = set(EXISTING_LINK_RE.findall(txt))
-            lines = txt.split("\n")
-            out = []
-            in_fence = False
-            modified = False
-            for line in lines:
-                if line.strip().startswith("```"):
-                    in_fence = not in_fence
-                    out.append(line)
+    for MODULES_DIR in MODULES_DIRS:
+        if not os.path.isdir(MODULES_DIR):
+            continue
+        for dirpath, _, files in os.walk(MODULES_DIR):
+            for name in sorted(files):
+                if not name.endswith(".md"):
                     continue
-                if in_fence:
-                    out.append(line)
-                    continue
-                new = linkify_line(line, terms, rel, linked)
-                if new != line:
-                    modified = True
-                out.append(new)
-            if modified:
-                with open(path, "w", encoding="utf-8") as f:
-                    f.write("\n".join(out))
-                count += 1
+                path = os.path.join(dirpath, name)
+                rel = os.path.relpath(GLOSSARY, os.path.dirname(path)).replace(os.sep, "/")
+                with open(path, encoding="utf-8") as f:
+                    txt = f.read()
+                linked = set(EXISTING_LINK_RE.findall(txt))
+                lines = txt.split("\n")
+                out = []
+                in_fence = False
+                modified = False
+                for line in lines:
+                    if line.strip().startswith("```"):
+                        in_fence = not in_fence
+                        out.append(line)
+                        continue
+                    if in_fence:
+                        out.append(line)
+                        continue
+                    new = linkify_line(line, terms, rel, linked)
+                    if new != line:
+                        modified = True
+                    out.append(new)
+                if modified:
+                    with open(path, "w", encoding="utf-8") as f:
+                        f.write("\n".join(out))
+                    count += 1
     return count
 
 

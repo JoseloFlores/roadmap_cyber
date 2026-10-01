@@ -7,7 +7,7 @@
 **Nivel:** Principiante → Analista SOC Nivel 1\
 **Enfoque:** Línea de comandos + Detección SOC
 
-Este módulo unifica la referencia rápida (comandos clave, cmdlets, LOLBins, `-enc`) con la guía larga (CMD comando por comando, objetos PowerShell, `CommandLine`, ofuscación, logging, correlación con procesos/servicios).
+Este módulo unifica la referencia rápida (comandos clave, cmdlets, LOLBins, `-enc`) con la guía larga (CMD comando por comando, objetos PowerShell, `CommandLine`, ofuscación, logging, <a href="../../GLOSARIO.md#correlacion" target="_blank">correlación</a> con procesos/servicios).
 
 **🎯 Objetivos del módulo**
 
@@ -100,7 +100,7 @@ Señales en un evento de PowerShell:
 
 **6. Conexión con el SOC**
 
-Un evento de PowerShell (<a href="../../GLOSARIO.md#event-id" target="_blank">Event ID</a> 4104 en el log de PowerShell, cuando
+Un evento de PowerShell (<a href="../../GLOSARIO.md#event-id" target="_blank">Event ID</a> 4104 en el <a href="../../GLOSARIO.md#log" target="_blank">log</a> de PowerShell, cuando
 el logging está habilitado) puede mostrar el script exacto ejecutado.
 Combinado con `netstat` y el proceso padre, reconstruyes la historia.
 

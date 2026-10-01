@@ -968,7 +968,7 @@ Detectar comportamientos sospechosos.
 
 Detectar archivos maliciosos conocidos y determinados comportamientos.
 
-**Auditoría**
+**<a href="../../GLOSARIO.md#auditoria" target="_blank">Auditoría</a>**
 
 Registrar actividades relevantes.
 

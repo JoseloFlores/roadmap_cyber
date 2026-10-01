@@ -295,7 +295,7 @@ Ejemplos:
 
 -   Escaneo de puertos
 
--   Fuerza bruta
+-   <a href="../../GLOSARIO.md#fuerza-bruta" target="_blank">Fuerza bruta</a>
 
 -   UDP Flood
 
